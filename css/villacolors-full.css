@@ -1,0 +1,764 @@
+/*
+ * Flat Colors of MAN!
+ */
+
+ /* Background Flat Colors */
+
+.cyan {background-color: #1abc9c }
+.dark-cyan {background-color: #16a085 }
+.green {background-color: #2ecc71 }
+.dark-green {background-color: #27ae60 }
+.blue {background-color: #3498db }
+.dark-blue {background-color: #2980b9 }
+.purple {background-color: #9b59b6 }
+.dark-purple {background-color: #8e44ad }
+.dark {background-color: #34495e }
+.dark-dark {background-color: #2c3e50 }
+.yellow {background-color: #f1c40f }
+.dark-yellow {background-color: #f39c12 }
+.orange {background-color: #e67e22 }
+.dark-orange {background-color: #d35400 }
+.red {background-color: #ea6153 }
+.dark-red {background-color: #c0392b }
+.clear {background-color: #ecf0f1 }
+.dark-clear {background-color: #bdc3c7 }
+.gray {background-color: #95a5a6 }
+.dark-gray {background-color: #7f8c8d }
+.white {background-color: #ffffff }
+.black {background-color: #000000 }
+/* Red */
+.chestnut-rose {background-color:#D24D57 }
+.pomegranate {background-color:#F22613 }
+.red {background-color:#FF0000 }
+.thunderbird {background-color:#D91E18 }
+.old-brick {background-color:#96281B }
+.flamingo {background-color:#EF4836 }
+.valencia {background-color:#D64541 }
+.tall-poppy {background-color:#C0392B }
+.monza {background-color:#CF000F }
+.cinnabar {background-color:#E74C3C }
+/* Pink */
+.razzmatazz {background-color:#DB0A5B }
+.derby {background-color:#FFECDB }
+.sunset-orange {background-color:#F64747 }
+.wax-flower {background-color:#F1A9A0 }
+.cabaret {background-color:#D2527F }
+.new-york-pink {background-color:#E08283 }
+.radical-red {background-color:#F62459 }
+.sunglo {background-color:#E26A6A }
+/* Purple */
+.snuff {background-color:#DCC6E0 }
+.rebeccapurple {background-color:#663399 }
+.honey-flower {background-color:#674172 }
+.wistful {background-color:#AEA8D3 }
+.plum {background-color:#913D88 }
+.seance {background-color:#9A12B3 }
+.medium-purple {background-color:#BF55EC }
+.light-wisteria {background-color:#BE90D4 }
+.studio {background-color:#8E44AD }
+.wisteria {background-color:#9B59B6 }
+/* Blue */
+.san-marino {background-color:#446CB3 }
+.alice-blue {background-color:#E4F1FE }
+.royal-blue {background-color:#4183D7 }
+.picton-blue {background-color:#59ABE3 }
+.spray {background-color:#81CFE0 }
+.shakespeare {background-color:#52B3D9 }
+.humming-bird {background-color:#C5EFF7 }
+.picton-blue {background-color:#22A7F0 }
+.curious-blue {background-color:#3498DB }
+.madison {background-color:#2C3E50 }
+.dodger-blue {background-color:#19B5FE }
+.ming {background-color:#336E7B }
+.ebony-clay {background-color:#22313F }
+.malibu {background-color:#6BB9F0 }
+.curious-blue {background-color:#1E8BC3 }
+.chambray {background-color:#3A539B }
+.pickled-bluewood {background-color:#34495E }
+.hoki {background-color:#67809F }
+.jelly-bean {background-color:#2574A9 }
+.jacksons-purple {background-color:#1F3A93 }
+.jordy-blue {background-color:#89C4F4 }
+.steel-blue {background-color:#4B77BE }
+.fountain-blue {background-color:#5C97BF }
+/* Green */
+.medium-turquoise {background-color:#4ECDC4 }
+.aqua-island {background-color:#A2DED0 }
+.gossip {background-color:#87D37C }
+.dark-sea-green {background-color:#90C695 }
+.eucalyptus {background-color:#26A65B }
+.caribbean-green {background-color:#03C9A9 }
+.silver-tree {background-color:#68C3A3 }
+.downy {background-color:#65C6BB }
+.mountain-meadow {background-color:#1BBC9B }
+.light-sea-green {background-color:#1BA39C }
+.medium-aquamarine {background-color:#66CC99 }
+.turquoise {background-color:#36D7B7 }
+.madang {background-color:#C8F7C5 }
+.riptide {background-color:#86E2D5 }
+.shamrock {background-color:#2ECC71 }
+.mountain-meadow {background-color:#16a085 }
+.emerald {background-color:#3FC380 }
+.green-haze {background-color:#019875 }
+.free-speech-aquamarine {background-color:#03A678 }
+.ocean-green {background-color:#4DAF7C }
+.niagara {background-color:#2ABB9B }
+.jade {background-color:#00B16A }
+.salem {background-color:#1E824C }
+.observatory {background-color:#049372 }
+.jungle-green {background-color:#26C281 }
+/* Yellow */
+.cream-can {background-color:#F5D76E }
+.ripe-lemon {background-color:#F7CA18 }
+.saffron {background-color:#F4D03F }
+/* Orange */
+.cape-honey {background-color:#FDE3A7 }
+.california {background-color:#F89406 }
+.fire-bush {background-color:#EB9532 }
+.tahiti-gold {background-color:#E87E04 }
+.casablanca {background-color:#F4B350 }
+.crusta {background-color:#F2784B }
+.jaffa {background-color:#EB974E }
+.lightning-yellow {background-color:#F5AB35 }
+.burnt-orange {background-color:#D35400 }
+.buttercup {background-color:#F39C12 }
+.ecstasy {background-color:#F9690E }
+.sandstorm {background-color:#F9BF3B }
+.jaffa {background-color:#F27935 }
+.zest {background-color:#E67E22 }
+/* Gray */
+.white-smoke {background-color:#ececec }
+.lynch {background-color:#6C7A89 }
+.pumice {background-color:#D2D7D3 }
+.gallery {background-color:#EEEEEE }
+.silver-sand {background-color:#BDC3C7 }
+.porcelain {background-color:#ECF0F1 }
+.cascade {background-color:#95A5A6 }
+.iron {background-color:#DADFE1 }
+.edward {background-color:#ABB7B7 }
+.cararra {background-color:#F2F1EF }
+.silver {background-color:#BFBFBF }
+/* Gray Scale */
+.g111 {background-color: #111}
+.g222 {background-color: #222}
+.g333 {background-color: #333}
+.g444 {background-color: #444}
+.g555 {background-color: #555}
+.g666 {background-color: #666}
+.g777 {background-color: #777}
+.g888 {background-color: #888}
+.g999 {background-color: #999}
+.gaaa {background-color: #aaa}
+.gbbb {background-color: #bbb}
+.gccc {background-color: #ccc}
+.gddd {background-color: #ddd}
+.geee {background-color: #eee}
+
+/* Border Flat Colors */
+
+.border-cyan {border-color: #1abc9c !important }
+.border-dark-cyan {border-color: #16a085 !important }
+.border-green {border-color: #2ecc71 !important }
+.border-dark-green {border-color: #27ae60 !important }
+.border-blue {border-color: #3498db !important }
+.border-dark-blue {border-color: #2980b9 !important }
+.border-purple {border-color: #9b59b6 !important }
+.border-dark-purple {border-color: #8e44ad !important }
+.border-dark {border-color: #34495e !important }
+.border-dark-dark {border-color: #2c3e50 !important }
+.border-yellow {border-color: #f1c40f !important }
+.border-dark-yellow {border-color: #f39c12 !important }
+.border-orange {border-color: #e67e22 !important }
+.border-dark-orange {border-color: #d35400 !important }
+.border-red {border-color: #ea6153 !important }
+.border-dark-red {border-color: #c0392b !important }
+.border-clear {border-color: #ecf0f1 !important }
+.border-dark-clear {border-color: #bdc3c7 !important }
+.border-gray {border-color: #95a5a6 !important }
+.border-dark-gray {border-color: #7f8c8d !important }
+.border-white {border-color: #ffffff !important }
+.border-black {border-color: #000000 !important }
+/* Red */
+.border-chestnut-rose {border-color:#D24D57 !important }
+.border-pomegranate {border-color:#F22613 !important }
+.border-red {border-color:#FF0000 !important }
+.border-thunderbird {border-color:#D91E18 !important }
+.border-old-brick {border-color:#96281B !important }
+.border-flamingo {border-color:#EF4836 !important }
+.border-valencia {border-color:#D64541 !important }
+.border-tall-poppy {border-color:#C0392B !important }
+.border-monza {border-color:#CF000F !important }
+.border-cinnabar {border-color:#E74C3C !important }
+/* Pink */
+.border-razzmatazz {border-color:#DB0A5B !important }
+.border-derby {border-color:#FFECDB !important }
+.border-sunset-orange {border-color:#F64747 !important }
+.border-wax-flower {border-color:#F1A9A0 !important }
+.border-cabaret {border-color:#D2527F !important }
+.border-new-york-pink {border-color:#E08283 !important }
+.border-radical-red {border-color:#F62459 !important }
+.border-sunglo {border-color:#E26A6A !important }
+/* Purple */
+.border-snuff {border-color:#DCC6E0 !important }
+.border-rebeccapurple {border-color:#663399 !important }
+.border-honey-flower {border-color:#674172 !important }
+.border-wistful {border-color:#AEA8D3 !important }
+.border-plum {border-color:#913D88 !important }
+.border-seance {border-color:#9A12B3 !important }
+.border-medium-purple {border-color:#BF55EC !important }
+.border-light-wisteria {border-color:#BE90D4 !important }
+.border-studio {border-color:#8E44AD !important }
+.border-wisteria {border-color:#9B59B6 !important }
+/* Blue */
+.border-san-marino {border-color:#446CB3 !important }
+.border-alice-blue {border-color:#E4F1FE !important }
+.border-royal-blue {border-color:#4183D7 !important }
+.border-picton-blue {border-color:#59ABE3 !important }
+.border-spray {border-color:#81CFE0 !important }
+.border-shakespeare {border-color:#52B3D9 !important }
+.border-humming-bird {border-color:#C5EFF7 !important }
+.border-picton-blue {border-color:#22A7F0 !important }
+.border-curious-blue {border-color:#3498DB !important }
+.border-madison {border-color:#2C3E50 !important }
+.border-dodger-blue {border-color:#19B5FE !important }
+.border-ming {border-color:#336E7B !important }
+.border-ebony-clay {border-color:#22313F !important }
+.border-malibu {border-color:#6BB9F0 !important }
+.border-curious-blue {border-color:#1E8BC3 !important }
+.border-chambray {border-color:#3A539B !important }
+.border-pickled-bluewood {border-color:#34495E !important }
+.border-hoki {border-color:#67809F !important }
+.border-jelly-bean {border-color:#2574A9 !important }
+.border-jacksons-purple {border-color:#1F3A93 !important }
+.border-jordy-blue {border-color:#89C4F4 !important }
+.border-steel-blue {border-color:#4B77BE !important }
+.border-fountain-blue {border-color:#5C97BF !important }
+/* Green */
+.border-medium-turquoise {border-color:#4ECDC4 !important }
+.border-aqua-island {border-color:#A2DED0 !important }
+.border-gossip {border-color:#87D37C !important }
+.border-dark-sea-green {border-color:#90C695 !important }
+.border-eucalyptus {border-color:#26A65B !important }
+.border-caribbean-green {border-color:#03C9A9 !important }
+.border-silver-tree {border-color:#68C3A3 !important }
+.border-downy {border-color:#65C6BB !important }
+.border-mountain-meadow {border-color:#1BBC9B !important }
+.border-light-sea-green {border-color:#1BA39C !important }
+.border-medium-aquamarine {border-color:#66CC99 !important }
+.border-turquoise {border-color:#36D7B7 !important }
+.border-madang {border-color:#C8F7C5 !important }
+.border-riptide {border-color:#86E2D5 !important }
+.border-shamrock {border-color:#2ECC71 !important }
+.border-mountain-meadow {border-color:#16a085 !important }
+.border-emerald {border-color:#3FC380 !important }
+.border-green-haze {border-color:#019875 !important }
+.border-free-speech-aquamarine {border-color:#03A678 !important }
+.border-ocean-green {border-color:#4DAF7C !important }
+.border-niagara {border-color:#2ABB9B !important }
+.border-jade {border-color:#00B16A !important }
+.border-salem {border-color:#1E824C !important }
+.border-observatory {border-color:#049372 !important }
+.border-jungle-green {border-color:#26C281 !important }
+/* Yellow */
+.border-cream-can {border-color:#F5D76E !important }
+.border-ripe-lemon {border-color:#F7CA18 !important }
+.border-saffron {border-color:#F4D03F !important }
+/* Orange */
+.border-cape-honey {border-color:#FDE3A7 !important }
+.border-california {border-color:#F89406 !important }
+.border-fire-bush {border-color:#EB9532 !important }
+.border-tahiti-gold {border-color:#E87E04 !important }
+.border-casablanca {border-color:#F4B350 !important }
+.border-crusta {border-color:#F2784B !important }
+.border-jaffa {border-color:#EB974E !important }
+.border-lightning-yellow {border-color:#F5AB35 !important }
+.border-burnt-orange {border-color:#D35400 !important }
+.border-buttercup {border-color:#F39C12 !important }
+.border-ecstasy {border-color:#F9690E !important }
+.border-sandstorm {border-color:#F9BF3B !important }
+.border-jaffa {border-color:#F27935 !important }
+.border-zest {border-color:#E67E22 !important }
+/* Gray */
+.border-white-smoke {border-color:#ececec !important }
+.border-lynch {border-color:#6C7A89 !important }
+.border-pumice {border-color:#D2D7D3 !important }
+.border-gallery {border-color:#EEEEEE !important }
+.border-silver-sand {border-color:#BDC3C7 !important }
+.border-porcelain {border-color:#ECF0F1 !important }
+.border-cascade {border-color:#95A5A6 !important }
+.border-iron {border-color:#DADFE1 !important }
+.border-edward {border-color:#ABB7B7 !important }
+.border-cararra {border-color:#F2F1EF !important }
+.border-silver {border-color:#BFBFBF !important }
+/* Grayscale */
+.border-g111 {border-color: #111 !important }
+.border-g222 {border-color: #222 !important }
+.border-g333 {border-color: #333 !important }
+.border-g444 {border-color: #444 !important }
+.border-g555 {border-color: #555 !important }
+.border-g666 {border-color: #666 !important }
+.border-g777 {border-color: #777 !important }
+.border-g888 {border-color: #888 !important }
+.border-g999 {border-color: #999 !important }
+.border-gaaa {border-color: #aaa !important }
+.border-gbbb {border-color: #bbb !important }
+.border-gccc {border-color: #ccc !important }
+.border-gddd {border-color: #ddd !important }
+.border-geee {border-color: #eee !important }
+
+/* Font Flat Colors */
+
+.font-cyan {color: #1abc9c }
+.font-dark-cyan {color: #16a085 }
+.font-green {color: #2ecc71 }
+.font-dark-green {color: #27ae60 }
+.font-blue {color: #3498db }
+.font-dark-blue {color: #2980b9 }
+.font-purple {color: #9b59b6 }
+.font-dark-purple {color: #8e44ad }
+.font-dark {color: #34495e }
+.font-dark-dark {color: #2c3e50 }
+.font-yellow {color: #f1c40f }
+.font-dark-yellow {color: #f39c12 }
+.font-orange {color: #e67e22 }
+.font-dark-orange {color: #d35400 }
+.font-red {color: #ea6153 }
+.font-dark-red {color: #c0392b }
+.font-clear {color: #ecf0f1 }
+.font-dark-clear {color: #bdc3c7 }
+.font-gray {color: #95a5a6 }
+.font-dark-gray {color: #7f8c8d }
+.font-white {color: #ffffff }
+.font-black {color: #000000 }
+/* Red */
+.font-chestnut-rose {background-color:#D24D57 }
+.font-pomegranate {background-color:#F22613 }
+.font-red {background-color:#FF0000 }
+.font-thunderbird {background-color:#D91E18 }
+.font-old-brick {background-color:#96281B }
+.font-flamingo {background-color:#EF4836 }
+.font-valencia {background-color:#D64541 }
+.font-tall-poppy {background-color:#C0392B }
+.font-monza {background-color:#CF000F }
+.font-cinnabar {background-color:#E74C3C }
+/* Pink */
+.font-razzmatazz {background-color:#DB0A5B }
+.font-derby {background-color:#FFECDB }
+.font-sunset-orange {background-color:#F64747 }
+.font-wax-flower {background-color:#F1A9A0 }
+.font-cabaret {background-color:#D2527F }
+.font-new-york-pink {background-color:#E08283 }
+.font-radical-red {background-color:#F62459 }
+.font-sunglo {background-color:#E26A6A }
+/* Purple */
+.font-snuff {background-color:#DCC6E0 }
+.font-rebeccapurple {background-color:#663399 }
+.font-honey-flower {background-color:#674172 }
+.font-wistful {background-color:#AEA8D3 }
+.font-plum {background-color:#913D88 }
+.font-seance {background-color:#9A12B3 }
+.font-medium-purple {background-color:#BF55EC }
+.font-light-wisteria {background-color:#BE90D4 }
+.font-studio {background-color:#8E44AD }
+.font-wisteria {background-color:#9B59B6 }
+/* Blue */
+.font-san-marino {background-color:#446CB3 }
+.font-alice-blue {background-color:#E4F1FE }
+.font-royal-blue {background-color:#4183D7 }
+.font-picton-blue {background-color:#59ABE3 }
+.font-spray {background-color:#81CFE0 }
+.font-shakespeare {background-color:#52B3D9 }
+.font-humming-bird {background-color:#C5EFF7 }
+.font-picton-blue {background-color:#22A7F0 }
+.font-curious-blue {background-color:#3498DB }
+.font-madison {background-color:#2C3E50 }
+.font-dodger-blue {background-color:#19B5FE }
+.font-ming {background-color:#336E7B }
+.font-ebony-clay {background-color:#22313F }
+.font-malibu {background-color:#6BB9F0 }
+.font-curious-blue {background-color:#1E8BC3 }
+.font-chambray {background-color:#3A539B }
+.font-pickled-bluewood {background-color:#34495E }
+.font-hoki {background-color:#67809F }
+.font-jelly-bean {background-color:#2574A9 }
+.font-jacksons-purple {background-color:#1F3A93 }
+.font-jordy-blue {background-color:#89C4F4 }
+.font-steel-blue {background-color:#4B77BE }
+.font-fountain-blue {background-color:#5C97BF }
+/* Green */
+.font-medium-turquoise {background-color:#4ECDC4 }
+.font-aqua-island {background-color:#A2DED0 }
+.font-gossip {background-color:#87D37C }
+.font-dark-sea-green {background-color:#90C695 }
+.font-eucalyptus {background-color:#26A65B }
+.font-caribbean-green {background-color:#03C9A9 }
+.font-silver-tree {background-color:#68C3A3 }
+.font-downy {background-color:#65C6BB }
+.font-mountain-meadow {background-color:#1BBC9B }
+.font-light-sea-green {background-color:#1BA39C }
+.font-medium-aquamarine {background-color:#66CC99 }
+.font-turquoise {background-color:#36D7B7 }
+.font-madang {background-color:#C8F7C5 }
+.font-riptide {background-color:#86E2D5 }
+.font-shamrock {background-color:#2ECC71 }
+.font-mountain-meadow {background-color:#16a085 }
+.font-emerald {background-color:#3FC380 }
+.font-green-haze {background-color:#019875 }
+.font-free-speech-aquamarine {background-color:#03A678 }
+.font-ocean-green {background-color:#4DAF7C }
+.font-niagara {background-color:#2ABB9B }
+.font-jade {background-color:#00B16A }
+.font-salem {background-color:#1E824C }
+.font-observatory {background-color:#049372 }
+.font-jungle-green {background-color:#26C281 }
+/* Yellow */
+.font-cream-can {background-color:#F5D76E }
+.font-ripe-lemon {background-color:#F7CA18 }
+.font-saffron {background-color:#F4D03F }
+/* Orange */
+.font-cape-honey {background-color:#FDE3A7 }
+.font-california {background-color:#F89406 }
+.font-fire-bush {background-color:#EB9532 }
+.font-tahiti-gold {background-color:#E87E04 }
+.font-casablanca {background-color:#F4B350 }
+.font-crusta {background-color:#F2784B }
+.font-jaffa {background-color:#EB974E }
+.font-lightning-yellow {background-color:#F5AB35 }
+.font-burnt-orange {background-color:#D35400 }
+.font-buttercup {background-color:#F39C12 }
+.font-ecstasy {background-color:#F9690E }
+.font-sandstorm {background-color:#F9BF3B }
+.font-jaffa {background-color:#F27935 }
+.font-zest {background-color:#E67E22 }
+/* Gray */
+.font-white-smoke {background-color:#ececec }
+.font-lynch {background-color:#6C7A89 }
+.font-pumice {background-color:#D2D7D3 }
+.font-gallery {background-color:#EEEEEE }
+.font-silver-sand {background-color:#BDC3C7 }
+.font-porcelain {background-color:#ECF0F1 }
+.font-cascade {background-color:#95A5A6 }
+.font-iron {background-color:#DADFE1 }
+.font-edward {background-color:#ABB7B7 }
+.font-cararra {background-color:#F2F1EF }
+.font-silver {background-color:#BFBFBF }
+/* Gray Scale */
+.font-g111 {color: #111}
+.font-g222 {color: #222}
+.font-g333 {color: #333}
+.font-g444 {color: #444}
+.font-g555 {color: #555}
+.font-g666 {color: #666}
+.font-g777 {color: #777}
+.font-g888 {color: #888}
+.font-g999 {color: #999}
+.font-gaaa {color: #aaa}
+.font-gbbb {color: #bbb}
+.font-gccc {color: #ccc}
+.font-gddd {color: #ddd}
+.font-geee {color: #eee}
+
+/*
+ * Hover Colors Event
+ */
+
+ /* Background Flat Colors */
+.h-cyan:hover, .h-cyan:active, .h-cyan:focus {background-color: #1abc9c }
+.h-dark-cyan:hover, .h-dark-cyan:active, .h-dark-cyan:focus {background-color: #16a085 }
+.h-green:hover, .h-green:active, .h-green:focus {background-color: #2ecc71 }
+.h-dark-green:hover, .h-dark-green:active, .h-dark-green:focus {background-color: #27ae60 }
+.h-blue:hover, .h-blue:active, .h-blue:focus {background-color: #3498db }
+.h-dark-blue:hover, .h-dark-blue:active, .h-dark-blue:focus {background-color: #2980b9 }
+.h-purple:hover, .h-purple:active, .h-purple:focus {background-color: #9b59b6 }
+.h-dark-purple:hover, .h-dark-purple:active, .h-dark-purple:focus {background-color: #8e44ad }
+.h-dark:hover, .h-dark:active, .h-dark:focus {background-color: #34495e }
+.h-dark-dark:hover, .h-dark-dark:active, .h-dark-dark:focus {background-color: #2c3e50 }
+.h-yellow:hover, .h-yellow:active, .h-yellow:focus {background-color: #f1c40f }
+.h-dark-yellow:hover, .h-dark-yellow:active, .h-dark-yellow:focus {background-color: #f39c12 }
+.h-orange:hover, .h-orange:active, .h-orange:focus {background-color: #e67e22 }
+.h-dark-orange:hover, .h-dark-orange:active, .h-dark-orange:focus {background-color: #d35400 }
+.h-red:hover, .h-red:active, .h-red:focus {background-color: #ea6153 }
+.h-dark-red:hover, .h-dark-red:active, .h-dark-red:focus {background-color: #c0392b }
+.h-clear:hover, .h-clear:active, .h-clear:focus {background-color: #ecf0f1 }
+.h-dark-clear:hover, .h-dark-clear:active, .h-dark-clear:focus {background-color: #bdc3c7 }
+.h-gray:hover, .h-gray:active, .h-gray:focus {background-color: #95a5a6 }
+.h-dark-gray:hover, .h-dark-gray:active, .h-dark-gray:focus {background-color: #7f8c8d }
+.h-white:hover, .h-white:active, .h-white:focus {background-color: #ffffff }
+.h-black:hover, .h-black:active, .h-black:focus {background-color: #000000 }
+/* Red */
+.h-chestnut-rose:hover, .h-chestnut-rose:focus, .h-chestnut-rose:active {background-color:#D24D57 }
+.h-pomegranate:hover, .h-pomegranate:focus, .h-pomegranate:active {background-color:#F22613 }
+.h-red:hover, .h-red:focus, .h-red:active {background-color:#FF0000 }
+.h-thunderbird:hover, .h-thunderbird:focus, .h-thunderbird:active {background-color:#D91E18 }
+.h-old-brick:hover, .h-old-brick:focus, .h-old-brick:active {background-color:#96281B }
+.h-flamingo:hover, .h-flamingo:focus, .h-flamingo:active {background-color:#EF4836 }
+.h-valencia:hover, .h-valencia:focus, .h-valencia:active {background-color:#D64541 }
+.h-tall-poppy:hover, .h-tall-poppy:focus, .h-tall-poppy:active {background-color:#C0392B }
+.h-monza:hover, .h-monza:focus, .h-monza:active {background-color:#CF000F }
+.h-cinnabar:hover, .h-cinnabar:focus, .h-cinnabar:active {background-color:#E74C3C }
+/* Pink */
+.h-razzmatazz:hover, .h-razzmatazz:focus, .h-razzmatazz:active {background-color:#DB0A5B }
+.h-derby:hover, .h-derby:focus, .h-derby:active {background-color:#FFECDB }
+.h-sunset-orange:hover, .h-sunset-orange:focus, .h-sunset-orange:active {background-color:#F64747 }
+.h-wax-flower:hover, .h-wax-flower:focus, .h-wax-flower:active {background-color:#F1A9A0 }
+.h-cabaret:hover, .h-cabaret:focus, .h-cabaret:active {background-color:#D2527F }
+.h-new-york-pink:hover, .h-new-york-pink:focus, .h-new-york-pink:active {background-color:#E08283 }
+.h-radical-red:hover, .h-radical-red:focus, .h-radical-red:active {background-color:#F62459 }
+.h-sunglo:hover, .h-sunglo:focus, .h-sunglo:active {background-color:#E26A6A }
+/* Purple */
+.h-snuff:hover, .h-snuff:focus, .h-snuff:active {background-color:#DCC6E0 }
+.h-rebeccapurple:hover, .h-rebeccapurple:focus, .h-rebeccapurple:active {background-color:#663399 }
+.h-honey-flower:hover, .h-honey-flower:focus, .h-honey-flower:active {background-color:#674172 }
+.h-wistful:hover, .h-wistful:focus, .h-wistful:active {background-color:#AEA8D3 }
+.h-plum:hover, .h-plum:focus, .h-plum:active {background-color:#913D88 }
+.h-seance:hover, .h-seance:focus, .h-seance:active {background-color:#9A12B3 }
+.h-medium-purple:hover, .h-medium-purple:focus, .h-medium-purple:active {background-color:#BF55EC }
+.h-light-wisteria:hover, .h-light-wisteria:focus, .h-light-wisteria:active {background-color:#BE90D4 }
+.h-studio:hover, .h-studio:focus, .h-studio:active {background-color:#8E44AD }
+.h-wisteria:hover, .h-wisteria:focus, .h-wisteria:active {background-color:#9B59B6 }
+/* Blue */
+.h-san-marino:hover, .h-san-marino:focus, .h-san-marino:active {background-color:#446CB3 }
+.h-alice-blue:hover, .h-alice-blue:focus, .h-alice-blue:active {background-color:#E4F1FE }
+.h-royal-blue:hover, .h-royal-blue:focus, .h-royal-blue:active {background-color:#4183D7 }
+.h-picton-blue:hover, .h-picton-blue:focus, .h-picton-blue:active {background-color:#59ABE3 }
+.h-spray:hover, .h-spray:focus, .h-spray:active {background-color:#81CFE0 }
+.h-shakespeare:hover, .h-shakespeare:focus, .h-shakespeare:active {background-color:#52B3D9 }
+.h-humming-bird:hover, .h-humming-bird:focus, .h-humming-bird:active {background-color:#C5EFF7 }
+.h-picton-blue:hover, .h-picton-blue:focus, .h-picton-blue:active {background-color:#22A7F0 }
+.h-curious-blue:hover, .h-curious-blue:focus, .h-curious-blue:active {background-color:#3498DB }
+.h-madison:hover, .h-madison:focus, .h-madison:active {background-color:#2C3E50 }
+.h-dodger-blue:hover, .h-dodger-blue:focus, .h-dodger-blue:active {background-color:#19B5FE }
+.h-ming:hover, .h-ming:focus, .h-ming:active {background-color:#336E7B }
+.h-ebony-clay:hover, .h-ebony-clay:focus, .h-ebony-clay:active {background-color:#22313F }
+.h-malibu:hover, .h-malibu:focus, .h-malibu:active {background-color:#6BB9F0 }
+.h-curious-blue:hover, .h-curious-blue:focus, .h-curious-blue:active {background-color:#1E8BC3 }
+.h-chambray:hover, .h-chambray:focus, .h-chambray:active {background-color:#3A539B }
+.h-pickled-bluewood:hover, .h-pickled-bluewood:focus, .h-pickled-bluewood:active {background-color:#34495E }
+.h-hoki:hover, .h-hoki:focus, .h-hoki:active {background-color:#67809F }
+.h-jelly-bean:hover, .h-jelly-bean:focus, .h-jelly-bean:active {background-color:#2574A9 }
+.h-jacksons-purple:hover, .h-jacksons-purple:focus, .h-jacksons-purple:active {background-color:#1F3A93 }
+.h-jordy-blue:hover, .h-jordy-blue:focus, .h-jordy-blue:active {background-color:#89C4F4 }
+.h-steel-blue:hover, .h-steel-blue:focus, .h-steel-blue:active {background-color:#4B77BE }
+.h-fountain-blue:hover, .h-fountain-blue:focus, .h-fountain-blue:active {background-color:#5C97BF }
+/* Green */
+.h-medium-turquoise:hover, .h-medium-turquoise:focus, .h-medium-turquoise:active {background-color:#4ECDC4 }
+.h-aqua-island:hover, .h-aqua-island:focus, .h-aqua-island:active {background-color:#A2DED0 }
+.h-gossip:hover, .h-gossip:focus, .h-gossip:active {background-color:#87D37C }
+.h-dark-sea-green:hover, .h-dark-sea-green:focus, .h-dark-sea-green:active {background-color:#90C695 }
+.h-eucalyptus:hover, .h-eucalyptus:focus, .h-eucalyptus:active {background-color:#26A65B }
+.h-caribbean-green:hover, .h-caribbean-green:focus, .h-caribbean-green:active {background-color:#03C9A9 }
+.h-silver-tree:hover, .h-silver-tree:focus, .h-silver-tree:active {background-color:#68C3A3 }
+.h-downy:hover, .h-downy:focus, .h-downy:active {background-color:#65C6BB }
+.h-mountain-meadow:hover, .h-mountain-meadow:focus, .h-mountain-meadow:active {background-color:#1BBC9B }
+.h-light-sea-green:hover, .h-light-sea-green:focus, .h-light-sea-green:active {background-color:#1BA39C }
+.h-medium-aquamarine:hover, .h-medium-aquamarine:focus, .h-medium-aquamarine:active {background-color:#66CC99 }
+.h-turquoise:hover, .h-turquoise:focus, .h-turquoise:active {background-color:#36D7B7 }
+.h-madang:hover, .h-madang:focus, .h-madang:active {background-color:#C8F7C5 }
+.h-riptide:hover, .h-riptide:focus, .h-riptide:active {background-color:#86E2D5 }
+.h-shamrock:hover, .h-shamrock:focus, .h-shamrock:active {background-color:#2ECC71 }
+.h-mountain-meadow:hover, .h-mountain-meadow:focus, .h-mountain-meadow:active {background-color:#16a085 }
+.h-emerald:hover, .h-emerald:focus, .h-emerald:active {background-color:#3FC380 }
+.h-green-haze:hover, .h-green-haze:focus, .h-green-haze:active {background-color:#019875 }
+.h-free-speech-aquamarine:hover, .h-free-speech-aquamarine:focus, .h-free-speech-aquamarine:active {background-color:#03A678 }
+.h-ocean-green:hover, .h-ocean-green:focus, .h-ocean-green:active {background-color:#4DAF7C }
+.h-niagara:hover, .h-niagara:focus, .h-niagara:active {background-color:#2ABB9B }
+.h-jade:hover, .h-jade:focus, .h-jade:active {background-color:#00B16A }
+.h-salem:hover, .h-salem:focus, .h-salem:active {background-color:#1E824C }
+.h-observatory:hover, .h-observatory:focus, .h-observatory:active {background-color:#049372 }
+.h-jungle-green:hover, .h-jungle-green:focus, .h-jungle-green:active {background-color:#26C281 }
+/* Yellow */
+.h-cream-can:hover, .h-cream-can:focus, .h-cream-can:active {background-color:#F5D76E }
+.h-ripe-lemon:hover, .h-ripe-lemon:focus, .h-ripe-lemon:active {background-color:#F7CA18 }
+.h-saffron:hover, .h-saffron:focus, .h-saffron:active {background-color:#F4D03F }
+/* Orange */
+.h-cape-honey:hover, .h-cape-honey:focus, .h-cape-honey:active {background-color:#FDE3A7 }
+.h-california:hover, .h-california:focus, .h-california:active {background-color:#F89406 }
+.h-fire-bush:hover, .h-fire-bush:focus, .h-fire-bush:active {background-color:#EB9532 }
+.h-tahiti-gold:hover, .h-tahiti-gold:focus, .h-tahiti-gold:active {background-color:#E87E04 }
+.h-casablanca:hover, .h-casablanca:focus, .h-casablanca:active {background-color:#F4B350 }
+.h-crusta:hover, .h-crusta:focus, .h-crusta:active {background-color:#F2784B }
+.h-jaffa:hover, .h-jaffa:focus, .h-jaffa:active {background-color:#EB974E }
+.h-lightning-yellow:hover, .h-lightning-yellow:focus, .h-lightning-yellow:active {background-color:#F5AB35 }
+.h-burnt-orange:hover, .h-burnt-orange:focus, .h-burnt-orange:active {background-color:#D35400 }
+.h-buttercup:hover, .h-buttercup:focus, .h-buttercup:active {background-color:#F39C12 }
+.h-ecstasy:hover, .h-ecstasy:focus, .h-ecstasy:active {background-color:#F9690E }
+.h-sandstorm:hover, .h-sandstorm:focus, .h-sandstorm:active {background-color:#F9BF3B }
+.h-jaffa:hover, .h-jaffa:focus, .h-jaffa:active {background-color:#F27935 }
+.h-zest:hover, .h-zest:focus, .h-zest:active {background-color:#E67E22 }
+/* Gray */
+.h-white-smoke:hover, .h-white-smoke:focus, .h-white-smoke:active {background-color:#ececec }
+.h-lynch:hover, .h-lynch:focus, .h-lynch:active {background-color:#6C7A89 }
+.h-pumice:hover, .h-pumice:focus, .h-pumice:active {background-color:#D2D7D3 }
+.h-gallery:hover, .h-gallery:focus, .h-gallery:active {background-color:#EEEEEE }
+.h-silver-sand:hover, .h-silver-sand:focus, .h-silver-sand:active {background-color:#BDC3C7 }
+.h-porcelain:hover, .h-porcelain:focus, .h-porcelain:active {background-color:#ECF0F1 }
+.h-cascade:hover, .h-cascade:focus, .h-cascade:active {background-color:#95A5A6 }
+.h-iron:hover, .h-iron:focus, .h-iron:active {background-color:#DADFE1 }
+.h-edward:hover, .h-edward:focus, .h-edward:active {background-color:#ABB7B7 }
+.h-cararra:hover, .h-cararra:focus, .h-cararra:active {background-color:#F2F1EF }
+.h-silver:hover, .h-silver:focus, .h-silver:active {background-color:#BFBFBF }
+/* Gray Scale */
+.h-g111:hover, .h-g111:active, .h-g111:focus {background-color: #111}
+.h-g222:hover, .h-g222:active, .h-g222:focus {background-color: #222}
+.h-g333:hover, .h-g333:active, .h-g333:focus {background-color: #333}
+.h-g444:hover, .h-g444:active, .h-g444:focus {background-color: #444}
+.h-g555:hover, .h-g555:active, .h-g555:focus {background-color: #555}
+.h-g666:hover, .h-g666:active, .h-g666:focus {background-color: #666}
+.h-g777:hover, .h-g777:active, .h-g777:focus {background-color: #777}
+.h-g888:hover, .h-g888:active, .h-g888:focus {background-color: #888}
+.h-g999:hover, .h-g999:active, .h-g999:focus {background-color: #999}
+.h-gaaa:hover, .h-gaaa:active, .h-gaaa:focus {background-color: #aaa}
+.h-gbbb:hover, .h-gbbb:active, .h-gbbb:focus {background-color: #bbb}
+.h-gccc:hover, .h-gccc:active, .h-gccc:focus {background-color: #ccc}
+.h-gddd:hover, .h-gddd:active, .h-gddd:focus {background-color: #ddd}
+.h-geee:hover, .h-geee:active, .h-geee:focus {background-color: #eee}
+/* Hover Font Flat Colors */
+.hfont-cyan:hover, .hfont-cyan:active, .hfont-cyan:focus {color: #1abc9c }
+.hfont-dark-cyan:hover, .hfont-dark-cyan:active, .hfont-dark-cyan:focus {color: #16a085 }
+.hfont-green:hover, .hfont-green:active, .hfont-green:focus {color: #2ecc71 }
+.hfont-dark-green:hover, .hfont-dark-green:active, .hfont-dark-green:focus {color: #27ae60 }
+.hfont-blue:hover, .hfont-blue:active, .hfont-blue:focus {color: #3498db }
+.hfont-dark-blue:hover, .hfont-dark-blue:active, .hfont-dark-blue:focus {color: #2980b9 }
+.hfont-purple:hover, .hfont-purple:active, .hfont-purple:focus {color: #9b59b6 }
+.hfont-dark-purple:hover, .hfont-dark-purple:active, .hfont-dark-purple:focus {color: #8e44ad }
+.hfont-dark:hover, .hfont-dark:active, .hfont-dark:focus {color: #34495e }
+.hfont-dark-dark:hover, .hfont-dark-dark:active, .hfont-dark-dark:focus {color: #2c3e50 }
+.hfont-yellow:hover, .hfont-yellow:active, .hfont-yellow:focus {color: #f1c40f }
+.hfont-dark-yellow:hover, .hfont-dark-yellow:active, .hfont-dark-yellow:focus {color: #f39c12 }
+.hfont-orange:hover, .hfont-orange:active, .hfont-orange:focus {color: #e67e22 }
+.hfont-dark-orange:hover, .hfont-dark-orange:active, .hfont-dark-orange:focus {color: #d35400 }
+.hfont-red:hover, .hfont-red:active, .hfont-red:focus {color: #ea6153 }
+.hfont-dark-red:hover, .hfont-dark-red:active, .hfont-dark-red:focus {color: #c0392b }
+.hfont-clear:hover, .hfont-clear:active, .hfont-clear:focus {color: #ecf0f1 }
+.hfont-dark-clear:hover, .hfont-dark-clear:active, .hfont-dark-clear:focus {color: #bdc3c7 }
+.hfont-gray:hover, .hfont-gray:active, .hfont-gray:focus {color: #95a5a6 }
+.hfont-dark-gray:hover, .hfont-dark-gray:active, .hfont-dark-gray:focus {color: #7f8c8d }
+.hfont-white:hover, .hfont-white:active, .hfont-white:focus {color: #ffffff }
+.hfont-black:hover, .hfont-black:active, .hfont-black:focus {color: #000000 }
+/* Red */
+.hfont-chestnut-rose:hover, .hfont-chestnut-rose:focus, .hfont-chestnut-rose:active {color:#D24D57 }
+.hfont-pomegranate:hover, .hfont-pomegranate:focus, .hfont-pomegranate:active {color:#F22613 }
+.hfont-red:hover, .hfont-red:focus, .hfont-red:active {color:#FF0000 }
+.hfont-thunderbird:hover, .hfont-thunderbird:focus, .hfont-thunderbird:active {color:#D91E18 }
+.hfont-old-brick:hover, .hfont-old-brick:focus, .hfont-old-brick:active {color:#96281B }
+.hfont-flamingo:hover, .hfont-flamingo:focus, .hfont-flamingo:active {color:#EF4836 }
+.hfont-valencia:hover, .hfont-valencia:focus, .hfont-valencia:active {color:#D64541 }
+.hfont-tall-poppy:hover, .hfont-tall-poppy:focus, .hfont-tall-poppy:active {color:#C0392B }
+.hfont-monza:hover, .hfont-monza:focus, .hfont-monza:active {color:#CF000F }
+.hfont-cinnabar:hover, .hfont-cinnabar:focus, .hfont-cinnabar:active {color:#E74C3C }
+/* Pink */
+.hfont-razzmatazz:hover, .hfont-razzmatazz:focus, .hfont-razzmatazz:active {color:#DB0A5B }
+.hfont-derby:hover, .hfont-derby:focus, .hfont-derby:active {color:#FFECDB }
+.hfont-sunset-orange:hover, .hfont-sunset-orange:focus, .hfont-sunset-orange:active {color:#F64747 }
+.hfont-wax-flower:hover, .hfont-wax-flower:focus, .hfont-wax-flower:active {color:#F1A9A0 }
+.hfont-cabaret:hover, .hfont-cabaret:focus, .hfont-cabaret:active {color:#D2527F }
+.hfont-new-york-pink:hover, .hfont-new-york-pink:focus, .hfont-new-york-pink:active {color:#E08283 }
+.hfont-radical-red:hover, .hfont-radical-red:focus, .hfont-radical-red:active {color:#F62459 }
+.hfont-sunglo:hover, .hfont-sunglo:focus, .hfont-sunglo:active {color:#E26A6A }
+/* Purple */
+.hfont-snuff:hover, .hfont-snuff:focus, .hfont-snuff:active {color:#DCC6E0 }
+.hfont-rebeccapurple:hover, .hfont-rebeccapurple:focus, .hfont-rebeccapurple:active {color:#663399 }
+.hfont-honey-flower:hover, .hfont-honey-flower:focus, .hfont-honey-flower:active {color:#674172 }
+.hfont-wistful:hover, .hfont-wistful:focus, .hfont-wistful:active {color:#AEA8D3 }
+.hfont-plum:hover, .hfont-plum:focus, .hfont-plum:active {color:#913D88 }
+.hfont-seance:hover, .hfont-seance:focus, .hfont-seance:active {color:#9A12B3 }
+.hfont-medium-purple:hover, .hfont-medium-purple:focus, .hfont-medium-purple:active {color:#BF55EC }
+.hfont-light-wisteria:hover, .hfont-light-wisteria:focus, .hfont-light-wisteria:active {color:#BE90D4 }
+.hfont-studio:hover, .hfont-studio:focus, .hfont-studio:active {color:#8E44AD }
+.hfont-wisteria:hover, .hfont-wisteria:focus, .hfont-wisteria:active {color:#9B59B6 }
+/* Blue */
+.hfont-san-marino:hover, .hfont-san-marino:focus, .hfont-san-marino:active {color:#446CB3 }
+.hfont-alice-blue:hover, .hfont-alice-blue:focus, .hfont-alice-blue:active {color:#E4F1FE }
+.hfont-royal-blue:hover, .hfont-royal-blue:focus, .hfont-royal-blue:active {color:#4183D7 }
+.hfont-picton-blue:hover, .hfont-picton-blue:focus, .hfont-picton-blue:active {color:#59ABE3 }
+.hfont-spray:hover, .hfont-spray:focus, .hfont-spray:active {color:#81CFE0 }
+.hfont-shakespeare:hover, .hfont-shakespeare:focus, .hfont-shakespeare:active {color:#52B3D9 }
+.hfont-humming-bird:hover, .hfont-humming-bird:focus, .hfont-humming-bird:active {color:#C5EFF7 }
+.hfont-picton-blue:hover, .hfont-picton-blue:focus, .hfont-picton-blue:active {color:#22A7F0 }
+.hfont-curious-blue:hover, .hfont-curious-blue:focus, .hfont-curious-blue:active {color:#3498DB }
+.hfont-madison:hover, .hfont-madison:focus, .hfont-madison:active {color:#2C3E50 }
+.hfont-dodger-blue:hover, .hfont-dodger-blue:focus, .hfont-dodger-blue:active {color:#19B5FE }
+.hfont-ming:hover, .hfont-ming:focus, .hfont-ming:active {color:#336E7B }
+.hfont-ebony-clay:hover, .hfont-ebony-clay:focus, .hfont-ebony-clay:active {color:#22313F }
+.hfont-malibu:hover, .hfont-malibu:focus, .hfont-malibu:active {color:#6BB9F0 }
+.hfont-curious-blue:hover, .hfont-curious-blue:focus, .hfont-curious-blue:active {color:#1E8BC3 }
+.hfont-chambray:hover, .hfont-chambray:focus, .hfont-chambray:active {color:#3A539B }
+.hfont-pickled-bluewood:hover, .hfont-pickled-bluewood:focus, .hfont-pickled-bluewood:active {color:#34495E }
+.hfont-hoki:hover, .hfont-hoki:focus, .hfont-hoki:active {color:#67809F }
+.hfont-jelly-bean:hover, .hfont-jelly-bean:focus, .hfont-jelly-bean:active {color:#2574A9 }
+.hfont-jacksons-purple:hover, .hfont-jacksons-purple:focus, .hfont-jacksons-purple:active {color:#1F3A93 }
+.hfont-jordy-blue:hover, .hfont-jordy-blue:focus, .hfont-jordy-blue:active {color:#89C4F4 }
+.hfont-steel-blue:hover, .hfont-steel-blue:focus, .hfont-steel-blue:active {color:#4B77BE }
+.hfont-fountain-blue:hover, .hfont-fountain-blue:focus, .hfont-fountain-blue:active {color:#5C97BF }
+/* Green */
+.hfont-medium-turquoise:hover, .hfont-medium-turquoise:focus, .hfont-medium-turquoise:active {color:#4ECDC4 }
+.hfont-aqua-island:hover, .hfont-aqua-island:focus, .hfont-aqua-island:active {color:#A2DED0 }
+.hfont-gossip:hover, .hfont-gossip:focus, .hfont-gossip:active {color:#87D37C }
+.hfont-dark-sea-green:hover, .hfont-dark-sea-green:focus, .hfont-dark-sea-green:active {color:#90C695 }
+.hfont-eucalyptus:hover, .hfont-eucalyptus:focus, .hfont-eucalyptus:active {color:#26A65B }
+.hfont-caribbean-green:hover, .hfont-caribbean-green:focus, .hfont-caribbean-green:active {color:#03C9A9 }
+.hfont-silver-tree:hover, .hfont-silver-tree:focus, .hfont-silver-tree:active {color:#68C3A3 }
+.hfont-downy:hover, .hfont-downy:focus, .hfont-downy:active {color:#65C6BB }
+.hfont-mountain-meadow:hover, .hfont-mountain-meadow:focus, .hfont-mountain-meadow:active {color:#1BBC9B }
+.hfont-light-sea-green:hover, .hfont-light-sea-green:focus, .hfont-light-sea-green:active {color:#1BA39C }
+.hfont-medium-aquamarine:hover, .hfont-medium-aquamarine:focus, .hfont-medium-aquamarine:active {color:#66CC99 }
+.hfont-turquoise:hover, .hfont-turquoise:focus, .hfont-turquoise:active {color:#36D7B7 }
+.hfont-madang:hover, .hfont-madang:focus, .hfont-madang:active {color:#C8F7C5 }
+.hfont-riptide:hover, .hfont-riptide:focus, .hfont-riptide:active {color:#86E2D5 }
+.hfont-shamrock:hover, .hfont-shamrock:focus, .hfont-shamrock:active {color:#2ECC71 }
+.hfont-mountain-meadow:hover, .hfont-mountain-meadow:focus, .hfont-mountain-meadow:active {color:#16a085 }
+.hfont-emerald:hover, .hfont-emerald:focus, .hfont-emerald:active {color:#3FC380 }
+.hfont-green-haze:hover, .hfont-green-haze:focus, .hfont-green-haze:active {color:#019875 }
+.hfont-free-speech-aquamarine:hover, .hfont-free-speech-aquamarine:focus, .hfont-free-speech-aquamarine:active {color:#03A678 }
+.hfont-ocean-green:hover, .hfont-ocean-green:focus, .hfont-ocean-green:active {color:#4DAF7C }
+.hfont-niagara:hover, .hfont-niagara:focus, .hfont-niagara:active {color:#2ABB9B }
+.hfont-jade:hover, .hfont-jade:focus, .hfont-jade:active {color:#00B16A }
+.hfont-salem:hover, .hfont-salem:focus, .hfont-salem:active {color:#1E824C }
+.hfont-observatory:hover, .hfont-observatory:focus, .hfont-observatory:active {color:#049372 }
+.hfont-jungle-green:hover, .hfont-jungle-green:focus, .hfont-jungle-green:active {color:#26C281 }
+/* Yellow */
+.hfont-cream-can:hover, .hfont-cream-can:focus, .hfont-cream-can:active {color:#F5D76E }
+.hfont-ripe-lemon:hover, .hfont-ripe-lemon:focus, .hfont-ripe-lemon:active {color:#F7CA18 }
+.hfont-saffron:hover, .hfont-saffron:focus, .hfont-saffron:active {color:#F4D03F }
+/* Orange */
+.hfont-cape-honey:hover, .hfont-cape-honey:focus, .hfont-cape-honey:active {color:#FDE3A7 }
+.hfont-california:hover, .hfont-california:focus, .hfont-california:active {color:#F89406 }
+.hfont-fire-bush:hover, .hfont-fire-bush:focus, .hfont-fire-bush:active {color:#EB9532 }
+.hfont-tahiti-gold:hover, .hfont-tahiti-gold:focus, .hfont-tahiti-gold:active {color:#E87E04 }
+.hfont-casablanca:hover, .hfont-casablanca:focus, .hfont-casablanca:active {color:#F4B350 }
+.hfont-crusta:hover, .hfont-crusta:focus, .hfont-crusta:active {color:#F2784B }
+.hfont-jaffa:hover, .hfont-jaffa:focus, .hfont-jaffa:active {color:#EB974E }
+.hfont-lightning-yellow:hover, .hfont-lightning-yellow:focus, .hfont-lightning-yellow:active {color:#F5AB35 }
+.hfont-burnt-orange:hover, .hfont-burnt-orange:focus, .hfont-burnt-orange:active {color:#D35400 }
+.hfont-buttercup:hover, .hfont-buttercup:focus, .hfont-buttercup:active {color:#F39C12 }
+.hfont-ecstasy:hover, .hfont-ecstasy:focus, .hfont-ecstasy:active {color:#F9690E }
+.hfont-sandstorm:hover, .hfont-sandstorm:focus, .hfont-sandstorm:active {color:#F9BF3B }
+.hfont-jaffa:hover, .hfont-jaffa:focus, .hfont-jaffa:active {color:#F27935 }
+.hfont-zest:hover, .hfont-zest:focus, .hfont-zest:active {color:#E67E22 }
+/* Gray */
+.hfont-white-smoke:hover, .hfont-white-smoke:focus, .hfont-white-smoke:active {color:#ececec }
+.hfont-lynch:hover, .hfont-lynch:focus, .hfont-lynch:active {color:#6C7A89 }
+.hfont-pumice:hover, .hfont-pumice:focus, .hfont-pumice:active {color:#D2D7D3 }
+.hfont-gallery:hover, .hfont-gallery:focus, .hfont-gallery:active {color:#EEEEEE }
+.hfont-silver-sand:hover, .hfont-silver-sand:focus, .hfont-silver-sand:active {color:#BDC3C7 }
+.hfont-porcelain:hover, .hfont-porcelain:focus, .hfont-porcelain:active {color:#ECF0F1 }
+.hfont-cascade:hover, .hfont-cascade:focus, .hfont-cascade:active {color:#95A5A6 }
+.hfont-iron:hover, .hfont-iron:focus, .hfont-iron:active {color:#DADFE1 }
+.hfont-edward:hover, .hfont-edward:focus, .hfont-edward:active {color:#ABB7B7 }
+.hfont-cararra:hover, .hfont-cararra:focus, .hfont-cararra:active {color:#F2F1EF }
+.hfont-silver:hover, .hfont-silver:focus, .hfont-silver:active {color:#BFBFBF }
+/* Gray Scale */
+.hfont-g111:hover, .hfont-g111:active, .hfont-g111:focus {color: #111}
+.hfont-g222:hover, .hfont-g222:active, .hfont-g222:focus {color: #222}
+.hfont-g333:hover, .hfont-g333:active, .hfont-g333:focus {color: #333}
+.hfont-g444:hover, .hfont-g444:active, .hfont-g444:focus {color: #444}
+.hfont-g555:hover, .hfont-g555:active, .hfont-g555:focus {color: #555}
+.hfont-g666:hover, .hfont-g666:active, .hfont-g666:focus {color: #666}
+.hfont-g777:hover, .hfont-g777:active, .hfont-g777:focus {color: #777}
+.hfont-g888:hover, .hfont-g888:active, .hfont-g888:focus {color: #888}
+.hfont-g999:hover, .hfont-g999:active, .hfont-g999:focus {color: #999}
+.hfont-gaaa:hover, .hfont-gaaa:active, .hfont-gaaa:focus {color: #aaa}
+.hfont-gbbb:hover, .hfont-gbbb:active, .hfont-gbbb:focus {color: #bbb}
+.hfont-gccc:hover, .hfont-gccc:active, .hfont-gccc:focus {color: #ccc}
+.hfont-gddd:hover, .hfont-gddd:active, .hfont-gddd:focus {color: #ddd}
+.hfont-geee:hover, .hfont-geee:active, .hfont-geee:focus {color: #eee}
