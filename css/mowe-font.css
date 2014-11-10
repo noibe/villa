@@ -1,20 +1,7 @@
-@font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 100;
-	src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
-}
+/*!
+ * Mowe Typeface v1.0.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
 
-@font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 300;
-	src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 600;
-	src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://fonts.gstatic.com/s/opensans/v10/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
-}
+@import url('//fonts.googleapis.com/css?family=Josefin+Sans:100,300,600|Open+Sans:300,400,600');
