@@ -17,17 +17,44 @@
 	<![endif]-->
 </head>
 <body>
-<h1>Hello World!</h1>
-<h2>Hello World!</h2>
-<h3>Hello World!</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex excepturi itaque maiores natus nobis nostrum perferendis, quam sit veritatis! Dolor eos facilis in nulla optio pariatur reiciendis velit! Modi.</p>
 
-<div class="container dark font-clear">
-	<h1 class="font-red">Hello World!</h1>
-	<h2>Hello World!</h2>
-	<h3>Hello World!</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex excepturi itaque maiores natus nobis nostrum perferendis, quam sit veritatis! Dolor eos facilis in nulla optio pariatur reiciendis velit! Modi.</p>
+<style type="text/css">
+	.nav {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		z-index: 1;
+	}
 
+	.nav .item {}
+
+	.nav .item .link {
+		display: block;
+		min-width: 500px;
+		padding: 15px 30px;
+	}
+</style>
+
+<div class="nav red">
+	<div class="item blue">
+		<a class="link" href="#">About</a>
+	</div>
+	<div class="item yellow">
+		<a class="link" href="#">About</a>
+	</div>
+	<div class="item green">
+		<a class="link" href="#">About</a>
+	</div>
 </div>
+
 </body>
 </html>
