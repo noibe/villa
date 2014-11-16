@@ -19,9 +19,7 @@
 <body class="red">
 
 <style type="text/css">
-	body {
-
-	}
+	body {}
 
 	.nav {
 		position: fixed;
@@ -70,7 +68,7 @@
 	}
 
 	.nav .brand {
-		font-weight: 800;
+		font-weight: 600;
 		font-size: 23px;
 		letter-spacing: -0.07em;
 	}
@@ -82,6 +80,7 @@
 
 	.color {
 		background-color: #00EBBB;
+		background-color: #669999 ;
 	}
 </style>
 
@@ -90,7 +89,7 @@
 		<div class="header">
 			<div class="item">
 				<a class="link font-g666" href="#">
-					<span class="brand">Webtal<span class="slogan">telecom</span></span>
+					<span class="brand"><span class="slogan">telecom</span></span>
 				</a>
 			</div>
 		</div>
@@ -115,8 +114,9 @@
 
 	.hero {
 		background-image: url("img/farm.jpg");
-		background-position: center bottom;
+		background-position: center 70%;
 	}
+
 	.hero .container {
 		max-width: 1000px;
 		padding-top: 320px;
@@ -125,11 +125,11 @@
 
 	.hero h1 {
 		font-family: 'open sans';
-		font-size: 32px;
+		font-size: 34px;
 		font-weight: 300;
 		text-align: left;
-		text-shadow: 1px 2px 7px rgba(0,0,0,.7);
-		max-width: 480px;
+		text-shadow: -2px 2px 5px rgba(0,0,0,.5);
+		max-width: 520px;
 		margin-bottom: 140px;
 	}
 
@@ -150,6 +150,14 @@
 		height: 60px;
 		margin: 0 auto;
 		width: 60px;
+		box-shadow: 0px 0px 2px #ffffff, 0px 0px 1px #ffffff inset;
+	}
+	
+	.hero .foo:hover {
+		box-shadow: 0px 0px 3px #ffffff inset;
+		padding: 2px;
+		margin-top: -2px;
+		transition: all .2s linear;
 	}
 
 	.hero a {
@@ -159,8 +167,8 @@
 
 <div class="hero font-white" id="foo">
 	<div class="container">
-		<h1 class=""><span>A melhor Internet de Palmital</span> por apenas <span><span>R$54,00</span> R$29,00</span>*</h1>
-		<a href=""><div class="foo h-white"></div></a>
+		<h1 class=""><span></span> por apenas <span><span>R$54,00</span> R$29,00</span>*</h1>
+		<a href=""><div class="foo"></div></a>
 	</div>
 </div>
 
@@ -176,11 +184,16 @@
 
 <script>
 	document.getElementsByClassName('hero')[0].style.height = window.innerHeight + "px";
+
+	window.onresize = function() {
+		document.getElementsByClassName('hero')[0].style.height = window.innerHeight + "px";
+	}
+
 	window.onload = function() {
 		var wrapper = document.getElementById("wrapper"); //get div
 		var h = wrapper.getBoundingClientRect(); //get height
 
-		scrollTo(h.top);
+		//scrollTo(h.top);
 
 		function scrollTo(x) {
 			//elapsed
