@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Villa</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="js/villa.js"></script>
+	<link rel="stylesheet" href="css/villa-foundation.css" />
+	<link rel="stylesheet" href="css/villa-grid.css"/>
+	<link rel="stylesheet" href="css/villa.css" />
+	<link rel="stylesheet" href="css/mowe-font.css" />
+	<link rel="stylesheet" href="css/mowe.css" />
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/villacolors-full.min.css" />
+		<script src="js/html5shiv.js"></script>
+		<script src="js/html5shiv-printshiv.js"></script>
+	<![endif]-->
+</head>
+<body class="red">
+
+<style type="text/css">
+	body {}
+
+	.nav {
+		position: fixed;
+		user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.nav,
+	.nav .container {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		justify-content: space-between;
+	}
+
+	.nav .menu {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-end;
+		font-size: 15px;
+	}
+
+	.nav .item .link {
+		display: block;
+		min-width: 60px;
+		font-weight: 700;
+		padding: 20px 25px;
+	}
+
+	.nav .header .item .link {
+		padding: 14px;
+	}
+
+	.nav .brand {
+		font-weight: 600;
+		font-size: 23px;
+		letter-spacing: -0.07em;
+	}
+
+	.nav .slogan {
+		font-weight: 300;
+		margin-left: 3px;
+	}
+
+	.color {
+		background-color: #00EBBB;
+		background-color: #669999 ;
+	}
+</style>
+
+<div class="nav white">
+	<!--<div class="container">-->
+		<div class="header">
+			<div class="item">
+				<a class="link font-g666" href="#">
+					<span class="brand"><span class="slogan">telecom</span></span>
+				</a>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="item">
+				<a class="link font-g666 hfont-light-sea-green" href="#">Planos</a>
+			</div>
+			<div class="item">
+				<a class="link font-g666 hfont-light-sea-green" href="#">Fibra</a>
+			</div>
+			<div class="item">
+				<a class="link font-g666 hfont-light-sea-green" href="#">Sobre</a>
+			</div>
+			<div class="item color">
+				<a class="link font-white" href="#">Contato</a>
+			</div>
+		</div>
+	<!--</div>-->
+</div>
+
+<style type="text/css">
+
+	.hero {
+		background-image: url("img/farm.jpg");
+		background-position: center 70%;
+	}
+
+	.hero .container {
+		max-width: 1000px;
+		padding-top: 320px;
+		padding-bottom: 80px;
+	}
+
+	.hero h1 {
+		font-family: 'open sans';
+		font-size: 34px;
+		font-weight: 300;
+		text-align: left;
+		text-shadow: -2px 2px 5px rgba(0,0,0,.5);
+		max-width: 520px;
+		margin-bottom: 140px;
+	}
+
+	.hero h1 span {
+		font-weight: 600;
+	}
+
+	.hero h1 span span {
+		font-size: 24px;
+		font-weight: 300;
+		text-decoration: line-through;
+	}
+
+	.hero .foo {
+		border-radius: 50%;
+		border: solid 2px #ffffff;
+		display: block;
+		height: 60px;
+		margin: 0 auto;
+		width: 60px;
+		box-shadow: 0 0 2px #ffffff, 0 0 1px #ffffff inset;
+	}
+	
+	.hero .foo:hover {
+		box-shadow: 0 0 3px #ffffff inset;
+		padding: 2px;
+		margin-top: -2px;
+		transition: all .2s linear;
+	}
+
+	.hero a {
+		border-radius: 50%;
+	}
+</style>
+
+<div class="hero font-white" id="foo">
+	<div class="container">
+		<h1 class=""><span></span> por apenas <span><span>R$54,00</span> R$29,00</span>*</h1>
+		<a href=""><div class="foo"></div></a>
+	</div>
+</div>
+
+<style type="text/css">
+	.new-foo {
+		height: 600px;
+		margin-bottom: 200px;
+	}
+</style>
+
+<div class="new-foo white"></div>
+<div id="wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dignissimos error ex hic laborum natus nostrum qui quisquam similique, voluptatibus? Aut, deserunt fugiat impedit nemo nisi nulla praesentium sed sit.</div>
+
+<script>
+	document.getElementsByClassName('hero')[0].style.height = window.innerHeight + "px";
+
+	window.onresize = function() {
+		document.getElementsByClassName('hero')[0].style.height = window.innerHeight + "px";
+	}
+
+	window.onload = function() {
+		var wrapper = document.getElementById("wrapper"); //get div
+		var h = wrapper.getBoundingClientRect(); //get height
+
+		//scrollTo(h.top);
+
+		function scrollTo(x) {
+			//elapsed
+			var e;
+			//duration in milli seconds
+			var d = 1000;
+			//b as in begin, where to start (you could get this dynamically)
+			var b = 0;
+			//start time, when the animation starts
+			var s = (new Date()).getTime(); //start time
+			//the magic
+			var t = setInterval(function () {
+				//calculate elapse time
+				e = (new Date()).getTime() - s;
+				//check if elapse time is less than duration
+				if (e < d) {
+					//animate using an easing equation
+					window.scrollTo(0, ease(e, b, x, d));
+				} else {
+					//animation is complete, stop interval timer
+					clearInterval(t);
+					t = null;
+				}
+			}, 4);
+		}
+
+		//Info about the letters (I think)
+		//t = elapse time
+		//b = where to begin
+		//c = change in comparison to begin
+		//d = duration of animation
+		function noease(t, b, c, d) {
+			t /= d;
+			return b + c * (t);
+		}
+
+		function ease(t, b, c, d) {
+			return Math.round(-c * Math.cos(t / d * (Math.PI / 2)) + c + b);
+		}
+	}
+</script>
+</body>
+</html>

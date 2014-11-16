@@ -61,11 +61,11 @@ div.medopacity {
 }
 
 div.nowidth {
-        width: 0px;
+        width: 0;
 }
 
 div.noheight {
-        height: 0px;
+        height: 0;
 }
 
 div.noopacity {
@@ -94,7 +94,7 @@ div#fx-tests div.noback {
 }
 
 div.chain, div.chain div { width: 100px; height: 20px; position: relative; float: left; }
-div.chain div { position: absolute; top: 0px; left: 0px; }
+div.chain div { position: absolute; top: 0; left: 0; }
 
 div.chain.test { background: red; }
 div.chain.test div { background: green; }
