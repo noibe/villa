@@ -14,6 +14,7 @@
  */
 /* FONT PATH
  * -------------------------- */
+
 @font-face {
     font-family: 'FontAwesome';
     src: url('../font/fontawesome-webfont.eot');
@@ -648,3 +649,34 @@
 .icon-cc:before {content: "\f20a"}
 .icon-shekel:before, .icon-sheqel:before, .icon-ils:before {content: "\f20b"}
 .icon-meanpath:before {content: "\f20c"}
+
+
+
+@font-face {
+    font-family: 'magma';
+    src:url("../font/magma.eot");
+    src:url("../font/magma.eot") format('embedded-opentype'),
+    url("../font/magma.woff") format('woff'),
+    url("../font/magma.ttf") format('truetype'),
+    url("../font/magma.svg") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.magma-logo {
+    display: inline-block;
+    font: normal normal normal 14px/1 magma;
+    font-size: inherit;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.magma-logo:before {
+    content: "\e600";
+}

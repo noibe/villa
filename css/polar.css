@@ -15,6 +15,11 @@ body {
 	height: 100%;
 }
 
+.bg-active {
+	background-image: url('../img/wall01.jpg') !important;
+	background-position: center center;
+}
+
 /*! Villa Maia v1.0.0 | MIT License | git.io/noibe/villa */
 
 .maia {
@@ -74,4 +79,16 @@ body {
 .maia [class^="icon-"],
 .maia [class*=" icon-"] {
 	padding-top: 3px;
+}
+
+.maia .start {
+	font-size: 24px;
+}
+
+.maia .start a {
+	cursor: default;
+}
+
+.maia .start span {
+	padding: 0 20px;
 }
