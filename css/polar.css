@@ -71,6 +71,45 @@ body {
 	align-items: center;
 }
 
+.maia .sign a {
+	flex-flow: column-reverse;
+	align-items: flex-end;
+}
+
+.maia .sign span {
+	align-self: flex-end;
+}
+
+.maia .item .sign-on,
+.maia .item .sign-off {
+	display: block;
+	height: 4px;
+	margin: 0 auto;
+	margin-top: 6px;
+	padding: 0 3px;
+	text-align: center;
+}
+
+.maia .item .sign-on {
+	background-color: #19b5fe;
+	border-bottom-left-radius: 10%;
+	border-bottom-right-radius: 10%;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+	transition: all 1s;
+}
+
+.maia .item .sign-icon {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row;
+	align-items: flex-end;
+	padding: 0;
+}
+
 .maia span {
 	align-self: center;
 	padding: 0 15px;
@@ -78,7 +117,7 @@ body {
 
 .maia [class^="icon-"],
 .maia [class*=" icon-"] {
-	padding-top: 3px;
+	font-size: 14px;
 }
 
 .maia .start {
