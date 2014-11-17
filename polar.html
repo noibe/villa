@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
+	<meta charset="utf-8"/>
 	<title>Villa</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 	<script src="js/villa.js"></script>
-	<link rel="stylesheet" href="css/villa-foundation.css" />
+	<link rel="stylesheet" href="css/villa-foundation.css"/>
 	<link rel="stylesheet" href="css/villa-grid.css"/>
-	<link rel="stylesheet" href="css/villa.css" />
-	<link rel="stylesheet" href="css/mowe-font.css" />
-	<link rel="stylesheet" href="css/mowe.css" />
+	<link rel="stylesheet" href="css/villa.css"/>
+	<link rel="stylesheet" href="css/polar-font.css"/>
+	<link rel="stylesheet" href="css/polar.css"/>
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/villa-colors-full.min.css"/>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/html5shiv-printshiv.js"></script>
+	<![endif]-->
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/polar.js"></script>
 </head>
-<body class="red">
+<body class="clear">
 
 <style type="text/css">
-	html,
-	body {
-		height: 100%;
-	}
 
-	#home-holder {
-		width: 100%;
-		height: 100%;
-	}
-
-	.maia {
-		position: fixed;
-		user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		width: 100%;
-		z-index: 1;
-	}
-
-	.maia,
-	.maia .container {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-flow: row nowrap;
-		justify-content: space-between;
-	}
 </style>
 
-<div id="home-holder" class="blue">
-	<div class="maia white">
-		<div class="start item">
+<div id="home-holder">
 
-		</div>
+	<div class="maia white font-g444">
+
+		<header>
+			<div class="start item">
+				<a href="#"></a>
+			</div>
+			<div class="menu-bar">
+				<li class="item"><a href="#" class="a-blue"><span>Endereço</span></a></li>
+				<li class="item"><a href="#" class="a-blue"><span>Contato</span></a></li>
+				<li class="item"><a href="#" class="a-blue"><span>Foto</span></a></li>
+				<li class="item"><a href="#" class="a-blue"><span>Sobre</span></a></li>
+			</div>
+		</header>
+
+		<footer>
+			<ul class="notification-bar">
+				<li class="item h-dark-clear"><span class="clock-text"></span></li>
+				<li class="item h-dark-clear"><a href="#"><span>Eduardo Barros</span></a></li>
+				<li class="item h-dark-clear"><a href="#"><span class="icon-th-large"></span></a></li>
+			</ul>
+		</footer>
+
 	</div>
+
 </div>
+
+<script>
+	//$('.maia.content').css('width', $('.maia').width() - $('.maia.header'))
+</script>
 
 </body>
 </html>

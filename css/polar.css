@@ -1,0 +1,77 @@
+/*!
+ * Polar v1.0.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
+
+html,
+body {
+	font-family: 'open sans';
+	height: 100%;
+}
+
+#home-holder {
+	width: 100%;
+	height: 100%;
+}
+
+/*! Villa Maia v1.0.0 | MIT License | git.io/noibe/villa */
+
+.maia {
+	font-size: 16px;
+	height: 38px;
+	position: fixed;
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	width: 100%;
+	z-index: 1;
+}
+
+.maia,
+.maia .container,
+.maia .item,
+.maia .item a,
+.maia header,
+.maia header .menu-bar,
+.maia footer,
+.maia footer .notification-bar {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.maia,
+.maia .container {
+	align-items: stretch;
+	flex-flow: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.maia .item,
+.maia header,
+.maia header .menu-bar,
+.maia footer,
+.maia footer .notification-bar {
+	align-items: stretch;
+}
+
+.maia .item a {
+	align-items: center;
+}
+
+.maia span {
+	align-self: center;
+	padding: 0 15px;
+}
+
+.maia [class^="icon-"],
+.maia [class*=" icon-"] {
+	padding-top: 3px;
+}
