@@ -84,18 +84,14 @@ body {
 .maia .item .sign-off {
 	display: block;
 	height: 4px;
-	margin: 0 auto;
-	margin-top: 6px;
+	margin: 6px auto 0;
 	padding: 0 3px;
 	text-align: center;
 }
 
 .maia .item .sign-on {
 	background-color: #19b5fe;
-	border-bottom-left-radius: 10%;
-	border-bottom-right-radius: 10%;
-	border-top-left-radius: 50%;
-	border-top-right-radius: 50%;
+	border-radius: 50% 50% 10% 10%;
 	transition: all 1s;
 }
 
