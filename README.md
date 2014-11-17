@@ -12,7 +12,8 @@ villa/
 │   ├── villa.min.css
 │   └── villa.min.css
 └── js/
-     └── bootstrap.min.js
+     ├── villa.js
+     └── villa.min.js
 ```
 
 ##Villa
@@ -24,4 +25,9 @@ villa/
 ##Villa UI
 
 ###Mowe
+
+Objectives:
+
 ###Polar
+
+Objectives:
