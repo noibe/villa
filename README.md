@@ -28,14 +28,14 @@ villa/
 
 Objectives:
 
--Cross-browser.
--Actual design.
--Unidimensional and Bidimensional.
+- Cross-browser.
+- Actual design.
+- Unidimensional and Bidimensional.
 
 ###Polar
 
 Objectives:
 
--HTML5.
--Actual design.
--Full screen.
+- HTML5.
+- Actual design.
+- Full screen.
