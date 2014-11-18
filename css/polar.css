@@ -17,7 +17,7 @@ body {
 }
 
 .bg-active {
-	background-image: url('../img/way.jpg') !important;
+	background-image: url('../img/wall01.jpg') !important;
 	background-position: center center;
 }
 
@@ -108,7 +108,7 @@ body {
 .maia .item .sign-off {
 	display: block;
 	height: 4px;
-	margin: 6px auto 0;
+	margin: 7px auto 0;
 	padding: 0 3px;
 	text-align: center;
 }

@@ -16,7 +16,12 @@ function ajustClock() {
 
 window.onload = function() {
     ajustClock();
+    $('#home-holder').css('height', $(window).height());
 }
+
+$(window).resize(function() {
+    $('#home-holder').css('height', $(window).height());
+});
 
 window.setInterval(function(){
     ajustClock();
