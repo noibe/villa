@@ -17,13 +17,15 @@ body {
 }
 
 .bg-active {
-	background-image: url('../img/winter01.jpg') !important;
+	background-image: url('../img/way.jpg') !important;
 	background-position: center center;
 }
 
 /*! Villa Maia v1.0.0 | MIT License | git.io/noibe/villa */
 
 .maia {
+	background-color: #ffffff;
+	color: #444444;
 	font-size: 15px;
 	line-height: 16px;
 	height: 38px;
@@ -35,7 +37,7 @@ body {
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	width: 100%;
-	z-index: 100;
+	z-index: 5000;
 	box-shadow: inset 0 -10px 38px -19px rgba(0,0,0,.4);
 }
 
@@ -73,6 +75,20 @@ body {
 .maia .item,
 .maia .item a {
 	cursor: default;
+}
+
+.maia .item:focus,
+.maia .item a:focus {
+	outline: 0;
+}
+
+.maia .item:hover {
+	color: #222222;
+	background-color: #ecf0f1;
+}
+
+.maia .item:active {
+	background-color: #bdc3c7;
 }
 
 .maia .item a {
@@ -132,6 +148,47 @@ body {
 	cursor: default;
 }
 
+.maia .start:hover {
+	background: none;
+	color: #19b5fe; /*dodger blue*/
+}
+
 .maia .start span {
-	padding: 0 20px;
+	padding: 0 23px;
+}
+
+
+/* BOOTSTRAP MODAL */
+
+.modal-open {
+	overflow: hidden;
+}
+.modal {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 38px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 500;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+}
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.modal-dialog {
+	position: relative;
+	width: auto;
+	margin: 200px;
+}
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
 }
