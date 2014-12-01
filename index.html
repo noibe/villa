@@ -81,6 +81,7 @@
 		margin-left: 3px;
 	}
 
+	/*noinspection CssOverwrittenProperties*/
 	.color {
 		background-color: #00EBBB;
 		background-color: #669999 ;
@@ -116,8 +117,7 @@
 <style type="text/css">
 
 	.hero {
-		background-image: url("img/farm.jpg");
-		background-position: center 70%;
+		background: url("img/farm.jpg") center 70%;
 	}
 
 	.hero .container {
@@ -127,6 +127,7 @@
 	}
 
 	.hero h1 {
+		/*noinspection CssNoGenericFontName*/
 		font-family: 'open sans';
 		font-size: 34px;
 		font-weight: 300;
@@ -190,7 +191,7 @@
 
 	window.onresize = function() {
 		document.getElementsByClassName('hero')[0].style.height = window.innerHeight + "px";
-	}
+	};
 
 	window.onload = function() {
 		var wrapper = document.getElementById("wrapper"); //get div
