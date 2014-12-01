@@ -1,4 +1,4 @@
-colors = [
+[
 	{"name":"cyan", "code": "#1abc9c"},
 	{"name":"dark-cyan", "code": "#16a085"},
 	{"name":"green", "code": "#2ecc71"},

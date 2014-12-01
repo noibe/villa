@@ -18,7 +18,7 @@ window.onload = function() {
     ajustClock();
     $('#home-holder').css('height', $(window).height());
     $('.sidebar').css('height', $(window).height() - $('.maia').height());
-}
+};
 
 $(window).resize(function() {
     $('#home-holder').css('height', $(window).height());
@@ -56,15 +56,15 @@ window.setInterval(function(){
                     this.$element.trigger('loaded.bs.modal')
                 }, this))
         }
-    }
+    };
 
-    Notification.VERSION  = '0.2.0'
+    Notification.VERSION  = '0.2.0';
 
     Notification.DEFAULTS = {
         backdrop: false,
         keyboard: true,
         show: true
-    }
+    };
 
     Notification.prototype.toggle = function (_relatedTarget) {
         return this.isShown ? this.hide() : this.show(_relatedTarget)
@@ -84,14 +84,14 @@ window.setInterval(function(){
 
         this.escape();
 
-        this.$element.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
+        this.$element.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this));
 
         that.$element
             .show()
             .scrollTop(0);
 
         return false;
-    }
+    };
 
     Notification.prototype.hide = function (e) {
         if (e) e.preventDefault();
@@ -113,14 +113,14 @@ window.setInterval(function(){
         this.$element
             .removeClass('in')
             .attr('aria-hidden', true)
-            .off('click.dismiss.bs.modal')
+            .off('click.dismiss.bs.modal');
 
         $.support.transition && this.$element.hasClass('fade') ?
             this.$element
                 .one('bsTransitionEnd', $.proxy(this.hideModal, this))
                 .emulateTransitionEnd(300) :
             this.hideModal()
-    }
+    };
 
     Notification.prototype.escape = function () {
         if (this.isShown && this.options.keyboard) {
@@ -132,11 +132,11 @@ window.setInterval(function(){
             this.$element.off('keyup.dismiss.bs.modal')
         }
         console.log(this);
-    }
+    };
 
     Notification.prototype.hideModal = function () {
         this.$element.hide()
-    }
+    };
 
     // NOTIFICATION PLUGIN DEFINITION
     // =======================

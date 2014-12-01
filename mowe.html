@@ -11,100 +11,59 @@
 	<link rel="stylesheet" href="css/villa.css" />
 	<link rel="stylesheet" href="css/mowe-font.css" />
 	<link rel="stylesheet" href="css/mowe.css" />
+	<script src="js/jquery-2.1.1.min.js"></script>
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" type="text/css" href="css/material-colors.css"/>
 		<script src="js/html5shiv.js"></script>
 		<script src="js/html5shiv-printshiv.js"></script>
 	<![endif]-->
 </head>
-<body class="red">
-
-
+<body class="">
 
 <style type="text/css">
 	body {}
 
-	.nav {
-		position: fixed;
-		user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		width: 100%;
-		z-index: 1;
-	}
-
-	.nav,
-	.nav .container {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-flow: row wrap;
-		justify-content: space-between;
-	}
-
-	.nav .menu {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: flex-end;
-		font-size: 15px;
-	}
-
-	.nav .item .link {
-		display: block;
-		min-width: 60px;
-		font-weight: 700;
-		padding: 20px 25px;
-	}
-
-	.nav .header .item .link {
-		padding: 14px;
-	}
-
-	.nav .brand {
-		font-weight: 600;
-		font-size: 23px;
-		letter-spacing: -0.07em;
-	}
-
-	.nav .slogan {
-		font-weight: 300;
-		margin-left: 2px;
-	}
-
-	.color {
-		background-color: #00EBBB;
-		background-color: #669999 ;
+	.nav header:hover .slogan {
+		padding-left: 0px !important;
+		transition: all .1s linear;
 	}
 </style>
 
-<div class="nav white">
+<div class="nav">
 	<!--<div class="container">-->
-		<div class="header">
+		<!--
+			TODO - menu and collapse
+			Need to analyses the menu and develop a amazing collapse API with JS
+		-->
+		<header>
 			<div class="item">
-				<a class="link font-grey-700" href="#">
-					<span class="brand">Webtal<span class="slogan">telecom</span></span>
+				<a class="brand font-white" href="#">
+					<span class="brand-text">WEBTal<!--<span class="slogan">telecom</span>--></span>
 				</a>
+				<!--
+					TODO - vector to brand name
+				-->
+				<a class="logo font-grey-700" href="#">
+					<svg id="bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+						<g>
+							<path d="M332,203.5c151.6,163.9,151.6,429.1,0,592.9"></path>
+							<path d="M403.5,111.8c199.7,214.6,199.7,561.9,0,776.5"></path>
+							<path d="M468,20c266.7,265.3,266.7,694.7,0,960"></path>
+						</g>
+					</svg>
+				</a>
+				<!--<a class="slogan font-grey-700" href="#"> <span class="slogan-text">telecom</span> </a>-->
 			</div>
-		</div>
-		<div class="menu">
+		</header>
+		<div class="menu font-grey-400">
 			<div class="item">
-				<a class="link font-grey-700 hfont-grey-500" href="#">Planos</a>
+				<a class="link hfont-teal-a700" href="#">Planos</a>
 			</div>
 			<div class="item">
-				<a class="link font-grey-700 hfont-grey-500" href="#">Fibra</a>
+				<a class="link hfont-teal-a700" href="#">Fibra</a>
 			</div>
 			<div class="item">
-				<a class="link font-grey-700 hfont-grey-500" href="#">Sobre</a>
+				<a class="link hfont-teal-a700" href="#">Sobre</a>
 			</div>
 			<div class="item teal-a400">
 				<a class="link font-white" href="#">Contato</a>
@@ -116,127 +75,165 @@
 <style type="text/css">
 
 	.hero {
-		background-image: url("img/farm.jpg");
-		background-position: center 70%;
-	}
-
-	.hero .container {
-		max-width: 1000px;
-		padding-top: 320px;
-		padding-bottom: 80px;
+		background: url("img/farm.jpg") center 70%;
+		padding-top: 60px;
 	}
 
 	.hero h1 {
-		font-family: 'open sans';
-		font-size: 34px;
-		font-weight: 300;
-		text-align: left;
-		text-shadow: -2px 2px 5px rgba(0,0,0,.5);
-		max-width: 520px;
-		margin-bottom: 140px;
-	}
-
-	.hero h1 span {
+		font-size: 48px;
 		font-weight: 600;
+		max-width: 500px;
+		margin-top: 100px;
 	}
 
-	.hero h1 span span {
-		font-size: 24px;
-		font-weight: 300;
-		text-decoration: line-through;
-	}
-
-	.hero .foo {
-		border-radius: 50%;
+	.hero .btn {
 		border: solid 2px #ffffff;
-		display: block;
-		height: 60px;
-		margin: 0 auto;
-		width: 60px;
-		box-shadow: 0 0 2px #ffffff, 0 0 1px #ffffff inset;
+		border-radius: 4px;
+		margin-top: 30px;
+		float: left;
+		padding: 10px 30px;
 	}
 
-	.hero .foo:hover {
-		box-shadow: 0 0 3px #ffffff inset;
-		padding: 2px;
-		margin-top: -2px;
-		transition: all .2s linear;
+	.hero .scroll-container {
+		position: absolute;
+		bottom: 30px;
+		text-align: center;
+		width: 100%;
 	}
 
-	.hero a {
+	.hero .scroll {
+		user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		outline: 0;
+	}
+
+	.hero .scroll-text {
+		font-size: 18px;
+	}
+
+	.hero .scroll-btn {
+		border: solid 4px #ffffff;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 52px;
+		height: 52px;
+		margin: 18px auto 0;
 		border-radius: 50%;
 	}
+
+	.hero .scroll-btn svg {
+		width: 44px;
+		height: 44px;
+	}
+
+	.hero .scroll-btn path {
+		fill: #ffffff;
+	}
+
 </style>
 
-<div class="hero font-white" id="foo">
+
+<!--
+	TODO - carousel
+	Need to carousel or another solution to show great deals
+-->
+<div class="hero green-a200 font-white" id="foo">
 	<div class="container">
-		<h1 class=""><span></span> por apenas <span><span>R$54,00</span> R$29,00</span>*</h1>
-		<a href=""><div class="foo"></div></a>
+		<h1>A melhor internet de palmital</h1>
+		<a href="#" id="js-scroll-prices" class="btn">Planos</a>
+	</div>
+	<div class="scroll-container">
+		<a  href="#" id="js-scroll-history" class="scroll">
+			<span class="scroll-text">Conheça a nossa história</span>
+			<span class="scroll-btn">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -300 1792 1792" version="1.1">
+						<g transform="matrix(1,0,0,-1,288.54238,1255.0508)">
+							<!--
+								TODO - Circle UX
+								Better the UX of the circle
+							-->
+							<path d="m 1075,800 q 0,-13 -10,-23 L 599,311 q -10,-10 -23,-10 -13,0 -23,10 L 87,777 q -10,10 -10,23 0,13 10,23 l 50,50 q 10,10 23,10 13,0 23,-10 L 576,480 969,873 q 10,10 23,10 13,0 23,-10 l 50,-50 q 10,-10 10,-23 z" ></path>
+						</g>
+					</svg>
+			</span>
+		</a>
 	</div>
 </div>
 
-<style type="text/css">
-	.new-foo {
-		height: 600px;
-		margin-bottom: 200px;
+<style>
+	.services {
+		padding: 300px;
 	}
 </style>
 
-<div class="new-foo white"></div>
-<div id="wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dignissimos error ex hic laborum natus nostrum qui quisquam similique, voluptatibus? Aut, deserunt fugiat impedit nemo nisi nulla praesentium sed sit.</div>
+<div class="services grey-900 font-grey-300">
+	<!--
+		TODO - WWD (What We Do)
+	-->
+	<h1>VAMOS FALAR UM POUCO SOBRE OS SERVIÇOS DA EMPRESA AQUI</h1>
+</div>
+
+<style>
+	.history {
+		padding: 400px;
+	}
+</style>
+
+<div id="history" class="history green-900 font-grey-300">
+	<!--
+		TODO - timeline
+	-->
+	<h1>VAMOS FALAR UM POUCO SOBRE A HISTÓRIA DA EMPRESA AQUI</h1>
+</div>
+
+<style>
+	#prices {
+		padding: 400px;
+	}
+</style>
+
+<div id="prices" class="history blue-grey-900 font-grey-300">
+	<!--
+		TODO - price comparison
+	-->
+	<h1>VAMOS FALAR UM POUCO SOBRE OS PLANOS DA EMPRESA AQUI</h1>
+</div>
+
+<style>
+	#bg {
+		z-index: -1;
+		height: 40px;
+		transition: all .1s linear;
+	}
+
+	#bg path {
+		fill: none;
+		stroke: #ffffff;
+		stroke-width: 60;
+		stroke-linecap: round;
+		stroke-miterlimit: 10;
+	}
+</style>
+
+<!--
+	TODO - footer
+-->
+<footer></footer>
+
+<script src="js/mowe.js"></script>
 
 <script>
-	document.getElementsByClassName('hero')[0].style.height = window.innerHeight + "px";
 
-	window.onresize = function() {
-		document.getElementsByClassName('hero')[0].style.height = window.innerHeight + "px";
-	}
-
-	window.onload = function() {
-		var wrapper = document.getElementById("wrapper"); //get div
-		var h = wrapper.getBoundingClientRect(); //get height
-
-		//scrollTo(h.top);
-
-		function scrollTo(x) {
-			//elapsed
-			var e;
-			//duration in milli seconds
-			var d = 1000;
-			//b as in begin, where to start (you could get this dynamically)
-			var b = 0;
-			//start time, when the animation starts
-			var s = (new Date()).getTime(); //start time
-			//the magic
-			var t = setInterval(function () {
-				//calculate elapse time
-				e = (new Date()).getTime() - s;
-				//check if elapse time is less than duration
-				if (e < d) {
-					//animate using an easing equation
-					window.scrollTo(0, ease(e, b, x, d));
-				} else {
-					//animation is complete, stop interval timer
-					clearInterval(t);
-					t = null;
-				}
-			}, 4);
-		}
-
-		//Info about the letters (I think)
-		//t = elapse time
-		//b = where to begin
-		//c = change in comparison to begin
-		//d = duration of animation
-		function noease(t, b, c, d) {
-			t /= d;
-			return b + c * (t);
-		}
-
-		function ease(t, b, c, d) {
-			return Math.round(-c * Math.cos(t / d * (Math.PI / 2)) + c + b);
-		}
-	}
 </script>
 </body>
 </html>
