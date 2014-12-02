@@ -10,7 +10,22 @@ window.onresize = function() {
 	document.getElementsByClassName('hero')[0].style.height = (window.innerHeight - 60) + "px";
 };
 
+window.onscroll = function (event) {
+	if (document.documentElement.scrollTop > window.innerHeight - 60) {
+		if (!$('.nav').hasClass('white')) $('.nav').addClass('white')
+	} else {
+		if ($('.nav').hasClass('white')) $('.nav').removeClass('white')
+	}
+};
+
 window.onload = function() {
+
+	if (document.documentElement.scrollTop > window.innerHeight) {
+		if (!$('.nav').hasClass('white')) $('.nav').addClass('white')
+	} else {
+		if ($('.nav').hasClass('white')) $('.nav').removeClass('white')
+	}
+
 	document.getElementById("js-scroll-services").onclick = function fun() {
 
 		var wrapper = document.getElementById("services"); //get div
@@ -18,7 +33,6 @@ window.onload = function() {
 
 		//noinspection JSSuspiciousNameCombination
 		scrollTo(h.top);
-
 	};
 
 	document.getElementById("js-scroll-prices").onclick = function fun() {
@@ -28,6 +42,9 @@ window.onload = function() {
 
 		scrollTo(h.top);
 
+		if (!$('.nav').hasClass('white')) {
+			$('.nav').addClass('white');
+		}
 	};
 
 	function scrollTo(x) {
