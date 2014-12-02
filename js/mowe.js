@@ -18,6 +18,14 @@ window.onscroll = function (event) {
 	}
 };
 
+$('.wow').click(function() {
+	if(!$(this).hasClass('show')) {
+		$(this).addClass('show');
+	} else {
+		$(this).removeClass('show');
+	}
+});
+
 window.onload = function() {
 
 	if (document.documentElement.scrollTop > window.innerHeight) {

@@ -32,7 +32,7 @@
 </style>
 
 <div class="nav">
-	<div class="wide container">
+	<div class="full wide container">
 		<!--
 			TODO - menu and collapse
 			Need to analyses the menu and develop a amazing collapse API with JS
@@ -203,11 +203,26 @@
 		text-align: center;
 	}
 
+	.block > .lead,
+	.block .container > .lead,
+	.block .about .lead {
+		font-size: 23px;
+		font-weight: 300;
+		text-align: center;
+	}
+
+	.block > h1 + .lead,
+	.block .container > h1 + .lead,
+	.block .about h1 + .lead {
+		margin-top: 20px;
+	}
+
 	.wow {
+		/*background-color: #1A237E;*/
 		cursor: pointer;
 		float: left;
 		margin: 30px 0;
-		width: 960px;
+		width: 100%;
 	}
 
 	.wow:last-child {
@@ -215,6 +230,9 @@
 	}
 
 	.wow-container {
+		/*background-color: #2196F3;*/
+		margin-right: 0;
+		transition: all .2s linear;
 		width: 160%;
 	}
 
@@ -237,7 +255,7 @@
 
 	.wow .right .img,
 	.wow .right .text {
-		float: right;
+		float: left;
 	}
 
 	.wow .right .img {
@@ -245,12 +263,18 @@
 	}
 
 	.wow .img {
-		margin: 15px 0
+		filter: grayscale(.7);
+		-webkit-filter: grayscale(.7);
+		margin: 15px 0;
+		transition: all .2s linear;
 	}
 
 	.wow .text {
-		width: 450px;
 		margin: 15px 0 15px 15px;
+		filter: none;
+		-webkit-filter: none;
+		transition: all .4s linear;
+		width: 30%;
 	}
 
 	.wow .text h1 {
@@ -261,6 +285,30 @@
 
 	.wow .text p {
 		font-size: 18px;
+		line-height: 27px;
+		margin: 15px 0 10px;
+	}
+
+	.wow.show .right {
+		margin-left: -44%;
+		transition: all .3s linear;
+	}
+
+	.wow.show .left {
+		margin-right: -44%;
+		transition: all .3s linear;
+	}
+
+	.wow.show .text {
+		filter: blur(3px);
+		-webkit-filter: blur(3px);
+		transition: all .4s linear;
+	}
+
+	.wow.show .img {
+		filter: none;
+		-webkit-filter: none;
+		transition: all .2s linear;
 	}
 
 </style>
@@ -270,17 +318,21 @@
 		TODO - WWD (What We Do)
 	-->
 
-	<div class="full container">
-
+	<div class="container">
 		<div class="about">
 			<h1>Nossos serviços e tecnologias</h1>
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis eligendi error impedit ipsum maxime minus mollitia nam necessitatibus nemo omnis optio pariatur quisquam ratione, sapiente suscipit tempora unde.</p>
 		</div>
+	</div>
 
-		<div class="wow red">
+	<div class="wide container">
+
+		<div class="wow">
 			<div class="wow-container left">
 
 				<section class="text">
-					<h1>hello!</h1>
+					<h1>Hello!</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem rerum sequi tempore tenetur.</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem rerum sequi tempore tenetur.</p>
 				</section>
 
@@ -294,13 +346,13 @@
 		<div class="wow">
 			<div class="wow-container right">
 
-				<section class="img">
-					<img src="img/section01.jpg" alt="just a mouse" />
-				</section>
-
 				<section class="text">
 					<h1>hello!</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem rerum sequi tempore tenetur.</p>
+				</section>
+
+				<section class="img">
+					<img src="img/section01.jpg" alt="just a mouse" />
 				</section>
 
 			</div>
@@ -309,13 +361,13 @@
 		<div class="wow">
 			<div class="wow-container left">
 
-				<section class="img">
-					<img src="img/section01.jpg" alt="just a mouse" />
-				</section>
-
 				<section class="text">
 					<h1>hello!</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem rerum sequi tempore tenetur.</p>
+				</section>
+
+				<section class="img">
+					<img src="img/section02.jpg" alt="just a mouse" />
 				</section>
 
 			</div>
@@ -384,390 +436,3 @@
 
 </script>
 </body>
-</html><!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<title>Mowe</title>
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-	<script src="js/villa.js"></script>
-	<link rel="stylesheet" href="css/villa-foundation.css" />
-	<link rel="stylesheet" href="css/villa-grid.css"/>
-	<link rel="stylesheet" href="css/villa.css" />
-	<link rel="stylesheet" href="css/mowe-font.css" />
-	<link rel="stylesheet" href="css/mowe.css" />
-	<script src="js/jquery-2.1.1.min.js"></script>
-	<!--[if lt IE 9]>
-		<link rel="stylesheet" type="text/css" href="css/material-colors.css"/>
-		<script src="js/html5shiv.js"></script>
-		<script src="js/html5shiv-printshiv.js"></script>
-	<![endif]-->
-</head>
-<body class="">
-
-<style type="text/css">
-	body {
-		overflow-x: hidden;
-	}
-
-	.nav header:hover .slogan {
-		padding-left: 0 !important;
-		transition: all .1s linear;
-	}
-</style>
-
-<div class="nav">
-	<div class="wide container">
-		<!--
-			TODO - menu and collapse
-			Need to analyses the menu and develop a amazing collapse API with JS
-		-->
-		<header>
-			<div class="item">
-				<a class="brand font-white" href="#">
-					<span class="brand-text">WEBTal<!--<span class="slogan">telecom</span>--></span>
-				</a>
-				<!--
-					TODO - vector to brand name
-				-->
-				<a class="logo font-grey-700" href="#">
-					<svg id="bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-						<g>
-							<path d="M332,203.5c151.6,163.9,151.6,429.1,0,592.9"></path>
-							<path d="M403.5,111.8c199.7,214.6,199.7,561.9,0,776.5"></path>
-							<path d="M468,20c266.7,265.3,266.7,694.7,0,960"></path>
-						</g>
-					</svg>
-				</a>
-				<!--<a class="slogan font-grey-700" href="#"> <span class="slogan-text">telecom</span> </a>-->
-			</div>
-		</header>
-		<div class="menu font-grey-400">
-			<div class="item">
-				<a class="link hfont-teal-a700" href="#">Planos</a>
-			</div>
-			<div class="item">
-				<a class="link hfont-teal-a700" href="#">Fibra</a>
-			</div>
-			<div class="item">
-				<a class="link hfont-teal-a700" href="#">Sobre</a>
-			</div>
-			<div class="item teal-a400">
-				<a class="link font-white" href="#">Contato</a>
-			</div>
-		</div>
-	</div>
-</div>
-
-<style type="text/css">
-
-	.hero {
-		background: url("img/wt01.jpg") no-repeat fixed center top;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		padding-top: 60px;
-	}
-
-	@media screen and (max-width: 1400px) {
-		.hero {
-		 }
-	}
-
-	.hero h1 {
-		font-size: 48px;
-		font-weight: 600;
-		max-width: 500px;
-		margin-top: 100px;
-	}
-
-	.hero .btn {
-		border: solid 2px #ffffff;
-		border-radius: 4px;
-		margin-top: 30px;
-		float: left;
-		padding: 10px 30px;
-	}
-
-	.hero .scroll-container {
-		position: absolute;
-		bottom: 30px;
-		text-align: center;
-		width: 100%;
-	}
-
-	.hero .scroll {
-		user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		outline: 0;
-	}
-
-	.hero .scroll-text {
-		font-size: 18px;
-	}
-
-	.hero .scroll-btn {
-		border: solid 4px #ffffff;
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width: 52px;
-		height: 52px;
-		margin: 18px auto 0;
-		border-radius: 50%;
-	}
-
-	.hero .scroll-btn svg {
-		width: 44px;
-		height: 44px;
-	}
-
-	.hero .scroll-btn path {
-		fill: #ffffff;
-	}
-
-</style>
-
-
-<!--
-	TODO - carousel
-	Need to carousel or another solution to show great deals
--->
-<div class="hero green-500 font-white" id="foo">
-	<div class="wide container">
-		<h1>A melhor internet de palmital</h1>
-		<a href="#" id="js-scroll-prices" class="btn">Planos</a>
-	</div>
-	<div class="scroll-container">
-		<a  href="#" id="js-scroll-services" class="scroll">
-			<span class="scroll-text">Conheça os nossos serviços</span>
-			<span class="scroll-btn">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -300 1792 1792" version="1.1">
-					<g transform="matrix(1,0,0,-1,288.54238,1255.0508)">
-						<!--
-							TODO - Circle UX
-							Better the UX of the circle
-						-->
-						<path d="m 1075,800 q 0,-13 -10,-23 L 599,311 q -10,-10 -23,-10 -13,0 -23,10 L 87,777 q -10,10 -10,23 0,13 10,23 l 50,50 q 10,10 23,10 13,0 23,-10 L 576,480 969,873 q 10,10 23,10 13,0 23,-10 l 50,-50 q 10,-10 10,-23 z" ></path>
-					</g>
-				</svg>
-			</span>
-		</a>
-	</div>
-</div>
-
-<style>
-
-	.block {
-		float: left;
-		overflow-x: hidden;
-		padding: 60px 0 20px;
-		width: 100%;
-	}
-
-	.block .container > .about,
-	.block > .about {
-		margin: 40px 0;
-	}
-
-	.block > h1,
-	.block .container > h1,
-	.block .about h1{
-		font-size: 48px;
-		font-weight: 400;
-		text-align: center;
-	}
-
-	.wow {
-		cursor: pointer;
-		float: left;
-		margin: 30px 0;
-		width: 960px;
-	}
-
-	.wow:last-child {
-		margin-bottom: 100px;
-	}
-
-	.wow-container {
-		width: 160%;
-	}
-
-	.wow .left {
-		float: right;
-	}
-
-	.wow .right {
-		float: left;
-	}
-
-	.wow .left .img,
-	.wow .left .text {
-		float: right;
-	}
-
-	.wow .left .img {
-		margin: 15px 15px 15px 0;
-	}
-
-	.wow .right .img,
-	.wow .right .text {
-		float: right;
-	}
-
-	.wow .right .img {
-		margin: 15px 0 15px 15px;
-	}
-
-	.wow .img {
-		margin: 15px 0
-	}
-
-	.wow .text {
-		width: 450px;
-		margin: 15px 0 15px 15px;
-	}
-
-	.wow .text h1 {
-		font-size: 48px;
-		font-weight: 300;
-		text-align: left;
-	}
-
-	.wow .text p {
-		font-size: 18px;
-	}
-
-</style>
-
-<div id="services" class="block grey-100 font-grey-900">
-	<!--
-		TODO - WWD (What We Do)
-	-->
-
-	<div class="full container">
-
-		<div class="about">
-			<h1>Nossos serviços e tecnologias</h1>
-		</div>
-
-		<div class="wow">
-			<div class="wow-container grey-900 left">
-
-				<section class="text">
-					<h1>hello!</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem rerum sequi tempore tenetur.</p>
-				</section>
-
-				<section class="img">
-					<img src="img/section01.jpg" alt="just a mouse" />
-				</section>
-
-			</div>
-		</div>
-
-		<div class="wow">
-			<div class="wow-container grey-900 right">
-
-				<section class="img">
-					<img src="img/section01.jpg" alt="just a mouse" />
-				</section>
-
-				<section class="text">
-					<h1>hello!</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem rerum sequi tempore tenetur.</p>
-				</section>
-
-			</div>
-		</div>
-
-		<div class="wow">
-			<div class="wow-container grey-900 left">
-
-				<section class="img">
-					<img src="img/section01.jpg" alt="just a mouse" />
-				</section>
-
-				<section class="text">
-					<h1>hello!</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem rerum sequi tempore tenetur.</p>
-				</section>
-
-			</div>
-		</div>
-
-	</div>
-
-</div>
-
-<style>
-	.history {
-		padding: 400px;
-	}
-</style>
-
-<div id="history" class="history green-900 font-grey-300">
-	<!--
-		TODO - timeline
-	-->
-	<h1>VAMOS FALAR UM POUCO SOBRE A HISTÓRIA DA EMPRESA AQUI</h1>
-</div>
-
-<style>
-	#prices {
-		padding: 400px;
-	}
-</style>
-
-<div id="prices" class="history blue-grey-900 font-grey-300">
-	<!--
-		TODO - price comparison
-	-->
-	<h1>VAMOS FALAR UM POUCO SOBRE OS PLANOS DA EMPRESA AQUI</h1>
-</div>
-
-<style>
-	#bg {
-		z-index: -1;
-		height: 40px;
-		transition: all .1s linear;
-	}
-
-	#bg path {
-		fill: none;
-		stroke: #ffffff;
-		stroke-width: 60;
-		stroke-linecap: round;
-		stroke-miterlimit: 10;
-	}
-</style>
-
-<!--
-	TODO - footer
--->
-
-<style type="text/css">
-	footer {
-		height: 600px;
-	}
-</style>
-<footer class="grey-900"></footer>
-
-<script src="js/mowe.js"></script>
-
-<script>
-
-</script>
-</body>
-</html>
