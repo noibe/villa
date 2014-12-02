@@ -79,7 +79,7 @@ html {
 }
 
 .nav .brand {
-	padding-right: 0px !important;
+	padding: 0 !important;
 }
 
 .nav .brand-text {
@@ -94,5 +94,5 @@ html {
 
 .nav header:hover #bg {
 	height: 48px;
-	transition: all .1s linear;
+	transition: all .15s linear;
 }

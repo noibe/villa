@@ -11,9 +11,9 @@ window.onresize = function() {
 };
 
 window.onload = function() {
-	document.getElementById("js-scroll-history").onclick = function fun() {
+	document.getElementById("js-scroll-services").onclick = function fun() {
 
-		var wrapper = document.getElementById("history"); //get div
+		var wrapper = document.getElementById("services"); //get div
 		var h = wrapper.getBoundingClientRect(); //get height
 
 		//noinspection JSSuspiciousNameCombination

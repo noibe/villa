@@ -21,7 +21,9 @@
 <body class="">
 
 <style type="text/css">
-	body {}
+	body {
+		overflow-x: hidden;
+	}
 
 	.nav header:hover .slogan {
 		padding-left: 0px !important;
@@ -30,7 +32,7 @@
 </style>
 
 <div class="nav">
-	<!--<div class="container">-->
+	<div class="wide container">
 		<!--
 			TODO - menu and collapse
 			Need to analyses the menu and develop a amazing collapse API with JS
@@ -69,14 +71,23 @@
 				<a class="link font-white" href="#">Contato</a>
 			</div>
 		</div>
-	<!--</div>-->
+	</div>
 </div>
 
 <style type="text/css">
 
 	.hero {
-		background: url("img/farm.jpg") center 70%;
+		background: url("img/wt01.jpg") no-repeat fixed center top;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 		padding-top: 60px;
+	}
+
+	@media screen and (max-width: 1400px) {
+		.hero {
+		 }
 	}
 
 	.hero h1 {
@@ -147,40 +158,132 @@
 	TODO - carousel
 	Need to carousel or another solution to show great deals
 -->
-<div class="hero green-a200 font-white" id="foo">
-	<div class="container">
+<div class="hero green-500 font-white" id="foo">
+	<div class="wide container">
 		<h1>A melhor internet de palmital</h1>
 		<a href="#" id="js-scroll-prices" class="btn">Planos</a>
 	</div>
 	<div class="scroll-container">
-		<a  href="#" id="js-scroll-history" class="scroll">
-			<span class="scroll-text">Conheça a nossa história</span>
+		<a  href="#" id="js-scroll-services" class="scroll">
+			<span class="scroll-text">Conheça os nossos serviços</span>
 			<span class="scroll-btn">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -300 1792 1792" version="1.1">
-						<g transform="matrix(1,0,0,-1,288.54238,1255.0508)">
-							<!--
-								TODO - Circle UX
-								Better the UX of the circle
-							-->
-							<path d="m 1075,800 q 0,-13 -10,-23 L 599,311 q -10,-10 -23,-10 -13,0 -23,10 L 87,777 q -10,10 -10,23 0,13 10,23 l 50,50 q 10,10 23,10 13,0 23,-10 L 576,480 969,873 q 10,10 23,10 13,0 23,-10 l 50,-50 q 10,-10 10,-23 z" ></path>
-						</g>
-					</svg>
+					<g transform="matrix(1,0,0,-1,288.54238,1255.0508)">
+						<!--
+							TODO - Circle UX
+							Better the UX of the circle
+						-->
+						<path d="m 1075,800 q 0,-13 -10,-23 L 599,311 q -10,-10 -23,-10 -13,0 -23,10 L 87,777 q -10,10 -10,23 0,13 10,23 l 50,50 q 10,10 23,10 13,0 23,-10 L 576,480 969,873 q 10,10 23,10 13,0 23,-10 l 50,-50 q 10,-10 10,-23 z" ></path>
+					</g>
+				</svg>
 			</span>
 		</a>
 	</div>
 </div>
 
 <style>
-	.services {
-		padding: 300px;
+
+	#services {
+		float: left;
+		width: 100%;
 	}
+
+	.wow {
+		cursor: pointer;
+		float: left;
+		width: 960px;
+		margin: 30px 0px;
+	}
+
+	.wow-container {
+		width: 160%;
+	}
+
+	.wow .left {
+		float: right;
+	}
+
+	.wow .right {
+		float: left;
+	}
+
+	.wow .left .img,
+	.wow .left .text {
+		float: left;
+	}
+
+	.wow .left .img {
+		margin: 15px 15px 15px 0px;
+	}
+
+	.wow .right .img,
+	.wow .right .text {
+		float: right;
+	}
+
+	.wow .right .img {
+		margin: 15px 0px 15px 15px;
+	}
+
+	.wow .img {
+		margin: 15px 0px
+	}
+
+	.wow .text {
+		width: 450px;
+		margin: 15px 0px 15px 15px;
+	}
+
+	.wow .text h1 {
+		font-size: 48px;
+		font-weight: 300;
+	}
+
+	.wow .text p {
+		font-size: 18px;
+	}
+
 </style>
 
-<div class="services grey-900 font-grey-300">
+<div id="services" class="grey-100 font-grey-900">
 	<!--
 		TODO - WWD (What We Do)
 	-->
-	<h1>VAMOS FALAR UM POUCO SOBRE OS SERVIÇOS DA EMPRESA AQUI</h1>
+
+	<div class="container">
+
+		<div class="wow">
+			<div class="wow-container left">
+
+				<section class="img">
+					<img src="img/section01.jpg" alt="just a mouse" />
+				</section>
+				<section class="text">
+					<h1>hello!</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem rerum sequi tempore tenetur.</p>
+				</section>
+
+
+			</div>
+		</div>
+
+		<div class="wow">
+			<div class="wow-container right">
+
+				<section class="img">
+					<img src="img/section01.jpg" alt="just a mouse" />
+				</section>
+
+				<section class="text">
+					<h1>hello!</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem rerum sequi tempore tenetur.</p>
+				</section>
+
+			</div>
+		</div>
+
+	</div>
+
 </div>
 
 <style>
@@ -228,7 +331,13 @@
 <!--
 	TODO - footer
 -->
-<footer></footer>
+
+<style type="text/css">
+	footer {
+		height: 600px;
+	}
+</style>
+<footer class="grey-900"></footer>
 
 <script src="js/mowe.js"></script>
 
