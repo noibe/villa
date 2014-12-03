@@ -14,7 +14,7 @@ window.onscroll = function (event) {
 	if (document.documentElement.scrollTop > window.innerHeight - 60) {
 		if (!$('.nav').hasClass('white')) $('.nav').removeClass('font-white').addClass('white font-green')
 	} else {
-		if ($('.nav').hasClass('white')) $('.nav').removeClass('white font-green').addClass('white font-white')
+		if ($('.nav').hasClass('white')) $('.nav').removeClass('white font-green').addClass('font-white')
 	}
 };
 
@@ -27,11 +27,10 @@ $('.wow').click(function() {
 });
 
 window.onload = function() {
-
-	if (document.documentElement.scrollTop > window.innerHeight) {
+	if (document.documentElement.scrollTop > window.innerHeight - 60) {
 		if (!$('.nav').hasClass('white')) $('.nav').removeClass('font-white').addClass('white font-green')
 	} else {
-		if ($('.nav').hasClass('white')) $('.nav').removeClass('white font-green').addClass('white font-white')
+		if ($('.nav').hasClass('white')) $('.nav').removeClass('white font-green').addClass('font-white')
 	}
 
 	document.getElementById("js-scroll-services").onclick = function fun() {
