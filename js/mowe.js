@@ -12,9 +12,15 @@ window.onresize = function() {
 
 window.onscroll = function (event) {
 	if (document.documentElement.scrollTop > window.innerHeight - 60) {
-		if (!$('.nav').hasClass('white')) $('.nav').removeClass('font-white').addClass('white font-green')
+		if (!$('.nav').hasClass('white')) {
+			$('.nav').removeClass('font-white').addClass('white font-green')
+			$('#bg path').css('stroke', '#dce775')
+		}
 	} else {
-		if ($('.nav').hasClass('white')) $('.nav').removeClass('white font-green').addClass('font-white')
+		if ($('.nav').hasClass('white')) {
+			$('.nav').removeClass('white font-green').addClass('font-white')
+			$('#bg path').css('stroke', '#ffffff')
+		}
 	}
 };
 
@@ -28,9 +34,15 @@ $('.wow').click(function() {
 
 window.onload = function() {
 	if (document.documentElement.scrollTop > window.innerHeight - 60) {
-		if (!$('.nav').hasClass('white')) $('.nav').removeClass('font-white').addClass('white font-green')
+		if (!$('.nav').hasClass('white')) {
+			$('.nav').removeClass('font-white').addClass('white font-green')
+			$('#bg path').css('stroke', '#dce775')
+		}
 	} else {
-		if ($('.nav').hasClass('white')) $('.nav').removeClass('white font-green').addClass('font-white')
+		if ($('.nav').hasClass('white')) {
+			$('.nav').removeClass('white font-green').addClass('font-white')
+			$('#bg path').css('stroke', '#ffffff')
+		}
 	}
 
 	document.getElementById("js-scroll-services").onclick = function fun() {
