@@ -1,0 +1,39 @@
+/*!
+ * Mowe Structure v0.5.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
+
+.block {
+    float: left;
+    overflow-x: hidden;
+    padding: 60px 0 20px;
+    width: 100%;
+}
+
+.block .container > .about,
+.block > .about {
+    margin: 40px 0;
+}
+
+.block > h1,
+.block .container > h1,
+.block .about h1{
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.block > .lead,
+.block .container > .lead,
+.block .about .lead {
+    font-size: 23px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.block > h1 + .lead,
+.block .container > h1 + .lead,
+.block .about h1 + .lead {
+    margin-top: 20px;
+}

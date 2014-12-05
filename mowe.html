@@ -8,8 +8,9 @@
 	<link rel="stylesheet" href="css/villa-foundation.css" />
 	<link rel="stylesheet" href="css/villa-grid.css"/>
 	<link rel="stylesheet" href="css/villa.css" />
-	<link rel="stylesheet" href="css/mowe-font.css" />
 	<link rel="stylesheet" href="css/mowe.css" />
+	<link rel="stylesheet" href="css/mowe-font.css" />
+	<link rel="stylesheet" href="css/mowe-font.css" />
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" type="text/css" href="css/material-colors.css"/>
@@ -56,20 +57,49 @@
 				<!--<a class="slogan font-grey-700" href="#"> <span class="slogan-text">telecom</span> </a>-->
 			</div>
 		</header>
-		<div class="menu font-grey-400">
-			<div class="item">
-				<a class="link hfont-teal-a700" href="#">Planos</a>
+
+
+		<style>
+			.nav .collapse {
+
+			}
+
+			.nav .collapse button {
+				display: none;
+			}
+
+			@media (max-width: 1024px) {
+				.nav .collapse button {
+					display: block;
+				}
+
+				.nav .collapse .item {
+					display: none;
+				}
+			}
+		</style>
+
+
+		<footer>
+			<button>+</button>
+			<div class="menu collapse font-grey-400">
+				<div class="item">
+					<a class="link hfont-teal-a700" href="#">Planos</a>
+				</div>
+				<div class="item">
+					<a class="link hfont-teal-a700" href="#">Fibra</a>
+				</div>
+				<div class="item">
+					<a class="link hfont-teal-a700" href="#">Sobre</a>
+				</div>
+				<div class="item teal-a400">
+					<a class="link font-white" href="#">Contato</a>
+				</div>
 			</div>
-			<div class="item">
-				<a class="link hfont-teal-a700" href="#">Fibra</a>
-			</div>
-			<div class="item">
-				<a class="link hfont-teal-a700" href="#">Sobre</a>
-			</div>
-			<div class="item teal-a400">
-				<a class="link font-white" href="#">Contato</a>
-			</div>
-		</div>
+		</footer>
+
+
+
 	</div>
 </div>
 
@@ -290,7 +320,7 @@
 -->
 
 <style type="text/css">
-	footer {
+	home > footer {
 		height: 600px;
 	}
 </style>
