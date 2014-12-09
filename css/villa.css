@@ -3,3 +3,9 @@
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
 */
+
+@media (min-width: 768px) {
+    .bg-sm {
+        background: none;
+    }
+}

@@ -9,6 +9,10 @@ html {
 	font-family: 'open sans';
 }
 
+body {
+	overflow-x: hidden;
+}
+
 /*! Villa Nav v0.8.0 (http://getvilla.org/mowe) */
 
 

@@ -25,7 +25,7 @@
     filter: grayscale(.8);
     -webkit-filter: grayscale(.8);
     padding: 15px 0;
-    transition: all .2s linear;
+    transition: all .2s linear .1s;
     width: 62%; /*IMG MEASURE*/
     max-width: 978px;
 }
@@ -34,7 +34,7 @@
     padding: 15px 0;
     filter: none;
     -webkit-filter: none;
-    transition: all .4s linear;
+    transition: all .4s linear .4s;
     width: 38%; /*TEXT MEASURE*/
 }
 
@@ -98,13 +98,13 @@
 .wow.show .text {
     filter: blur(3px);
     -webkit-filter: blur(3px);
-    transition: all .4s linear;
+    transition: all .3s linear;
 }
 
 .wow.show .img {
     filter: none;
     -webkit-filter: none;
-    transition: all .2s linear;
+    transition: all .2s linear .4s;
 }
 
 @media (max-width: 420px) {

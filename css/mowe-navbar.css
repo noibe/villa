@@ -1,0 +1,156 @@
+/*!
+ * Mowe Nav v0.8.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
+
+.navbar {
+    /*background-color: transparent;*/
+    min-height: 64px;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    width: 100%;
+    z-index: 100;
+}
+
+*:active,
+*:hover,
+*:focus {
+    outline: 0;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+.navbar,
+.navbar .container,
+.navbar .item,
+.navbar .item a,
+.navbar .menu,
+.navbar header,
+.navbar footer {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.navbar,
+.navbar .container,
+.navbar header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.navbar .item {
+    align-items: stretch;
+}
+
+.navbar .item a {
+    align-items: center;
+}
+
+.navbar .item a {
+    padding: 0 25px;
+}
+
+.navbar .menu {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    font-size: 15px;
+}
+
+.navbar .item .link {
+    font-weight: 700;
+}
+
+.navbar header:hover .slogan {
+    padding-left: 0 !important;
+    transition: all .1s linear;
+}
+
+.navbar .brand {
+    padding: 0 0 0 25px !important;
+}
+
+.navbar .brand-text {
+    font-weight: 600;
+    font-size: 23px;
+    letter-spacing: -0.07em;
+}
+
+.navbar .logo {
+    padding: 0 !important;
+}
+
+.navbar header .item:hover #bg {
+    height: 48px;
+    transition: all .15s linear;
+}
+
+
+.navbar .toggle {
+    border: none;
+    font-size: 23px;
+    padding: 0 20px;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .fixed-sm {
+        position: fixed;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar .toggle {
+        display: block;
+    }
+
+    .navbar header {
+        height: 64px;
+    }
+
+    .navbar footer {
+        display: block;
+    }
+
+    .navbar .menu {
+        display: none;
+    }
+
+    .navbar .show.menu {
+        position: absolute;
+        top: 64px;
+        right: 0;
+        border-top: solid 1px #bdbdbd;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        float: right;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar .show.menu a {
+        padding: 10px 25px;
+    }
+
+    .navbar,
+    .navbar .container {
+        flex-direction: column;
+        align-content: flex-end;
+    }
+}

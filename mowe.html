@@ -9,8 +9,11 @@
 	<link rel="stylesheet" href="css/villa-grid.css"/>
 	<link rel="stylesheet" href="css/villa.css" />
 	<link rel="stylesheet" href="css/mowe.css" />
+	<link rel="stylesheet" href="css/mowe-hero.css" />
 	<link rel="stylesheet" href="css/mowe-font.css" />
-	<link rel="stylesheet" href="css/mowe-font.css" />
+	<link rel="stylesheet" href="css/mowe-navbar.css" />
+	<link rel="stylesheet" href="css/mowe-structure.css" />
+	<link rel="stylesheet" href="css/mowe-wow.css" />
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" type="text/css" href="css/material-colors.css"/>
@@ -20,118 +23,58 @@
 </head>
 <body class="">
 
-<style type="text/css">
-	body {
-		overflow-x: hidden;
+<style>
+	.navbar.white .brand {
+		color: #66bb6a;
 	}
 
-	.nav header:hover .slogan {
-		padding-left: 0 !important;
+	.navbar.white #bg path {
+		stroke: #cddc39 !important;
+	}
+
+	@media (max-width: 768px) {
+		.navbar .brand {
+			color: #66bb6a;
+		}
+
+		#bg path {
+			stroke: #cddc39 !important;
+		}
+	}
+
+	#bars {
+		width: 25px;
+		height: 25px;
+		padding-top: 5px;
+	}
+
+	#bars line {
+		fill: none;
+		stroke :#ffffff;
+		stroke-width: 160;
+		stroke-miterlimit: 10;
+	}
+
+	#bg {
+		height: 40px;
 		transition: all .1s linear;
 	}
-</style>
 
-<div class="nav font-white">
-	<div class="full wide container">
-		<!--
-			TODO - menu and collapse
-			Need to analyses the menu and develop a amazing collapse API with JS
-		-->
-		<header>
-			<div class="item">
-				<a class="brand" href="#">
-					<span class="brand-text">WEBTal<!--<span class="slogan">telecom</span>--></span>
-				</a>
-				<!--
-					TODO - vector to brand name
-				-->
-				<a class="logo font-grey-700" href="#">
-					<svg id="bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-						<g>
-							<path d="M332,203.5c151.6,163.9,151.6,429.1,0,592.9"></path>
-							<path d="M403.5,111.8c199.7,214.6,199.7,561.9,0,776.5"></path>
-							<path d="M468,20c266.7,265.3,266.7,694.7,0,960"></path>
-						</g>
-					</svg>
-				</a>
-				<!--<a class="slogan font-grey-700" href="#"> <span class="slogan-text">telecom</span> </a>-->
-			</div>
-		</header>
-
-
-		<style>
-			.nav .collapse {
-
-			}
-
-			.nav .collapse button {
-				display: none;
-			}
-
-			@media (max-width: 1024px) {
-				.nav .collapse button {
-					display: block;
-				}
-
-				.nav .collapse .item {
-					display: none;
-				}
-			}
-		</style>
-
-
-		<footer>
-			<button>+</button>
-			<div class="menu collapse font-grey-400">
-				<div class="item">
-					<a class="link hfont-teal-a700" href="#">Planos</a>
-				</div>
-				<div class="item">
-					<a class="link hfont-teal-a700" href="#">Fibra</a>
-				</div>
-				<div class="item">
-					<a class="link hfont-teal-a700" href="#">Sobre</a>
-				</div>
-				<div class="item teal-a400">
-					<a class="link font-white" href="#">Contato</a>
-				</div>
-			</div>
-		</footer>
-
-
-
-	</div>
-</div>
-
-<style type="text/css">
+	#bg path {
+		fill: none;
+		stroke: #ffffff;
+		stroke-width: 60;
+		stroke-linecap: round;
+		stroke-miterlimit: 10;
+	}
 
 	.hero {
-		background: url("img/wt01.jpg") no-repeat fixed center top;
+		background: url("img/wt01.jpg") no-repeat;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
 		padding-top: 60px;
-	}
-
-	@media screen and (max-width: 1400px) {
-		.hero {
-		 }
-	}
-
-	.hero h1 {
-		font-size: 48px;
-		font-weight: 600;
-		max-width: 500px;
-		margin-top: 100px;
-	}
-
-	.hero .btn {
-		border: solid 2px #ffffff;
-		border-radius: 4px;
-		margin-top: 30px;
-		float: left;
-		padding: 10px 30px;
 	}
 
 	.hero .scroll-container {
@@ -179,6 +122,70 @@
 	.hero .scroll-btn path {
 		fill: #ffffff;
 	}
+</style>
+
+<div class="navbar fixed-sm font-white">
+	<div class="full wide container">
+
+		<header class="bg-sm white">
+
+			<div class="item">
+				<a class="brand" href="#">
+					<span class="brand-text">WEBTal<!--<span class="slogan">telecom</span>--></span>
+				</a>
+				<!--
+					TODO - vector to brand name
+				-->
+				<a class="logo font-grey-700" href="#">
+					<svg id="bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+						<g>
+							<path d="M332,203.5c151.6,163.9,151.6,429.1,0,592.9"></path>
+							<path d="M403.5,111.8c199.7,214.6,199.7,561.9,0,776.5"></path>
+							<path d="M468,20c266.7,265.3,266.7,694.7,0,960"></path>
+						</g>
+					</svg>
+				</a>
+			</div>
+
+			<button class="toggle teal-a400 font-white">
+				<svg version="1.1" id="bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+					<g>
+						<line class="st0" x1="99.1" y1="182.2" x2="1000" y2="182.2"/>
+						<line class="st0" x1="99.1" y1="504.6" x2="1000" y2="504.6"/>
+						<line class="st0" x1="99.1" y1="817.8" x2="1000" y2="817.8"/>
+					</g>
+				</svg>
+			</button>
+
+		</header>
+
+		<footer>
+
+			<div class="menu bg-sm white font-grey-400">
+				<div class="item">
+					<a class="link hfont-teal-a700" href="#">Planos</a>
+				</div>
+				<div class="item">
+					<a class="link hfont-teal-a700" href="#">Fibra</a>
+				</div>
+				<div class="item">
+					<a class="link hfont-teal-a700" href="#">Sobre</a>
+				</div>
+				<div class="item teal-a400">
+					<a class="link font-white" href="#">Contato</a>
+				</div>
+			</div>
+
+		</footer>
+
+
+
+	</div>
+</div>
+
+<style type="text/css">
+
+
 
 </style>
 
@@ -199,7 +206,7 @@
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -300 1792 1792" version="1.1">
 					<g transform="matrix(1,0,0,-1,288.54238,1255.0508)">
 						<!--
-							TODO - Circle UX
+							TODO - circle ux and hero typeface
 							Better the UX of the circle
 						-->
 						<path d="m 1075,800 q 0,-13 -10,-23 L 599,311 q -10,-10 -23,-10 -13,0 -23,10 L 87,777 q -10,10 -10,23 0,13 10,23 l 50,50 q 10,10 23,10 13,0 23,-10 L 576,480 969,873 q 10,10 23,10 13,0 23,-10 l 50,-50 q 10,-10 10,-23 z" ></path>
@@ -210,7 +217,7 @@
 	</div>
 </div>
 
-<div id="services" class="block grey-100 font-grey-900">
+<div class="block services grey-100 font-grey-900">
 
 	<div class="container">
 		<div class="about">
@@ -227,7 +234,7 @@
 				<section class="text">
 					<h1>Hello!</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem rerum sequi tempore tenetur.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem rerum sequi tempore tenetur.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae consequatur dolore unde? Aperiam, delectus distinctio iste neque nulla numquam qui sequi. Et impedit molestias mollitia repudiandae tenetur. Dolorem, eum.</p>
 				</section>
 
 				<section class="img">
@@ -243,7 +250,7 @@
 
 				<section class="text">
 					<h1>hello!</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem rerum sequi tempore tenetur.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium doloremque necessitatibus quod? Aut dicta eaque ex exercitationem explicabo impedit libero maxime. Amet architecto earum eos mollitia quis tenetur velit veritatis!</p>
 				</section>
 
 				<section class="img">
@@ -258,7 +265,7 @@
 
 				<section class="text">
 					<h1>hello!</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem rerum sequi tempore tenetur.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim exercitationem modi pariatur quaerat rerum similique tempora. Adipisci aliquam culpa facilis, fugit laborum, minus molestias neque quidem repellendus, sed sequi?</p>
 				</section>
 
 				<section class="img">
@@ -272,47 +279,156 @@
 
 </div>
 
-<style>
 
-	.history {
-		padding: 400px;
-	}
-</style>
 
-<div id="history" class="history green-900 font-grey-300">
+<div id="history" class="history block grey-200 font-grey-700">
+	<div class="container">
+		<div class="about">
+			<h1>Nossa História</h1>
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis eligendi error impedit ipsum maxime minus mollitia nam necessitatibus nemo omnis optio pariatur quisquam ratione, sapiente suscipit tempora unde.</p>
+		</div>
+	</div>
 	<!--
 		TODO - timeline
 	-->
-	<h1>VAMOS FALAR UM POUCO SOBRE A HISTÓRIA DA EMPRESA AQUI</h1>
+
+	<style>
+
+		.timeline {
+			display: block;
+			float: left;
+			width: 100%;
+		}
+
+		.timeline .nav {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			justify-content: center;
+			margin: 20px auto 60px;
+			user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+		}
+
+		.timeline .nav li {
+			cursor: pointer;
+			border-style: solid;
+			border-width: 1px;
+			font-size: 16px;
+			padding: 15px 30px;
+			margin-left: -1px;
+		}
+
+		@media screen and (max-width: 480px) {
+			.timeline .nav li {
+				padding: 15px 15px;
+			}
+		}
+
+		.timeline .nav li:first-child {
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+
+		.timeline .nav li:last-child {
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+		
+		.timeline .content {
+			display: block;
+			float: left;
+			width: 500%;
+		}
+
+		.timeline .content li {
+			float: left;
+			padding: 30px 0;
+			width: 20%;
+		}
+
+		.timeline .content li p {
+			padding: 30px 60px;
+			text-align: center;
+		}
+
+		.timeline.slide-0 .content,
+		.timeline.slide-1 .content,
+		.timeline.slide-2 .content,
+		.timeline.slide-3 .content,
+		.timeline.slide-4 .content,
+		.timeline.slide-5 .content,
+		.timeline.slide-6 .content,
+		.timeline.slide-7 .content,
+		.timeline.slide-8 .content,
+		.timeline.slide-9 .content {
+			transition: margin .4s linear .1s;
+		}
+
+		.timeline.slide-0 .content { margin-left: 0; }
+
+		.timeline.slide-1 .content { margin-left: -100%; }
+
+		.timeline.slide-2 .content { margin-left: -200%; }
+
+		.timeline.slide-3 .content { margin-left: -300%; }
+
+		.timeline.slide-4 .content { margin-left: -400%; }
+
+		.timeline.slide-5 .content { margin-left: -500%; }
+
+		.timeline.slide-6 .content { margin-left: -600%; }
+
+		.timeline.slide-7 .content { margin-left: -700%; }
+
+		.timeline.slide-8 .content { margin-left: -800%; }
+
+		.timeline.slide-9 .content { margin-left: -900%; }
+
+	</style>
+
+	<!--div.timeline>div.container>(ul.nav>(li{Scene $$})*5)+(ul.content>(li{Scene $$})*5)-->
+
+	<div class="container">
+		<div class="timeline">
+			<ul class="nav">
+				<li class="border-green-900 font-green-900 h-green-900 hfont-white">2001</li>
+				<li class="border-green-900 font-green-900 h-green-900 hfont-white">2002</li>
+				<li class="border-green-900 font-green-900 h-green-900 hfont-white">2003</li>
+				<li class="border-green-900 font-green-900 h-green-900 hfont-white">2004</li>
+				<li class="border-green-900 font-green-900 h-green-900 hfont-white">2005</li>
+			</ul>
+			<ul class="content">
+				<li class="green-100 font-grey-800"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci consectetur dolore ducimus et ex fuga maxime neque optio perspiciatis quae qui quisquam quod, similique soluta, sunt temporibus. Autem, iste?</p></li>
+				<li class="green-300 font-grey-800"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolorum et ipsum ratione! Asperiores, consectetur culpa ducimus eligendi error, expedita explicabo incidunt ipsum neque placeat porro quas totam ullam, vitae.</p></li>
+				<li class="green-600 font-white"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, beatae blanditiis cupiditate dicta eos explicabo hic in inventore laboriosam laborum mollitia neque provident quae qui rem suscipit veritatis vitae voluptatum.</p></li>
+				<li class="green-900 font-white"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto atque aut beatae blanditiis consequuntur ea eligendi excepturi facere illum incidunt pariatur, sed similique tempore unde. Aliquam enim temporibus veritatis.</p></li>
+				<li class="green-600 font-white"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut autem cupiditate ex harum nisi porro voluptates! Consequatur earum laudantium perferendis ratione veritatis. Adipisci cupiditate dolorem doloribus maiores. Ipsa, odio!</p></li>
+			</ul>
+		</div>
+	</div>
+
 </div>
 
 <style>
-	#prices {
-		padding: 400px;
-	}
 </style>
 
 <div id="prices" class="history blue-grey-900 font-grey-300">
 	<!--
 		TODO - price comparison
 	-->
-	<h1>VAMOS FALAR UM POUCO SOBRE OS PLANOS DA EMPRESA AQUI</h1>
 </div>
 
 <style>
-	#bg {
-		z-index: -1;
-		height: 40px;
-		transition: all .1s linear;
-	}
 
-	#bg path {
-		fill: none;
-		stroke: #ffffff;
-		stroke-width: 60;
-		stroke-linecap: round;
-		stroke-miterlimit: 10;
-	}
+
+
 </style>
 
 <!--
@@ -320,11 +436,12 @@
 -->
 
 <style type="text/css">
-	home > footer {
-		height: 600px;
+	body > footer {
+		width: 100%;
+		padding-bottom: 300px !important;
 	}
 </style>
-<footer class="grey-900"></footer>
+<footer class="block grey-900">a</footer>
 
 <script src="js/mowe.js"></script>
 

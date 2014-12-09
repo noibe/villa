@@ -11,9 +11,9 @@
 	margin-left: auto;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1024px) {
 	.container {
-		width: 750px;
+		width: 100%;
 	}
 }
 
@@ -23,7 +23,7 @@
 	}
 }
 
-@media (min-width: 1230px) {
+@media (min-width: 1200px) {
 	.wide {
 		width: 1140px;
 	}

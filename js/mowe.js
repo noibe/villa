@@ -4,22 +4,33 @@
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
  */
 
-document.getElementsByClassName('hero')[0].style.height = (window.innerHeight - 60) + "px";
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){ window.isMobile = true; } else { window.isMobile = false; }
+
+if(window.innerWidth > 768) {
+	document.getElementsByClassName('hero')[0].style.height = (window.innerHeight - 60) + "px";
+} else {
+	document.getElementsByClassName('hero')[0].style.height = (window.innerHeight - 120) + "px";
+}
 
 window.onresize = function() {
-	document.getElementsByClassName('hero')[0].style.height = (window.innerHeight - 60) + "px";
+	if(window.innerWidth > 768) {
+		document.getElementsByClassName('hero')[0].style.height = (window.innerHeight - 60) + "px";
+	} else {
+		document.getElementsByClassName('hero')[0].style.height = (window.innerHeight - 120) + "px";
+	}
 };
 
+
 window.onscroll = function (event) {
-	if (document.documentElement.scrollTop > window.innerHeight - 60) {
-		if (!$('.nav').hasClass('white')) {
-			$('.nav').removeClass('font-white').addClass('white font-green')
-			$('#bg path').css('stroke', '#dce775')
-		}
-	} else {
-		if ($('.nav').hasClass('white')) {
-			$('.nav').removeClass('white font-green').addClass('font-white')
-			$('#bg path').css('stroke', '#ffffff')
+	if (!window.isMobile) {
+		if ((window.pageYOffset || doc.scrollTop) > (window.innerHeight - 64)) {
+			if (!$('.navbar').hasClass('white')) {
+				$('.navbar').addClass('white');
+			}
+		} else {
+			if ($('.navbar').hasClass('white')) {
+				$('.navbar').removeClass('white');
+			}
 		}
 	}
 };
@@ -32,22 +43,23 @@ $('.wow').click(function() {
 	}
 });
 
+$('.navbar header .toggle').click(function() {
+	console.log($(this).closest('.navbar').find('.menu'));
+	$(this).closest('.navbar').find('.menu').toggleClass('show');
+});
+
+$('.timeline .nav li').click(function () {
+	console.log($(this).closest('.timeline').find('.content li').get($(this).index()));
+	var index = $(this).index();
+	$($(this).closest('.timeline')).attr('class', 'timeline');
+	$($(this).closest('.timeline')).addClass('slide-' + index);
+})
+
 window.onload = function() {
-	if (document.documentElement.scrollTop > window.innerHeight - 60) {
-		if (!$('.nav').hasClass('white')) {
-			$('.nav').removeClass('font-white').addClass('white font-green')
-			$('#bg path').css('stroke', '#dce775')
-		}
-	} else {
-		if ($('.nav').hasClass('white')) {
-			$('.nav').removeClass('white font-green').addClass('font-white')
-			$('#bg path').css('stroke', '#ffffff')
-		}
-	}
 
 	document.getElementById("js-scroll-services").onclick = function fun() {
 
-		var wrapper = document.getElementById("services"); //get div
+		var wrapper = document.getElementsByClassName("services")[0]; //get div
 		var h = wrapper.getBoundingClientRect(); //get height
 
 		//noinspection JSSuspiciousNameCombination
@@ -61,8 +73,8 @@ window.onload = function() {
 
 		scrollTo(h.top);
 
-		if (!$('.nav').hasClass('white')) {
-			$('.nav').addClass('white');
+		if (!$('.navbar').hasClass('white')) {
+			$('.navbar').addClass('white');
 		}
 	};
 
