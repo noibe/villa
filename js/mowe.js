@@ -118,3 +118,7 @@ window.onload = function() {
 	}
 };
 
+/* external funcs */
+
+//removes class with prefix
+jQuery.fn.removeClassLike = function(prefix){ var classes = this.attr("class").split(" ").filter(function(c) { return c.lastIndexOf(prefix, 0) !== 0; }); return this.attr("class", classes.join(" ")); }
