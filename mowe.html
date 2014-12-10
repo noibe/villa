@@ -485,22 +485,8 @@
 			justify-content: center;
 		}
 
-		.pricelist .content li:hover {
-			background-color: #ffffff;
-			color: #222;
-			transition: background .3s linear;
-		}
-
-		.pricelist .content li:hover .title {
-			border-color: #ffffff;
-		}
-
-		.pricelist .content li:hover .action {
-			visibility: visible;
-			transition: none;
-		}
-
 		.pricelist .content li {
+			border-radius: 8px;
 			display: -webkit-box;
 			display: -moz-box;
 			display: -ms-flexbox;
@@ -515,33 +501,66 @@
 
 		.pricelist .content li .title {
 			border-bottom: solid 2px #666;
-			font-size: 23px;
+			font-size: 18px;
 			margin-bottom: 10px;
 			padding-bottom: 10px;
 			text-transform: uppercase;
 		}
 
+		.pricelist .content li .price {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+
 		.pricelist .content li .price .dollar {
 			font-size: 40px;
+			align-self: flex-start;
 		}
 
 		.pricelist .content li .price .number {
 			font-size: 80px;
 			line-height: 80px;
+			align-self: center;
+		}
+
+		.pricelist .content li .price .decimal {
+			align-self: flex-end;
 		}
 
 		.pricelist .content li .description {
+			font-size: 15px;
 			margin: 15px 0;
 			color: #888;
 		}
 
 		.pricelist .content li .action {
 			background-color: #4DC2E3;
+			border-radius: 25px;
 			color: #ffffff;
 			display: block;
 			margin-top: 20px;
 			padding: 10px;
 			visibility: hidden;
+			transition: none;
+		}
+
+		.pricelist .content li:hover {
+			background-color: #ffffff;
+			color: #222;
+			transition: background .3s linear;
+		}
+
+		.pricelist .content li:hover .title {
+			border-color: #ffffff;
+		}
+
+		.pricelist .content li:hover .action {
+			visibility: visible;
 			transition: none;
 		}
 	</style>
@@ -561,6 +580,7 @@
 					<span class="price">
 						<span class="dollar">R$</span>
 						<span class="number">39</span>
+						<span class="decimal">,90</span>
 					</span>
 					<span class="description">Upload: 1 MEGA</span>
 					<a href="#" class="action">Assine Já</a>
@@ -579,6 +599,7 @@
 					<span class="price">
 						<span class="dollar">R$</span>
 						<span class="number">89</span>
+						<span class="decimal">,90</span>
 					</span>
 					<span class="description">Upload: 1 MEGA</span>
 					<a href="#" class="action">Assine Já</a>
