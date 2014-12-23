@@ -25,13 +25,15 @@
 
 @media (min-width: 1200px) {
 	.wide {
-		width: 1140px;
+		width: 100%;
+		max-width: 1140px;
 	}
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
 	.full {
-		width: 1600px;
+		width: 100%;
+		max-width: 1600px;
 	}
 }
 

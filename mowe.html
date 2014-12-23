@@ -24,12 +24,27 @@
 <body class="">
 
 <style>
-	.navbar.white .brand {
+
+	@media (min-width: 1200px) {
+		.navbar .full {
+			pading-right: 200px;
+		}
+	}
+
+	.block-1 .navbar .brand {
 		color: #66bb6a;
 	}
 
-	.navbar.white #bg path {
+	.block-1 .navbar #bg path {
 		stroke: #cddc39 !important;
+	}
+
+	.block-3 .navbar .brand {
+		color: #ff0000;
+	}
+
+	.block-3 .navbar #bg path {
+		stroke: #ffff00 !important;
 	}
 
 	@media (max-width: 768px) {
@@ -133,9 +148,6 @@
 				<a class="brand" href="#">
 					<span class="brand-text">WEBTal<!--<span class="slogan">telecom</span>--></span>
 				</a>
-				<!--
-					TODO - vector to brand name
-				-->
 				<a class="logo font-grey-700" href="#">
 					<svg id="bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
 						<g>
@@ -189,7 +201,6 @@
 
 </style>
 
-
 <!--
 	TODO - carousel
 	Need to carousel or another solution to show great deals
@@ -217,7 +228,7 @@
 	</div>
 </div>
 
-<div class="block services grey-100 font-grey-900">
+<div id="block-1" class="block services grey-100 font-grey-900">
 
 	<div class="container">
 		<div class="about">
@@ -281,7 +292,7 @@
 
 
 
-<div id="history" class="history block grey-200 font-grey-700">
+<div id="block-2" class="history block grey-200 font-grey-700">
 
 	<div class="container">
 		<div class="about">
@@ -289,10 +300,6 @@
 			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis eligendi error impedit ipsum maxime minus mollitia nam necessitatibus nemo omnis optio pariatur quisquam ratione, sapiente suscipit tempora unde.</p>
 		</div>
 	</div>
-
-	<!--
-		TODO - timeline
-	-->
 
 	<style>
 
@@ -420,7 +427,7 @@
 
 </div>
 
-<div id="prices" class="block blue-grey-900 font-grey-300">
+<div id="block-3" class="block blue-grey-900 font-grey-300">
 
 	<div class="container">
 		<div class="about">
@@ -624,7 +631,7 @@
 		padding-bottom: 300px !important;
 	}
 </style>
-<footer class="block grey-900">a</footer>
+<footer id="block-4" class="block grey-900">a</footer>
 
 <script src="js/mowe.js"></script>
 
