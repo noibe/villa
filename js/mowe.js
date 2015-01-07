@@ -223,6 +223,54 @@ window.onload = function () {
 
 }(jQuery));
 
+
+(function ($) {
+
+	/* Constructor of slide functions */
+	$.fn.scrollList = function (options) {
+
+		var settings = $.extend({
+			beforePadding: 0,
+			startName: "",
+			target: "body"
+		}, options);
+
+		var addressListSettings = {
+			beforePadding: settings.beforePadding,
+			parent: settings.target,
+			startName: settings.startName
+		};
+
+		var addressList = $(this).getAddress(addressListSettings);
+		var element = this;
+		var pastActive;
+
+		$(window).resize(function () {
+			addressList = $(element).getAddress(addressListSettings);
+		});
+
+		$(window).scroll(function () {
+			var active = $(this).getScrollActiveItem(addressList);
+
+			if (active != pastActive) {
+				if (!$(settings.target).hasClass(active)) {
+
+					if ($(settings.target).hasClass(pastActive)) {
+						$(settings.target).removeClass(pastActive);
+					}
+
+					$(settings.target).addClass(active);
+
+					pastActive = active;
+				}
+			}
+		});
+	};
+
+
+
+}(jQuery));
+
 /* external funcs */
 
 function getPosition(element) {
