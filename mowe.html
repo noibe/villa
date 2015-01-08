@@ -1,143 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
+	<meta charset="utf-8"/>
 	<title>Mowe</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 	<script src="js/villa.js"></script>
-	<link rel="stylesheet" href="css/villa-foundation.css" />
+	<link rel="stylesheet" href="css/villa-foundation.css"/>
 	<link rel="stylesheet" href="css/villa-grid.css"/>
-	<link rel="stylesheet" href="css/villa.css" />
-	<link rel="stylesheet" href="css/mowe.css" />
-	<link rel="stylesheet" href="css/mowe-hero.css" />
-	<link rel="stylesheet" href="css/mowe-font.css" />
-	<link rel="stylesheet" href="css/mowe-navbar.css" />
-	<link rel="stylesheet" href="css/mowe-structure.css" />
-	<link rel="stylesheet" href="css/mowe-wow.css" />
+	<link rel="stylesheet" href="css/villa.css"/>
+	<link rel="stylesheet" href="css/wtal.css"/>
+	<link rel="stylesheet" href="css/mowe.css"/>
+	<link rel="stylesheet" href="css/mowe-hero.css"/>
+	<link rel="stylesheet" href="css/mowe-font.css"/>
+	<link rel="stylesheet" href="css/mowe-navbar.css"/>
+	<link rel="stylesheet" href="css/mowe-structure.css"/>
+	<link rel="stylesheet" href="css/mowe-wow.css"/>
+	<link rel="stylesheet" href="css/mowe-pricelist.css"/>
+	<link rel="stylesheet" href="css/mowe-timeline.css"/>
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<!--[if lt IE 9]>
-		<link rel="stylesheet" type="text/css" href="css/material-colors.css"/>
-		<script src="js/html5shiv.js"></script>
-		<script src="js/html5shiv-printshiv.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/material-colors.css"/>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/html5shiv-printshiv.js"></script>
 	<![endif]-->
 </head>
 <body class="">
-
-<style>
-
-	@media (min-width: 1200px) {
-		.navbar .full {
-			pading-right: 200px;
-		}
-	}
-
-	.block-1 .navbar .brand {
-		color: #66bb6a;
-	}
-
-	.block-1 .navbar #bg path {
-		stroke: #cddc39 !important;
-	}
-
-	.block-3 .navbar .brand {
-		color: #ff0000;
-	}
-
-	.block-3 .navbar #bg path {
-		stroke: #ffff00 !important;
-	}
-
-	@media (max-width: 768px) {
-		.navbar .brand {
-			color: #66bb6a;
-		}
-
-		#bg path {
-			stroke: #cddc39 !important;
-		}
-	}
-
-	#bars {
-		width: 25px;
-		height: 25px;
-		padding-top: 5px;
-	}
-
-	#bars line {
-		fill: none;
-		stroke :#ffffff;
-		stroke-width: 160;
-		stroke-miterlimit: 10;
-	}
-
-	#bg {
-		height: 40px;
-		transition: all .1s linear;
-	}
-
-	#bg path {
-		fill: none;
-		stroke: #ffffff;
-		stroke-width: 60;
-		stroke-linecap: round;
-		stroke-miterlimit: 10;
-	}
-
-	.hero {
-		background: url("img/wt01.jpg") no-repeat;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		padding-top: 60px;
-	}
-
-	.hero .scroll-container {
-		position: absolute;
-		bottom: 30px;
-		text-align: center;
-		width: 100%;
-	}
-
-	.hero .scroll {
-		user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		outline: 0;
-	}
-
-	.hero .scroll-text {
-		font-size: 18px;
-	}
-
-	.hero .scroll-btn {
-		border: solid 4px #ffffff;
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width: 52px;
-		height: 52px;
-		margin: 18px auto 0;
-		border-radius: 50%;
-	}
-
-	.hero .scroll-btn svg {
-		width: 44px;
-		height: 44px;
-	}
-
-	.hero .scroll-btn path {
-		fill: #ffffff;
-	}
-</style>
 
 <div class="navbar fixed-sm font-white">
 	<div class="full wide container">
@@ -191,27 +79,21 @@
 		</footer>
 
 
-
 	</div>
 </div>
-
-<style type="text/css">
-
-
-
-</style>
 
 <!--
 	TODO - carousel
 	Need to carousel or another solution to show great deals
 -->
+
 <div class="hero green-500 font-white" id="foo">
 	<div class="wide container">
 		<h1>A melhor internet de palmital</h1>
 		<a href="#" id="js-scroll-prices" class="btn">Planos</a>
 	</div>
 	<div class="scroll-container">
-		<a  href="#" id="js-scroll-services" class="scroll">
+		<a href="#" id="js-scroll-services" class="scroll">
 			<span class="scroll-text">Conheça os nossos serviços</span>
 			<span class="scroll-btn">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -300 1792 1792" version="1.1">
@@ -220,7 +102,8 @@
 							TODO - circle ux and hero typeface
 							Better the UX of the circle
 						-->
-						<path d="m 1075,800 q 0,-13 -10,-23 L 599,311 q -10,-10 -23,-10 -13,0 -23,10 L 87,777 q -10,10 -10,23 0,13 10,23 l 50,50 q 10,10 23,10 13,0 23,-10 L 576,480 969,873 q 10,10 23,10 13,0 23,-10 l 50,-50 q 10,-10 10,-23 z" ></path>
+						<path
+							d="m 1075,800 q 0,-13 -10,-23 L 599,311 q -10,-10 -23,-10 -13,0 -23,10 L 87,777 q -10,10 -10,23 0,13 10,23 l 50,50 q 10,10 23,10 13,0 23,-10 L 576,480 969,873 q 10,10 23,10 13,0 23,-10 l 50,-50 q 10,-10 10,-23 z"></path>
 					</g>
 				</svg>
 			</span>
@@ -233,7 +116,10 @@
 	<div class="container">
 		<div class="about">
 			<h1>Nossos serviços e tecnologias</h1>
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis eligendi error impedit ipsum maxime minus mollitia nam necessitatibus nemo omnis optio pariatur quisquam ratione, sapiente suscipit tempora unde.</p>
+
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis eligendi
+				error impedit ipsum maxime minus mollitia nam necessitatibus nemo omnis optio pariatur quisquam ratione,
+				sapiente suscipit tempora unde.</p>
 		</div>
 	</div>
 
@@ -244,12 +130,18 @@
 
 				<section class="text">
 					<h1>Hello!</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem rerum sequi tempore tenetur.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae consequatur dolore unde? Aperiam, delectus distinctio iste neque nulla numquam qui sequi. Et impedit molestias mollitia repudiandae tenetur. Dolorem, eum.</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis
+						doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem
+						rerum sequi tempore tenetur.</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae consequatur dolore unde?
+						Aperiam, delectus distinctio iste neque nulla numquam qui sequi. Et impedit molestias mollitia
+						repudiandae tenetur. Dolorem, eum.</p>
 				</section>
 
 				<section class="img">
-					<img src="img/section01.jpg" alt="just a mouse" />
+					<img src="img/section01.jpg" alt="just a mouse"/>
 				</section>
 
 
@@ -261,11 +153,14 @@
 
 				<section class="text">
 					<h1>hello!</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium doloremque necessitatibus quod? Aut dicta eaque ex exercitationem explicabo impedit libero maxime. Amet architecto earum eos mollitia quis tenetur velit veritatis!</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium doloremque necessitatibus
+						quod? Aut dicta eaque ex exercitationem explicabo impedit libero maxime. Amet architecto earum
+						eos mollitia quis tenetur velit veritatis!</p>
 				</section>
 
 				<section class="img">
-					<img src="img/section01.jpg" alt="just a mouse" />
+					<img src="img/section01.jpg" alt="just a mouse"/>
 				</section>
 
 			</div>
@@ -276,11 +171,14 @@
 
 				<section class="text">
 					<h1>hello!</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim exercitationem modi pariatur quaerat rerum similique tempora. Adipisci aliquam culpa facilis, fugit laborum, minus molestias neque quidem repellendus, sed sequi?</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim exercitationem modi
+						pariatur quaerat rerum similique tempora. Adipisci aliquam culpa facilis, fugit laborum, minus
+						molestias neque quidem repellendus, sed sequi?</p>
 				</section>
 
 				<section class="img">
-					<img src="img/section02.jpg" alt="just a mouse" />
+					<img src="img/section02.jpg" alt="just a mouse"/>
 				</section>
 
 			</div>
@@ -290,119 +188,17 @@
 
 </div>
 
-
-
 <div id="block-2" class="history block grey-200 font-grey-700">
 
 	<div class="container">
 		<div class="about">
 			<h1>Nossa História</h1>
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis eligendi error impedit ipsum maxime minus mollitia nam necessitatibus nemo omnis optio pariatur quisquam ratione, sapiente suscipit tempora unde.</p>
+
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis eligendi
+				error impedit ipsum maxime minus mollitia nam necessitatibus nemo omnis optio pariatur quisquam ratione,
+				sapiente suscipit tempora unde.</p>
 		</div>
 	</div>
-
-	<style>
-
-		.timeline {
-			display: block;
-			float: left;
-			width: 100%;
-			margin-bottom: 100px;
-		}
-
-		.timeline .nav {
-			display: -webkit-box;
-			display: -moz-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
-			justify-content: center;
-			margin: 20px auto 60px;
-			user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			-webkit-touch-callout: none;
-			-webkit-user-select: none;
-			-khtml-user-select: none;
-		}
-
-		.timeline .nav li {
-			cursor: pointer;
-			border-style: solid;
-			border-width: 1px;
-			font-size: 16px;
-			padding: 15px 30px;
-			margin-left: -1px;
-		}
-
-		@media screen and (max-width: 480px) {
-			.timeline .nav li {
-				padding: 15px 15px;
-			}
-		}
-
-		.timeline .nav li:first-child {
-			border-top-left-radius: 5px;
-			border-bottom-left-radius: 5px;
-		}
-
-		.timeline .nav li:last-child {
-			border-top-right-radius: 5px;
-			border-bottom-right-radius: 5px;
-		}
-		
-		.timeline .content {
-			display: block;
-			float: left;
-			width: 500%;
-		}
-
-		.timeline .content li {
-			min-height: 300px;
-			float: left;
-			padding: 30px 0;
-			width: 20%;
-		}
-
-		.timeline .content li p {
-			padding: 30px 60px;
-			text-align: center;
-		}
-
-		.timeline.slide-0 .content,
-		.timeline.slide-1 .content,
-		.timeline.slide-2 .content,
-		.timeline.slide-3 .content,
-		.timeline.slide-4 .content,
-		.timeline.slide-5 .content,
-		.timeline.slide-6 .content,
-		.timeline.slide-7 .content,
-		.timeline.slide-8 .content,
-		.timeline.slide-9 .content {
-			transition: margin .4s linear .1s;
-		}
-
-		.timeline.slide-0 .content { margin-left: 0; }
-
-		.timeline.slide-1 .content { margin-left: -100%; }
-
-		.timeline.slide-2 .content { margin-left: -200%; }
-
-		.timeline.slide-3 .content { margin-left: -300%; }
-
-		.timeline.slide-4 .content { margin-left: -400%; }
-
-		.timeline.slide-5 .content { margin-left: -500%; }
-
-		.timeline.slide-6 .content { margin-left: -600%; }
-
-		.timeline.slide-7 .content { margin-left: -700%; }
-
-		.timeline.slide-8 .content { margin-left: -800%; }
-
-		.timeline.slide-9 .content { margin-left: -900%; }
-
-	</style>
 
 	<!--div.timeline>div.container>(ul.nav>(li{Scene $$})*5)+(ul.content>(li{Scene $$})*5)-->
 
@@ -416,161 +212,38 @@
 				<li class="border-green-900 font-green-900 h-green-900 hfont-white">2005</li>
 			</ul>
 			<ul class="content">
-				<li class="green-100 font-grey-800"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci consectetur dolore ducimus et ex fuga maxime neque optio perspiciatis quae qui quisquam quod, similique soluta, sunt temporibus. Autem, iste?</p></li>
-				<li class="green-300 font-grey-800"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolorum et ipsum ratione! Asperiores, consectetur culpa ducimus eligendi error, expedita explicabo incidunt ipsum neque placeat porro quas totam ullam, vitae.</p></li>
-				<li class="green-600 font-white"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, beatae blanditiis cupiditate dicta eos explicabo hic in inventore laboriosam laborum mollitia neque provident quae qui rem suscipit veritatis vitae voluptatum.</p></li>
-				<li class="green-900 font-white"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto atque aut beatae blanditiis consequuntur ea eligendi excepturi facere illum incidunt pariatur, sed similique tempore unde. Aliquam enim temporibus veritatis.</p></li>
-				<li class="green-600 font-white"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut autem cupiditate ex harum nisi porro voluptates! Consequatur earum laudantium perferendis ratione veritatis. Adipisci cupiditate dolorem doloribus maiores. Ipsa, odio!</p></li>
+				<li class="green-100 font-grey-800"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+					adipisci consectetur dolore ducimus et ex fuga maxime neque optio perspiciatis quae qui quisquam
+					quod, similique soluta, sunt temporibus. Autem, iste?</p></li>
+				<li class="green-300 font-grey-800"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
+					dolorum et ipsum ratione! Asperiores, consectetur culpa ducimus eligendi error, expedita explicabo
+					incidunt ipsum neque placeat porro quas totam ullam, vitae.</p></li>
+				<li class="green-600 font-white"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque,
+					beatae blanditiis cupiditate dicta eos explicabo hic in inventore laboriosam laborum mollitia neque
+					provident quae qui rem suscipit veritatis vitae voluptatum.</p></li>
+				<li class="green-900 font-white"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+					architecto atque aut beatae blanditiis consequuntur ea eligendi excepturi facere illum incidunt
+					pariatur, sed similique tempore unde. Aliquam enim temporibus veritatis.</p></li>
+				<li class="green-600 font-white"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+					aut autem cupiditate ex harum nisi porro voluptates! Consequatur earum laudantium perferendis
+					ratione veritatis. Adipisci cupiditate dolorem doloribus maiores. Ipsa, odio!</p></li>
 			</ul>
 		</div>
 	</div>
 
 </div>
 
-<div id="block-3" class="block blue-grey-900 font-grey-300">
+<div id="block-3" class="block light-green-100 font-grey-800">
 
 	<div class="container">
 		<div class="about">
 			<h1>Assine já!</h1>
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid assumenda error est fuga fugit incidunt ipsam laboriosam numquam, qui quisquam quod repellat sed similique tempora tenetur veritatis. Adipisci, iusto.</p>
 		</div>
 	</div>
 
 	<!--
-		TODO - price comparison
+		TODO - responsive price comparison
 	-->
-
-	<style>
-		.pricelist {
-			margin-bottom: 100px;
-		}
-
-		.pricelist .nav {
-			display: -webkit-box;
-			display: -moz-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
-			justify-content: center;
-			margin: 30px auto 60px;
-			user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			-webkit-touch-callout: none;
-			-webkit-user-select: none;
-			-khtml-user-select: none;
-		}
-
-		.pricelist .nav li {
-			cursor: pointer;
-			border-style: solid;
-			border-width: 1px;
-			font-size: 16px;
-			padding: 15px 30px;
-			margin-left: -1px;
-			min-width: 150px;
-			text-align: center;
-		}
-
-		.pricelist .nav li:first-child {
-			border-top-left-radius: 5px;
-			border-bottom-left-radius: 5px;
-		}
-
-		.pricelist .nav li:last-child {
-			border-top-right-radius: 5px;
-			border-bottom-right-radius: 5px;
-		}
-
-		.pricelist .content {
-			display: -webkit-box;
-			display: -moz-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-		}
-
-		.pricelist .content li {
-			border-radius: 8px;
-			display: -webkit-box;
-			display: -moz-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			padding: 40px 50px;
-			text-align: center;
-			width: 30%;
-		}
-
-		.pricelist .content li .title {
-			border-bottom: solid 2px #666;
-			font-size: 18px;
-			margin-bottom: 10px;
-			padding-bottom: 10px;
-			text-transform: uppercase;
-		}
-
-		.pricelist .content li .price {
-			display: -webkit-box;
-			display: -moz-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-		}
-
-		.pricelist .content li .price .dollar {
-			font-size: 40px;
-			align-self: flex-start;
-		}
-
-		.pricelist .content li .price .number {
-			font-size: 80px;
-			line-height: 80px;
-			align-self: center;
-		}
-
-		.pricelist .content li .price .decimal {
-			align-self: flex-end;
-		}
-
-		.pricelist .content li .description {
-			font-size: 15px;
-			margin: 15px 0;
-			color: #888;
-		}
-
-		.pricelist .content li .action {
-			background-color: #4DC2E3;
-			border-radius: 25px;
-			color: #ffffff;
-			display: block;
-			margin-top: 20px;
-			padding: 10px;
-			visibility: hidden;
-			transition: none;
-		}
-
-		.pricelist .content li:hover {
-			background-color: #ffffff;
-			color: #222;
-			transition: background .3s linear;
-		}
-
-		.pricelist .content li:hover .title {
-			border-color: #ffffff;
-		}
-
-		.pricelist .content li:hover .action {
-			visibility: visible;
-			transition: none;
-		}
-	</style>
 
 	<!--div.container>div.pricelist>(ul.nav>(li{Plan $$})*5)+(ul.content>(li{Plan Text $$})*5)-->
 
@@ -582,55 +255,151 @@
 				<li>Rural</li>
 			</ul>
 			<ul class="content">
-				<li>
-					<span class="title">2 Mega</span>
-					<span class="price">
-						<span class="dollar">R$</span>
-						<span class="number">39</span>
-						<span class="decimal">,90</span>
-					</span>
-					<span class="description">Upload: 1 MEGA</span>
-					<a href="#" class="action">Assine Já</a>
+				<li class="category-1">
+					<ul class="content">
+						<li>
+							<span class="title">1 Mega</span>
+							<span class="price">
+								<span class="dollar">R$</span>
+								<span class="number">54</span>
+								<span class="decimal">,00</span>
+							</span>
+							<span class="description">Upload: 1 MEGA</span>
+							<a href="#" class="action">Assine Já</a>
+						</li>
+						<li>
+							<span class="title">2 Mega</span>
+							<span class="price">
+								<span class="dollar">R$</span>
+								<span class="number">74</span>
+								<span class="decimal">,00</span>
+							</span>
+							<span class="description">Upload: 1 MEGA</span>
+							<a href="#" class="action">Assine Já</a>
+						</li>
+						<li>
+							<span class="title">3 Mega</span>
+							<span class="price">
+								<span class="dollar">R$</span>
+								<span class="number">99</span>
+								<span class="decimal">,00</span>
+							</span>
+							<span class="description">Upload: 1 MEGA</span>
+							<a href="#" class="action">Assine Já</a>
+						</li>
+						<li>
+							<span class="title">4 Mega</span>
+							<span class="price">
+								<span class="dollar">R$</span>
+								<span class="number">125</span>
+								<span class="decimal">,00</span>
+							</span>
+							<span class="description">Upload: 1 MEGA</span>
+							<a href="#" class="action">Assine Já</a>
+						</li>
+					</ul>
 				</li>
-				<li>
-					<span class="title">4 Mega</span>
-					<span class="price">
-						<span class="dollar">R$</span>
-						<span class="number">69</span>
-					</span>
-					<span class="description">Upload: 1 MEGA</span>
-					<a href="#" class="action">Assine Já</a>
+
+				<li class="category-2">
+					<ul class="content">
+						<li>
+							<span class="title">1 Mega</span>
+							<span class="price">
+								<span class="dollar">R$</span>
+								<span class="number">54</span>
+								<span class="decimal">,00</span>
+							</span>
+							<span class="description">Upload: 1 MEGA</span>
+							<a href="#" class="action">Assine Já</a>
+						</li>
+						<li>
+							<span class="title">2 Mega</span>
+							<span class="price">
+								<span class="dollar">R$</span>
+								<span class="number">74</span>
+								<span class="decimal">,00</span>
+							</span>
+							<span class="description">Upload: 1 MEGA</span>
+							<a href="#" class="action">Assine Já</a>
+						</li>
+						<li>
+							<span class="title">3 Mega</span>
+							<span class="price">
+								<span class="dollar">R$</span>
+								<span class="number">99</span>
+								<span class="decimal">,00</span>
+							</span>
+							<span class="description">Upload: 1 MEGA</span>
+							<a href="#" class="action">Assine Já</a>
+						</li>
+						<li>
+							<span class="title">4 Mega</span>
+							<span class="price">
+								<span class="dollar">R$</span>
+								<span class="number">125</span>
+								<span class="decimal">,00</span>
+							</span>
+							<span class="description">Upload: 1 MEGA</span>
+							<a href="#" class="action">Assine Já</a>
+						</li>
+					</ul>
 				</li>
-				<li>
-					<span class="title">8 Mega</span>
-					<span class="price">
-						<span class="dollar">R$</span>
-						<span class="number">89</span>
-						<span class="decimal">,90</span>
-					</span>
-					<span class="description">Upload: 1 MEGA</span>
-					<a href="#" class="action">Assine Já</a>
+
+				<li class="category-3">
+					<ul class="content">
+						<li>
+							<span class="title">1 Mega</span>
+							<span class="price">
+								<span class="dollar">R$</span>
+								<span class="number">54</span>
+								<span class="decimal">,00</span>
+							</span>
+							<span class="description">Upload: 1 MEGA</span>
+							<a href="#" class="action">Assine Já</a>
+						</li>
+						<li>
+							<span class="title">2 Mega</span>
+							<span class="price">
+								<span class="dollar">R$</span>
+								<span class="number">74</span>
+								<span class="decimal">,00</span>
+							</span>
+							<span class="description">Upload: 1 MEGA</span>
+							<a href="#" class="action">Assine Já</a>
+						</li>
+						<li>
+							<span class="title">3 Mega</span>
+							<span class="price">
+								<span class="dollar">R$</span>
+								<span class="number">99</span>
+								<span class="decimal">,00</span>
+							</span>
+							<span class="description">Upload: 1 MEGA</span>
+							<a href="#" class="action">Assine Já</a>
+						</li>
+						<li>
+							<span class="title">4 Mega</span>
+							<span class="price">
+								<span class="dollar">R$</span>
+								<span class="number">125</span>
+								<span class="decimal">,00</span>
+							</span>
+							<span class="description">Upload: 1 MEGA</span>
+							<a href="#" class="action">Assine Já</a>
+						</li>
+					</ul>
 				</li>
+
 			</ul>
 		</div>
 	</div>
 
 </div>
 
-<style>
-
-</style>
-
 <!--
 	TODO - footer
 -->
 
-<style type="text/css">
-	body > footer {
-		width: 100%;
-		padding-bottom: 300px !important;
-	}
-</style>
 <footer id="block-4" class="block grey-900">a</footer>
 
 <script src="js/mowe.js"></script>

@@ -1,0 +1,136 @@
+/*!
+ * Mowe Pricelist v1.0.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
+
+.pricelist {
+	margin-bottom: 100px;
+}
+
+.pricelist .nav {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	margin: 30px auto 60px;
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+}
+
+.pricelist .nav li {
+	cursor: pointer;
+	border-style: solid;
+	border-width: 1px;
+	font-size: 16px;
+	padding: 15px 30px;
+	margin-left: -1px;
+	min-width: 150px;
+	text-align: center;
+}
+
+.pricelist .nav li:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.pricelist .nav li:last-child {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.pricelist .content {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.pricelist .content li {
+	border-radius: 8px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 40px 50px;
+	text-align: center;
+	max-width: 30%;
+}
+
+.pricelist .content li .title {
+	border-bottom: solid 2px #666;
+	font-size: 18px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.pricelist .content li .price {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	min-width: 180px;
+}
+
+.pricelist .content li .price .dollar {
+	font-size: 40px;
+	align-self: flex-start;
+}
+
+.pricelist .content li .price .number {
+	font-size: 80px;
+	line-height: 80px;
+	align-self: center;
+}
+
+.pricelist .content li .price .decimal {
+	align-self: flex-end;
+}
+
+.pricelist .content li .description {
+	font-size: 15px;
+	margin: 15px 0;
+	color: #888;
+}
+
+.pricelist .content li .action {
+	background-color: #9ccc65;
+	border-radius: 25px;
+	color: #ffffff;
+	display: block;
+	margin-top: 20px;
+	padding: 10px;
+	visibility: hidden;
+	transition: none;
+}
+
+.pricelist .content li:hover {
+	background-color: #ffffff;
+	color: #222;
+	transition: background .3s linear;
+}
+
+.pricelist .content li:hover .title {
+	border-color: #ffffff;
+}
+
+.pricelist .content li:hover .action {
+	visibility: visible;
+	transition: none;
+}

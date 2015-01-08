@@ -1,0 +1,125 @@
+/*!
+ * Mowe Webtal Project v0.9.0 (http://gomowe.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
+
+@media (min-width: 1200px) {
+	.navbar .full {
+		pading-right: 200px;
+	}
+}
+
+.block-1 .navbar .brand,
+.block-2 .navbar .brand {
+	color: #66bb6a;
+}
+
+.block-1 .navbar #bg path,
+.block-2 .navbar #bg path {
+	stroke: #cddc39 !important;
+}
+
+.block-3 .navbar .brand {
+	color: #fff;
+}
+
+.block-3 .navbar #bg path {
+	stroke: #fff !important;
+}
+
+@media (max-width: 768px) {
+	.navbar .brand {
+		color: #66bb6a;
+	}
+
+	#bg path {
+		stroke: #cddc39 !important;
+	}
+}
+
+#bars {
+	width: 25px;
+	height: 25px;
+	padding-top: 5px;
+}
+
+#bars line {
+	fill: none;
+	stroke: #ffffff;
+	stroke-width: 160;
+	stroke-miterlimit: 10;
+}
+
+#bg {
+	height: 40px;
+	transition: all .1s linear;
+}
+
+#bg path {
+	fill: none;
+	stroke: #ffffff;
+	stroke-width: 60;
+	stroke-linecap: round;
+	stroke-miterlimit: 10;
+}
+
+.hero {
+	background: url("../img/wt01.jpg") no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-top: 60px;
+}
+
+.hero .scroll-container {
+	position: absolute;
+	bottom: 30px;
+	text-align: center;
+	width: 100%;
+}
+
+.hero .scroll {
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	outline: 0;
+}
+
+.hero .scroll-text {
+	font-size: 18px;
+}
+
+.hero .scroll-btn {
+	border: solid 4px #ffffff;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 52px;
+	height: 52px;
+	margin: 18px auto 0;
+	border-radius: 50%;
+}
+
+.hero .scroll-btn svg {
+	width: 44px;
+	height: 44px;
+}
+
+.hero .scroll-btn path {
+	fill: #ffffff;
+}
+
+body > footer {
+	width: 100%;
+	padding-bottom: 300px !important;
+}

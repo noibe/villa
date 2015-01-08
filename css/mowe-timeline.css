@@ -1,0 +1,124 @@
+/*!
+ * Mowe Timeline v1.0.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
+
+.timeline {
+	display: block;
+	float: left;
+	width: 100%;
+	margin-bottom: 100px;
+}
+
+.timeline .nav {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	margin: 20px auto 60px;
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+}
+
+.timeline .nav li {
+	cursor: pointer;
+	border-style: solid;
+	border-width: 1px;
+	font-size: 16px;
+	padding: 15px 30px;
+	margin-left: -1px;
+}
+
+@media screen and (max-width: 480px) {
+	.timeline .nav li {
+		padding: 15px 15px;
+	}
+}
+
+.timeline .nav li:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.timeline .nav li:last-child {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.timeline .content {
+	display: block;
+	float: left;
+	width: 500%;
+}
+
+.timeline .content li {
+	min-height: 300px;
+	float: left;
+	padding: 30px 0;
+	width: 20%;
+}
+
+.timeline .content li p {
+	padding: 30px 60px;
+	text-align: center;
+}
+
+.timeline.slide-0 .content,
+.timeline.slide-1 .content,
+.timeline.slide-2 .content,
+.timeline.slide-3 .content,
+.timeline.slide-4 .content,
+.timeline.slide-5 .content,
+.timeline.slide-6 .content,
+.timeline.slide-7 .content,
+.timeline.slide-8 .content,
+.timeline.slide-9 .content {
+	transition: margin .4s linear .1s;
+}
+
+.timeline.slide-0 .content {
+	margin-left: 0;
+}
+
+.timeline.slide-1 .content {
+	margin-left: -100%;
+}
+
+.timeline.slide-2 .content {
+	margin-left: -200%;
+}
+
+.timeline.slide-3 .content {
+	margin-left: -300%;
+}
+
+.timeline.slide-4 .content {
+	margin-left: -400%;
+}
+
+.timeline.slide-5 .content {
+	margin-left: -500%;
+}
+
+.timeline.slide-6 .content {
+	margin-left: -600%;
+}
+
+.timeline.slide-7 .content {
+	margin-left: -700%;
+}
+
+.timeline.slide-8 .content {
+	margin-left: -800%;
+}
+
+.timeline.slide-9 .content {
+	margin-left: -900%;
+}
