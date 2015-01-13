@@ -23,13 +23,23 @@
 	font-size: 16px;
 }
 
+#prices .nav.pills li {
+	border-radius: 5px;
+}
+
+/* temporary use */
+#prices.slide-1 .nav.pills li:nth-child(1),
+#prices.slide-2 .nav.pills li:nth-child(2),
+#prices.slide-3 .nav.pills li:nth-child(3) {
+	border-style: solid;
+}
+
 .slide .nav.pills {
 	justify-content: center;
 	margin: 30px auto 60px;
 }
 
 .slide .nav.pills li {
-	border-style: solid;
 	border-width: 1px;
 	margin-left: -1px;
 	min-width: 150px;
@@ -37,7 +47,8 @@
 	text-align: center;
 }
 
-.slide .nav.pills li:first-child {
+/* TEMPORARY COMMENT */
+/*.slide .nav.pills li:first-child {
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
@@ -45,7 +56,7 @@
 .slide .nav.pills li:last-child {
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
-}
+}*/
 
 .pricelist {
 	margin-bottom: 100px;

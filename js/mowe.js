@@ -60,10 +60,6 @@ window.onload = function () {
 		var h = wrapper.getBoundingClientRect(); //get height
 
 		scrollTo(h.top);
-
-		if (!$('.navbar').hasClass('white')) {
-			$('.navbar').addClass('white');
-		}
 	};
 
 	function scrollTo(x) {
@@ -107,9 +103,56 @@ window.onload = function () {
 
 	/* */
 	$('.block').scrollList({
-		beforePadding: 65
+		beforePadding: 65,
+		startName: "block"
+	});
+
+	$('#prices .slide .nav>li').distinct({
+		content: $("#prices .slide .content .pricelist"),
+		defaultClass: $("#prices").attr("class"),
+		startName: "slide",
+		target: $("#prices")
 	});
 };
+
+/* Mowe Distinct v0.1.0 */
+
+(function ($) {
+
+	/* Constructor of distinct functions */
+	$.fn.distinct = function (options) {
+
+		var settings = $.extend({
+			content: "",
+			defaultClass: "",
+			startName: "",
+			target: "body"
+		}, options);
+
+		$(settings.target).addClass("slide-1");
+
+		console.log(this);
+		console.log(settings.defaultClass);
+
+		var distinctList = new Array();
+
+		$(this).click(function(index) {
+			var string = "";
+
+			if(settings.startName){
+				string = settings.startName + "-" + ($(this).index() + 1);
+			} else {
+				string = $(this).attr("id") + "-" + ($(this).index() + 1);
+			}
+
+			$(settings.target).attr("class", settings.defaultClass + " " + string);
+
+			$(settings.content[$(this).index()]).index();
+
+		});
+	}
+
+}(jQuery));
 
 /* Mowe ScrollList v1.0.0 */
 
@@ -178,7 +221,7 @@ window.onload = function () {
 	/* Get Address List Function */
 	$.fn.getAddress = function (options) {
 
-		//beforePadding attr is nonfunctional
+		//beforePadding attr works now
 		//parent attr is nonfunctional (at this version)
 		//startName attr is optional
 		var settings = $.extend({
@@ -192,6 +235,7 @@ window.onload = function () {
 		var addressList = new Array();
 
 		if (!settings.name) {
+
 			this.each(function (index) {
 
 				var name = "";
@@ -215,13 +259,15 @@ window.onload = function () {
 				}
 
 			});
-		}
 
-		return addressList;
+			return addressList;
 
-	};
+		};
+	}
 
 }(jQuery));
+
+
 
 
 (function ($) {

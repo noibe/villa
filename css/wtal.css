@@ -95,7 +95,7 @@
 }
 
 .hero .scroll-btn {
-	border: solid 4px #ffffff;
+	border: solid 3px #ffffff;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -122,4 +122,24 @@
 body > footer {
 	width: 100%;
 	padding-bottom: 300px !important;
+}
+
+.hero h1 {
+	font-weight: 300;
+	font-size: 72px;
+	text-align: center;
+}
+
+#prices .pricelist {
+	display: none;
+	opacity: 0;
+	transition: all 1s ease;
+}
+
+#prices.slide-1 .pricelist:nth-child(1),
+#prices.slide-2 .pricelist:nth-child(2),
+#prices.slide-3 .pricelist:nth-child(3) {
+	display: block;
+	opacity: 1;
+	transition: all 1s ease;
 }
