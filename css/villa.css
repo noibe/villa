@@ -115,3 +115,16 @@ blockquote {
         line-height: 1.25;
     }
 }
+
+/* UI Helpers */
+
+/* Opacity Helpers */
+.opacity10, .h-opacity10:hover { opacity: 0.1 }
+.opacity20, .h-opacity20:hover { opacity: 0.2 }
+.opacity30, .h-opacity30:hover { opacity: 0.3 }
+.opacity40, .h-opacity40:hover { opacity: 0.4 }
+.opacity50, .h-opacity50:hover { opacity: 0.5 }
+.opacity60, .h-opacity60:hover { opacity: 0.6 }
+.opacity70, .h-opacity70:hover { opacity: 0.7 }
+.opacity80, .h-opacity80:hover { opacity: 0.8 }
+.opacity90, .h-opacity90:hover { opacity: 0.9 }

@@ -66,7 +66,7 @@ window.onload = function () {
 		//elapsed
 		var e;
 		//duration in milli seconds
-		var d = 800;
+		var d = 600;
 		//b as in begin, where to start (you could get this dynamically)
 		var b = document.documentElement.scrollTop;
 		//start time, when the animation starts
