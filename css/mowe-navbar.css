@@ -6,7 +6,7 @@
 
 .navbar {
     /*background-color: transparent;*/
-    min-height: 64px;
+    min-height: 4em;
     user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -65,7 +65,7 @@ button::-moz-focus-inner {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    font-size: 15px;
+    font-size: .875em;
 }
 
 .navbar .item .link {

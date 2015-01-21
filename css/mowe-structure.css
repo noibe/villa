@@ -7,19 +7,19 @@
 .block {
     float: left;
     overflow-x: hidden;
-    padding: 60px 0 20px;
+    padding: 3.75em 0 20px;
     width: 100%;
 }
 
 .block .container > .about,
 .block > .about {
-    margin: 40px 0;
+    margin: 2.25em 0;
 }
 
 .block > h1,
 .block .container > h1,
 .block .about h1{
-    font-size: 48px;
+    font-size: 3em;
     font-weight: 400;
     text-align: center;
 }
@@ -27,7 +27,7 @@
 .block > .lead,
 .block .container > .lead,
 .block .about .lead {
-    font-size: 23px;
+    font-size: 1.5em;
     font-weight: 300;
     text-align: center;
 }

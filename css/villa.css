@@ -12,11 +12,11 @@
 
 html {
     /* can i use this someday, it helps to use the Root EM (rem) rule */
-    /*font-size: 62.5%;*/
+    font-size: 62.5%;
 }
 
 body {
-    font-size: 100%;
+    font-size: 160%;
     line-height: 1.25;
 }
 
@@ -96,9 +96,9 @@ blockquote {
 
 @media (min-width: 56.25em) {
     h1 {
-        font-size: 3em;
+        font-size: 4em;
         /* 3x body copy size = 48px */
-        line-height: 1.05;
+        line-height: 1.05; /* << ORIGINAL */
         /* keep to a multiple of the 20px line height
         and something more appropriate for display headings */
     }
