@@ -7,7 +7,7 @@
 .block {
     float: left;
     overflow-x: hidden;
-    padding: 3.75em 0 20px;
+    padding: 1.5em 0 1.125em;
     width: 100%;
 }
 
@@ -19,7 +19,6 @@
 .block > h1,
 .block .container > h1,
 .block .about h1{
-    font-size: 3em;
     font-weight: 400;
     text-align: center;
 }
@@ -36,4 +35,18 @@
 .block .container > h1 + .lead,
 .block .about h1 + .lead {
     margin-top: 20px;
+}
+
+@media (min-width: 30em) {
+    .block {
+        padding: 2.25em 0 1.125em;
+        width: 100%;
+    }
+}
+
+@media (min-width: 43.75em) {
+    .block {
+        padding: 3.75em 0 1.5em;
+        width: 100%;
+    }
 }
