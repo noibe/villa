@@ -1,8 +1,97 @@
 /*!
- * Villa Mowe Distinct v0.1.0 (http://getvilla.org/)
+ * Villa Mowe Distinct v0.4.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
  */
+//1024x480
+
+$('.slide .about').click(function(){
+	toggleFullScreen();
+});
+
+/* timeInterval default is 30 seconds*/
+var timeInterval = 4000;
+var timeResponse = 0;
+
+var senseResponses = new Array();
+
+setInterval(function() {
+
+	if (senseResponses.length > 0) {
+		// if has responses on array
+		for (var i = senseResponses.length; i > 0; i--) {
+
+			var ajaxTime = new Date().getTime();
+
+			var responseString = JSON.stringify(Array(senseResponses[i - 1]));
+
+			$.ajax({
+				cache: false,
+				data: {
+					response: responseString
+				},
+				error: function() {
+
+					console.log('falhas');
+
+					// ajust the time interval (or not)
+					if(timeInterval < 30000) {
+						timeInterval += 2000;
+					}
+
+				},
+				success: function(data) {
+
+					if (data == 301) {
+						// if the result is equal to '303'
+
+						// drop one position of the responses array
+						senseResponses.pop();
+
+						// ajust the time interval (or not)
+						if(timeInterval > 10000) {
+							timeInterval -= 2000;
+						}
+
+						timeResponse = new Date().getTime()-ajaxTime;
+					} else {
+						console.log(data);
+					}
+
+					console.log(data);
+
+				},
+				timeout: timeInterval / 4,
+				type: 'GET',
+				url: "http://noibe.com/api/mrfb/index.php"
+			});
+
+		}
+
+	} else {
+		// if NOT has responses on array
+		$.ajax({
+			cache: false,
+			error: function(data) {
+				// remove the class online if exists
+				if($('body').hasClass('online')) {
+					$('body').removeClass('online');
+				}
+			},
+			success: function(data) {
+				// add or not the class online
+				if(!$('body').hasClass('online')) {
+					$('body').addClass('online');
+				}
+
+			},
+			timeout: timeInterval / 4,
+			type: 'GET',
+			url: "http://noibe.com/api/mrfb/index.php"
+		});
+	}
+
+}, timeInterval);
 
 (function ($) {
 
@@ -17,13 +106,15 @@
 			targetData: false
 		}, options);
 
-		console.log(this);
-		console.log(settings.target);
+		/*console.log(this);*/
+		/*console.log(settings.target);*/
 
 		var distinctList = new Array();
 		var currentIndex;
 
 		$(this).click(function(index) {
+
+			navigator.vibrate(200);
 
 			var string = "";
 
@@ -54,28 +145,23 @@
 
 				/* INDIVIDUAL CASE! JUST FOR TEST! IGNORE THE NEXT IF, PLEASE >< */
 
-				if(currentIndex < 3) {
+				/* TODO */
 
-					var url= "http://noibe.com/api/mrfb/index.php";
+				var response = {
+					comment: 'Novo teste',
+					place: 'A',
+					service: 1,
+					vote: $(settings.target).attr('data-value')
+				};
 
-					$.ajax({
-						cache: false,
-						data: {
-							message: $('.card').attr('data-value'),
-							/*garrido_lt@hotmail.com*/
-							to: 'eduardo_barros@outlook.com'
-						},
-						error: function() {
-							$('#info').html('<p>An error has occurred</p>');
-						},
-						success: function(data) {
-							console.log(data);
-						},
-						type: 'GET',
-						url: url
-					});
+				senseResponses.push(response);
 
-				}
+				setTimeout(function(){
+					$(settings.target).attr("class", settings.defaultClass);
+					$(settings.target).attr("data-value", "");
+
+					currentIndex = $(this).index();
+				}, 4000);
 
 			}
 
@@ -86,10 +172,6 @@
 }(jQuery));
 
 /* external funcs */
-
-function mrfbSend() {
-
-}
 
 function getPosition(element) {
 	var xPosition = 0;
@@ -123,4 +205,30 @@ jQuery.fn.removeClassLike = function (prefix) {
 		return c.lastIndexOf(prefix, 0) !== 0;
 	});
 	return this.attr("class", classes.join(" "));
+}
+
+//full screen mode
+function toggleFullScreen() {
+	if (!document.fullscreenElement &&    // alternative standard method
+		!document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+		if (document.documentElement.requestFullscreen) {
+			document.documentElement.requestFullscreen();
+		} else if (document.documentElement.msRequestFullscreen) {
+			document.documentElement.msRequestFullscreen();
+		} else if (document.documentElement.mozRequestFullScreen) {
+			document.documentElement.mozRequestFullScreen();
+		} else if (document.documentElement.webkitRequestFullscreen) {
+			document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+		}
+	} else {
+		if (document.exitFullscreen) {
+			document.exitFullscreen();
+		} else if (document.msExitFullscreen) {
+			document.msExitFullscreen();
+		} else if (document.mozCancelFullScreen) {
+			document.mozCancelFullScreen();
+		} else if (document.webkitExitFullscreen) {
+			document.webkitExitFullscreen();
+		}
+	}
 }
