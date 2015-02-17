@@ -10,7 +10,7 @@ $('.slide .about').click(function(){
 });
 
 /* timeInterval default is 30 seconds*/
-var timeInterval = 4000;
+var timeInterval = 8000;
 var timeResponse = 0;
 
 var senseResponses = new Array();
@@ -61,8 +61,8 @@ setInterval(function() {
 					console.log(data);
 
 				},
-				timeout: timeInterval / 4,
-				type: 'GET',
+				timeout: timeInterval / 2,
+				type: 'POST',
 				url: "http://noibe.com/api/mrfb/index.php"
 			});
 
@@ -85,8 +85,8 @@ setInterval(function() {
 				}
 
 			},
-			timeout: timeInterval / 4,
-			type: 'GET',
+			timeout: timeInterval / 2,
+			type: 'POST',
 			url: "http://noibe.com/api/mrfb/index.php"
 		});
 	}

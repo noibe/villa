@@ -1,243 +1,256 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8" />
-	<title>Villa</title>
+<head lang="en">
+	<meta charset="utf-8"/>
+	<title>MR FB</title>
 	<meta name="viewport"
 	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 	<script src="js/villa.js"></script>
-	<link rel="stylesheet" href="css/villa-foundation.css" />
+	<link rel="stylesheet" href="css/villa-foundation.css"/>
 	<link rel="stylesheet" href="css/villa-grid.css"/>
-	<link rel="stylesheet" href="css/villa.css" />
-	<link rel="stylesheet" href="css/mowe-font.css" />
-	<link rel="stylesheet" href="css/mowe.css" />
+	<link rel="stylesheet" href="css/villa.css"/>
+	<link rel="stylesheet" href="css/mowe.css"/>
+	<link rel="stylesheet" href="css/mowe-ui-helpers.css"/>
+	<link rel="stylesheet" href="css/mowe-inputs.css"/>
+	<link rel="stylesheet" href="css/mowe-hero.css"/>
+	<link rel="stylesheet" href="css/mowe-font.css"/>
+	<link rel="stylesheet" href="css/mowe-navbar.css"/>
+	<link rel="stylesheet" href="css/mowe-structure.css"/>
+	<link rel="stylesheet" href="css/mowe-wow.css"/>
+	<link rel="stylesheet" href="css/mowe-pricelist.css"/>
+	<link rel="stylesheet" href="css/mowe-timeline.css"/>
+	<link rel="stylesheet" href="css/wtal.css"/>
+	<script src="js/jquery-2.1.1.min.js"></script>
 	<!--[if lt IE 9]>
-	<link rel="stylesheet" type="text/css" href="css/villa-colors-full.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/material-colors.css"/>
 	<script src="js/html5shiv.js"></script>
 	<script src="js/html5shiv-printshiv.js"></script>
 	<![endif]-->
 </head>
-<body class="red">
-<test></test>
-<div class=""></div>
+<body class="grey-100 slide-1">
 
 <style type="text/css">
-	body {}
 
-	.navbar {
-		position: fixed;
+	body {
 		user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
 		-webkit-touch-callout: none;
 		-webkit-user-select: none;
 		-khtml-user-select: none;
-		width: 100%;
-		z-index: 1;
+		/* To responsive, need to resize the font-size */
 	}
 
-	.navbar,
-	.navbar .container {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-flow: row wrap;
-		justify-content: space-between;
+	.slide {
+		padding: 0;
+		display: none;
 	}
 
-	.navbar .menu {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
+	.slide .about,
+	.slide .about > .container {
 		display: flex;
-		flex-direction: row;
+		flex-flow: row;
 		flex-wrap: nowrap;
-		justify-content: flex-end;
-		font-size: 15px;
+		justify-content: space-between;
+		align-items: center;
 	}
 
-	.navbar .item .link {
-		display: block;
-		min-width: 60px;
-		font-weight: 700;
-		padding: 20px 25px;
+	.slide .about {
+		background: url("img/misc/mrrango-background.png");
+		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26);
+		margin: 0;
 	}
 
-	.navbar .header .item .link {
-		padding: 14px;
+	.slide .about .bulb {
+		border-radius: 50%;
+		height: 10px;
+		margin-left: 1em;
+		min-width: 10px;
+		width: 10px;
 	}
 
-	.navbar .brand {
-		font-weight: 600;
-		font-size: 23px;
-		letter-spacing: -0.07em;
+	.online .slide .about .bulb {
+		background-color: #4caf50;
 	}
 
-	.navbar .slogan {
-		font-weight: 300;
-		margin-left: 3px;
-	}
-
-	/*noinspection CssOverwrittenProperties*/
-	.color {
-		background-color: #00EBBB;
-		background-color: #669999 ;
-	}
-</style>
-
-<div class="navbar white">
-	<!--<div class="container">-->
-		<div class="header">
-			<div class="item">
-				<a class="link font-g666" href="#">
-					<span class="brand"><span class="slogan">telecom</span></span>
-				</a>
-			</div>
-		</div>
-		<div class="menu">
-			<div class="item">
-				<a class="link font-g666 hfont-light-sea-green" href="#">Planos</a>
-			</div>
-			<div class="item">
-				<a class="link font-g666 hfont-light-sea-green" href="#">Fibra</a>
-			</div>
-			<div class="item">
-				<a class="link font-g666 hfont-light-sea-green" href="#">Sobre</a>
-			</div>
-			<div class="item color">
-				<a class="link font-white" href="#">Contato</a>
-			</div>
-		</div>
-	<!--</div>-->
-</div>
-
-<style type="text/css">
-
-	.hero {
-		background: url("img/farm.jpg") center 70%;
-	}
-
-	.hero .container {
-		max-width: 1000px;
-		padding-top: 320px;
-		padding-bottom: 80px;
-	}
-
-	.hero h1 {
-		/*noinspection CssNoGenericFontName*/
-		font-family: 'open sans';
-		font-size: 34px;
-		font-weight: 300;
+	.slide .about h1 {
 		text-align: left;
-		text-shadow: -2px 2px 5px rgba(0,0,0,.5);
-		max-width: 520px;
-		margin-bottom: 140px;
+		font-size: 2em;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-left: .5em;
 	}
 
-	.hero h1 span {
-		font-weight: 600;
+	.slide .about img {
+		width: 6em;
+		height: 6em;
+		margin: 0.75em 1.5em;
 	}
 
-	.hero h1 span span {
-		font-size: 24px;
-		font-weight: 300;
-		text-decoration: line-through;
-	}
-
-	.hero .foo {
-		border-radius: 50%;
-		border: solid 2px #ffffff;
+	.slide-1 .slide:nth-of-type(1),
+	.slide-2 .slide:nth-of-type(2),
+	.slide-3 .slide:nth-of-type(3),
+	.slide-4 .slide:nth-of-type(4) {
 		display: block;
-		height: 60px;
-		margin: 0 auto;
-		width: 60px;
-		box-shadow: 0 0 2px #ffffff, 0 0 1px #ffffff inset;
-	}
-	
-	.hero .foo:hover {
-		box-shadow: 0 0 3px #ffffff inset;
-		padding: 2px;
-		margin-top: -2px;
-		transition: all .2s linear;
 	}
 
-	.hero a {
-		border-radius: 50%;
+	.card {
+		align-content: center;
+		align-items: stretch;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-top: 1.3125em;
 	}
+
+	.star {
+		align-content: center;
+		align-items: center;
+		/*border: solid 6px #3f51b5;*/
+		color: #444444;
+		display: flex;
+		flex-wrap: wrap;
+		flex-flow: column;
+		font-weight: 600;
+		justify-content: center;
+		margin: 1.75em 0;
+	}
+
+	.star img {
+		background-color: #ffffff;
+		border-radius: 50%;
+		box-shadow: -3px 3px 12px rgba(0,0,0,.4);
+		padding: 3px;
+		width: 90px;
+	}
+
+	.star .title {
+		font-size: 1.3125em;
+		margin-top: 0.75em;
+		font-weight: 600;
+		letter-spacing: -1px;
+		text-transform: uppercase;
+	}
+
+	@media (min-width: 30em) {
+		.star img {
+			padding: 4px;
+		}
+	}
+
+	@media (min-width: 43.75em) {
+		.star img {
+			padding: 5px;
+			width: 100px;
+		}
+	}
+
+	@media (min-width: 56.25em) {
+		.card {
+			margin-top: 60px;
+		}
+
+		.star img {
+			padding:6px;
+			width: 110px;
+		}
+	}
+
+	@media (min-width: 70em) {
+		.card {
+			margin-top: 60px;
+		}
+
+		.star img {
+			padding:7px;
+			width: 140px;
+		}
+	}
+
+	.star-1 .star:nth-child(1) img,
+	.star-2 .star:nth-child(2) img,
+	.star-3 .star:nth-child(3) img,
+	.star-4 .star:nth-child(4) img {
+		border-color: #3f51b5;
+		background-color: #3f51b5;
+		color: #e8eaf6;
+	}
+
+	.star-2 .star:nth-child(1),
+	.star-3 .star:nth-child(1),
+	.star-4 .star:nth-child(1),
+	.star-1 .star:nth-child(2),
+	.star-3 .star:nth-child(2),
+	.star-4 .star:nth-child(2),
+	.star-1 .star:nth-child(3),
+	.star-2 .star:nth-child(3),
+	.star-4 .star:nth-child(3),
+	.star-1 .star:nth-child(4),
+	.star-2 .star:nth-child(4),
+	.star-3 .star:nth-child(4) {
+		display: none;
+	}
+
+	.star-1 .intro,
+	.star-2 .intro,
+	.star-3 .intro,
+	.star-4 .intro {
+		display: none;
+	}
+
+	.thanks {
+		display: none;
+	}
+
+	.star-1 .thanks,
+	.star-2 .thanks,
+	.star-3 .thanks,
+	.star-4 .thanks {
+		display: block;
+	}
+
 </style>
 
-<div class="hero font-white" id="foo">
-	<div class="container">
-		<h1 class=""><span></span> por apenas <span><span>R$54,00</span> R$29,00</span>*</h1>
-		<a href=""><div class="foo"></div></a>
+<div class="block slide">
+	<div class="about red-900 font-yellow">
+		<div class="container">
+			<span class="bulb"></span>
+			<h1 class="intro">Como está o restaurante hoje?</h1>
+			<h1 class="thanks">Muito Obrigado!</h1>
+			<img src="img/misc/mrrango-logo.png" alt=""/>
+		</div>
 	</div>
+
+	<div class="card">
+		<div class="star">
+			<img src="img/emoji/Emoji%20Smiley-35.png" alt=""/>
+			<span class="title">Péssimo</span>
+		</div>
+		<div class="star">
+			<img src="img/emoji/Emoji%20Smiley-53.png" alt=""/>
+			<span class="title">Ruim</span>
+		</div>
+		<div class="star">
+			<img src="img/emoji/Emoji%20Smiley-04.png" alt=""/>
+			<span class="title">Bom</span>
+		</div>
+		<div class="star">
+			<img src="img/emoji/Emoji%20Smiley-07.png" alt=""/>
+			<span class="title">Excelente</span>
+		</div>
+	</div>
+
 </div>
 
-<style type="text/css">
-	.new-foo {
-		height: 600px;
-		margin-bottom: 200px;
-	}
-</style>
-
-<div class="new-foo white"></div>
-<div id="wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dignissimos error ex hic laborum natus nostrum qui quisquam similique, voluptatibus? Aut, deserunt fugiat impedit nemo nisi nulla praesentium sed sit.</div>
-
+<script src="js/mowe-distinct.js"></script>
 <script>
-	document.getElementsByClassName('hero')[0].style.height = window.innerHeight + "px";
 
-	window.onresize = function() {
-		document.getElementsByClassName('hero')[0].style.height = window.innerHeight + "px";
-	};
-
-	window.onload = function() {
-		var wrapper = document.getElementById("wrapper"); //get div
-		var h = wrapper.getBoundingClientRect(); //get height
-
-		//scrollTo(h.top);
-
-		function scrollTo(x) {
-			//elapsed
-			var e;
-			//duration in milli seconds
-			var d = 1000;
-			//b as in begin, where to start (you could get this dynamically)
-			var b = 0;
-			//start time, when the animation starts
-			var s = (new Date()).getTime(); //start time
-			//the magic
-			var t = setInterval(function () {
-				//calculate elapse time
-				e = (new Date()).getTime() - s;
-				//check if elapse time is less than duration
-				if (e < d) {
-					//animate using an easing equation
-					window.scrollTo(0, ease(e, b, x, d));
-				} else {
-					//animation is complete, stop interval timer
-					clearInterval(t);
-					t = null;
-				}
-			}, 4);
-		}
-
-		//Info about the letters (I think)
-		//t = elapse time
-		//b = where to begin
-		//c = change in comparison to begin
-		//d = duration of animation
-		function noease(t, b, c, d) {
-			t /= d;
-			return b + c * (t);
-		}
-
-		function ease(t, b, c, d) {
-			return Math.round(-c * Math.cos(t / d * (Math.PI / 2)) + c + b);
-		}
-	}
+	$('.card .star').distinct({
+		defaultClass: $('body').attr('class'),
+		startName: 'star',
+		targetData: true
+	});
 </script>
+
 </body>
 </html>
