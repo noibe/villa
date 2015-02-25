@@ -1,7 +1,0 @@
-#RewriteEngine On
-#RewriteRule asbg index.php?local=asbg
-#RewriteRule astm index.php?local=astm
-#RewriteRule asvl index.php?local=asvl
-#RewriteRule asvx index.php?local=asvx
-#RewriteRule ortm index.php?local=ortm
-#RewriteRule pptb index.php?local=pptb

@@ -55,7 +55,6 @@ setInterval(function() {
 
 						timeResponse = new Date().getTime()-ajaxTime;
 					} else {
-						console.log(data);
 					}
 
 					console.log(data);
@@ -147,9 +146,10 @@ setInterval(function() {
 
 				/* TODO */
 
+
 				var response = {
 					comment: 'Novo teste',
-					place: 'A',
+					place: 'mr rango',
 					service: 1,
 					vote: $(settings.target).attr('data-value')
 				};
