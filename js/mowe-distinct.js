@@ -10,7 +10,7 @@ $('.slide .about').click(function(){
 });
 
 /* timeInterval default is 30 seconds*/
-var timeInterval = 8000;
+var timeInterval = 30000;
 var timeResponse = 0;
 
 var senseResponses = new Array();
@@ -68,6 +68,7 @@ setInterval(function() {
 		}
 
 	} else {
+		console.log("trying");
 		// if NOT has responses on array
 		$.ajax({
 			cache: false,

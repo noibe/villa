@@ -105,9 +105,9 @@ try {
 //					$mail->addAddress('joseeduardo_barros@hotmail.com');             // Send to Developer (test)
 
 					// Additional To
-//					$mail->addAddress('garrido_lt@hotmail.com');                     // Send to Lourenço
-//					$mail->addAddress('rh.rafaelsouza@outlook.com');                 // Send to Rafael
-//					$mail->addAddress('talita.rodrigues24@hotmail.com');             // Send to Talita
+					$mail->addAddress('garrido_lt@hotmail.com');                     // Send to Lourenço
+					$mail->addAddress('rh.rafaelsouza@outlook.com');                 // Send to Rafael
+					$mail->addAddress('talita.rodrigues24@hotmail.com');             // Send to Talita
 
 					$mail->isHTML(true);                                  // Set email format to HTML
 
