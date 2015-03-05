@@ -254,14 +254,6 @@
 </div>
 
 <script src="js/app-mrfb.js"></script>
-<script>
-
-	$('.card .star').distinct({
-		defaultClass: $('body').attr('class'),
-		startName: 'star',
-		targetData: true
-	});
-</script>
 
 </body>
 </html>
