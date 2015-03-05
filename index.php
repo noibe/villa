@@ -253,7 +253,7 @@
 
 </div>
 
-<script src="js/mowe-distinct.js"></script>
+<script src="js/app-mrfb.js"></script>
 <script>
 
 	$('.card .star').distinct({

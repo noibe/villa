@@ -1,9 +1,8 @@
 /*!
- * Villa Mowe Distinct v0.4.0 (http://getvilla.org/)
+ * Villa Mr Feedback v0.9.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
  */
-//1024x480
 
 $('.slide .about').click(function(){
 	toggleFullScreen();
@@ -94,6 +93,12 @@ setInterval(function() {
 }, timeInterval);
 
 (function ($) {
+
+	$('.card .star').distinct({
+		defaultClass: $('body').attr('class'),
+		startName: 'star',
+		targetData: true
+	});
 
 	/* Constructor of distinct functions */
 	$.fn.distinct = function (options) {
