@@ -2,12 +2,12 @@
 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)\.(gif|jpg|png|jpeg|css|js|swf)$ /mrfb/public/$1.$2 [L,NC]
+    RewriteRule ^(.*)\.(gif|jpg|png|jpeg|css|js|swf)$ /public/$1.$2 [L,NC]
 
     # Removes index.php from ExpressionEngine URLs
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ /mrfb/index.php?local=$1 [L,QSA]
+    RewriteRule ^(.*)$ /index.php?local=$1 [L,QSA]
 #
 #<IfModule mod_rewrite.c>
 #</IfModule>

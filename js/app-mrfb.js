@@ -94,12 +94,6 @@ setInterval(function() {
 
 (function ($) {
 
-	$('.card .star').distinct({
-		defaultClass: $('body').attr('class'),
-		startName: 'star',
-		targetData: true
-	});
-
 	/* Constructor of distinct functions */
 	$.fn.distinct = function (options) {
 
@@ -173,6 +167,14 @@ setInterval(function() {
 
 
 }(jQuery));
+
+// execute the plugin
+
+$('.card .star').distinct({
+	defaultClass: $('body').attr('class'),
+	startName: 'star',
+	targetData: true
+});
 
 /* external funcs */
 
