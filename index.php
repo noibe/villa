@@ -208,7 +208,7 @@
 	.star-4 .intro {
 		display: none;
 	}
-	
+
 	.thanks {
 		display: none;
 	}

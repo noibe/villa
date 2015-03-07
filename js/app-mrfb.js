@@ -4,7 +4,8 @@
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
  */
 
-$('.slide .about').click(function(){
+// Client call to toggle FullScreen mode
+$('.about img').click(function(){
 	toggleFullScreen();
 });
 
@@ -14,7 +15,7 @@ var timeResponse = 0;
 
 var senseResponses = new Array();
 
-setInterval(function() {
+/*setInterval(function() {
 
 	if (senseResponses.length > 0) {
 		// if has responses on array
@@ -90,87 +91,127 @@ setInterval(function() {
 		});
 	}
 
-}, timeInterval);
+}, timeInterval);*/
 
-(function ($) {
+// Function to get the responses
+// Temporary use
+function getResponse(vote, local) {
+
+	var response = {
+		comment: 'Novo teste',
+		place: local,
+		service: 1,
+		vote: vote
+	};
+
+	senseResponses.push(response);
+
+	setTimeout(function(){
+		$(settings.target).attr("class", settings.defaultClass);
+		$(settings.target).attr("data-value", "");
+
+		currentIndex = $(this).index();
+	}, 4000);
+
+}
+
++function ($) {
+	'use strict';
 
 	/* Constructor of distinct functions */
 	$.fn.distinct = function (options) {
 
 		var settings = $.extend({
+			selfAction: false,
 			content: "",
 			defaultClass: "",
 			startName: "",
 			target: "body",
-			targetData: false
+			touchEvents: true
 		}, options);
 
-		/*console.log(this);*/
-		/*console.log(settings.target);*/
-
-		var distinctList = new Array();
 		var currentIndex;
 
-		$(this).click(function(index) {
-
-			navigator.vibrate(200);
-
-			var string = "";
-
-			if(currentIndex == $(this).index() + 1) {
-
-				$(settings.target).attr("class", settings.defaultClass);
-				$(settings.target).attr("data-value", "");
-
-				currentIndex = $(this).index();
-
-			} else {
-
-				currentIndex = $(this).index() + 1;
-
-				if (settings.startName) {
-					string = settings.startName + "-" + (currentIndex);
-				} else {
-					string = $(this).attr("id") + "-" + (currentIndex);
-				}
-
-				$(settings.target).attr("class", settings.defaultClass + " " + string);
-
-				$(settings.content[$(this).index()]).index();
-
-				if (settings.targetData) {
-					$(settings.target).attr('data-value', currentIndex);
-				}
-
-				/* INDIVIDUAL CASE! JUST FOR TEST! IGNORE THE NEXT IF, PLEASE >< */
-
-				var response = {
-					comment: 'Novo teste',
-					place: 'mr rango',
-					service: 1,
-					vote: $(settings.target).attr('data-value')
-				};
-
-				senseResponses.push(response);
-
-				setTimeout(function(){
-					$(settings.target).attr("class", settings.defaultClass);
-					$(settings.target).attr("data-value", "");
-
-					currentIndex = $(this).index();
-				}, 4000);
-
+		// Add Touch and Mouse Listeners to elements
+		this.each(function() {
+			if (settings.touchEvents) {
+				this.addEventListener("touchstart", handleController, false);
 			}
 
+			this.addEventListener("click", handleController, false);
 		});
+
+		// Handle Controller (start the actions with the listeners (touch or mouse))
+		function handleController(evt) {
+
+
+			evt.preventDefault();
+
+			// Get the Index of element
+			currentIndex = $(this).index();
+
+			// Test if exists some self action
+			if (settings.selfAction) {
+
+				// init the self array
+				var self = Array();
+
+				// Find a index number at selfAction array and put on array 'self'
+				// Ps: test for a fastest method to loop the array using the 'l' var
+				for (var i = 0, l = settings.selfAction.length; i < l; i++) {
+
+					// Internal Loop to pass in all index of SelfAction Array
+					for (var j = 0; j < settings.selfAction[i].index.length; j++) {
+
+						// Test if the current index is in some selfAction Object
+						if (settings.selfAction[i].index[j] == currentIndex) {
+							// Put the founded object to self array
+							self.push(settings.selfAction[i]);
+						}
+
+					}
+
+				}
+
+				// Execute or not the rules declared on selfAction
+				for (var i = 0; i < self.length; i++) {
+					self[i].action(this);
+				}
+
+			}
+		}
+
+		var num = 0;
+
+		console.log(Array.isArray(settings.selfAction[num].index));
+		console.log(settings.selfAction[num].index instanceof Array);
+		console.log(typeof settings.selfAction[num].index === Array);
+		console.log(Object.prototype.toString.call(settings.selfAction[num].index) === '[object Array]');
+		console.log(settings.selfAction[num].index.length);
+
 	}
 
-
-}(jQuery));
+}(jQuery);
 
 // execute the plugin
 
 $('.card .star').distinct({
+	selfAction: [
+		{
+			action: function(el) {
+				console.log('o valor é 1 ou 3');
+			},
+			attrName: 'test',
+			index: [1,2,3,0]
+		},
+		{
+			action: function(el) {
+				console.log('pra puta que pariu');
+			},
+			attrName: 'test',
+			index: 0
+		}
+	],
 	defaultClass: $('body').attr('class'),
 	startName: 'star',
 	targetData: true
