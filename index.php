@@ -22,15 +22,15 @@
 	<link rel="stylesheet" href="css/wtal.css"/>
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<?php
-		if (isset($_GET['local'])) {
-			echo "<script>";
-			if ($_GET['local'] == 'mrrango') {
-				echo "var local = 'mr rango'";
-			} else {
-				echo "var local = '" . $_GET['local'] . "';";
-			}
-			echo "</script>\n";
-		};
+	if (isset($_GET['local'])) {
+		echo "<script>";
+		if ($_GET['local'] == 'mrrango') {
+			echo "var local = 'mr rango'";
+		} else {
+			echo "var local = '" . $_GET['local'] . "';";
+		}
+		echo "</script>\n";
+	};
 	?>
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" type="text/css" href="css/material-colors.css"/>
@@ -38,7 +38,7 @@
 	<script src="js/html5shiv-printshiv.js"></script>
 	<![endif]-->
 </head>
-<body class="grey-100">
+<body class="grey-100 question-1">
 
 <style type="text/css">
 
@@ -176,12 +176,16 @@
 		/*color: #e8eaf6;*/
 	}
 
-	.question-1,
-	.question-2,
-	.thanks {
+	.form-sense .question-1,
+	.form-sense .question-2,
+	.form-sense .thanks {
 		display: none;
 	}
-	
+
+	.question-1 .form-sense .question-1 {
+		display: flex;
+	}
+
 </style>
 
 <div class="block form-sense">
@@ -189,19 +193,19 @@
 	<div class="about red-900 font-yellow">
 		<div class="container">
 			<span class="bulb"></span>
-			<h1 class="question-1">Como está o restaurante hoje?</h1>
-			<h1 class="question-2">Qual setor te incomoda?</h1>
-			<h1 class="thanks">Muito Obrigado!</h1>
+			<span class="question-1"><h1>Como está o restaurante hoje?</h1></span>
+			<span class="question-2"><h1>Qual setor te incomoda?</h1></span>
+			<span class="thanks"><h1>Muito Obrigado!</h1></span>
 			<img src="img/misc/mrrango-logo.png" alt=""/>
 		</div>
 	</div>
 
-	<div class="sense ">
-		<div class="star" distinct-attr="slide-2">
+	<div class="sense question-1">
+		<div class="star">
 			<img src="img/emoji/Emoji%20Smiley-35.png" alt=""/>
 			<span class="title">Péssimo</span>
 		</div>
-		<div class="star" distinct-attr="slide-2">
+		<div class="star">
 			<img src="img/emoji/Emoji%20Smiley-53.png" alt=""/>
 			<span class="title">Ruim</span>
 		</div>
@@ -215,20 +219,20 @@
 		</div>
 	</div>
 
-	<div class="sense">
-		<div class="star" distinct-attr="slide-2">
+	<div class="sense question-2">
+		<div class="option">
 			<img src="img/emoji/Emoji%20Smiley-35.png" alt=""/>
 			<span class="title">Péssimo</span>
 		</div>
-		<div class="star" distinct-attr="slide-2">
+		<div class="option">
 			<img src="img/emoji/Emoji%20Smiley-53.png" alt=""/>
 			<span class="title">Ruim</span>
 		</div>
-		<div class="star">
+		<div class="option">
 			<img src="img/emoji/Emoji%20Smiley-04.png" alt=""/>
 			<span class="title">Bom</span>
 		</div>
-		<div class="star">
+		<div class="option">
 			<img src="img/emoji/Emoji%20Smiley-07.png" alt=""/>
 			<span class="title">Excelente</span>
 		</div>
@@ -236,6 +240,7 @@
 
 </div>
 
+<script src="js/distinct.js"></script>
 <script src="js/app-mrfb.js"></script>
 <!--<script src="js/mowe-distinct.js"></script>-->
 
