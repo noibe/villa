@@ -38,7 +38,7 @@
 	<script src="js/html5shiv-printshiv.js"></script>
 	<![endif]-->
 </head>
-<body class="grey-100 slide-1">
+<body class="grey-100">
 
 <style type="text/css">
 
@@ -52,13 +52,12 @@
 		/* To responsive, need to resize the font-size */
 	}
 
-	.slide {
+	.block.form-sense {
 		padding: 0;
-		display: none;
 	}
 
-	.slide .about,
-	.slide .about > .container {
+	.form-sense .about,
+	.form-sense .about > .container {
 		display: flex;
 		flex-flow: row;
 		flex-wrap: nowrap;
@@ -66,13 +65,13 @@
 		align-items: center;
 	}
 
-	.slide .about {
+	.form-sense .about {
 		background: url("img/misc/mrrango-background.png");
 		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26);
 		margin: 0;
 	}
 
-	.slide .about .bulb {
+	.form-sense .about .bulb {
 		border-radius: 50%;
 		height: 10px;
 		margin-left: 1em;
@@ -80,11 +79,11 @@
 		width: 10px;
 	}
 
-	.online .slide .about .bulb {
+	.online .form-sense .about .bulb {
 		background-color: #4caf50;
 	}
 
-	.slide .about h1 {
+	.form-sense .about h1 {
 		text-align: left;
 		font-size: 2em;
 		font-weight: 800;
@@ -92,20 +91,13 @@
 		margin-left: .5em;
 	}
 
-	.slide .about img {
+	.form-sense .about img {
 		width: 6em;
 		height: 6em;
 		margin: 0.75em 1.5em;
 	}
 
-	.slide-1 .slide:nth-of-type(1),
-	.slide-2 .slide:nth-of-type(2),
-	.slide-3 .slide:nth-of-type(3),
-	.slide-4 .slide:nth-of-type(4) {
-		display: block;
-	}
-
-	.card {
+	.sense {
 		align-content: center;
 		align-items: stretch;
 		display: flex;
@@ -157,7 +149,7 @@
 	}
 
 	@media (min-width: 56.25em) {
-		.card {
+		.sense {
 			margin-top: 60px;
 		}
 
@@ -168,7 +160,7 @@
 	}
 
 	@media (min-width: 70em) {
-		.card {
+		.sense {
 			margin-top: 60px;
 		}
 
@@ -178,61 +170,52 @@
 		}
 	}
 
-	.star-1 .star:nth-child(1) img,
-	.star-2 .star:nth-child(2) img,
-	.star-3 .star:nth-child(3) img,
-	.star-4 .star:nth-child(4) img {
-		border-color: #3f51b5;
-		background-color: #3f51b5;
-		color: #e8eaf6;
+	.star img {
+		/*border-color: #3f51b5;*/
+		/*background-color: #3f51b5;*/
+		/*color: #e8eaf6;*/
 	}
 
-	.star-2 .star:nth-child(1),
-	.star-3 .star:nth-child(1),
-	.star-4 .star:nth-child(1),
-	.star-1 .star:nth-child(2),
-	.star-3 .star:nth-child(2),
-	.star-4 .star:nth-child(2),
-	.star-1 .star:nth-child(3),
-	.star-2 .star:nth-child(3),
-	.star-4 .star:nth-child(3),
-	.star-1 .star:nth-child(4),
-	.star-2 .star:nth-child(4),
-	.star-3 .star:nth-child(4) {
-		display: none;
-	}
-
-	.star-1 .intro,
-	.star-2 .intro,
-	.star-3 .intro,
-	.star-4 .intro {
-		display: none;
-	}
-
+	.question-1,
+	.question-2,
 	.thanks {
 		display: none;
 	}
-
-	.star-1 .thanks,
-	.star-2 .thanks,
-	.star-3 .thanks,
-	.star-4 .thanks {
-		display: block;
-	}
-
+	
 </style>
 
-<div class="block slide">
+<div class="block form-sense">
+
 	<div class="about red-900 font-yellow">
 		<div class="container">
 			<span class="bulb"></span>
-			<h1 class="intro">Como está o restaurante hoje?</h1>
+			<h1 class="question-1">Como está o restaurante hoje?</h1>
+			<h1 class="question-2">Qual setor te incomoda?</h1>
 			<h1 class="thanks">Muito Obrigado!</h1>
 			<img src="img/misc/mrrango-logo.png" alt=""/>
 		</div>
 	</div>
 
-	<div class="card">
+	<div class="sense ">
+		<div class="star" distinct-attr="slide-2">
+			<img src="img/emoji/Emoji%20Smiley-35.png" alt=""/>
+			<span class="title">Péssimo</span>
+		</div>
+		<div class="star" distinct-attr="slide-2">
+			<img src="img/emoji/Emoji%20Smiley-53.png" alt=""/>
+			<span class="title">Ruim</span>
+		</div>
+		<div class="star">
+			<img src="img/emoji/Emoji%20Smiley-04.png" alt=""/>
+			<span class="title">Bom</span>
+		</div>
+		<div class="star">
+			<img src="img/emoji/Emoji%20Smiley-07.png" alt=""/>
+			<span class="title">Excelente</span>
+		</div>
+	</div>
+
+	<div class="sense">
 		<div class="star" distinct-attr="slide-2">
 			<img src="img/emoji/Emoji%20Smiley-35.png" alt=""/>
 			<span class="title">Péssimo</span>
@@ -254,6 +237,7 @@
 </div>
 
 <script src="js/app-mrfb.js"></script>
+<!--<script src="js/mowe-distinct.js"></script>-->
 
 </body>
 </html>

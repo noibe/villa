@@ -95,7 +95,7 @@ var senseResponses = new Array();
 
 // Function to get the responses
 // Temporary use
-function getResponse(vote, local) {
+function getResponse(vote, service, place) {
 
 	var response = {
 		comment: 'Novo teste',
@@ -106,13 +106,20 @@ function getResponse(vote, local) {
 
 	senseResponses.push(response);
 
+	/*
+	// Show thanks message
 	setTimeout(function(){
 		$(settings.target).attr("class", settings.defaultClass);
 		$(settings.target).attr("data-value", "");
 
 		currentIndex = $(this).index();
 	}, 4000);
+	*/
 
+}
+
+function startResponse(vote) {
+	console.log(vote);
 }
 
 +function ($) {
@@ -122,9 +129,10 @@ function getResponse(vote, local) {
 	$.fn.distinct = function (options) {
 
 		var settings = $.extend({
-			selfAction: false,
+			action: false,
 			content: "",
 			defaultClass: "",
+			selfAction: false,
 			startName: "",
 			target: "body",
 			touchEvents: true
@@ -144,81 +152,105 @@ function getResponse(vote, local) {
 		// Handle Controller (start the actions with the listeners (touch or mouse))
 		function handleController(evt) {
 
-
 			evt.preventDefault();
 
 			// Get the Index of element
 			currentIndex = $(this).index();
 
+			/* TODO - Remove Class */
+			/* TODO - Add class */
+
 			// Test if exists some self action
-			if (settings.selfAction) {
+			if (settings.selfAction) selfAction();
 
-				// init the self array
-				var self = Array();
+			doDistinct(this);
 
-				// Find a index number at selfAction array and put on array 'self'
-				// Ps: test for a fastest method to loop the array using the 'l' var
-				for (var i = 0, l = settings.selfAction.length; i < l; i++) {
+		}
 
-					// Internal Loop to pass in all index of SelfAction Array
-					for (var j = 0; j < settings.selfAction[i].index.length; j++) {
+		// Self Action Controller
+		function selfAction() {
 
-						// Test if the current index is in some selfAction Object
-						if (settings.selfAction[i].index[j] == currentIndex) {
-							// Put the founded object to self array
-							self.push(settings.selfAction[i]);
-						}
+			// init the self array
+			var self = Array();
 
+			// Find a index number at selfAction array and put on array 'self'
+			// Obs: test for a fastest method to loop the array using the 'l' var
+			for (var i = 0, l = settings.selfAction.length; i < l; i++) {
+
+				// Internal Loop to pass in all index of SelfAction Array
+				for (var j = 0; j < settings.selfAction[i].index.length; j++) {
+
+					// Test if the current index is in some selfAction Object
+					if (settings.selfAction[i].index[j] == currentIndex) {
+						// Put the founded object to self array
+						self.push(settings.selfAction[i]);
 					}
 
 				}
 
-				// Execute or not the rules declared on selfAction
-				for (var i = 0; i < self.length; i++) {
-					self[i].action(this);
-				}
-
 			}
+
+			// Execute or not the rules declared on selfAction
+			for (var i = 0; i < self.length; i++) {
+				// Test if will pass the element (this) parameter
+				// at function (self.action)
+				if (self[i].passParam) self[i].action(this); else self[i].action();
+			}
+
 		}
 
-		var num = 0;
+		function doDistinct(el) {
 
-		console.log(Array.isArray(settings.selfAction[num].index));
-		console.log(settings.selfAction[num].index instanceof Array);
-		console.log(typeof settings.selfAction[num].index === Array);
-		console.log(Object.prototype.toString.call(settings.selfAction[num].index) === '[object Array]');
-		console.log(settings.selfAction[num].index.length);
+			// Init vars 'attr' and 'value'
+			var attr, value;
+
+			// Get name of the attr based on attrName var of Settings Object
+			attr = settings.attrName;
+
+			// Get value based on currentIndex and plusOne vars of Settings Object
+			value = currentIndex;
+			if (settings.plusOne) value++;
+
+			// Update value based on starName var of Settings Object
+			if (settings.startName) value = settings.startName + '-' + value;
+
+			$(settings.target).attr(attr, value);
+
+		}
 
 	}
 
 }(jQuery);
 
-// execute the plugin
-
+// Implent the Distinct plugin at starts markup
 $('.card .star').distinct({
 	selfAction: [
 		{
 			action: function(el) {
-				console.log('o valor é 1 ou 3');
+				getResponse()
 			},
-			attrName: 'test',
-			index: [1,2,3,0]
+			attrName: 'thanks',
+			index: [0,1],
+			passParam: true
 		},
 		{
 			action: function(el) {
-				console.log('pra puta que pariu');
+				getResponse()
 			},
-			attrName: 'test',
-			index: 0
+			index: [2,3],
+			passParam: true
 		}
 	],
+	attrName: "data-vote",
 	defaultClass: $('body').attr('class'),
-	startName: 'star',
+	plusOne: true,
+	startName: false,
 	targetData: true
 });
 
 /* external funcs */
 
+// Return position (x or y) of element
 function getPosition(element) {
 	var xPosition = 0;
 	var yPosition = 0;
@@ -231,7 +263,7 @@ function getPosition(element) {
 	return {x: xPosition, y: yPosition};
 }
 
-//get scroll position from top
+// get scroll position from top
 function getScrollTop() {
 	if (typeof pageYOffset != 'undefined') {
 		//most browsers except IE before #9
@@ -245,7 +277,7 @@ function getScrollTop() {
 	}
 }
 
-//removes class with prefix
+// removes class with prefix
 jQuery.fn.removeClassLike = function (prefix) {
 	var classes = this.attr("class").split(" ").filter(function (c) {
 		return c.lastIndexOf(prefix, 0) !== 0;
@@ -253,7 +285,7 @@ jQuery.fn.removeClassLike = function (prefix) {
 	return this.attr("class", classes.join(" "));
 }
 
-//full screen mode
+// full screen mode
 function toggleFullScreen() {
 	if (!document.fullscreenElement &&    // alternative standard method
 		!document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
