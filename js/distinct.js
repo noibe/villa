@@ -12,10 +12,12 @@
 
 		var settings = $.extend({
 			action: false,
-			content: "",
-			defaultClass: "",
+			attrName: false,
+			content: false,
+			doDistinct: true,
+			plusOne: false,
+			prefix: false,
 			selfAction: false,
-			startName: "",
 			target: "body",
 			touchEvents: true
 		}, options);
@@ -45,7 +47,14 @@
 			// Test if exists some self action
 			if (settings.selfAction) selfAction(this);
 
-			doDistinct(this);
+			if (settings.action) {
+				if (settings.plusOne) settings.action(currentIndex + 1);
+				else settings.action(currentIndex);
+			}
+
+			if (settings.doDistinct) {
+				doDistinct(this);
+			}
 
 		}
 
@@ -76,27 +85,39 @@
 			for (var i = 0; i < self.length; i++) {
 				// Test if will pass the element (this) parameter
 				// at function (self.action)
-				if (self[i].passParam) self[i].action(el); else self[i].action();
+				if (self[i].passParam) {
+					if (settings.plusOne) self[i].action(currentIndex + 1);
+					else self[i].action(currentIndex);
+				} else self[i].action();
 			}
 
 		}
 
 		function doDistinct(el) {
 
-			// Init vars 'attr' and 'value'
-			var attr, value;
+			// Init var 'value'
+			var prefix, value;
 
-			// Get name of the attr based on attrName var of Settings Object
-			attr = settings.attrName;
-
-			// Get value based on currentIndex and plusOne vars of Settings Object
+			// Get value based on currentIndex
 			value = currentIndex;
 			if (settings.plusOne) value++;
 
-			// Update value based on starName var of Settings Object
-			if (settings.startName) value = settings.startName + '-' + value;
+			// Update prefix based on classPrefix var of Settings Object
+			if (settings.prefix) prefix = settings.prefix;
+			else prefix = el.className;
 
-			$(settings.target).attr(attr, value);
+			// Update value based on classPrefix var of Settings Object
+			value = prefix + '-' + value;
+
+			if (settings.attrName && settings.attrName != 'class') {
+				$(settings.target).attr(settings.attrName, value);
+			} else {
+				// Remove class with prefix
+				$(settings.target).removeClassLike(prefix);
+
+				// Add new class based on value
+				$(settings.target).addClass(value);
+			}
 
 		}
 
@@ -135,8 +156,10 @@ function getScrollTop() {
 
 // removes class with prefix
 jQuery.fn.removeClassLike = function (prefix) {
-	var classes = this.attr("class").split(" ").filter(function (c) {
-		return c.lastIndexOf(prefix, 0) !== 0;
-	});
-	return this.attr("class", classes.join(" "));
+	if (this.attr("class")) {
+		var classes = this.attr("class").split(" ").filter(function (c) {
+			return c.lastIndexOf(prefix, 0) !== 0;
+		});
+		return this.attr("class", classes.join(" "));
+	}
 }
