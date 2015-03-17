@@ -7,8 +7,10 @@
 +function ($) {
 	'use strict';
 
+	//
+
 	/* Constructor of distinct functions */
-	$.fn.distinct = function (options) {
+	$.fn.distinct = function (listener, options) {
 
 		var settings = $.extend({
 			action: false,
@@ -55,6 +57,7 @@
 			if (settings.doDistinct) {
 				doDistinct(this);
 			}
+			
 
 		}
 

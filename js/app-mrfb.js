@@ -151,7 +151,7 @@ $('.sense .star').distinct({
 });
 
 // Implent the Distinct plugin at options markup
-$('.sense .option').distinct({
+$('.sense .option').distinct('touch', {
 	action: function(el) {
 		$('body').removeClassLike('star-');
 		console.log(el + ' é o serviço');
