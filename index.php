@@ -38,11 +38,12 @@
 	<script src="js/html5shiv-printshiv.js"></script>
 	<![endif]-->
 </head>
-<body class="grey-100 question-1">
+<body>
 
 <style type="text/css">
 
 	body {
+		background-color: #f5f5f5;
 		user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
@@ -106,7 +107,7 @@
 		margin-top: 1.3125em;
 	}
 
-	.star {
+	.sense .star {
 		align-content: center;
 		align-items: center;
 		/*border: solid 6px #3f51b5;*/
@@ -119,7 +120,7 @@
 		margin: 1.75em 0;
 	}
 
-	.star img {
+	.sense .star img {
 		background-color: #ffffff;
 		border-radius: 50%;
 		box-shadow: -3px 3px 12px rgba(0,0,0,.4);
@@ -127,7 +128,7 @@
 		width: 90px;
 	}
 
-	.star .title {
+	.sense .star .title {
 		font-size: 1.3125em;
 		margin-top: 0.75em;
 		font-weight: 600;
@@ -135,14 +136,19 @@
 		text-transform: uppercase;
 	}
 
+	.sense .option {
+		border: solid 1px #444444;
+		padding: 15px 10px;
+	}
+
 	@media (min-width: 30em) {
-		.star img {
+		.sense .star img {
 			padding: 4px;
 		}
 	}
 
 	@media (min-width: 43.75em) {
-		.star img {
+		.sense .star img {
 			padding: 5px;
 			width: 100px;
 		}
@@ -153,7 +159,7 @@
 			margin-top: 60px;
 		}
 
-		.star img {
+		.sense .star img {
 			padding:6px;
 			width: 110px;
 		}
@@ -164,25 +170,23 @@
 			margin-top: 60px;
 		}
 
-		.star img {
+		.sense .star img {
 			padding:7px;
 			width: 140px;
 		}
 	}
 
-	.star img {
-		/*border-color: #3f51b5;*/
-		/*background-color: #3f51b5;*/
-		/*color: #e8eaf6;*/
-	}
-
-	.form-sense .question-1,
 	.form-sense .question-2,
 	.form-sense .thanks {
 		display: none;
 	}
 
-	.question-1 .form-sense .question-1 {
+	[class^="star"] .question-1 {
+		display: none;
+	}
+
+	.star-1 .form-sense .question-2,
+	.star-2 .form-sense .question-2 {
 		display: flex;
 	}
 
@@ -221,19 +225,15 @@
 
 	<div class="sense question-2">
 		<div class="option">
-			<img src="img/emoji/Emoji%20Smiley-35.png" alt=""/>
 			<span class="title">Péssimo</span>
 		</div>
 		<div class="option">
-			<img src="img/emoji/Emoji%20Smiley-53.png" alt=""/>
 			<span class="title">Ruim</span>
 		</div>
 		<div class="option">
-			<img src="img/emoji/Emoji%20Smiley-04.png" alt=""/>
 			<span class="title">Bom</span>
 		</div>
 		<div class="option">
-			<img src="img/emoji/Emoji%20Smiley-07.png" alt=""/>
 			<span class="title">Excelente</span>
 		</div>
 	</div>
