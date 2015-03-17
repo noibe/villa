@@ -123,7 +123,7 @@ function getResponse(vote, service, place) {
 }
 
 function startResponse(vote) {
-	console.log(vote);
+
 }
 
 // Implent the Distinct plugin at starts markup
@@ -131,25 +131,33 @@ $('.sense .star').distinct({
 	selfAction: [
 		{
 			action: function(el) {
-				startResponse($(el).index()+1);
+				startResponse(el)
 			},
 			attrName: 'thanks',
 			index: [0,1],
-			passParam: true
+			passParam: true,
+			plusOne: true
 		},
 		{
 			action: function(el) {
 				console.log('3 ou 4');
 			},
 			index: [2,3],
-			passParam: true
+			passParam: true,
+			plusOne: true
 		}
 	],
-	attrName: "data-vote",
-	defaultClass: $('body').attr('class'),
-	plusOne: true,
-	startName: 'question',
-	targetData: true
+	plusOne: true
+});
+
+// Implent the Distinct plugin at options markup
+$('.sense .option').distinct({
+	action: function(el) {
+		$('body').removeClassLike('star-');
+		console.log(el + ' é o serviço');
+	},
+	doDistinct: false,
+	plusOne: true
 });
 
 // full screen mode
