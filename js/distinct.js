@@ -7,8 +7,6 @@
 +function ($) {
 	'use strict';
 
-	//
-
 	/* Constructor of distinct functions */
 	$.fn.distinct = function (listener, options) {
 
