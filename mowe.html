@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta charset="utf-8"/>
 	<title>Mowe</title>
@@ -10,8 +10,6 @@
 	<link rel="stylesheet" href="css/villa-grid.css"/>
 	<link rel="stylesheet" href="css/villa.css"/>
 	<link rel="stylesheet" href="css/mowe.css"/>
-	<link rel="stylesheet" href="css/mowe-ui-helpers.css"/>
-	<link rel="stylesheet" href="css/mowe-inputs.css"/>
 	<link rel="stylesheet" href="css/mowe-hero.css"/>
 	<link rel="stylesheet" href="css/mowe-font.css"/>
 	<link rel="stylesheet" href="css/mowe-navbar.css"/>
@@ -22,14 +20,15 @@
 	<link rel="stylesheet" href="css/wtal.css"/>
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/villac.css"/>
 	<link rel="stylesheet" type="text/css" href="css/material-colors.css"/>
 	<script src="js/html5shiv.js"></script>
 	<script src="js/html5shiv-printshiv.js"></script>
 	<![endif]-->
 </head>
-<body class="">
+<body class="navbar-fixed">
 
-<div class="navbar fixed-sm font-white">
+<div class="navbar fixed-sm font-white user-unselect">
 	<div class="full wide container">
 
 		<header class="bg-sm white">
@@ -65,16 +64,13 @@
 
 			<div class="menu bg-sm white font-white">
 				<div class="item">
-					<a class="link hfont-green-a400" href="#">Planos</a>
+					<a class="link hfont-green-a400" href="#prices">Planos</a>
 				</div>
 				<div class="item">
-					<a class="link hfont-green-a400" href="#">Fibra</a>
+					<a class="link hfont-green-a400" href="#about">Sobre</a>
 				</div>
-				<div class="item">
-					<a class="link hfont-green-a400" href="#">Sobre</a>
-				</div>
-				<div class="item teal-a400">
-					<a class="link font-white" href="#">Contato</a>
+				<div class="item green-a200">
+					<a class="link font-white" href="#contato">Contato</a>
 				</div>
 			</div>
 
@@ -89,146 +85,82 @@
 	Need to carousel or another solution to show great deals
 -->
 
-<div class="hero green-300 font-white" id="foo">
-	<div class="wide container">
-		<h1>A melhor internet de palmital</h1>
-		<a href="#" id="js-scroll-prices" class="btn">Nossos planos</a>
+<div class="hero green-300 bg-cover font-white height-window" id="foo" height-offset="0">
+
+	<div class="wide container flex flex-wrap">
+
+		<div class="welcome flex-3">
+			<h1>Bem vindo à<br/><strong>Webtal Telecom</strong>!</h1>
+		</div>
+
+		<div class="promo flex-2 font-grey-50">
+			<div id="promo01">
+				<p>
+					<span class="small">Tenha a <strong>melhor Internet</strong> da região</span>
+				</p>
+				<p>
+					<span class="x-small">
+						<em>a partir de</em>
+					</span>
+					<strong>
+						<span class="price">29</span>
+						<span class="cents">,90</span>
+					</strong>
+				</p>
+			</div>
+			<a href="#" id="prices-scroll" class="btn">Conheça nossos planos</a>
+		</div>
+
 	</div>
-	<div class="scroll-container">
+
+	<!--<div class="scroll-container">
 		<a href="#" id="js-scroll-services" class="scroll">
 			<span class="scroll-text fade-in">Conheça os nossos serviços</span>
 			<span class="scroll-btn">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -300 1792 1792" version="1.1">
 					<g transform="matrix(1,0,0,-1,288.54238,1255.0508)">
-						<!--
-							TODO - circle ux and hero typeface
-							Better the UX of the circle
-						-->
-						<path
-							d="m 1075,800 q 0,-13 -10,-23 L 599,311 q -10,-10 -23,-10 -13,0 -23,10 L 87,777 q -10,10 -10,23 0,13 10,23 l 50,50 q 10,10 23,10 13,0 23,-10 L 576,480 969,873 q 10,10 23,10 13,0 23,-10 l 50,-50 q 10,-10 10,-23 z"></path>
+						<path d="m 1075,800 q 0,-13 -10,-23 L 599,311 q -10,-10 -23,-10 -13,0 -23,10 L 87,777 q -10,10 -10,23 0,13 10,23 l 50,50 q 10,10 23,10 13,0 23,-10 L 576,480 969,873 q 10,10 23,10 13,0 23,-10 l 50,-50 q 10,-10 10,-23 z"></path>
 					</g>
 				</svg>
 			</span>
 		</a>
-	</div>
+	</div>-->
 </div>
 
-<div id="block-1" class="block services grey-100 font-grey-900">
+<div id="about" class="services block grey-50 font-grey-800">
 
 	<div class="container">
 		<div class="about">
-			<h1>Nossos serviços e tecnologias</h1>
+			<h1>Bem vindo à Webtal Telecom!</h1>
 
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis eligendi
-				error impedit ipsum maxime minus mollitia nam necessitatibus nemo omnis optio pariatur quisquam ratione,
-				sapiente suscipit tempora unde.</p>
+			<p class="lead">Nós temos o <b>compromisso</b> de <strong>oferecer</strong> sempre os melhores serviços aos seus clientes. Para isso investimos constantemente em novas tecnologias e soluções inovadoras, garantindo a evolução constante das taxas de Download e Upload.  E Garantindo a qualidade oferecida aos nossos clientes.</p>
 		</div>
 	</div>
 
-	<div class="wide container">
+	<div class="blog container">
 
-		<div class="wow">
-			<div class="wow-container left">
+		<h1>Nossa história</h1>
+		<p>WEBTal Telecom, que passou a oferecer serviço de acesso local e contribuiu decisivamente para a democratização da tecnologia da informação e à inclusão digital. O pioneirismo e o empreendedorismo do provedor são uma das mais importantes contribuições empresariais à sociedade e ao desenvolvimento do município nas últimas décadas, principalmente pelas profundas mudanças que o acesso facilitado à rede mundial de computadores causou na sociedade e na economia.</p>
+		<p>Com muitos investimentos em novas tecnologias, a ampliação da rede de distribuição de sinal e a confiança dos inúmeros  clientes, a WEBTal é sinônimo de inovação em Palmital desde o início de sua operação comercial, em junho de 2001. Com trabalho consolidado e histórico de bons serviços prestados, o provedor é uma empresa que gera empregos e oferece a melhor tecnologia a usuários, com sua rede De Fibra Ótica e wireless (sem fio),  expandidas nos municípios de Palmital , Ibirarema, Nossa Senhora Aparecida, Nova Alexandria e Platina  além de atender um grande número de moradores e empresas rurais em parte dos municípios de Andirá (PR), Cândido Mota e Ribeirão do Sul.</p>
+		<div class="full-wide red">img here</div>
+		<p>Nos últimos anos a WEBTal buscou a inovação e as tecnologias de ponta para garantir o pleno atendimento às necessidades dos clientes residenciais, comerciais, industriais e rurais. Nos primeiros períodos de funcionamento o acesso à internet era feito por meio do uso de linha telefônica, que era onerado pelo custo dos pulsos cobrados pela operadora de telefonia. Com a implantação do serviço via rádio (wireless), amplamente utilizado em todo o mundo, os usuários se utilizam da comunicação sem fio com o provedor e também contam com maior qualidade no sinal para garantir velocidade na transferência de dados pelo acesso em banda larga.</p>
 
-				<section class="text">
-					<h1>Hello!</h1>
-
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam at debitis
-						doloremque ex, inventore iure iusto maiores molestias non numquam odio perspiciatis quos rem
-						rerum sequi tempore tenetur.</p>
-
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae consequatur dolore unde?
-						Aperiam, delectus distinctio iste neque nulla numquam qui sequi. Et impedit molestias mollitia
-						repudiandae tenetur. Dolorem, eum.</p>
-				</section>
-
-				<section class="img">
-					<img src="img/section01.jpg" alt="just a mouse"/>
-				</section>
-
-
-			</div>
-		</div>
-
-		<div class="wow">
-			<div class="wow-container right">
-
-				<section class="text">
-					<h1>hello!</h1>
-
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium doloremque necessitatibus
-						quod? Aut dicta eaque ex exercitationem explicabo impedit libero maxime. Amet architecto earum
-						eos mollitia quis tenetur velit veritatis!</p>
-				</section>
-
-				<section class="img">
-					<img src="img/section01.jpg" alt="just a mouse"/>
-				</section>
-
-			</div>
-		</div>
-
-		.wow>.wow-container.left>section.text>h1
-
-		<div class="wow">
-			<div class="wow-container left">
-
-				<section class="text">
-					<h1>hello!</h1>
-
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim exercitationem modi
-						pariatur quaerat rerum similique tempora. Adipisci aliquam culpa facilis, fugit laborum, minus
-						molestias neque quidem repellendus, sed sequi?</p>
-				</section>
-
-				<section class="img">
-					<img src="img/section02.jpg" alt="just a mouse"/>
-				</section>
-
-			</div>
-		</div>
+		<h1>Missão</h1>
+		<p>Nós temos como objetivo principal prover com excelência, desenvolver, comercializar e implantar tecnologia em telecomunicação. Serviços e soluções inteligentes em conectividade atendendo os nossos clientes de forma integrada e precisa; oferecendo serviços de telecomunicações com qualidade e alta disponibilidade para negócios e lazer de nossos clientes.</p>
+		<p>Prestando o melhor serviço, com o melhor atendimento e com a melhor tecnologia para integrar e aproximar pessoas.</p>
 
 	</div>
 
 </div>
 
-<div id="block-2" class="history block grey-200 font-grey-700">
 
-	<div class="container">
-		<div class="about">
-			<h1>Nossa História</h1>
-
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis eligendi
-				error impedit ipsum maxime minus mollitia nam necessitatibus nemo omnis optio pariatur quisquam ratione,
-				sapiente suscipit tempora unde.</p>
-		</div>
-	</div>
-
-	<!--div.timeline>div.container>(ul.nav>(li{Scene $$})*5)+(ul.content>(li{Scene $$})*5)-->
-
-	<div class="container">
-		<div class="timeline">
-			<ul class="nav">
-				<li class="border-green-900 font-green-900 h-green-900 hfont-white">2001</li>
-				<li class="border-green-900 font-green-900 h-green-900 hfont-white">2003</li>
-				<li class="border-green-900 font-green-900 h-green-900 hfont-white">2013</li>
-			</ul>
-			<ul class="content">
-				<li class="green-100 font-grey-800"><p>Com a missão de trazer conexão de qualidade no municipio de Palmital, foi fundada em 2001 a Webtal, que no inicio contava</p></li>
-				<li class="green-300 font-grey-800"><p>O portal da Webtal se tornou um meio de comunicação graças ao mural de recados, a popular ferramenta trouxe a população a novidade de publicação direta em uma página web.</p></li>
-				<li class="green-600 font-white"><p>Criar novos produtos é necessário para o futuro de uma empresa, então pensando nos nossos clientes, nós trouxemos a tecnologia de conexão de fibra optica, uma forma definitiva para uma conexão de qualidade.</p></li>
-			</ul>
-		</div>
-	</div>
-
-</div>
 
 <div id="prices" class="block teal-900 font-white">
 
 	<div class="container">
 		<div class="about">
 			<h1>Escolha o seu plano</h1>
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem beatae doloremque dolorum et, excepturi expedita illo libero nihil non quae qui quibusdam quo rerum sint sunt tempora ullam, veritatis.</p>
+			<p class="lead">Para atender melhor os nossos clientes, criamos planos para cada tipo de necessidade. Escolha o seu plano na lista a baixo e preencha o seu nome e telefone, entraremos em contato com você o mais breve possível! Em caso de duvidas, entre em contato!</p>
 		</div>
 	</div>
 
@@ -245,7 +177,8 @@
 				<li>Rural</li>
 			</ul>
 			<ul class="content">
-				<li class="pricelist">
+
+				<li class="pricelist" data-product-reference="residencial">
 					<ul class="content">
 						<li>
 							<span class="title">1 Mega</span>
@@ -255,7 +188,6 @@
 								<span class="decimal">,00</span>
 							</span>
 							<span class="description">Upload: 1 MEGA</span>
-							<a href="#" class="action">Assine Já</a>
 						</li>
 						<li>
 							<span class="title">2 Mega</span>
@@ -265,7 +197,6 @@
 								<span class="decimal">,00</span>
 							</span>
 							<span class="description">Upload: 1 MEGA</span>
-							<a href="#" class="action">Assine Já</a>
 						</li>
 						<li>
 							<span class="title">3 Mega</span>
@@ -275,7 +206,6 @@
 								<span class="decimal">,00</span>
 							</span>
 							<span class="description">Upload: 1 MEGA</span>
-							<a href="#" class="action">Assine Já</a>
 						</li>
 						<li>
 							<span class="title">4 Mega</span>
@@ -285,12 +215,12 @@
 								<span class="decimal">,00</span>
 							</span>
 							<span class="description">Upload: 1 MEGA</span>
-							<a href="#" class="action">Assine Já</a>
+
 						</li>
 					</ul>
 				</li>
 
-				<li class="pricelist">
+				<li class="pricelist" data-product-reference="rural">
 					<ul class="content">
 						<li>
 							<span class="title">1 Mega</span>
@@ -300,7 +230,6 @@
 								<span class="decimal">,00</span>
 							</span>
 							<span class="description">Upload: 1 MEGA</span>
-							<a href="#" class="action">Assine Já</a>
 						</li>
 						<li>
 							<span class="title">2 Mega</span>
@@ -310,7 +239,6 @@
 								<span class="decimal">,00</span>
 							</span>
 							<span class="description">Upload: 1 MEGA</span>
-							<a href="#" class="action">Assine Já</a>
 						</li>
 						<li>
 							<span class="title">3 Mega</span>
@@ -320,7 +248,6 @@
 								<span class="decimal">,00</span>
 							</span>
 							<span class="description">Upload: 1 MEGA</span>
-							<a href="#" class="action">Assine Já</a>
 						</li>
 						<li>
 							<span class="title">4 Mega</span>
@@ -330,7 +257,6 @@
 								<span class="decimal">,00</span>
 							</span>
 							<span class="description">Upload: 1 MEGA</span>
-							<a href="#" class="action">Assine Já</a>
 						</li>
 					</ul>
 				</li>
@@ -345,7 +271,23 @@
 	TODO - footer
 -->
 
-<footer id="block-4" class="block grey-900">a</footer>
+<style>
+
+</style>
+
+<footer id="contato" class="block grey-900 font-grey-600 border-grey-600">
+	<div class="about">
+		<span class="address">+55 18 3351 3504 / Webtal Telecom, Palmital, SP, Brasil</span>
+		<span class="copyright">©Webtal Telecom 2015</span>
+	</div>
+	<div class="divisor"></div>
+	<div class="about">
+		<a href="//letsmowe.com">
+			<img src="./img/ad.png" alt="Mowe & Kabanas Info"/>
+		</a>
+		<span class="copyright">Desenvolvimento</span>
+	</div>
+</footer>
 
 <script src="js/mowe.js"></script>
 
