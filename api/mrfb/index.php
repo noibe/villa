@@ -1,6 +1,6 @@
 <?php
 
-require 'PHPMailer/PHPMailerAutoload.php';
+require '../PHPMailer/PHPMailerAutoload.php';
 
 header("Access-Control-Allow-Origin: *");
 
