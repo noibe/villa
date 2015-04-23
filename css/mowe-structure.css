@@ -18,9 +18,8 @@
 
 .block > h1,
 .block .container > h1,
-.block .about h1{
+.block .about h1 {
     font-weight: 400;
-    text-align: center;
 }
 
 .block > .lead,
@@ -28,7 +27,6 @@
 .block .about .lead {
     font-size: 1.5em;
     font-weight: 300;
-    text-align: center;
 }
 
 .block > h1 + .lead,

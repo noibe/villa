@@ -1,34 +1,41 @@
 /*!
- * Mowe Hero v1.0.0 (http://getvilla.org/)
+ * Mowe Hero v2.0.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
 */
 
 .hero {
-    background-repeat: no-repeat;
-    background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    /* Temporary padding config for the navbar menu */
-    /* Needs of a global config at body to notice the use about a navbar menu */
-    padding-top: 60px;
+    align-content: stretch;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0 1em;
+}
+
+.hero > * {
+    margin: 1em auto;
+    min-width: 20em;
+}
+
+.navbar-fixed .hero > * {
+    margin: 1.5em auto 1em; /* top: 3.5em to navbar + 1em to hero */
 }
 
 .hero h1 {
-    font-size: 2.5em;
+    font-size: 2.25em;
     font-weight: 300;
-    margin-top: 25px;
-    text-align: center;
 }
 
 @media (min-width: 43.75em) {
 
+    .navbar-fixed .hero > * {
+        margin: 4.5em auto 1em; /* top: 3.5em to navbar + 1em to hero */
+    }
+
     .hero h1 {
         font-size: 3em;
-        /* 3x body copy size = 48px */
-        line-height: 1.125;
-        margin-top: 170px;
     }
 
 }
@@ -37,27 +44,22 @@
 
     .hero h1 {
         font-size: 3em;
-        /* 3x body copy size = 48px */
-        line-height: 1.05;
-        margin-top: 170px;
     }
 
 }
 
-@media (min-width: 75em) {
-
-    .hero h1 {
-        font-size: 3.75em;
-        /* 3.75x body copy size = 60px */
-    }
-
-}
-
-@media (min-width: 100em) {
+@media (min-width: 72em) {
 
     .hero h1 {
         font-size: 4.5em;
-        /* 4.5x body copy size = 72px */
+    }
+
+}
+
+@media (min-width: 96em) {
+
+    .hero h1 {
+        font-size: 6em;
     }
 
 }
@@ -69,113 +71,3 @@
     float: left;
     padding: 10px 30px;
 }
-.hero .scroll-container {
-    position: absolute;
-    bottom: 30px;
-    text-align: center;
-    width: 100%;
-}
-
-.hero .scroll:hover {
-    opacity: 1;
-    transition: opacity 1s ease;
-}
-
-.fade-in {
-    animation: fade-in 1s ease-in-out 0s 1;
-    -webkit-animation: fade-in 1s ease-in-out 0s 1;
-}
-
-.hero .scroll {
-    user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    outline: 0;
-}
-
-.hero .scroll:hover .scroll-btn {
-    background-color: rgba(255,255,255,0.2);
-    transition: all 1s ease;
-}
-
-.hero .scroll-text {
-    font-size: 14px;
-    text-shadow: 1px 1px 5px rgba(77,77,77,.6);
-    text-transform: uppercase;
-}
-
-.hero .scroll-btn {
-    align-items: center;
-    background-color: rgba(255,255,255,0.0);
-    border: solid 1px rgba(255,255,255,0.05);
-    border-radius: 50%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: column;
-    height: 52px;
-    justify-content: center;
-    margin: 8px auto 0;
-    width: 52px;
-}
-
-.hero .scroll-btn svg {
-    margin-top: -5px;
-    height: 44px;
-    opacity: .6;
-    transition: opacity 1s ease;
-    width: 44px;
-}
-
-.hero .scroll-btn svg:hover {
-    animation: scroll-animation .6s ease 0s infinite;
-    -webkit-animation: scroll-animation .6s ease 0s infinite;
-    opacity: 1;
-    transition: all 1s ease;
-}
-
-@-webkit-keyframes scroll-animation {
-    0% {
-        padding-top: 0;
-    }
-
-    90% {
-        padding-top: 20px;
-    }
-
-    100% {
-        padding-top: 60px;
-    }
-}
-
-@keyframes scroll-animation {
-    0% {
-        padding-top: 0;
-    }
-
-    90% {
-        padding-top: 20px;
-    }
-
-    100% {
-        padding-top: 60px;
-    }
-}
-
-.hero .scroll-btn path {
-    fill: #ffffff;
-}
-
-/* TEMPORARY USE */
-/*
-.hero .btn {
-    font-size: 23px;
-    margin-top: 30px;
-    float: left;
-    padding: 10px 30px;
-}*/

@@ -10,7 +10,7 @@ $('.slide .about').click(function(){
 });
 
 /* timeInterval default is 30 seconds*/
-var timeInterval = 4000;
+var timeInterval = 30000;
 var timeResponse = 0;
 
 var senseResponses = new Array();
@@ -55,20 +55,20 @@ setInterval(function() {
 
 						timeResponse = new Date().getTime()-ajaxTime;
 					} else {
-						console.log(data);
 					}
 
 					console.log(data);
 
 				},
-				timeout: timeInterval / 4,
-				type: 'GET',
+				timeout: timeInterval / 2,
+				type: 'POST',
 				url: "http://noibe.com/api/mrfb/index.php"
 			});
 
 		}
 
 	} else {
+		console.log("trying");
 		// if NOT has responses on array
 		$.ajax({
 			cache: false,
@@ -85,8 +85,8 @@ setInterval(function() {
 				}
 
 			},
-			timeout: timeInterval / 4,
-			type: 'GET',
+			timeout: timeInterval / 2,
+			type: 'POST',
 			url: "http://noibe.com/api/mrfb/index.php"
 		});
 	}
@@ -125,8 +125,8 @@ setInterval(function() {
 
 				currentIndex = $(this).index();
 
-
 			} else {
+
 				currentIndex = $(this).index() + 1;
 
 				if (settings.startName) {
@@ -145,11 +145,9 @@ setInterval(function() {
 
 				/* INDIVIDUAL CASE! JUST FOR TEST! IGNORE THE NEXT IF, PLEASE >< */
 
-				/* TODO */
-
 				var response = {
 					comment: 'Novo teste',
-					place: 'A',
+					place: 'mr rango',
 					service: 1,
 					vote: $(settings.target).attr('data-value')
 				};

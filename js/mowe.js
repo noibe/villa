@@ -4,25 +4,16 @@
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
  */
 
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-	window.isMobile = true;
-} else {
-	window.isMobile = false;
-}
+var emailService = 'eduardo@noibe.com';
+var emailServiceCount = 4;
+var emailServiceClickCount = 8;
 
-if (window.innerWidth > 768) {
-	document.getElementsByClassName('hero')[0].style.height = (window.innerHeight - 60) + "px";
-} else {
-	document.getElementsByClassName('hero')[0].style.height = (window.innerHeight - 120) + "px";
-}
-
-window.onresize = function () {
-	if (window.innerWidth > 768) {
-		document.getElementsByClassName('hero')[0].style.height = (window.innerHeight - 60) + "px";
-	} else {
-		document.getElementsByClassName('hero')[0].style.height = (window.innerHeight - 120) + "px";
-	}
-};
+$('#prices-scroll').click(function () {
+	$("html, body").animate({
+		scrollTop: $('#prices').offset().top
+	}, '1200'
+	);
+});
 
 $('.wow').click(function () {
 	if (!$(this).hasClass('show')) {
@@ -36,72 +27,8 @@ $('.navbar header .toggle').click(function () {
 	$(this).closest('.navbar').find('.menu').toggleClass('show');
 });
 
-$('.timeline .nav li').click(function () {
-	$(this).closest('.timeline').find('.content li').get($(this).index());
-	var index = $(this).index();
-	$($(this).closest('.timeline')).attr('class', 'timeline');
-	$($(this).closest('.timeline')).addClass('slide-' + index);
-});
-
 window.onload = function () {
 
-	document.getElementById("js-scroll-services").onclick = function fun() {
-
-		var wrapper = document.getElementsByClassName("services")[0]; //get div
-		var h = wrapper.getBoundingClientRect(); //get height
-
-		//noinspection JSSuspiciousNameCombination
-		scrollTo(h.top);
-	};
-
-	document.getElementById("js-scroll-prices").onclick = function fun() {
-
-		var wrapper = document.getElementById("prices"); //get div
-		var h = wrapper.getBoundingClientRect(); //get height
-
-		scrollTo(h.top);
-	};
-
-	function scrollTo(x) {
-		//elapsed
-		var e;
-		//duration in milli seconds
-		var d = 600;
-		//b as in begin, where to start (you could get this dynamically)
-		var b = document.documentElement.scrollTop;
-		//start time, when the animation starts
-		var s = (new Date()).getTime(); //start time
-		//the magic
-		var t = setInterval(function () {
-			//calculate elapse time
-			e = (new Date()).getTime() - s;
-			//check if elapse time is less than duration
-			if (e < d) {
-				//animate using an easing equation
-				window.scrollTo(0, ease(e, b, x, d));
-			} else {
-				//animation is complete, stop interval timer
-				clearInterval(t);
-				t = null;
-			}
-		}, 4);
-	}
-
-	//Info about the letters
-	//t = elapse time
-	//b = where to begin
-	//c = change in comparison to begin
-	//d = duration of animation
-	function noease(t, b, c, d) {
-		t /= d;
-		return b + c * (t);
-	}
-
-	function ease(t, b, c, d) {
-		return Math.round(-c * Math.cos(t / d * (Math.PI / 2)) + c + b);
-	}
-
-	/* */
 	$('.block').scrollList({
 		beforePadding: 65,
 		startName: "block"
@@ -113,6 +40,114 @@ window.onload = function () {
 		startName: "slide",
 		target: $("#prices")
 	});
+
+	/* CONTACT FUNCTIONS START HERE */
+
+	// Append forms
+	var contactForm = '<a class="action user-unselect cursor-pointer" data-toggle="contact-form">Assine Já</a>' +
+		'<input type="date" class="contact-form" name="name" placeholder="Nome" autocomplete="off"/>' +
+		'<input type="tel" class="contact-form" name="phone" placeholder="Telefone (apenas números)" autocomplete="off" maxlength="11"/>' +
+		'<input type="submit" class="contact-form action send user-unselect cursor-pointer" value="Solicitar Contato!"/>' +
+		'<span class="action sent">Obrigado! :D<br/>Entraremos em contato em breve!</span>' +
+		'<span class="action not-sent">Ops! :(<br/>Houve algum problema! Tente novamente mais tarde!</span>';
+
+	$('.pricelist .content > li').insertHTML(contactForm);
+
+	// Add mask to phone fields
+	//$('.pricelist .content > li [name=phone]').mask('(99) 999999999');
+
+	// Active form
+	$('.pricelist .content > li [data-toggle=contact-form]').click(function() {
+		// Remove Success and Fail class and fix de title
+		$('.pricelist .content > .success').removeClass('success').
+			find('[data-toggle=contact-form]').
+			html('Assine Já');
+		$('.pricelist .content > .fail').removeClass('fail').
+			find('[data-toggle=contact-form]').
+			html('Assine Já');
+
+		// Get the Parent and some possible element with form enabled
+		var a = $(this).parent(), b, c;
+
+		// If the current element has active, disable it
+		if ($(a).hasClass('active-form')) {
+			$(a).removeClass('active-form');
+			// Fix the title of button
+			$(a).find('[data-toggle=contact-form]').html('Assine Já');
+			b = true;
+		}
+
+		// Disable the form of any element with form enabled
+		c = $('.pricelist .content > .active-form');
+		if (c.length) {
+			$(c).removeClass('active-form');
+			// Fix the title of button of enabled itens
+			$(c).find('[data-toggle=contact-form]').html('Assine Já');
+		}
+
+		// IF var b is ok, enable the form of current element
+		if (!b) {
+			// Enable the form of current element
+			$(a).addClass('active-form');
+
+			// Add the fallback to title of button
+			$(this).html('Voltar');
+
+			$(a).find('[name=name]').focus();
+		}
+
+	});
+
+	// Send response to server
+	$('.pricelist .content > li .send').click(function() {
+		// Test number of clicks to request (MAX = 4)
+		if (emailServiceClickCount > 0) {
+			var a = $(this).parent();
+			var aa = $(a).find('[name=name]').val();
+			var ab = $(a).find('[name=phone]').val();
+
+			// Test if fields are null
+			if ((aa.length > 0) && (ab.length > 0)) {
+				emailServiceClickCount--;
+				var b = $(a).parent().parent();
+				var	c = {
+					name: aa,
+					phone: ab,
+					product: $(a).find('.title').html(),
+					reference: $(b).attr('data-product-reference'),
+					mail: emailService
+				};
+				// Test number of requests (MAX = 4)
+				if (emailServiceCount > 0) {
+					$.ajax({
+						cache: false,
+						data: c,
+						fail: function(data) {
+							$(a).removeClass('active-form');
+							$(a).addClass('fail');
+						},
+						success: function(data) {
+							$(a).removeClass('active-form');
+							$(a).addClass('success');
+							emailServiceCount--;
+						},
+						url: '/api/wtal/'
+					});
+				} else {
+					$(a).removeClass('active-form');
+					$(a).addClass('fail');
+				}
+			} else {
+				console.log('algum erro');
+			}
+		} else {
+			$(a).removeClass('active-form');
+			$(a).addClass('fail');
+		}
+	});
+
+	/* CONTACT FUNCTIONS ENDS HERE */
+
 };
 
 /* Mowe Distinct v0.1.0 */
@@ -130,9 +165,6 @@ window.onload = function () {
 		}, options);
 
 		$(settings.target).addClass("slide-1");
-
-		console.log(this);
-		console.log(settings.defaultClass);
 
 		var distinctList = new Array();
 
@@ -267,53 +299,14 @@ window.onload = function () {
 
 }(jQuery));
 
-
-
-
 (function ($) {
 
-	/* Constructor of slide functions */
-	$.fn.scrollList = function (options) {
-
-		var settings = $.extend({
-			beforePadding: 0,
-			startName: "",
-			target: "body"
-		}, options);
-
-		var addressListSettings = {
-			beforePadding: settings.beforePadding,
-			parent: settings.target,
-			startName: settings.startName
-		};
-
-		var addressList = $(this).getAddress(addressListSettings);
-		var element = this;
-		var pastActive;
-
-		$(window).resize(function () {
-			addressList = $(element).getAddress(addressListSettings);
-		});
-
-		$(window).scroll(function () {
-			var active = $(this).getScrollActiveItem(addressList);
-
-			if (active != pastActive) {
-				if (!$(settings.target).hasClass(active)) {
-
-					if ($(settings.target).hasClass(pastActive)) {
-						$(settings.target).removeClass(pastActive);
-					}
-
-					$(settings.target).addClass(active);
-
-					pastActive = active;
-				}
-			}
-		});
-	};
-
-
+	/* Insert HTML content to element */
+	$.fn.insertHTML = function (content) {
+		for(var a = this.length; a--; ) {
+			this[a].innerHTML += content;
+		}
+	}
 
 }(jQuery));
 
@@ -352,3 +345,6 @@ jQuery.fn.removeClassLike = function (prefix) {
 	});
 	return this.attr("class", classes.join(" "));
 }
+
+// jquery.maskedinput  (https://github.com/digitalBush/jquery.maskedinput)
+function getPasteEvent(){var e=document.createElement("input"),t="onpaste";return e.setAttribute(t,""),"function"==typeof e[t]?"paste":"input"}var pasteEventName=getPasteEvent()+".mask",ua=navigator.userAgent,iPhone=/iphone/i.test(ua),android=/android/i.test(ua),caretTimeoutId;$.mask={definitions:{9:"[0-9]",a:"[A-Za-z]","*":"[A-Za-z0-9]"},dataName:"rawMaskFn",placeholder:"_"},$.fn.extend({caret:function(e,t){var n;if(0!==this.length&&!this.is(":hidden"))return"number"==typeof e?(t="number"==typeof t?t:e,this.each(function(){this.setSelectionRange?this.setSelectionRange(e,t):this.createTextRange&&(n=this.createTextRange(),n.collapse(!0),n.moveEnd("character",t),n.moveStart("character",e),n.select())})):(this[0].setSelectionRange?(e=this[0].selectionStart,t=this[0].selectionEnd):document.selection&&document.selection.createRange&&(n=document.selection.createRange(),e=0-n.duplicate().moveStart("character",-1e5),t=e+n.text.length),{begin:e,end:t})},unmask:function(){return this.trigger("unmask")},mask:function(e,t){var n,a,r,i,o,c;return!e&&this.length>0?(n=$(this[0]),n.data($.mask.dataName)()):(t=$.extend({placeholder:$.mask.placeholder,completed:null},t),a=$.mask.definitions,r=[],i=c=e.length,o=null,$.each(e.split(""),function(e,t){"?"==t?(c--,i=e):a[t]?(r.push(new RegExp(a[t])),null===o&&(o=r.length-1)):r.push(null)}),this.trigger("unmask").each(function(){function n(e){for(;++e<c&&!r[e];);return e}function l(e){for(;--e>=0&&!r[e];);return e}function s(e,a){var i,l;if(!(0>e)){for(i=e,l=n(a);c>i;i++)if(r[i]){if(!(c>l&&r[i].test(g[l])))break;g[i]=g[l],g[l]=t.placeholder,l=n(l)}m(),v.caret(Math.max(o,e))}}function u(e){var a,i,o,l;for(a=e,i=t.placeholder;c>a;a++)if(r[a]){if(o=n(a),l=g[a],g[a]=i,!(c>o&&r[o].test(l)))break;i=l}}function d(e){var t,a,r,i=e.which;8===i||46===i||iPhone&&127===i?(t=v.caret(),a=t.begin,r=t.end,r-a===0&&(a=46!==i?l(a):r=n(a-1),r=46===i?n(r):r),h(a,r),s(a,r-1),e.preventDefault()):27==i&&(v.val(k),v.caret(0,p()),e.preventDefault())}function f(e){var a,i,o,l=e.which,d=v.caret();e.ctrlKey||e.altKey||e.metaKey||32>l||l&&(d.end-d.begin!==0&&(h(d.begin,d.end),s(d.begin,d.end-1)),a=n(d.begin-1),c>a&&(i=String.fromCharCode(l),r[a].test(i)&&(u(a),g[a]=i,m(),o=n(a),android?setTimeout($.proxy($.fn.caret,v,o),0):v.caret(o),t.completed&&o>=c&&t.completed.call(v))),e.preventDefault())}function h(e,n){var a;for(a=e;n>a&&c>a;a++)r[a]&&(g[a]=t.placeholder)}function m(){v.val(g.join(""))}function p(e){var n,a,l=v.val(),s=-1;for(n=0,pos=0;c>n;n++)if(r[n]){for(g[n]=t.placeholder;pos++<l.length;)if(a=l.charAt(pos-1),r[n].test(a)){g[n]=a,s=n;break}if(pos>l.length)break}else g[n]===l.charAt(pos)&&n!==i&&(pos++,s=n);return e?m():i>s+1?(v.val(""),h(0,c)):(m(),v.val(v.val().substring(0,s+1))),i?n:o}var v=$(this),g=$.map(e.split(""),function(e){return"?"!=e?a[e]?t.placeholder:e:void 0}),k=v.val();v.data($.mask.dataName,function(){return $.map(g,function(e,n){return r[n]&&e!=t.placeholder?e:null}).join("")}),v.attr("readonly")||v.one("unmask",function(){v.unbind(".mask").removeData($.mask.dataName)}).bind("focus.mask",function(){clearTimeout(caretTimeoutId);var t;k=v.val(),t=p(),caretTimeoutId=setTimeout(function(){m(),t==e.length?v.caret(0,t):v.caret(t)},10)}).bind("blur.mask",function(){p(),v.val()!=k&&v.change()}).bind("keydown.mask",d).bind("keypress.mask",f).bind(pasteEventName,function(){setTimeout(function(){var e=p(!0);v.caret(e),t.completed&&e==v.val().length&&t.completed.call(v)},0)}),p()}))}});

@@ -6,34 +6,41 @@
 
 /* Container */
 
+/*
+	TODO - Container options (full, wide and blog)
+	TODO - Container with support to Flex
+*/
+
 .container {
 	margin-right: auto;
 	margin-left: auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 60em) {
 	.container {
 		width: 100%;
 	}
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 60em) {
 	.container {
-		width: 978px;
+		width: 64em;
 	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 72em) {
+	.blog {
+		width: 100%;
+	}
+
 	.wide {
 		width: 100%;
-		max-width: 1140px;
+		max-width: 72em;
 	}
-}
 
-@media (min-width: 1200px) {
 	.full {
 		width: 100%;
-		max-width: 1600px;
+		max-width: 96em;
 	}
 }
 
