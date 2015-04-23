@@ -136,26 +136,6 @@
 
 .hero .promo #promo01 .btn {  }
 
-@media (min-width: 48em) {
-
-	.hero .welcome {
-		padding: 2em;
-	}
-
-	.hero .promo #promo01 p {
-		font-size: 0.875em;
-	}
-
-}
-
-@media (min-width: 64em) {
-
-	.hero .promo #promo01 p {
-		font-size: 1em;
-	}
-
-}
-
 .hero .scroll-container {
 	position: absolute;
 	bottom: 30px;
@@ -457,6 +437,34 @@ body > footer .about {
 .pricelist .content li.fail [data-toggle=contact-form],
 .pricelist .content li.fail .contact-form {
 	display: none;
+}
+
+#about .photo {
+	background: url("../img/mac02.jpg") center;
+	min-height: 18em;
+}
+
+@media (min-width: 48em) {
+
+	.hero .welcome {
+		padding: 2em;
+	}
+
+	.hero .promo #promo01 p {
+		font-size: 0.875em;
+	}
+
+	#about .photo {
+		min-height: 24em;
+	}
+
+}
+
+@media (min-width: 64em) {
+
+	.hero .promo #promo01 p {
+		font-size: 1em;
+	}
 }
 
 /*
