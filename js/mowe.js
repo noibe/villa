@@ -45,16 +45,16 @@ window.onload = function () {
 
 	// Append forms
 	var contactForm = '<a class="action user-unselect cursor-pointer" data-toggle="contact-form">Assine Já</a>' +
-		'<input type="text" class="contact-form" name="name" placeholder="Nome"/>' +
-		'<input type="text" class="contact-form" name="phone" placeholder="Celular"/>' +
-		'<input type="submit" class="contact-form action send user-unselect cursor-pointer" value="Solicitar Contato!">' +
+		'<input type="date" class="contact-form" name="name" placeholder="Nome" autocomplete="off"/>' +
+		'<input type="tel" class="contact-form" name="phone" placeholder="Telefone (apenas números)" autocomplete="off" maxlength="11"/>' +
+		'<input type="submit" class="contact-form action send user-unselect cursor-pointer" value="Solicitar Contato!"/>' +
 		'<span class="action sent">Obrigado! :D<br/>Entraremos em contato em breve!</span>' +
 		'<span class="action not-sent">Ops! :(<br/>Houve algum problema! Tente novamente mais tarde!</span>';
 
 	$('.pricelist .content > li').insertHTML(contactForm);
 
 	// Add mask to phone fields
-	$('.pricelist .content > li [name=phone]').mask('(999) 999-9999');
+	//$('.pricelist .content > li [name=phone]').mask('(99) 999999999');
 
 	// Active form
 	$('.pricelist .content > li [data-toggle=contact-form]').click(function() {
@@ -101,39 +101,45 @@ window.onload = function () {
 	// Send response to server
 	$('.pricelist .content > li .send').click(function() {
 		// Test number of clicks to request (MAX = 4)
-		if (emailServiceClickCount--) {
-			console.log(emailServiceClickCount);
+		if (emailServiceClickCount > 0) {
 			var a = $(this).parent();
-			var b = $(a).parent().parent();
-			var	c = {
-				name: $(a).find('[name=name]').val(),
-				phone: $(a).find('[name=phone]').val(),
-				product: $(a).find('.title').html(),
-				reference: $(b).attr('data-product-reference'),
-				mail: emailService
-			};
+			var aa = $(a).find('[name=name]').val();
+			var ab = $(a).find('[name=phone]').val();
 
-			// Test number of requests (MAX = 4)
-			if (emailServiceCount <= 0) {
-				$(a).removeClass('active-form');
-				$(a).addClass('fail');
+			// Test if fields are null
+			if ((aa.length > 0) && (ab.length > 0)) {
+				emailServiceClickCount--;
+				var b = $(a).parent().parent();
+				var	c = {
+					name: aa,
+					phone: ab,
+					product: $(a).find('.title').html(),
+					reference: $(b).attr('data-product-reference'),
+					mail: emailService
+				};
+				// Test number of requests (MAX = 4)
+				if (emailServiceCount > 0) {
+					$.ajax({
+						cache: false,
+						data: c,
+						fail: function(data) {
+							$(a).removeClass('active-form');
+							$(a).addClass('fail');
+						},
+						success: function(data) {
+							$(a).removeClass('active-form');
+							$(a).addClass('success');
+							emailServiceCount--;
+						},
+						url: '/api/wtal/'
+					});
+				} else {
+					$(a).removeClass('active-form');
+					$(a).addClass('fail');
+				}
 			} else {
-				$.ajax({
-					cache: false,
-					data: c,
-					fail: function(data) {
-						$(a).removeClass('active-form');
-						$(a).addClass('fail');
-					},
-					success: function(data) {
-						$(a).removeClass('active-form');
-						$(a).addClass('success');
-						emailServiceCount--
-					},
-					url: '/api/wtal/'
-				});
+				console.log('algum erro');
 			}
-
 		} else {
 			$(a).removeClass('active-form');
 			$(a).addClass('fail');
