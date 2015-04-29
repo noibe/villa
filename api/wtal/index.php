@@ -37,7 +37,7 @@ if ($emailService) {
 
 	// To
 	$mail->addAddress('joseeduardobarros@gmail.com', 'Eduardo');     // Send to Developer (test)
-//					$mail->addAddress('joseeduardo_barros@hotmail.com');             // Send to Developer (test)
+//	$mail->addAddress('joseeduardo_barros@hotmail.com');             // Send to Developer (test)
 
 	// Additional To
 	$mail->addAddress($mail);          // Send to Someone
