@@ -16,14 +16,7 @@ function ajustClock() {
 
 window.onload = function() {
     ajustClock();
-    $('#home-holder').css('height', $(window).height());
-    $('.sidebar').css('height', $(window).height() - $('.maia').height());
 };
-
-$(window).resize(function() {
-    $('#home-holder').css('height', $(window).height());
-    $('.sidebar').css('height', $(window).height() - $('.maia').height());
-});
 
 window.setInterval(function(){
     ajustClock();

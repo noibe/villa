@@ -7,57 +7,51 @@
 html,
 body {
 	height: 100%;
-	z-index: -1;
+	overflow: hidden;
 }
 
 #home-holder {
-	height: 100%;
-	width: 100%;
-	z-index: 0;
 }
 
 .bg-active {
-	background-image: url('../img/wall02.jpg') !important;
-	background-position: center center;
+	background-image: url("../img/wall02.jpg");
+
+}
+
+.maia,
+.sidebar,
+.notification {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
 }
 
 /*! Villa Maia v1.0.0 | MIT License | git.io/noibe/villa */
 
 .maia {
 	/*background-color: rgba(255,255,255,.96);*/
-	/*color: #444444;*/
-	font-size: 16px;
-	line-height: 16px;
-	height: 38px;
-	position: fixed;
-	user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	width: 100%;
-	z-index: 5000;
-	box-shadow: inset 0 -10px 38px -19px rgba(0,0,0,.2);
+	/*box-shadow: inset 0 -10px 38px -19px rgba(0,0,0,.2);*/
 	/*box-shadow: inset 0 -10px 38px -19px rgba(255,255,255,.3);*/
+	/*box-shadow: inset 0 -10px 38px -19px rgba(255,255,255,.1);*/
 
-
-	/*Test Rules*/
-	/*background-color: #303f9f;*/
-
-	/*color: #e3f2fd;*/
-	box-shadow: inset 0 -10px 38px -19px rgba(255,255,255,.1);
+	height: 36px;
 	opacity: .98;
+	width: 100%;
 }
 
-.maia,
-.maia .container,
-.maia .item,
-.maia .item a,
-.maia header,
-.maia header .menu-bar,
-.maia footer,
-.maia footer .notification-bar {
+.maia .item span {
+	font-size: .875em;
+}
+
+.maia * {
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -68,8 +62,7 @@ body {
 .maia,
 .maia .container {
 	align-items: stretch;
-	flex-flow: row;
-	flex-wrap: nowrap;
+	align-content: center;
 	justify-content: space-between;
 }
 
@@ -154,7 +147,7 @@ body {
 }
 
 .maia .start {
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .maia .start a {
@@ -167,9 +160,56 @@ body {
 }
 
 .maia .start span {
-	padding: 0 23px;
+	padding: 0 21px;
 }
 
+.sidebar {
+	background-color: rgba(0,0,0,.6);
+	/*background-color: rgba(255,255,255,.6);*/
+	color: #ffffff;
+	height: 100%;
+	width: 60px;
+	/*z-index: 1010;*/
+	opacity: .4;
+}
+
+.workspace {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.workspace .window { }
+
+.workspace .maximized {
+	margin: 36px 0 0 60px;
+	font-size: 1em;
+}
+
+.launcher {
+	display: flex;
+	justify-content: space-between;
+	height: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+	UI
+
+*/
 
 /* BOOTSTRAP MODAL */
 
@@ -204,4 +244,19 @@ body {
 	bottom: 0;
 	left: 0;
 	z-index: 0;
+}
+
+.notification {
+	display: none;
+	background-color: rgba(0,0,0,.7);
+	align-items: flex-start;
+	color: rgba(255,255,255,.6);
+	float: right;
+	min-width: 400px;
+}
+
+.notification .title {
+	border-bottom: solid 1px rgba(255,255,255,.3);
+	font-size: 1.5em;
+	font-weight: 300;
 }

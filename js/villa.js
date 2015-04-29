@@ -56,8 +56,14 @@ function colorFactory() {
     }
 
     var villaApi = [
-        ['.height-window',
+        ['.min-height-window',
             ['min-height', window.innerHeight + 'px']
+        ],
+        ['.height-window',
+            ['height', window.innerHeight + 'px']
+        ],
+        ['.max-height-window',
+            ['max-height', window.innerHeight + 'px']
         ]
     ];
 
@@ -65,21 +71,31 @@ function colorFactory() {
     addStylesheetRules(villaApi);
 }
 
-
-
-start = performance.now();
 colorFactory();
-end = performance.now();
-//console.log(end - start);
 
 // Refresh the height-window value on resize
 window.onresize = function() {
-    var a = document.getElementsByClassName('height-window');
-    if(a)
-        for (var c = a.length; c--;) {
-            var size = window.innerHeight;
-            var offset = (a[c].getAttribute('height-offset'));
-            if (offset) size += parseInt(offset);
-            a[c].style.minHeight = size + 'px';
+    var a = window.innerHeight;
+
+    var b = document.getElementsByClassName('min-height-window');
+    if(b)
+        for (var c = b.length; c--;) {
+            var offset = (b[c].getAttribute('height-offset'));
+            if (offset) a += parseInt(offset);
+            b[c].style.minHeight = a + 'px';
+        }
+
+    var b = document.getElementsByClassName('height-window');
+    if(b)
+        for (var c = b.length; c--;) {
+            var offset = (b[c].getAttribute('height-offset'));
+            if (offset) a += parseInt(offset);
+            b[c].style.height = a + 'px';
+        }
+
+    var b = document.getElementsByClassName('max-height-window');
+    if(b)
+        for (var c = b.length; c--;) {
+            b[c].style.maxHeight = a + 'px';
         }
 };
