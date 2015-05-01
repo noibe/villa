@@ -82,15 +82,15 @@ window.onresize = function() {
         for (var c = b.length; c--;) {
             var offset = (b[c].getAttribute('height-offset'));
             if (offset) a += parseInt(offset);
-            b[c].style.minHeight = a + 'px';
+            b[c].style.minHeight = (a + offset) + 'px';
         }
 
     var b = document.getElementsByClassName('height-window');
     if(b)
         for (var c = b.length; c--;) {
             var offset = (b[c].getAttribute('height-offset'));
-            if (offset) a += parseInt(offset);
-            b[c].style.height = a + 'px';
+            if (offset) offset = parseInt(offset);
+            b[c].style.height = (a + offset) + 'px';
         }
 
     var b = document.getElementsByClassName('max-height-window');

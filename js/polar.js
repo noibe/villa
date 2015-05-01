@@ -14,9 +14,29 @@ function ajustClock() {
     $('.clock-text').html(time);
 }
 
+/* function to maxime window */
+var maximize = function (a, b, c) {
+    a.style.height = (c - b) + 'px';
+};
+
+var maximizeAll = function (a) {
+    var b = document.getElementById('start').offsetHeight;
+    var c = window.innerHeight;
+    if (b) b = parseInt(b);
+    if (a)
+        for (var d = a.length; d--; ) {
+            maximize(a[d], b, c);
+        }
+};
+
 window.onload = function() {
     ajustClock();
+    maximizeAll(document.getElementsByClassName('maximized'));
 };
+
+$(window).resize(function() {
+    maximizeAll(document.getElementsByClassName('maximized'));
+});
 
 window.setInterval(function(){
     ajustClock();

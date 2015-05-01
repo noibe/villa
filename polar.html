@@ -25,14 +25,33 @@
 <div id="home-holder" class="height-window bg-active bg-cover">
 
 	<div class="workspace">
-		<div class="window grey-300 maximized">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus debitis fugit non obcaecati odio optio perspiciatis rerum. Alias at delectus dignissimos id quaerat quas quasi quis temporibus totam ut?</div>
+		<div class="window grey-200 maximized">
+			<header class="border-grey-400">
+				<span class="title">Pacientes</span>
+			</header>
+			<div class="content">
+				<form action="">
+					<div class="field">
+						<input type="text" placeholder="Nome" class="font-large"/>
+					</div>
+					<div class="field">
+						<input type="text" placeholder="Endereço"/>
+					</div>
+					<div class="field">
+						<input type="submit" class="button"/>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 
-	<div class="maia grey-800 font-blue-grey">
+	<div class="maia grey-800 font-grey-400">
 
 		<header>
-			<div class="start item">
-				<a href="#"><span class="magma-logo"></span></a>
+			<div id="start" class="item">
+				<a href="#">
+					<span class="magma-logo"></span>
+				</a>
 			</div>
 		</header>
 
@@ -68,7 +87,15 @@
 
 	</div>
 
-	<div class="sidebar"></div>
+	<div class="launcher height-window grey-600" height-offset="-36">
+		<ul>
+			<li class="item"><a href="#"><span class="icon">P</span></a></li>
+			<li class="item"><a href="#"><span class="icon">A</span></a></li>
+			<li class="item"><a href="#"><span class="icon"><span class="icon-user-md"></span></span></a></li>
+			<li class="item"><a href="#"><span class="icon">T</span></a></li>
+			<li class="item"><a href="#"><span class="icon">T</span></a></li>
+		</ul>
+	</div>
 
 	<div class="overlay"></div>
 

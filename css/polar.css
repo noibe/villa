@@ -1,5 +1,5 @@
 /*!
- * Polar v1.0.0 (http://getvilla.org/)
+ * Polar v1.8.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
 */
@@ -19,7 +19,7 @@ body {
 }
 
 .maia,
-.sidebar,
+.launcher,
 .notification {
 	display: -webkit-box;
 	display: -moz-box;
@@ -41,8 +41,7 @@ body {
 	/*box-shadow: inset 0 -10px 38px -19px rgba(0,0,0,.2);*/
 	/*box-shadow: inset 0 -10px 38px -19px rgba(255,255,255,.3);*/
 	/*box-shadow: inset 0 -10px 38px -19px rgba(255,255,255,.1);*/
-
-	height: 36px;
+	height: 36px; /* #start space */
 	opacity: .98;
 	width: 100%;
 }
@@ -87,10 +86,6 @@ body {
 .maia .item:hover {
 	background-color: #ecf0f1;
 	color: #222222;
-
-	/*Test Rules*/
-/*	background-color: #90a4ae;
-	color: #222222;*/
 }
 
 .maia .item:active {
@@ -146,31 +141,24 @@ body {
 	font-size: 14px;
 }
 
-.maia .start {
-	font-size: 16px;
+.maia #start {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	font-size: 1em;
+	width: 48px; /* #start space */
 }
 
-.maia .start a {
+.maia #start a {
 	cursor: default;
 }
 
-.maia .start:hover {
+.maia #start:hover {
 	background: none;
 	color: #19b5fe; /*dodger blue*/
-}
-
-.maia .start span {
-	padding: 0 21px;
-}
-
-.sidebar {
-	background-color: rgba(0,0,0,.6);
-	/*background-color: rgba(255,255,255,.6);*/
-	color: #ffffff;
-	height: 100%;
-	width: 60px;
-	/*z-index: 1010;*/
-	opacity: .4;
 }
 
 .workspace {
@@ -181,22 +169,82 @@ body {
 	height: 100%;
 }
 
-.workspace .window { }
+.workspace .window {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+}
 
-.workspace .maximized {
-	margin: 36px 0 0 60px;
+.workspace .window.maximized {
+	margin: 36px 0 0 48px; /* #start space */
 	font-size: 1em;
+	height: 100%;
+}
+
+.workspace .window > header {
+	align-items: center;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	height: 36px;
+	min-height: 36px;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+
+.workspace .window > header > .title {
+	font-weight: 600;
+	padding: 0 2em 0 1em;
+}
+
+.workspace .window > .content {
+	overflow: auto;
 }
 
 .launcher {
-	display: flex;
+	/*background-color: rgba(0,0,0,.6);*/
+	/*background-color: rgba(255,255,255,.6);*/
+	color: #ffffff;
 	justify-content: space-between;
-	height: 500px;
+	flex-direction: column;
+	height: 100%;
+	width: 48px; /* #start space */
+
 }
 
+.launcher .item {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	opacity: .98;
+}
 
+.launcher .item > a {
+	padding: 8px;
+}
 
+.launcher .item > a:hover {
+	color: black;
+}
 
+.launcher .item > a .icon {
+	font-weight: 600;
+	font-size: 1.5em;
+}
 
 
 
@@ -206,10 +254,73 @@ body {
 
 
 /*
-
-	UI
-
+	Polar IO Style
 */
+
+/* Inputs */
+
+form {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	padding: 0 1em;
+	align-items: stretch;
+}
+
+form .field {
+	margin: 1em 0 .5em;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+form .field > * {
+	/*width: 100%;*/
+}
+
+input {
+	/* reset */
+	background: none;
+	border: none;
+	/* style */
+	border-bottom: solid 1px #bdbdbd;
+	font-size: .875em;
+	width: 100%;
+}
+
+input:focus {
+	border-bottom: solid 2px #bdbdbd;
+}
+
+input.font-large {
+	font-size: 1.5em;
+}
+
+.button {
+	background-color: #0091ea;
+	border: none;
+	color: #ffffff;
+	font-weight: 600;
+	min-height: 36px;
+	min-width: 96px;
+	padding: 0 8px;
+	text-transform: uppercase;
+	width: auto;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+	border: none;
+	opacity: .9;
+}
+
+
 
 /* BOOTSTRAP MODAL */
 
