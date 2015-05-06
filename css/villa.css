@@ -150,10 +150,36 @@ blockquote {
     flex-direction: column;
 }
 
+.flex-row {
+    flex-flow: row;
+    flex-direction: row;
+}
+
 /* Flex Wrap */
 .flex-wrap {
     flex-flow: wrap;
     flex-wrap: wrap;
+}
+
+/* Justify Content */
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+.justify-around {
+    justify-content: space-around;
 }
 
 /* Flex Grow */
@@ -167,6 +193,17 @@ blockquote {
 .flex-7 {flex: 7}
 .flex-8 {flex: 8}
 .flex-9 {flex: 9}
+.flex-10 {flex: 10}
+.flex-11 {flex: 11}
+.flex-12 {flex: 12}
+.flex-13 {flex: 13}
+.flex-14 {flex: 14}
+.flex-15 {flex: 15}
+.flex-16 {flex: 16}
+.flex-17 {flex: 17}
+.flex-18 {flex: 18}
+.flex-19 {flex: 19}
+.flex-20 {flex: 20}
 
 /*
     Background Helpers
