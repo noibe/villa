@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Magma Scientific</title>
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<script src="js/villa.js"></script>
+	<link rel="stylesheet" href="css/villa-foundation.css"/>
+	<link rel="stylesheet" href="css/villa-grid.css"/>
+	<link rel="stylesheet" href="css/polar-font.css"/>
+	<link rel="stylesheet" href="css/villa.css"/>
+	<link rel="stylesheet" href="css/polar.css"/>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/material-colors.css"/>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/html5shiv-printshiv.js"></script>
+	<![endif]-->
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/polar.js"></script>
+</head>
+<body>
+
+<style>
+	html,
+	body {
+		height: auto;
+		overflow: visible;
+	}
+
+	.field {
+		flex-direction: column;
+	}
+
+	input[type=radio],
+	input[type=checkbox] {
+		width: auto;
+	}
+
+	form {
+		display: block;
+	}
+
+	h2 {
+		margin-top: .75em;
+	}
+
+	@media print {
+		.page-break	{ display: block; page-break-before: always; }
+	}
+</style>
+
+<div class="container">
+	<form action="#">
+
+		<div>
+
+			<h2>Paciente</h2>
+
+			<div class="flex justify-between">
+
+				<div class="field flex-2">
+					<label for="prontuario__id">Registro Ambulatorio</label>
+					<input type="text" id="prontuario__id" name="prontuario__id"/>
+				</div>
+
+				<div class="field flex-3" style="margin-left: 2em">
+					<label for="prontuario_Data">Data Cadastro</label>
+					<input type="date" id="prontuario_Data" name="prontuario_Data"/>
+				</div>
+
+			</div>
+
+			<div class="field">
+				<label for="paciente_Nome">Nome</label>
+				<input type="text" class="font-large" id="paciente_Nome" name="paciente_Nome" required/>
+			</div>
+
+			<div class="flex justify-between">
+
+				<div class="field">
+					<label for="">Sexo</label>
+					<div class="flex">
+						<span class="flex">
+							<input type="radio" name="sexo" id="paciente_SexoFeminino" name="paciente_Sexo"/>
+							<label for="paciente_SexoFeminino">Feminino</label>
+						</span>
+						<span class="flex">
+							<input type="radio" name="sexo" id="paciente_SexoMasculino" name="paciente_Sexo"/>
+							<label for="paciente_SexoMasculino">Masculino</label>
+						</span>
+					</div>
+				</div>
+
+				<div class="field flex-1" style="margin-left: 2em">
+					<label for="paciente_Nascimento">Data de Nascimento</label>
+					<input type="date" id="paciente_Nascimento" name="paciente_Nascimento"/>
+				</div>
+
+			</div>
+			<div class="flex justify-between flex-wrap">
+				<div class="field">
+					<label for="">Religião</label>
+					<span class="flex">
+						<input type="radio" id="paciente_Religiao_1" name="paciente_Religiao"/>
+						<label for="paciente_Religiao_1">Católico</label>
+					</span>
+					<span class="flex">
+						<input type="radio" id="paciente_Religiao_2" name="paciente_Religiao"/>
+						<label for="paciente_Religiao_2">Evangélico</label>
+					</span>
+					<span class="flex">
+						<input type="radio" id="paciente_Religiao_3" name="paciente_Religiao"/>
+						<label for="paciente_Religiao_3">Judeu</label>
+					</span>
+					<span class="flex">
+						<input type="radio" id="paciente_Religiao_4" name="paciente_Religiao"/>
+						<label for="paciente_Religiao_4">Outro</label>
+						<input type="text" id="paciente_Religiao_Note" name="paciente_Religiao_Note"/>
+					</span>
+				</div>
+				<div class="field">
+					<label for="">Etnia</label>
+					<span class="flex">
+						<input type="radio" id="paciente_Etnia_1" name="paciente_Etnia"/>
+						<label for="paciente_Etnia_1">Branco</label>
+					</span>
+					<span class="flex">
+						<input type="radio" id="paciente_Etnia_2" name="paciente_Etnia"/>
+						<label for="paciente_Etnia_2">Índio</label>
+					</span>
+					<span class="flex">
+						<input type="radio" id="paciente_Etnia_3" name="paciente_Etnia"/>
+						<label for="paciente_Etnia_3">Negro</label>
+					</span>
+					<span class="flex">
+						<input type="radio" id="paciente_Etnia_4" name="paciente_Etnia"/>
+						<label for="paciente_Etnia_4">Outro</label>
+						<input type="text" id="paciente_Etnia_Note" name="paciente_Etnia_Note"/>
+					</span>
+				</div>
+				<div class="field">
+					<label for="">Escolaridade</label>
+					<span class="flex">
+						<input type="radio" id="paciente_Escolaridade_1" name="paciente_Escolaridade"/>
+						<label for="paciente_Escolaridade_1">Ensino Fundamental</label>
+					</span>
+					<span class="flex">
+						<input type="radio" id="paciente_Escolaridade_2" name="paciente_Escolaridade"/>
+						<label for="paciente_Escolaridade_2">Ensino Médio</label>
+					</span>
+					<span class="flex">
+						<input type="radio" id="paciente_Escolaridade_3" name="paciente_Escolaridade"/>
+						<label for="paciente_Escolaridade_3">Ensino Superior</label>
+					</span>
+					<span class="flex">
+						<input type="radio" id="paciente_Escolaridade_4" name="paciente_Escolaridade"/>
+						<label for="paciente_Escolaridade_4">Outro</label>
+						<input type="text" id="paciente_Escolaridade_Note" name="paciente_Escolaridade_Note"/>
+					</span>
+				</div>
+
+				<div class="field">
+					<label for="">Estado Cívil</label>
+					<span class="flex">
+						<input type="radio" id="paciente_EstadoCivil_1" name="paciente_EstadoCivil"/>
+						<label for="paciente_EstadoCivil_1">Casado(a)</label>
+					</span>
+					<span class="flex">
+						<input type="radio" id="paciente_EstadoCivil_2" name="paciente_EstadoCivil"/>
+						<label for="paciente_EstadoCivil_2">Solteiro(a)</label>
+					</span>
+					<span class="flex">
+						<input type="radio" id="paciente_EstadoCivil_3" name="paciente_EstadoCivil"/>
+						<label for="paciente_EstadoCivil_3">Divorciado(a)</label>
+					</span>
+					<span class="flex">
+						<input type="radio" id="paciente_EstadoCivil_4" name="paciente_EstadoCivil"/>
+						<label for="paciente_EstadoCivil_4">Viúvo(a)</label>
+					</span>
+					<span class="flex">
+						<input type="radio" id="paciente_EstadoCivil_5" name="paciente_EstadoCivil"/>
+						<label for="paciente_EstadoCivil_5">Outro</label>
+						<input type="text" id="paciente_EstadoCivil_Note" name="paciente_EstadoCivil_Note"/>
+					</span>
+				</div>
+			</div>
+
+		</div>
+
+		<div>
+
+			<h2>Exame Físico</h2>
+
+			<div class="flex justify-between">
+
+				<div class="field">
+					<label for="exameFisico_Peso">Peso</label>
+					<input type="tel" placeholder="kg" id="exameFisico_Peso" name="exameFisico_Peso"/>
+				</div>
+
+				<div class="field" style="margin-left: 2em">
+					<label for="exameFisico_Altura">Altura</label>
+					<input type="tel" placeholder="cm" id="exameFisico_Altura" name="exameFisico_Altura"/>
+				</div>
+
+				<div class="field" style="margin-left: 2em">
+					<label for="exameFisico_IMC">IMC</label>
+					<input type="tel" id="exameFisico_IMC" name="exameFisico_IMC"/>
+				</div>
+
+			</div>
+
+			<div class="field">
+				<label for="exameFisico_PressaoArterial">Pressão Arterial</label>
+				<input type="tel" id="exameFisico_PressaoArterial" name="exameFisico_PressaoArterial"/>
+			</div>
+			<div class="field">
+				<label for="exameFisico_CircunferenciaAbdominal">Circunferência Abdominal</label>
+				<input type="tel" id="exameFisico_CircunferenciaAbdominal" name="exameFisico_CircunferenciaAbdominal"/>
+			</div>
+			<div class="field">
+				<label for="exameFisico_CircunferenciaCervical">Circunferência Cervical</label>
+				<input type="tel" id="exameFisico_CircunferenciaCervical" name="exameFisico_CircunferenciaCervical"/>
+			</div>
+
+		</div>
+
+		<div class="page-break">
+
+			<h2>Antecedentes</h2>
+
+			<div class="field">
+				<label for="">Situação</label>
+				<span class="flex">
+					<input type="checkbox" id="antecedentes_Situacao_1" name="antecedentes_Situacao"/>
+					<label for="antecedentes_Situacao_1">Gestação</label>
+					<input type="checkbox" id="antecedentes_Situacao_2" name="antecedentes_Situacao"/>
+					<label for="antecedentes_Situacao_2">Paridade</label>
+					<input type="checkbox" id="antecedentes_Situacao_3" name="antecedentes_Situacao"/>
+					<label for="antecedentes_Situacao_3">Aborto</label>
+				</span>
+			</div>
+			<div class="field">
+				<label for="">Tabagismo</label>
+				<span class="flex">
+					<input type="radio" id="antecedentes_Tabagismo_1" name="antecedentes_Tabagismo"/>
+					<label for="antecedentes_Tabagismo_1">Sim</label>
+				</span>
+				<span class="flex">
+					<input type="radio" id="antecedentes_Tabagismo_2" name="antecedentes_Tabagismo"/>
+					<label for="antecedentes_Tabagismo_2">Não</label>
+				</span>
+			</div>
+
+
+			<div class="flex">
+
+				<div class="field">
+					<label for="">H.A.C.</label>
+					<span class="flex">
+						<input type="radio" id="antecedentes_HAC_1" name="antecedentes_HAC"/>
+						<label for="antecedentes_HAC_1">Sim</label>
+						<div class="field grey-50">
+							<!--
+								TODO - Adicionar função keep
+							-->
+							<label for=""></label>
+							<span class="flex">
+								<input type="radio" id="antecedentes_HAC_Tipo_1" name="antecedentes_HAC_Tipo"/>
+								<label for="antecedentes_HAC_Tipo_1">Compensado</label>
+							</span>
+							<span class="flex">
+								<input type="radio" id="antecedentes_HAC_Tipo_2" name="antecedentes_HAC_Tipo"/>
+								<label for="antecedentes_HAC_Tipo_2">Descompensado</label>
+							</span>
+						</div>
+					</span>
+					<span class="flex">
+						<input type="radio" id="antecedentes_HAC_2" name="antecedentes_HAC"/>
+						<label for="antecedentes_HAC_2">Não</label>
+					</span>
+				</div>
+				
+			</div>
+
+			<div class="flex">
+
+				<div class="field">
+					<label for="">Diabetes Mellitus</label>
+					<span class="flex">
+						<input type="radio" name="dm" id="antecedentes_" name="antecedentes_"/>
+						<label for="antecedentes_">Sim</label>
+						<div class="field grey-50">
+							<!--
+								TODO - Adicionar função keep
+							-->
+							<label for=""></label>
+							<span class="flex">
+								<input type="radio" name="dm-keep" id="antecedentes_" name="antecedentes_"/>
+								<label for="antecedentes_">Compensado</label>
+							</span>
+							<span class="flex">
+								<input type="radio" name="dm-keep" id="antecedentes_" name="antecedentes_"/>
+								<label for="antecedentes_">Descompensado</label>
+							</span>
+						</div>
+					</span>
+					<span class="flex">
+						<input type="radio" name="dm" id="antecedentes_" name="antecedentes_"/>
+						<label for="antecedentes_">Não</label>
+					</span>
+				</div>
+
+
+			</div>
+
+			<div class="flex">
+
+				<div class="field">
+					<label for="">Hipotireoidismo</label>
+					<span class="flex">
+						<input type="radio" name="hipotireoidismo" id="antecedentes_" name="antecedentes_"/>
+						<label for="antecedentes_">Sim</label>
+						<div class="field grey-50">
+							<!--
+								TODO - Adicionar função keep
+							-->
+							<label for=""></label>
+							<span class="flex">
+								<input type="radio" name="hipotireoidismo-keep" id="antecedentes_" name="antecedentes_"/>
+								<label for="antecedentes_">Compensado</label>
+							</span>
+							<span class="flex">
+								<input type="radio" name="hipotireoidismo-keep" id="antecedentes_" name="antecedentes_"/>
+								<label for="antecedentes_">Descompensado</label>
+							</span>
+						</div>
+					</span>
+					<span class="flex">
+						<input type="radio" name="hipotireoidismo" id="antecedentes_" name="antecedentes_"/>
+						<label for="antecedentes_">Não</label>
+					</span>
+				</div>
+
+
+			</div>
+
+			<div class="field">
+				<label for="antecedentes_">Outros</label>
+				<input type="text" id="antecedentes_" name="antecedentes_"/>
+				<input type="text" id="" name=""/>
+			</div>
+
+		</div>
+
+		<div class="page-break">
+
+			<h2>Características do Utero / Mioma</h2>
+
+			<div class="field">
+				<label for="">US</label>
+				<input type="text" id="" name=""/>
+			</div>
+
+			<div class="flex justify-between">
+
+				<div class="field flex-4">
+					<label for="">Volume Interino</label>
+					<input type="tel" maxlength="4" placeholder="cm³" id="" name=""/>
+				</div>
+
+				<div class="field grey-50 flex-5" style="margin-left: 2em">
+					<!--
+						TODO - Adicionar função keep
+					-->
+					<span class="flex">
+						<label for="">Ovário Direito</label>
+						<input type="tel" placeholder="cm³" name="ovario-keep" maxlength="3" id="" name=""/>
+					</span>
+					<span class="flex">
+						<label for="">Ovário Esquerdo</label>
+						<input type="tel" placeholder="cm³" name="ovario-keep" maxlength="3" id="" name=""/>
+					</span>
+				</div>
+
+			</div>
+
+			<div class="field">
+				<label for="">Endométro</label>
+				<input type="tel" maxlength="2" placeholder="mm" id="" name=""/>
+			</div>
+
+			<div class="flex flex-column">
+
+				<div class="flex justify-between">
+
+					<div class="field flex-4">
+						<label for="">Quantidade de Miomas</label>
+						<input type="tel" maxlength="2" id="" name=""/>
+					</div>
+
+					<div class="flex flex-column flex-5" style="margin-left: 2em">
+
+						<div class="field grey-50">
+							<!--
+								TODO - Adicionar função keep
+							-->
+							<div class="flex">
+								<div class="flex flex-column">
+									<span class="flex">
+										<input type="checkbox" name="us-keep" id="" name=""/>
+										<label for="">Submucoso</label>
+									</span>
+									<span class="flex">
+										<input type="checkbox" name="us-keep" id="" name=""/>
+										<label for="">Subseroso</label>
+									</span>
+									<span class="flex">
+										<input type="checkbox" name="us-keep" id="" name=""/>
+										<label for="">Intramural</label>
+									</span>
+								</div>
+								<div class="field">
+									<span class="flex">
+										<label for="">Caracteristicas do Mioma</label>
+										<input type="tel" placeholder="mm" maxlength="2" id="" name=""/>
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="field grey-50">
+							<!--
+								TODO - Adicionar função keep
+							-->
+							<div class="flex">
+								<div class="flex flex-column">
+									<span class="flex">
+										<input type="checkbox" name="us-keep" id="" name=""/>
+										<label for="">Submucoso</label>
+									</span>
+									<span class="flex">
+										<input type="checkbox" name="us-keep" id="" name=""/>
+										<label for="">Subseroso</label>
+									</span>
+									<span class="flex">
+										<input type="checkbox" name="us-keep" id="" name=""/>
+										<label for="">Intramural</label>
+									</span>
+								</div>
+								<div class="field">
+									<span class="flex">
+										<label for="">Caracteristicas do Mioma</label>
+										<input type="tel" placeholder="mm" maxlength="2" id="" name=""/>
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="field grey-50">
+							<!--
+								TODO - Adicionar função keep
+							-->
+							<div class="flex">
+								<div class="flex flex-column">
+									<span class="flex">
+										<input type="checkbox" name="us-keep" id="" name=""/>
+										<label for="">Submucoso</label>
+									</span>
+									<span class="flex">
+										<input type="checkbox" name="us-keep" id="" name=""/>
+										<label for="">Subseroso</label>
+									</span>
+									<span class="flex">
+										<input type="checkbox" name="us-keep" id="" name=""/>
+										<label for="">Intramural</label>
+									</span>
+								</div>
+								<div class="field">
+									<span class="flex">
+										<label for="">Caracteristicas do Mioma</label>
+										<input type="tel" placeholder="mm" maxlength="2" id="" name=""/>
+									</span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="field">
+
+					<div class="flex">
+						<input type="checkbox" id="" name=""/>
+						<label for="">Dados não disponíveis</label>
+					</div>
+
+				</div>
+
+			</div>
+
+
+		</div>
+
+		<div class="page-break">
+
+			<h2>Sangramento</h2>
+
+			<div class="field">
+				<label for="">Escore PBAC Inicíal</label>
+				<input type="text" id="" name=""/>
+			</div>
+
+		</div>
+
+		<h2>Escalas</h2>
+
+		<div class="field">
+			<label for="">Depressão Beck Inicial</label>
+			<input type="tel" id="" name=""/>
+		</div>
+		<div class="field">
+			<label for="">Qualidade de Vida x Mioma</label>
+			<input type="tel" id="" name=""/>
+		</div>
+
+		<div>
+
+			<h2>Exames</h2>
+
+			<div class="flex flex-wrap justify-around">
+
+				<div class="field">
+					<label for="" class="flex-9">Hb</label>
+					<input class="flex-1" type="tel"/>
+				</div>
+				<div class="field">
+						<label for="" class="flex-9">Ht</label>
+					<input class="flex-1" type="tel"/>
+				</div>
+				<div class="field">
+						<label for="" class="flex-9">Ferro</label>
+					<input class="flex-1" type="tel"/>
+				</div>
+				<div class="field">
+						<label for="" class="flex-9">Ferritina</label>
+					<input class="flex-1" type="tel"/>
+				</div>
+				<div class="field">
+						<label for="" class="flex-9">R.D.W</label>
+					<input class="flex-1" type="tel"/>
+				</div>
+				<div class="field">
+						<label for="" class="flex-9">V.C.M</label>
+					<input class="flex-1" type="tel"/>
+				</div>
+				<div class="field">
+						<label for="" class="flex-9">Vitamina D3</label>
+					<input class="flex-1" type="tel"/>
+				</div>
+				<div class="field">
+						<label for="" class="flex-9">T.S.H</label>
+					<input class="flex-1" type="tel"/>
+				</div>
+				<div class="field">
+						<label for="" class="flex-9">G.J</label>
+					<input class="flex-1" type="tel"/>
+				</div>
+				<div class="field">
+						<label for="" class="flex-9">C.T</label>
+					<input class="flex-1" type="tel"/>
+				</div>
+				<div class="field">
+						<label for="" class="flex-9">L.D.L</label>
+					<input class="flex-1" type="tel"/>
+				</div>
+				<div class="field">
+						<label for="" class="flex-9">H.D.L</label>
+					<input class="flex-1" type="tel"/>
+				</div>
+				<div class="field">
+						<label for="" class="flex-9">T.4.L</label>
+					<input class="flex-1" type="tel"/>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="page-break">
+
+			<h2>Conduta</h2>
+
+			<div class="flex">
+
+				<div class="field">
+					<span class="flex">
+						<input type="radio" name="cirurgia" id="" name=""/>
+						<label for="">Cirurgia</label>
+
+						<div class="field grey-50">
+							<!--
+								TODO - Adicionar função keep
+							-->
+							<label for=""></label>
+							<span class="flex">
+								<input type="radio" name="cirurgia-keep" id="" name=""/>
+								<label for="">H.T.A.</label>
+							</span>
+							<span class="flex">
+								<input type="radio" name="cirurgia-keep" id="" name=""/>
+								<label for="">H.V.</label>
+							</span>
+						</div>
+					</span>
+
+					<span class="flex">
+						<input type="radio" name="cirurgia" id="" name=""/>
+						<label for="">S.I.U - L.N.G</label>
+					</span>
+
+					<span class="flex">
+						<input type="radio" name="cirurgia" id="" name=""/>
+						<label for="">Hormônio Terapia</label>
+						<div class="field grey-50">
+							<!--
+								TODO - Adicionar função keep
+							-->
+							<label for=""></label>
+							<span class="flex">
+								<input type="radio" name="cirurgia-keep" id="" name=""/>
+								<label for="">Progestagênio</label>
+								<div class="field grey-100">
+									<!--
+										TODO - Adicionar função keep
+									-->
+									<label for=""></label>
+										<label for="">Nome</label>
+										<input type="text" name="cirurgia-keep" id="" name=""/>
+									<span class="flex">
+										<input type="checkbox" name="cirurgia-keep" id="" name=""/>
+										<label for="">Ciclico</label>
+									</span>
+									<span class="flex">
+										<input type="checkbox" name="cirurgia-keep" id="" name=""/>
+										<label for="">Contínuo</label>
+									</span>
+								</div>
+							</span>
+							<span class="flex">
+								<input type="radio" name="cirurgia-keep" id="" name=""/>
+								<label for="">A.C.Os</label>
+								<div class="field grey-100">
+									<!--
+										TODO - Adicionar função keep
+									-->
+									<label for=""></label>
+										<label for="">Nome</label>
+										<input type="text" name="cirurgia-keep" id="" name=""/>
+									<span class="flex">
+										<input type="checkbox" name="cirurgia-keep" id="" name=""/>
+										<label for="">Ciclico</label>
+									</span>
+									<span class="flex">
+										<input type="checkbox" name="cirurgia-keep" id="" name=""/>
+										<label for="">Contínuo</label>
+									</span>
+								</div>
+							</span>
+							<span class="flex">
+								<input type="radio" name="cirurgia-keep" id="" name=""/>
+								<label for="">Analogo do GnRH</label>
+								<div class="field grey-100">
+									<!--
+										TODO - Adicionar função keep
+									-->
+									<label for=""></label>
+										<label for="">Nome</label>
+										<input type="text" name="cirurgia-keep" id="" name=""/>
+								</div>
+							</span>
+						</div>
+					</span>
+
+					<span class="flex">
+						<input type="radio" name="cirurgia" id="" name=""/>
+						<label for="">A.I.N.H.</label>
+
+						<div class="field grey-50">
+							<!--
+								TODO - Adicionar função keep
+							-->
+							<label for="">Nome</label>
+							<input type="text" name="cirurgia-keep" id="" name=""/>
+						</div>
+					</span>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div>
+
+			<h2>Resultados</h2>
+
+			<div class="field">
+				<label for="">Escore PBAC Final</label>
+				<input type="tel" id="" name=""/>
+			</div>
+			<div class="field">
+				<label for="">Depressão Beck Final</label>
+				<input type="tel" id="" name=""/>
+			</div>
+			<div class="field">
+				<label for="">Qualidade Vida x Mioma</label>
+				<input type="tel" id="" name=""/>
+			</div>
+
+		</div>
+
+	</form>
+
+</div>
+
+</body>
+</html>
