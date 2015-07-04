@@ -1,11 +1,7 @@
 /*!
- * Villa Framework v2.0.0 (http://getvilla.org/)
+ * Villa UI Helper v1.0.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
-*/
-
-/*
-    #UI Helpers
 */
 
 /* Opacity Helpers */
@@ -18,4 +14,21 @@
 .opacity70, .h-opacity70:hover { opacity: 0.7 }
 .opacity80, .h-opacity80:hover { opacity: 0.8 }
 .opacity90, .h-opacity90:hover { opacity: 0.9 }
+
+/*
+    Background Helpers
+*/
+
+/* Background Image Cover */
+.bg-cover {
+	background-repeat: no-repeat;
+	background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+}
+
+/*
+    #UX Helpers
+*/
 

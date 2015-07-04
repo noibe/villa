@@ -18,7 +18,7 @@
 }
 
 /*
-	Flex Direction
+	Flex Direction Helpers
 */
 
 /* Flex Column */
@@ -34,7 +34,150 @@
 }
 
 /*
-	Flex Wrap
+	Flex Grow
+*/
+
+.flex-1 {
+	-webkit-flex-grow: 1
+flex-grow: 1
+}
+
+.flex-2 {
+	-webkit-flex-grow: 2
+flex-grow: 2
+}
+
+.flex-3 {
+	-webkit-flex-grow: 3
+flex-grow: 3
+}
+
+.flex-4 {
+	-webkit-flex-grow: 4
+flex-grow: 4
+}
+
+.flex-5 {
+	-webkit-flex-grow: 5
+flex-grow: 5
+}
+
+.flex-6 {
+	-webkit-flex-grow: 6
+flex-grow: 6
+}
+
+.flex-7 {
+	-webkit-flex-grow: 7
+flex-grow: 7
+}
+
+.flex-8 {
+	-webkit-flex-grow: 8
+flex-grow: 8
+}
+
+.flex-9 {
+	-webkit-flex-grow: 9
+flex-grow: 9
+}
+
+.flex-10 {
+	-webkit-flex-grow: 10
+flex-grow: 10
+}
+
+.flex-11 {
+	-webkit-flex-grow: 11
+flex-grow: 11
+}
+
+.flex-12 {
+	-webkit-flex-grow: 12
+flex-grow: 12
+}
+
+.flex-13 {
+	-webkit-flex-grow: 13
+flex-grow: 13
+}
+
+.flex-14 {
+	-webkit-flex-grow: 14
+flex-grow: 14
+}
+
+.flex-15 {
+	-webkit-flex-grow: 15
+flex-grow: 15
+}
+
+.flex-16 {
+	-webkit-flex-grow: 16
+flex-grow: 16
+}
+
+.flex-17 {
+	-webkit-flex-grow: 17
+flex-grow: 17
+}
+
+.flex-18 {
+	-webkit-flex-grow: 18
+flex-grow: 18
+}
+
+.flex-19 {
+	-webkit-flex-grow: 19
+flex-grow: 19
+}
+
+.flex-20 {
+	-webkit-flex-grow: 20
+flex-grow: 20
+}
+
+.flex-21 {
+	-webkit-flex-grow: 21
+flex-grow: 21
+}
+
+/*
+	Justify Content Helpers
+*/
+
+/* Justify Center */
+.justify-center {
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+/* Justify End */
+.justify-end {
+	-webkit-justify-content: flex-end; /* Safari 6.1+ */
+	justify-content: flex-end;
+}
+
+/* Justify Start */
+.justify-start {
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+}
+
+/* Justify with Space Between */
+.justify-between {
+	-webkit-justify-content: space-between; /* Safari 6.1+ */
+	justify-content: space-between;
+}
+
+/* Justify with Space Around */
+.justify-around {
+	-webkit-justify-content: space-around; /* Safari 6.1+ */
+	justify-content: space-around;
+}
+
+/*
+	Flex Wrap Helpers
 */
 
 /* Flex Wrap */
@@ -47,82 +190,4 @@
 .flex-wrap {
 	flex-flow: nowrap;
 	flex-wrap: nowrap;
-}
-
-/* Justify Content */
-
-.justify-center {
-	justify-content: center;
-}
-
-.justify-start {
-	justify-content: flex-start;
-}
-
-.justify-end {
-	justify-content: flex-end;
-}
-
-.justify-between {
-	justify-content: space-between;
-}
-.justify-around {
-	justify-content: space-around;
-}
-
-/* Flex Grow */
-
-.flex-1 {flex: 1}
-.flex-2 {flex: 2}
-.flex-3 {flex: 3}
-.flex-4 {flex: 4}
-.flex-5 {flex: 5}
-.flex-6 {flex: 6}
-.flex-7 {flex: 7}
-.flex-8 {flex: 8}
-.flex-9 {flex: 9}
-.flex-10 {flex: 10}
-.flex-11 {flex: 11}
-.flex-12 {flex: 12}
-.flex-13 {flex: 13}
-.flex-14 {flex: 14}
-.flex-15 {flex: 15}
-.flex-16 {flex: 16}
-.flex-17 {flex: 17}
-.flex-18 {flex: 18}
-.flex-19 {flex: 19}
-.flex-20 {flex: 20}
-
-/*
-    Background Helpers
-*/
-
-/* Background Image Cover */
-.bg-cover {
-	background-repeat: no-repeat;
-	background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-webkit-background-size: cover;
-}
-
-/*
-    #UX Helpers
-*/
-
-/*
-    Cursor Helpers
-*/
-
-.cursor-pointer {
-	cursor: pointer;
-}
-
-.user-unselect {
-	user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
 }

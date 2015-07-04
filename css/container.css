@@ -3,3 +3,37 @@
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
 */
+
+/* Container Margin */
+.container {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (max-width: 60em) {
+	.container {
+		width: 100%;
+	}
+}
+
+@media (min-width: 60em) {
+	.container {
+		width: 64em;
+	}
+}
+
+@media (min-width: 72em) {
+	.blog {
+		width: 100%;
+	}
+
+	.wide {
+		width: 100%;
+		max-width: 72em;
+	}
+
+	.full {
+		width: 100%;
+		max-width: 96em;
+	}
+}
