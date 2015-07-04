@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 var cssfiles = 'css/*.css',
 	jsfiles = 'js/*.js';
 
-gulp.task('villa', function() {
+gulp.task('css', function() {
 	gulp.src(cssfiles)
 		.pipe(minifycss())
 		.pipe(concat('villa.css'))
