@@ -1,15 +1,10 @@
 /*!
- * Villa Grid v1.0.0 (http://getvilla.org/)
+ * Villa Grid v2.0.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
 */
 
 /* Container */
-
-/*
-	TODO - Container options (full, wide and blog)
-	TODO - Container with support to Flex
-*/
 
 .container {
 	margin-right: auto;
