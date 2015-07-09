@@ -26,7 +26,7 @@ gulp.task('js', function() {
 			preserveComments: 'some'
 		}))
 		.pipe(rename({
-			extname: '.js.css'
+			extname: '.min.js'
 		}))
 		.pipe(gulp.dest('dist/js'));
 });

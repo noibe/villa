@@ -11,8 +11,155 @@
 	<link rel="stylesheet" href="css/grid.css"/>
 	<link rel="stylesheet" href="css/typography.css"/>
 	<link rel="stylesheet" href="css/ui.css"/>
+	<link rel="stylesheet" href="css/ux.css"/>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
+	<link rel="stylesheet" type="text/css" href="dist/css/cross.css"/>
+	<script src="dist/js/html5shiv.js"></script>
+	<script src="dist/js/html5shiv-printshiv.js"></script>
+	<script src="dist/js/classList.min.js"></script>
+	<![endif]-->
 </head>
 <body>
+
+<style scoped="scoped">
+
+	body {
+		font: caption;
+		height: 100%;
+	}
+
+	h2 {
+		font-size: 6em;
+		font-weight: 100;
+		line-height: 2;
+	}
+
+	body > header {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: 10em 0 16em;
+	}
+
+	body > header .logotype {
+		font-size: 12em;
+		font-weight: 100;
+		line-height: 2;
+	}
+
+	body > header .lead {
+		font-size: 2.5em;
+		font-weight: 100;
+		margin-bottom: 3em;
+	}
+
+	a.download {
+		border-radius: 3px;
+		font-size: 1.75em;
+		line-height: 1;
+		padding: .75em 1em;
+	}
+
+	a.download:hover {
+		box-shadow: 0 0 3em 0 #ffffff;
+		-webkit-transition: all .5s;
+		-moz-transition: all .5s;
+		-ms-transition: all .5s;
+		-o-transition: all .5s;
+		transition: all .5s;
+	}
+
+</style>
+
+<header class="hero blue-grey-900 font-grey-100">
+
+	<span class="logotype">
+		<span class="type">Villa</span><span class="version font-light-blue">/3</span>
+	</span>
+
+	<p class="lead font-grey-400">
+		A amazing Framework to prototyping
+	</p>
+
+	<a href="http://github.com/noibe/villa" class="download white font-grey-900">Get Villa!</a>
+
+</header>
+
+<main>
+	<div class="install grey-200">
+		<style scoped="scoped">
+			.block {
+				padding: 16em 0;
+				font-weight: 100;
+			}
+
+			.install p {
+				font-size: 1.75em;
+			}
+
+			.code {
+				display: block;
+				border-radius: 3px;
+				font-family: monospace;
+				margin: 3em;
+				padding: 2em 3em;
+			}
+
+			.code.html span {
+				line-height: 1.5;
+			}
+
+			.code.html .from:before {
+				content: '<';
+			}
+
+			.code.html .fromslash:before {
+				content: '</';
+			}
+
+			.code.html .to:before {
+				content: '>';
+			}
+
+			.code.html .toslash:before {
+				content: '/>';
+			}
+
+		</style>
+
+		<div class="block">
+			<div class="container">
+				<h2>Installing</h2>
+				<p>To install a villa, just link the villa.js and the villa.css!</p>
+				<span class="code html grey-900 font-blue">
+					<span class="from"></span><span>script</span>
+					<span class="font-white">src=</span><span class="font-green">"js/villa.min.js"</span><span class="to"></span><span class="fromslash"></span><span>script</span><span class="to"></span>
+					<br/>
+					<span class="from"></span><span>link</span>
+					<span class="font-white">rel=</span><span class="font-green">"stylesheet"</span>
+					<span class="font-white">src=</span><span class="font-green">"js/villa.min.css"</span>
+					<span class="toslash"></span>
+				</span>
+			</div>
+		</div>
+
+		<div class="block">
+			<div class="container">
+				<h2>Docs</h2>
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer>
+	<style scoped="scoped">
+		body > footer {
+
+		}
+	</style>
+
+</footer>
 
 </body>
 </html>
