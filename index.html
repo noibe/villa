@@ -20,12 +20,11 @@
 	<script src="dist/js/classList.min.js"></script>
 	<![endif]-->
 </head>
-<body>
+<body class="font-grey-900">
 
 <style scoped="scoped">
 
 	body {
-		font: caption;
 		height: 100%;
 	}
 
@@ -43,7 +42,7 @@
 	}
 
 	body > header .logotype {
-		font-size: 12em;
+		font-size: 14em;
 		font-weight: 100;
 		line-height: 2;
 	}
@@ -72,10 +71,10 @@
 
 </style>
 
-<header class="hero blue-grey-900 font-grey-100">
+<header class="hero grey-900 font-grey-100">
 
 	<span class="logotype">
-		<span class="type">Villa</span><span class="version font-light-blue">/3</span>
+		<span class="type">Villa</span><span class="version font-light-blue">JS</span>
 	</span>
 
 	<p class="lead font-grey-400">
@@ -87,7 +86,7 @@
 </header>
 
 <main>
-	<div class="install grey-200">
+	<div class="install">
 		<style scoped="scoped">
 			.block {
 				padding: 16em 0;
@@ -101,12 +100,12 @@
 			.code {
 				display: block;
 				border-radius: 3px;
-				font-family: monospace;
 				margin: 3em;
 				padding: 2em 3em;
 			}
 
 			.code.html span {
+				font-size: 1.75em;
 				line-height: 1.5;
 			}
 
@@ -132,7 +131,7 @@
 			<div class="container">
 				<h2>Installing</h2>
 				<p>To install a villa, just link the villa.js and the villa.css!</p>
-				<span class="code html grey-900 font-blue">
+				<code class="code html grey-900 font-blue">
 					<span class="from"></span><span>script</span>
 					<span class="font-white">src=</span><span class="font-green">"js/villa.min.js"</span><span class="to"></span><span class="fromslash"></span><span>script</span><span class="to"></span>
 					<br/>
@@ -140,13 +139,55 @@
 					<span class="font-white">rel=</span><span class="font-green">"stylesheet"</span>
 					<span class="font-white">src=</span><span class="font-green">"js/villa.min.css"</span>
 					<span class="toslash"></span>
-				</span>
+				</code>
 			</div>
 		</div>
 
-		<div class="block">
+		<div class="block blue-grey-100">
 			<div class="container">
+
 				<h2>Docs</h2>
+
+				<h3>Villa</h3>
+
+				<p>The Villa Structure is based on some definations, as there: Foundation, Container, Flex, Typography and UX and UI helpers.</p>
+
+				<h3>Foundation</h3>
+
+				<p>Also know as 'the reseter', the Villa Foundation set the default styles of browser to a todo thing.</p>
+
+				<h3>Container</h3>
+
+				<p>The container is what receive the content, it can be determinate as Blog, Wide and Full.</p>
+
+				<h3>Flex</h3>
+
+				<p>With the new HTML5, the grid layout as finally obsolete, and the Flexbox is the future! The Villa Flex contains every flex helpers to you create personally interfaces.</p>
+				<h4>Align Content</h4>
+				<h4>Align Items</h4>
+				<h4>Justify Content</h4>
+
+				<h3>Grid</h3>
+
+				<p>Based on the <a href="http://getbootstrap.com">Bootstrap</a> grid, the grid layout is used on villa do the crossbrowser layout.</p>
+
+				<h3>Typography</h3>
+
+				<p>With a lot of study about typography, we get the best font-sizes, line-height, and good praticies to better your page. All the sizes use the EM measure.</p>
+
+				<h3>Color Helpers</h3>
+
+				<p>Based on the specification of <a href="http://www.google.com/design/spec/style/color.html#">Material Colors</a>, </p>
+
+				<h3>UX Helpers</h3>
+
+				<h4>Color Helpers</h4>
+				<h4>Cursors</h4>
+
+				<h3>UI Helpers</h3>
+
+				<h4>Color Helpers</h4>
+
 			</div>
 		</div>
 	</div>
