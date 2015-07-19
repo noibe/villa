@@ -1,5 +1,5 @@
 /*!
- * Villa Framework v2.2.0 (http://getvilla.org/)
+ * Villa Framework v2.3.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
  */
@@ -106,13 +106,18 @@ WebFontConfig = {
 var getWebFont = function() {
 
 	if (document.getElementsByClassName('open-sans').length > 0) {
-		var wf = document.createElement('script');
+
+		var wf, s;
+
+		wf = document.createElement('script');
 		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
 			'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
 		wf.type = 'text/javascript';
 		wf.async = 'true';
-		var s = document.getElementsByTagName('script')[0];
+
+		s = document.getElementsByTagName('script')[0];
 		s.parentNode.insertBefore(wf, s);
+
 	}
 
 };
