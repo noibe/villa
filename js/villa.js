@@ -71,8 +71,6 @@ function colorFactory() {
 	addStylesheetRules(villaApi);
 }
 
-colorFactory();
-
 // Refresh the height-window value on resize
 var updateResize = function () {
 	var a, b, c, o;
@@ -98,29 +96,48 @@ var updateResize = function () {
 	if (b) for (c = b.length; c--;) b[c].style.maxHeight = a + 'px';
 };
 
-
 WebFontConfig = {
-	google: { families: [ 'Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800,800italic:latin' ] }
+	using: false,
+	google: { families: [ 'Open+Sans:400,300,600,700,800:latin' ] }
 };
 
 var getWebFont = function() {
 
-	if (document.getElementsByClassName('open-sans').length > 0) {
+	if (!WebFontConfig.using) {
 
-		var wf, s;
+		var a = document.getElementsByClassName('open-sans'),
+			b = document.getElementsByClassName('open-sans-italic');
 
-		wf = document.createElement('script');
-		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-			'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-		wf.type = 'text/javascript';
-		wf.async = 'true';
+		if (b.length)
+			WebFontConfig.google = { families: [ 'Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800,800italic:latin' ] };
 
-		s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(wf, s);
+		if (a.length || b.length) {
+
+			var wf, s;
+
+			wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+
+			s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+
+			WebFontConfig.using = true;
+
+			console.log('o');
+		}
 
 	}
 
 };
 
+(function() {
+	colorFactory();
+	getWebFont();
+})();
+
 window.addEventListener('resize', updateResize);
 window.addEventListener('load', getWebFont);
+
