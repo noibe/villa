@@ -4,6 +4,8 @@
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
 */
 
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800,800italic);*/
+
 html {
 	/* can i use this someday, it helps to use the Root EM (rem) rule */
 	font: caption;
@@ -113,4 +115,8 @@ blockquote {
 		/* 1.75x body copy size = 28px */
 		line-height: 1.25;
 	}
+}
+
+.open-sans {
+	font-family: 'Open Sans', sans-serif;
 }

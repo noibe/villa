@@ -98,4 +98,24 @@ var updateResize = function () {
 	if (b) for (c = b.length; c--;) b[c].style.maxHeight = a + 'px';
 };
 
+
+WebFontConfig = {
+	google: { families: [ 'Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800,800italic:latin' ] }
+};
+
+var getWebFont = function() {
+
+	if (document.getElementsByClassName('open-sans').length > 0) {
+		var wf = document.createElement('script');
+		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+			'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		wf.type = 'text/javascript';
+		wf.async = 'true';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(wf, s);
+	}
+
+};
+
 window.addEventListener('resize', updateResize);
+window.addEventListener('load', getWebFont);

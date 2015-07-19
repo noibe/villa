@@ -20,12 +20,27 @@
 	<script src="dist/js/classList.min.js"></script>
 	<![endif]-->
 </head>
-<body class="font-grey-900">
+<body class="font-grey-900 open-sans">
 
 <style scoped="scoped">
 
+	html,
 	body {
 		height: 100%;
+		width: 100%;
+	}
+	body {
+		font-weight: 400;
+		font-size: 14px/1.5;
+		color: #333;
+		background-color: #fff;
+		-webkit-text-size-adjust: 100%;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-rendering: optimizeLegibility;
+		-webkit-font-feature-settings: 'liga', 'kern';
+		-moz-font-feature-settings: 'liga', 'kern';
+		font-feature-settings: 'liga', 'kern';
 	}
 
 	h2 {
@@ -38,11 +53,10 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		padding: 10em 0 16em;
 	}
 
 	body > header .logotype {
-		font-size: 14em;
+		font-size: 10em;
 		font-weight: 100;
 		line-height: 2;
 	}
@@ -61,7 +75,7 @@
 	}
 
 	a.download:hover {
-		box-shadow: 0 0 3em 0 #ffffff;
+		box-shadow: 0 0 48px 0 rgba(250,250,250,.3);
 		-webkit-transition: all .5s;
 		-moz-transition: all .5s;
 		-ms-transition: all .5s;
@@ -71,7 +85,7 @@
 
 </style>
 
-<header class="hero grey-900 font-grey-100">
+<header class="hero grey-900 font-grey-100 height-window flex justify-center align-center flex-column">
 
 	<span class="logotype">
 		<span class="type">Villa</span><span class="version font-light-blue">JS</span>
@@ -81,7 +95,7 @@
 		A amazing Framework to prototyping
 	</p>
 
-	<a href="http://github.com/noibe/villa" class="download white font-grey-900">Get Villa!</a>
+	<a href="http://github.com/noibe/villa" class="download light-blue-a100 font-grey-900">Get Villa!</a>
 
 </header>
 
@@ -199,7 +213,6 @@
 
 		}
 	</style>
-
 </footer>
 
 </body>

@@ -5,11 +5,11 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	uglify = require('gulp-uglify');
 
-var cssfiles = 'css/*.css',
-	jsfiles = 'js/*.js';
+var cssFiles = 'css/*.css',
+	jsFiles = 'js/*.js';
 
 gulp.task('css', function() {
-	gulp.src(cssfiles)
+	gulp.src(cssFiles)
 		.pipe(minifycss())
 		.pipe(concat('villa.css'))
 		.pipe(rename({
@@ -19,7 +19,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-	gulp.src(jsfiles)
+	gulp.src(jsFiles)
 		.pipe(jshint())
 		.pipe(jshint.reporter('default'))
 		.pipe(uglify({
