@@ -4,50 +4,6 @@
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
 */
 
-/* Grid Padding */
-
-.pw30 {padding-left: 30px;	padding-right: 30px; }
-.pw15 {padding-left: 15px;	padding-right: 15px; }
-.pw10 {padding-left: 10px;	padding-right: 10px; }
-.pw05 {padding-left: 05px;	padding-right: 05px; }
-.pw-none {padding-left: 0;	padding-right: 0; }
-
-.pw15 .row {margin-left: 15px; margin-right: 15px; }
-.pw10 .row {margin-left: 10px; margin-right: 10px; }
-.pw05 .row {margin-left: 05px; margin-right: 05px; }
-
-.pw30 [class^='col-xs'],
-.pw30 [class^='col-sm'],
-.pw30 [class^='col-ms'],
-.pw30 [class^='col-lg'] {
-	padding-left: 30px;
-	padding-right: 30px;
-}
-
-.pw15 [class^='col-xs'],
-.pw15 [class^='col-sm'],
-.pw15 [class^='col-ms'],
-.pw15 [class^='col-lg'] {
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
-.pw10 [class^='col-xs'],
-.pw10 [class^='col-sm'],
-.pw10 [class^='col-ms'],
-.pw10 [class^='col-lg'] {
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.pw05 [class^='col-xs'],
-.pw05 [class^='col-sm'],
-.pw05 [class^='col-ms'],
-.pw05 [class^='col-lg'] {
-	padding-left: 5px;
-	padding-right: 5px;
-}
-
 /* Row Config */
 
 .row:after {
@@ -126,7 +82,7 @@
 .col-xs-offset-1 {margin-left: 8.33333333% }
 .col-xs-offset-0 {margin-left: 0 }
 
-@media (min-width: 480px) {
+@media (min-width: 36em) {
 	[class^='col-sm'] {float: left; }
 
 	.col-sm-12 {width: 100% }
@@ -185,7 +141,7 @@
 	.col-sm-offset-0 {margin-left: 0 }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
 	[class^='col-md'] {float: left; }
 
 	.col-md-12 {width: 100% }
@@ -244,7 +200,7 @@
 	.col-md-offset-0 {margin-left: 0 }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 60em) {
 	[class^='col-lg'] {float: left; }
 
 	.col-lg-12 {width: 100% }
@@ -303,7 +259,7 @@
 	.col-lg-offset-0 {margin-left: 0 }
 }
 
-@media (min-width: 1230px) {
+@media (min-width: 72em) {
 	[class^='col-xl'] {float: left; }
 
 	.col-xl-12 {width: 100% }
