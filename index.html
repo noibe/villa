@@ -24,31 +24,6 @@
 
 <style scoped="scoped">
 
-	html,
-	body {
-		height: 100%;
-		width: 100%;
-	}
-	body {
-		font-weight: 400;
-		font-size: 14px/1.5;
-		color: #333;
-		background-color: #fff;
-		-webkit-text-size-adjust: 100%;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		text-rendering: optimizeLegibility;
-		-webkit-font-feature-settings: 'liga', 'kern';
-		-moz-font-feature-settings: 'liga', 'kern';
-		font-feature-settings: 'liga', 'kern';
-	}
-
-	h2 {
-		font-size: 6em;
-		font-weight: 100;
-		line-height: 2;
-	}
-
 	body > header {
 		display: flex;
 		align-items: center;
@@ -58,13 +33,14 @@
 	body > header .logotype {
 		font-size: 10em;
 		font-weight: 100;
-		line-height: 2;
+		line-height: 1;
+		margin: .375em 0;
 	}
 
 	body > header .lead {
 		font-size: 2.5em;
 		font-weight: 100;
-		margin-bottom: 3em;
+		margin-bottom: 2em;
 	}
 
 	a.download {
@@ -95,20 +71,15 @@
 		A amazing Framework to prototyping
 	</p>
 
-	<a href="http://github.com/noibe/villa" class="download light-blue-a100 font-grey-900">Get Villa!</a>
+	<a href="http://github.com/noibe/villa" class="download white font-grey-900">Get Villa!</a>
 
 </header>
 
 <main>
-	<div class="install">
+	<div class="install grey-50">
 		<style scoped="scoped">
 			.block {
-				padding: 16em 0;
-				font-weight: 100;
-			}
-
-			.install p {
-				font-size: 1.75em;
+				padding: 8em 0;
 			}
 
 			.code {
@@ -119,7 +90,7 @@
 			}
 
 			.code.html span {
-				font-size: 1.75em;
+				font-size: 1.5em;
 				line-height: 1.5;
 			}
 
@@ -157,8 +128,35 @@
 			</div>
 		</div>
 
-		<div class="block blue-grey-100">
+		<div class="block grey-100">
 			<div class="container">
+
+				<style scoped="scoped">
+
+					.container {
+						max-width: 48em;
+					}
+
+					h2 {
+						font-size: 3.5em;
+						font-weight: 300;
+					}
+
+					h3 {
+						border-bottom: solid 1px #bdbdbd;
+						font-weight: 600;
+						margin: 1em 0 .5em;
+						width: 100%;
+					}
+
+					h4,
+					h5,
+					h6,
+					p {
+						margin-bottom: 1em;
+					}
+
+				</style>
 
 				<h2>Docs</h2>
 
@@ -178,6 +176,7 @@
 
 				<p>With the new HTML5, the grid layout as finally obsolete, and the Flexbox is the future! The Villa Flex contains every flex helpers to you create personally interfaces.</p>
 				<h4>Align Content</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis in obcaecati vero! Aliquid eligendi impedit ipsum neque quibusdam, quidem reiciendis vitae? Aliquid, at consectetur corporis minima necessitatibus nisi optio.</p>
 				<h4>Align Items</h4>
 				<h4>Justify Content</h4>
 
@@ -204,6 +203,18 @@
 
 			</div>
 		</div>
+
+		<div class="block grey-400">
+			<div class="container">
+				<nav class="flex justify-end">
+					<div class="item">Home</div>
+					<div class="item">Inicio</div>
+					<div class="item">Preços</div>
+					<div class="item">Sobre</div>
+				</nav>
+			</div>
+		</div>
+
 	</div>
 </main>
 
