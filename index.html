@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="open-sans-italic">
+<html lang="en" class="fira-san">
 <head>
 	<meta charset="UTF-8">
 	<title>Villa</title>
@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="css/typography.css"/>
 	<link rel="stylesheet" href="css/ui.css"/>
 	<link rel="stylesheet" href="css/ux.css"/>
-	<link rel="stylesheet" href="dist/css/villa.min.css"/>
+	<!--<link rel="stylesheet" href="dist/css/villa.min.css"/>-->
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
 	<link rel="stylesheet" type="text/css" href="dist/css/cross.css"/>
@@ -36,6 +36,11 @@
 		font-weight: 100;
 		line-height: 1;
 		margin: .375em 0;
+		letter-spacing: -8px;
+	}
+
+	body > header .logotype .version {
+		letter-spacing: -16px;
 	}
 
 	body > header .lead {
@@ -62,13 +67,13 @@
 
 </style>
 
-<header class="hero grey-900 font-grey-100 height-window flex justify-center align-center flex-column">
+<header class="hero grey-900 font-grey-100 height-window flex justify-center">
 
 	<span class="logotype">
 		<span class="type">Villa</span><span class="version font-light-blue">JS</span>
 	</span>
 
-	<p class="lead font-grey-400">
+	<p class="lead font-grey-400 open-sans">
 		A amazing Framework to prototyping
 	</p>
 
@@ -77,7 +82,9 @@
 </header>
 
 <main>
+
 	<div class="install grey-50">
+
 		<style scoped="scoped">
 			.block {
 				padding: 8em 0;
@@ -116,7 +123,7 @@
 		<div class="block">
 			<div class="container">
 				<h2>Installing</h2>
-				<p>To install a villa, just link the villa.js and the villa.css!</p>
+				<p>To install a villa, please, just link the <em>villa.js</em> and the <em>villa.css</em> at your head!</p>
 				<code class="code html grey-900 font-blue">
 					<span class="from"></span><span>script</span>
 					<span class="font-white">src=</span><span class="font-green">"js/villa.min.js"</span><span class="to"></span><span class="fromslash"></span><span>script</span><span class="to"></span>
@@ -130,6 +137,7 @@
 		</div>
 
 		<div class="block grey-100">
+
 			<div class="container">
 
 				<style scoped="scoped">
@@ -203,20 +211,11 @@
 				<h4>Color Helpers</h4>
 
 			</div>
-		</div>
 
-		<div class="block grey-400">
-			<div class="container">
-				<nav class="flex justify-around">
-					<div class="item">Home</div>
-					<div class="item">Inicio</div>
-					<div class="item">Preços</div>
-					<div class="item">Sobre</div>
-				</nav>
-			</div>
 		</div>
 
 	</div>
+
 </main>
 
 <footer>

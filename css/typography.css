@@ -1,5 +1,5 @@
 /*!
- * Villa Typography v2.0.0 (http://getvilla.org/)
+ * Villa Typography v2.6.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
 */
@@ -99,7 +99,7 @@ blockquote {
 	h1 {
 		font-size: 4.5em;
 		/* 3x body copy size = 48px */
-		line-height: 1.25; /* << ORIGINAL */
+		line-height: 1.25;
 		/* keep to a multiple of the 20px line height
 		and something more appropriate for display headings */
 	}
@@ -121,7 +121,30 @@ blockquote {
 	Typefaces Helpers
 */
 
-.open-sans,
-.open-sans-italic {
-	font-family: 'Open Sans', sans-serif;
+.cursive {
+	font-family: cursive;
 }
+
+.fantasy {
+	font-family: fantasy;
+}
+
+.monospace {
+	font-family: monospace;
+}
+
+.sans-serif {
+	font-family: sans-serif;
+}
+
+.serif {
+	font-family: serif;
+}
+
+.fira-mono,
+.fira-sans,
+.fira-sans-italic,
+.lato,
+.open-sans,
+.open-sans-italic,
+.roboto {}

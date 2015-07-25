@@ -4,25 +4,11 @@
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
 */
 
-* {
-	margin: 0;
-	padding: 0;
-}
-
-li {
-	display: block;
-}
-
 h1,
 h2,
 h3,
 h4 {
 	font-size: inherit;
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
 }
 
 img {
