@@ -60,18 +60,22 @@ buildFoundation = function() {
 
 	var styles = [
 		['*',
-			['-webkit-box-sizing', boxSizing],
-			['-moz-box-sizing', boxSizing],
-			['box-sizing', boxSizing],
-			['margin', 0],
-			['padding', 0]
+			[
+				['-webkit-box-sizing', boxSizing],
+				['-moz-box-sizing', boxSizing],
+				['box-sizing', boxSizing],
+				['margin', 0],
+				['padding', 0]
+			]
 		],
 		['li',
-			['display', 'block']
+			[['display', 'block']]
 		],
 		['a',
-			['text-decoration', 'none'],
-			['color', 'inherit']
+			[
+				['text-decoration', 'none'],
+				['color', 'inherit']
+			]
 		]
 	];
 
@@ -262,5 +266,14 @@ getWebFont = function () {
 	getWebFont();
 })();
 
-window.addEventListener('resize', updateResize);
-window.addEventListener('load', getWebFont);
+var addEvent = function(a, b) {
+	if (window.attachEvent) {
+		window.attachEvent(a, b);
+	}
+	else if (window.addEventListener) {
+		window.addEventListener(a, b);
+	}
+};
+
+addEvent('resize', updateResize);
+addEvent('load', getWebFont);
