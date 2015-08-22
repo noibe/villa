@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify');
 
 var cssFiles = 'css/*.css',
-	jsFiles = 'js/*.js';
+	jsFiles = 'js/villa.js';
 
 gulp.task('css', function() {
 	gulp.src(cssFiles)
