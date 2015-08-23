@@ -1,5 +1,5 @@
 /*!
- * Villa Framework v2.6.0 (http://getvilla.org/)
+ * Villa Framework v2.7.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
  */
@@ -54,6 +54,165 @@ colorFactory = function() {
 	addStylesheetRules(styleSheetString);
 	addStylesheetRules(villaApi);
 };
+
+/**
+ * Villa Flex v3.0.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+ */
+var buildFlex;
+buildFlex = function() {
+
+	// start styles array and build flex
+
+	var i, j, a, b, styles = [];
+
+	// flex helpers
+
+	styles.push({
+		selector: '.flex, .child-flex > *, .extends-flex *',
+		properties: [
+			['display', '-webkit-box'],
+			['display', '-moz-box'],
+			['display', '-ms-flexbox'],
+			['display', '-webkit-flex'],
+			['display', 'flex']
+		]
+	});
+
+	// build align rules
+
+	var flexAlignValues = [
+		'baseline',
+		'center',
+		['end'],
+		['start'],
+		'stretch'
+	];
+
+	for (i = flexAlignValues.length; i--; ) {
+
+		if (flexAlignValues[i] instanceof Array) {
+			a = flexAlignValues[i][0];
+			b = 'flex-' + flexAlignValues[i][0];
+		} else {
+			a = flexAlignValues[i];
+			b = a;
+		}
+
+		styles.push({
+			selector: '.flex.align' + '-' + a,
+			properties: [
+				['-webkit-align-items' , b],
+				['align-items' , b]
+			]
+		});
+
+		styles.push({
+			selector: '.flex.content' + '-' + a,
+			properties: [
+				['-webkit-align-content' , b],
+				['align-content' , b]
+			]
+		});
+
+		styles.push({
+			selector: '.flex .self' + '-' + a,
+			properties: [
+				['-webkit-align-self' , b],
+				['align-self' , b]
+			]
+		});
+
+	}
+
+	// build flex direction rules
+
+	var flexDirectionValues = [
+		'column',
+		'row'
+	];
+
+	for (i = flexDirectionValues.length; i--; ) {
+		a = flexDirectionValues[i];
+		styles.push({
+			selector: '.flex-' + a,
+			properties: [
+				['-ms-flex-direction', a],
+				['-webkit-flex-direction', a],
+				['flex-direction', a]
+			]
+		});
+	}
+
+	// build flex grow and order rules
+
+	for (i = 64 + 1; --i; ) {
+
+		styles.push({
+			selector: '.flex .grow-' + i,
+			properties: [
+				['-webkit-flex-grow', '' + i],
+				['flex-grow', '' + i]
+			]
+		});
+
+		styles.push({
+			selector: '.flex .order-' + i,
+			properties: [
+				['order', '' + i]
+			]
+		});
+
+	}
+
+	// build flex wrap rules
+
+	var flexWrapValues = [
+		'wrap',
+		'nowrap'
+	];
+
+	for (i = flexWrapValues.length; i--; ) {
+		a = flexWrapValues[i];
+		styles.push({
+			selector: '.flex-' + a,
+			properties: [
+				['-ms-flex-wrap', a],
+				['-webkit-flex-wrap', a],
+				['flex-wrap', a]
+			]
+		});
+	}
+
+	// build justify content
+
+	var justifyValues = [
+		['center'],
+		['end', 'flex'],
+		['start', 'flex'],
+		['between', 'space'],
+		['around', 'space']
+	];
+
+	for (i = justifyValues.length; i--; ) {
+		a = justifyValues[i][0];
+		b = (justifyValues[i][1]) ? justifyValues[i][1] : false;
+
+		styles.push({
+			selector: '.justify-' + a,
+			properties: [
+				['-webkit-justify-content', ((b) ? b + '-' : '') + a],
+				['justify-content', ((b) ? b + '-' : '') + a]
+			]
+		});
+
+	}
+
+	addStylesheetRules(styles);
+
+};
+
 
 /**
  * Villa Foundation v3.0.0 (http://getvilla.org/)
@@ -269,6 +428,7 @@ getWebFont = function () {
 
 (function () {
 	buildFoundation();
+	buildFlex();
 	buildGrid();
 	colorFactory();
 	getWebFont();

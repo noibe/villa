@@ -4,610 +4,158 @@
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
 */
 
-/*
-	Flex Helper
-*/
-
-/* Flex Box */
-.flex {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-}
-
-/*
-	Flex Align Content Helpers
-*/
-
-/* Flex Align Content Center */
-.flex.content-center {
-	-webkit-align-content: center;
-	align-content: center;
-}
-
-/* Flex Align Content Baseline */
-.flex.content-baseline {
-	align-content: baseline;
-}
-
-/* Flex Align Content End */
-.flex.content-end {
-	-webkit-align-content: flex-end;
-	align-content: flex-end;
-}
-
-/* Flex Align Content Start */
-.flex.content-start {
-	-webkit-align-content: flex-start;
-	align-content: flex-start;
-}
-
-/* Flex Align Content Stretch */
-.flex.content-stretch {
-	-webkit-align-content: stretch;
-	align-content: stretch;
-}
-
-/*
-	Flex Align Items Helpers
-*/
-
-/* Flex Align Items Center */
-.flex.align-center {
-	-webkit-align-items: center;
-	align-items: center;
-}
-
-/* Flex Align Items Baseline */
-.flex.align-baseline {
-	-webkit-align-items: baseline;
-	align-items: baseline;
-}
-
-/* Flex Align Items End */
-.flex.align-end {
-	-webkit-align-items: flex-end;
-	align-items: flex-end;
-}
-
-/* Flex Align Items Start */
-.flex.align-start {
-	-webkit-align-items: flex-start;
-	align-items: flex-start;
-}
-
-/* Flex Align Items Stretch */
-.flex.align-stretch {
-	-webkit-align-items: stretch;
-	align-items: stretch;
-}
-
-/*
-	Flex Align Content Helpers
-*/
-
-/* Flex Align Content Center */
-.flex .self-center {
-	-webkit-align-self: center;
-	align-self: center;
-}
-
-/* Flex Align Content Baseline */
-.flex .self-baseline {
-	-webkit-align-self: baseline;
-	align-self: baseline;
-}
-
-/* Flex Align Content End */
-.flex .self-end {
-	-webkit-align-self: flex-end;
-	align-self: flex-end;
-}
-
-/* Flex Align Content Start */
-.flex .self-start {
-	-webkit-align-self: flex-start;
-	align-self: flex-start;
-}
-
-/* Flex Align Content Stretch */
-.flex .self-stretch {
-	-webkit-align-self: stretch;
-	align-self: stretch;
-}
-
-/*
-	Flex Direction Helpers
-*/
-
-/* Flex Column */
-.flex-column {
-	-ms-flex-direction: column;
-	-webkit-flex-direction: column;
-	flex-direction: column;
-}
-
-/* Flex Row */
-.flex-row {
-	-ms-flex-direction: row;
-	-webkit-flex-direction: row;
-	flex-direction: row;
-}
-
-/*
-	Flex Grow
-*/
-
-.flex .grow-1 {
-	-webkit-flex-grow: 1;
-	flex-grow: 1;
-}
-
-.flex .grow-2 {
-	-webkit-flex-grow: 2;
-	flex-grow: 2;
-}
-
-.flex .grow-3 {
-	-webkit-flex-grow: 3;
-	flex-grow: 3;
-}
-
-.flex .grow-4 {
-	-webkit-flex-grow: 4;
-	flex-grow: 4;
-}
-
-.flex .grow-5 {
-	-webkit-flex-grow: 5;
-	flex-grow: 5;
-}
-
-.flex .grow-6 {
-	-webkit-flex-grow: 6;
-	flex-grow: 6;
-}
-
-.flex .grow-7 {
-	-webkit-flex-grow: 7;
-	flex-grow: 7;
-}
-
-.flex .grow-8 {
-	-webkit-flex-grow: 8;
-	flex-grow: 8;
-}
-
-.flex .grow-9 {
-	-webkit-flex-grow: 9;
-	flex-grow: 9;
-}
-
-.flex .grow-10 {
-	-webkit-flex-grow: 10;
-	flex-grow: 10;
-}
-
-.flex .grow-11 {
-	-webkit-flex-grow: 11;
-	flex-grow: 11;
-}
-
-.flex .grow-12 {
-	-webkit-flex-grow: 12;
-	flex-grow: 12;
-}
-
-.flex .grow-13 {
-	-webkit-flex-grow: 13;
-	flex-grow: 13;
-}
-
-.flex .grow-14 {
-	-webkit-flex-grow: 14;
-	flex-grow: 14;
-}
-
-.flex .grow-15 {
-	-webkit-flex-grow: 15;
-	flex-grow: 15;
-}
-
-.flex .grow-16 {
-	-webkit-flex-grow: 16;
-	flex-grow: 16;
-}
-
-.flex .grow-17 {
-	-webkit-flex-grow: 17;
-	flex-grow: 17;
-}
-
-.flex .grow-18 {
-	-webkit-flex-grow: 18;
-	flex-grow: 18;
-}
-
-.flex .grow-19 {
-	-webkit-flex-grow: 19;
-	flex-grow: 19;
-}
-
-.flex .grow-20 {
-	-webkit-flex-grow: 20;
-	flex-grow: 20;
-}
-
-.flex .grow-21 {
-	-webkit-flex-grow: 21;
-	flex-grow: 21;
-}
-
-.flex .grow-22 {
-	-webkit-flex-grow: 21;
-	flex-grow: 21;
-}
-
-.flex .grow-23 {
-	-webkit-flex-grow: 21;
-	flex-grow: 21;
-}
-
-.flex .grow-24 {
-	-webkit-flex-grow: 21;
-	flex-grow: 21;
-}
-
-.flex .grow-25 {
-	-webkit-flex-grow: 25;
-	flex-grow: 25;
-}
-
-.flex .grow-26 {
-	-webkit-flex-grow: 26;
-	flex-grow: 26;
-}
-
-.flex .grow-27 {
-	-webkit-flex-grow: 27;
-	flex-grow: 27;
-}
-
-.flex .grow-28 {
-	-webkit-flex-grow: 28;
-	flex-grow: 28;
-}
-
-.flex .grow-29 {
-	-webkit-flex-grow: 29;
-	flex-grow: 29;
-}
-
-.flex .grow-30 {
-	-webkit-flex-grow: 30;
-	flex-grow: 30;
-}
-
-.flex .grow-31 {
-	-webkit-flex-grow: 31;
-	flex-grow: 31;
-}
-
-.flex .grow-32 {
-	-webkit-flex-grow: 32;
-	flex-grow: 32;
-}
-
-/*
-	Justify Content Helpers
-*/
-
-/* Justify Center */
-.justify-center {
-	-webkit-justify-content: center;
-	justify-content: center;
-}
-
-/* Justify End */
-.justify-end {
-	-webkit-justify-content: flex-end;
-	justify-content: flex-end;
-}
-
-/* Justify Start */
-.justify-start {
-	-webkit-justify-content: flex-start;
-	justify-content: flex-start;
-}
-
-/* Justify with Space Between */
-.justify-between {
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
-}
-
-/* Justify with Space Around */
-.justify-around {
-	-webkit-justify-content: space-around;
-	justify-content: space-around;
-}
-
-/*
-	Flex Order Helpers
-*/
-
-.flex .order-1 {
-	order: 1;
-}
-
-.flex .order-2 {
-	order: 2;
-}
-
-.flex .order-3 {
-	order: 3;
-}
-
-.flex .order-4 {
-	order: 4;
-}
-
-.flex .order-5 {
-	order: 5;
-}
-
-.flex .order-6 {
-	order: 6;
-}
-
-.flex .order-7 {
-	order: 7;
-}
-
-.flex .order-8 {
-	order: 8;
-}
-
-.flex .order-9 {
-	order: 9;
-}
-
-.flex .order-10 {
-	order: 10;
-}
-
-.flex .order-11 {
-	order: 11;
-}
-
-.flex .order-12 {
-	order: 12;
-}
-
-.flex .order-13 {
-	order: 13;
-}
-
-.flex .order-14 {
-	order: 14;
-}
-
-.flex .order-15 {
-	order: 15;
-}
-
-.flex .order-16 {
-	order: 16;
-}
-
-.flex .order-17 {
-	order: 17;
-}
-
-.flex .order-18 {
-	order: 18;
-}
-
-.flex .order-19 {
-	order: 19;
-}
-
-.flex .order-20 {
-	order: 20;
-}
-
-.flex .order-21 {
-	order: 21;
-}
-
-.flex .order-22 {
-	order: 22;
-}
-
-.flex .order-23 {
-	order: 23;
-}
-
-.flex .order-24 {
-	order: 24;
-}
-
-.flex .order-25 {
-	order: 25;
-}
-
-.flex .order-26 {
-	order: 26;
-}
-
-.flex .order-27 {
-	order: 27;
-}
-
-.flex .order-28 {
-	order: 28;
-}
-
-.flex .order-29 {
-	order: 29;
-}
-
-.flex .order-30 {
-	order: 30;
-}
-
-.flex .order-31 {
-	order: 31;
-}
-
-.flex .order-32 {
-	order: 32;
-}
-
-.flex .order-33 {
-	order: 33;
-}
-
-.flex .order-34 {
-	order: 34;
-}
-
-.flex .order-35 {
-	order: 35;
-}
-
-.flex .order-36 {
-	order: 36;
-}
-
-.flex .order-37 {
-	order: 37;
-}
-
-.flex .order-38 {
-	order: 38;
-}
-
-.flex .order-39 {
-	order: 39;
-}
-
-.flex .order-40 {
-	order: 40;
-}
-
-.flex .order-41 {
-	order: 41;
-}
-
-.flex .order-42 {
-	order: 42;
-}
-
-.flex .order-43 {
-	order: 43;
-}
-
-.flex .order-44 {
-	order: 44;
-}
-
-.flex .order-45 {
-	order: 45;
-}
-
-.flex .order-46 {
-	order: 46;
-}
-
-.flex .order-47 {
-	order: 47;
-}
-
-.flex .order-48 {
-	order: 48;
-}
-
-.flex .order-49 {
-	order: 49;
-}
-
-.flex .order-50 {
-	order: 50;
-}
-
-.flex .order-51 {
-	order: 51;
-}
-
-.flex .order-52 {
-	order: 52;
-}
-
-.flex .order-53 {
-	order: 53;
-}
-
-.flex .order-54 {
-	order: 54;
-}
-
-.flex .order-55 {
-	order: 55;
-}
-
-.flex .order-56 {
-	order: 56;
-}
-
-.flex .order-57 {
-	order: 57;
-}
-
-.flex .order-58 {
-	order: 58;
-}
-
-.flex .order-59 {
-	order: 59;
-}
-
-.flex .order-60 {
-	order: 60;
-}
-
-.flex .order-61 {
-	order: 61;
-}
-
-.flex .order-62 {
-	order: 62;
-}
-
-.flex .order-63 {
-	order: 63;
-}
-
-.flex .order-64 {
-	order: 64;
-}
-
-/*
-	Flex Wrap Helpers
-*/
-
-/* Flex Wrap */
-.flex-wrap {
-	-ms-flex-wrap: wrap;
-	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
-}
-
-/* Flex No-wrap */
-.flex-nowrap {
-	-ms-flex-wrap: nowrap;
-	-webkit-flex-wrap: nowrap;
-	flex-wrap: nowrap;
-}
+.flex,
+.extends-flex,
+.child-flex,
+.flex.content-center,
+.flex.content-baseline,
+.flex.content-end,
+.flex.content-start,
+.flex.content-stretch,
+.flex.align-center,
+.flex.align-baseline,
+.flex.align-end,
+.flex.align-start,
+.flex.align-stretch,
+.flex .self-center,
+.flex .self-baseline,
+.flex .self-end,
+.flex .self-start,
+.flex .self-stretch,
+.flex-column,
+.flex-row,
+.flex .grow-1,
+.flex .grow-2,
+.flex .grow-3,
+.flex .grow-4,
+.flex .grow-5,
+.flex .grow-6,
+.flex .grow-7,
+.flex .grow-8,
+.flex .grow-9,
+.flex .grow-10,
+.flex .grow-11,
+.flex .grow-12,
+.flex .grow-13,
+.flex .grow-14,
+.flex .grow-15,
+.flex .grow-16,
+.flex .grow-17,
+.flex .grow-18,
+.flex .grow-19,
+.flex .grow-20,
+.flex .grow-21,
+.flex .grow-22,
+.flex .grow-23,
+.flex .grow-24,
+.flex .grow-25,
+.flex .grow-26,
+.flex .grow-27,
+.flex .grow-28,
+.flex .grow-29,
+.flex .grow-30,
+.flex .grow-31,
+.flex .grow-32,
+.flex .grow-33,
+.flex .grow-34,
+.flex .grow-35,
+.flex .grow-36,
+.flex .grow-37,
+.flex .grow-38,
+.flex .grow-39,
+.flex .grow-40,
+.flex .grow-41,
+.flex .grow-42,
+.flex .grow-43,
+.flex .grow-44,
+.flex .grow-45,
+.flex .grow-46,
+.flex .grow-47,
+.flex .grow-48,
+.flex .grow-49,
+.flex .grow-50,
+.flex .grow-51,
+.flex .grow-52,
+.flex .grow-53,
+.flex .grow-54,
+.flex .grow-55,
+.flex .grow-56,
+.flex .grow-57,
+.flex .grow-58,
+.flex .grow-59,
+.flex .grow-60,
+.flex .grow-61,
+.flex .grow-62,
+.flex .grow-63,
+.flex .grow-64,
+.flex .order-1,
+.flex .order-2,
+.flex .order-3,
+.flex .order-4,
+.flex .order-5,
+.flex .order-6,
+.flex .order-7,
+.flex .order-8,
+.flex .order-9,
+.flex .order-10,
+.flex .order-11,
+.flex .order-12,
+.flex .order-13,
+.flex .order-14,
+.flex .order-15,
+.flex .order-16,
+.flex .order-17,
+.flex .order-18,
+.flex .order-19,
+.flex .order-20,
+.flex .order-21,
+.flex .order-22,
+.flex .order-23,
+.flex .order-24,
+.flex .order-25,
+.flex .order-26,
+.flex .order-27,
+.flex .order-28,
+.flex .order-29,
+.flex .order-30,
+.flex .order-31,
+.flex .order-32,
+.flex .order-33,
+.flex .order-34,
+.flex .order-35,
+.flex .order-36,
+.flex .order-37,
+.flex .order-38,
+.flex .order-39,
+.flex .order-40,
+.flex .order-41,
+.flex .order-42,
+.flex .order-43,
+.flex .order-44,
+.flex .order-45,
+.flex .order-46,
+.flex .order-47,
+.flex .order-48,
+.flex .order-49,
+.flex .order-50,
+.flex .order-51,
+.flex .order-52,
+.flex .order-53,
+.flex .order-54,
+.flex .order-55,
+.flex .order-56,
+.flex .order-57,
+.flex .order-58,
+.flex .order-59,
+.flex .order-60,
+.flex .order-61,
+.flex .order-62,
+.flex .order-63,
+.flex .order-64,
+.flex-wrap,
+.flex-nowrap,
+.justify-center,
+.justify-end,
+.justify-start,
+.justify-between,
+.justify-around {}

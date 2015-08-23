@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="fira-sans">
+<html lang="en" class="">
 <head>
 	<meta charset="UTF-8">
 	<title>Villa</title>
-	<script src="dist/js/villa.min.js"></script>
+	<script src="js/villa.js"></script>
 	<link rel="stylesheet" href="css/_.css"/>
 	<link rel="stylesheet" href="css/container.css"/>
 	<link rel="stylesheet" href="css/flex.css"/>
@@ -24,12 +24,6 @@
 <body class="font-grey-900">
 
 <style scoped="scoped">
-
-	body > header {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-	}
 
 	body > header .logotype {
 		font-size: 10em;
@@ -67,13 +61,13 @@
 
 </style>
 
-<header class="hero grey-900 font-grey-100 height-window flex justify-center">
+<header class="hero align-center grey-900 font-grey-100 height-window flex justify-center flex-column">
 
-	<span class="logotype">
+	<span class="logotype flex-wrap">
 		<span class="type">Villa</span><span class="version font-light-blue">JS</span>
 	</span>
 
-	<p class="lead font-grey-400 open-sans">
+	<p class="lead font-grey-400">
 		A amazing Framework to prototyping
 	</p>
 
