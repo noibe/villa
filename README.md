@@ -9,13 +9,18 @@ To install a villa, just link the villa.js and the villa.css at your head!
 <script src="js/villa.js"></script>
 ```
 
-##ProtoJS
+##Foundation
 
-###Reset
-###Container
+##Typography
+
+## Helpers
 
 ###Container
 
 ###Flex
 
 ###Grid
+
+###UI Helpers
+
+##API
