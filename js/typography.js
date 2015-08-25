@@ -1,5 +1,5 @@
 /*!
- * Villa Typography v2.0.0 (http://getvilla.org/)
+ * Villa Typography v2.6.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
  */

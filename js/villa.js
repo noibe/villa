@@ -1,5 +1,5 @@
 /*!
- * Villa Framework v2.7.0 (http://getvilla.org/)
+ * Villa Framework v2.8.7 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
  */
@@ -23,19 +23,13 @@ colorFactory = function() {
 	var styleSheetString = [];
 
 	for (var i = colors.length; i--; ) {
+		var name = colors[i][0];
+		var value = colors[i][1];
+
 		styleSheetString.push(
-			['.' + colors[i][0], [['background-color', colors[i][1]]]],
-			['.font-' + colors[i][0], [['color', colors[i][1]]]],
-			['.border-' + colors[i][0], [['border-color', colors[i][1]]]],
-			['.a-' + colors[i][0] + ':active', [['background-color', colors[i][1]]]],
-			['.afont-' + colors[i][0] + ':active', [['color', colors[i][1]]]],
-			['.aborder-' + colors[i][0] + ':active', [['border-color', colors[i][1]]]],
-			['.f-' + colors[i][0] + ':focus', [['background-color', colors[i][1]]]],
-			['.ffont-' + colors[i][0] + ':focus', [['color', colors[i][1]]]],
-			['.fborder-' + colors[i][0] + ':focus', [['border-color', colors[i][1]]]],
-			['.h-' + colors[i][0] + ':hover', [['background-color', colors[i][1]]]],
-			['.hfont-' + colors[i][0] + ':hover', [['color', colors[i][1]]]],
-			['.hborder-' + colors[i][0] + ':hover', [['border-color', colors[i][1]]]]
+			['.' + name + ', .a-' + name + ':active' + ', .f-' + name+ ':focus' + ', .h-' + name+ ':hover', [['background-color', value]]],
+			['.font-' + name + ', .afont-' + name+ ':active' + ', .ffont-' + name+ ':focus' + ' .hfont-' + name+ ':hover', [['color', value]]],
+			['.border-' + name + ', .aborder-' + name+ ':active' + ', .fborder-' + name+ ':focus' + ', .hborder-' + name+ ':hover', [['border-color', value]]]
 		);
 	}
 
