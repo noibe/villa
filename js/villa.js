@@ -142,7 +142,7 @@ buildFlex = function() {
 	// build flex grow and order rules
 
 	styles.push({
-		selector: '.flex .child-grow-1 > *',
+		selector: '.flex.child-grow-1 > *',
 		properties: [
 			['-webkit-flex-grow', '1'],
 			['flex-grow', '1']
@@ -178,7 +178,7 @@ buildFlex = function() {
 	for (i = flexWrapValues.length; i--; ) {
 		a = flexWrapValues[i];
 		styles.push({
-			selector: '.flex-' + a + '.child-flex-' + a + ' > *' + '.extends-flex-' + a + ' *',
+			selector: '.flex-' + a + ', .child-flex-' + a + ' > *' + ', .extends-flex-' + a + ' *',
 			properties: [
 				['-ms-flex-wrap', a],
 				['-webkit-flex-wrap', a],
