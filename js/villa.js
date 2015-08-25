@@ -260,20 +260,18 @@ buildFoundation = function() {
 var buildGrid;
 buildGrid = function() {
 
-	var i, j, k, p, u, rules, styles;
+	var i, j, k, p, u, r, s = [];
 
 	u = 100 / 12;
 
-	styles = [];
-
-	styles.push({
+	s.push({
 		selector: ".col:before",
 		properties: [
 			['content', 'hehe']
 		]
 	});
 
-	styles.push({
+	s.push({
 		selector: "[class*='col-xs'], [class*='col-sm'], [class*='col-md'], [class*='col-lg']",
 		properties: [
 			['position', 'relative'],
@@ -281,7 +279,7 @@ buildGrid = function() {
 		]
 	});
 
-	styles.push({
+	s.push({
 		selector: "[class*='col-xl']",
 		properties: [
 			['float', 'left']
@@ -290,7 +288,7 @@ buildGrid = function() {
 
 	// non media rules
 
-	rules = [
+	r = [
 		{
 			prefix: '.col-xs-',
 			properties: 'width',
@@ -314,14 +312,14 @@ buildGrid = function() {
 	];
 
 	for (i = 12 + 1; i--; )
-		if (rules.length) {
+		if (r.length) {
 			p = u * i;
 			if (p) p += '%';
-			for (j = rules.length; j--; )
-				if ((i > 0) || ((i === 0) && (rules[j].zero)))
-					styles.push([
-						rules[j].prefix + i,
-						[[rules[j].properties, p]]
+			for (j = r.length; j--; )
+				if ((i > 0) || ((i === 0) && (r[j].zero)))
+					s.push([
+						r[j].prefix + i,
+						[[r[j].properties, p]]
 					]);
 		}
 
@@ -387,11 +385,11 @@ buildGrid = function() {
 						]);
 			}
 
-		styles.push(media);
+		s.push(media);
 
 	}
 
-	addStylesheetRules(styles);
+	addStylesheetRules(s);
 
 };
 
