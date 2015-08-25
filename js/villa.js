@@ -65,7 +65,7 @@ buildFlex = function() {
 
 	// start styles array and build flex
 
-	var i, j, a, b, styles = [];
+	var i, a, b, styles = [];
 
 	// flex helpers
 
@@ -101,7 +101,7 @@ buildFlex = function() {
 		}
 
 		styles.push({
-			selector: '.flex.align' + '-' + a,
+			selector: '.flex.align' + '-' + a + ', .flex.child-align' + '-' + a + ' > *',
 			properties: [
 				['-webkit-align-items' , b],
 				['align-items' , b]
@@ -136,7 +136,7 @@ buildFlex = function() {
 	for (i = flexDirectionValues.length; i--; ) {
 		a = flexDirectionValues[i];
 		styles.push({
-			selector: '.flex-' + a,
+			selector: '.flex-' + a + ', .child-flex' + a + ' > *, .extends-flex' + a + ' *',
 			properties: [
 				['-ms-flex-direction', a],
 				['-webkit-flex-direction', a],
@@ -146,6 +146,14 @@ buildFlex = function() {
 	}
 
 	// build flex grow and order rules
+
+	styles.push({
+		selector: '.flex .child-grow-1 > *',
+		properties: [
+			['-webkit-flex-grow', '1'],
+			['flex-grow', '1']
+		]
+	});
 
 	for (i = 64 + 1; --i; ) {
 
@@ -176,7 +184,7 @@ buildFlex = function() {
 	for (i = flexWrapValues.length; i--; ) {
 		a = flexWrapValues[i];
 		styles.push({
-			selector: '.flex-' + a,
+			selector: '.flex-' + a + '.child-flex-' + a + ' > *' + '.extends-flex-' + a + ' *',
 			properties: [
 				['-ms-flex-wrap', a],
 				['-webkit-flex-wrap', a],
@@ -200,7 +208,7 @@ buildFlex = function() {
 		b = (justifyValues[i][1]) ? justifyValues[i][1] : false;
 
 		styles.push({
-			selector: '.justify-' + a,
+			selector: '.justify-' + a + ', .child-justify-' + a + ' > *',
 			properties: [
 				['-webkit-justify-content', ((b) ? b + '-' : '') + a],
 				['justify-content', ((b) ? b + '-' : '') + a]
@@ -263,6 +271,13 @@ buildGrid = function() {
 	u = 100 / 12;
 
 	styles = [];
+
+	styles.push({
+		selector: ".col:before",
+		properties: [
+			['content', 'hehe']
+		]
+	});
 
 	styles.push({
 		selector: "[class*='col-xs'], [class*='col-sm'], [class*='col-md'], [class*='col-lg']",

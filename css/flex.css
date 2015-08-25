@@ -4,9 +4,20 @@
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
 */
 
-.flex,
-.extends-flex,
-.child-flex,
+.child-flex > *,
+.extends-flex *,
+.flex {}
+
+.flex.child-content-center > *,
+.flex.child-content-baseline > *,
+.flex.child-content-end > *,
+.flex.child-content-start > *,
+.flex.child-content-stretch > *,
+.flex.child-align-center > *,
+.flex.child-align-baseline > *,
+.flex.child-align-end > *,
+.flex.child-align-start > *,
+.flex.child-align-stretch > *,
 .flex.content-center,
 .flex.content-baseline,
 .flex.content-end,
@@ -21,9 +32,16 @@
 .flex .self-baseline,
 .flex .self-end,
 .flex .self-start,
-.flex .self-stretch,
+.flex .self-stretch {}
+
 .flex-column,
+.child-flex-column,
+.extends-flex-column,
 .flex-row,
+.child-flex-row,
+.extends-flex-row {}
+
+.flex .child-grow-1 > *,
 .flex .grow-1,
 .flex .grow-2,
 .flex .grow-3,
@@ -87,7 +105,8 @@
 .flex .grow-61,
 .flex .grow-62,
 .flex .grow-63,
-.flex .grow-64,
+.flex .grow-64 {}
+
 .flex .order-1,
 .flex .order-2,
 .flex .order-3,
@@ -151,9 +170,20 @@
 .flex .order-61,
 .flex .order-62,
 .flex .order-63,
-.flex .order-64,
+.flex .order-64 {}
+
+.child-flex-wrap > *,
+.child-flex-nowrap > *,
+.extends-flex-wrap *,
+.extends-flex-nowrap *,
 .flex-wrap,
-.flex-nowrap,
+.flex-nowrap {}
+
+.child-justify-center > *,
+.child-justify-end > *,
+.child-justify-start > *,
+.child-justify-between > *,
+.child-justify-around > *,
 .justify-center,
 .justify-end,
 .justify-start,
