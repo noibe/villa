@@ -21,8 +21,8 @@ To install a villa, just link the villa.js and the villa.css at your head!
 
 ###Grid
 
-###UI Helpers
-
 ###UX Helpers
+
+###UI Helpers
 
 ##API
