@@ -5,15 +5,75 @@
 */
 
 /* Opacity Helpers */
-.opacity10, .h-opacity10:hover { opacity: 0.1 }
-.opacity20, .h-opacity20:hover { opacity: 0.2 }
-.opacity30, .h-opacity30:hover { opacity: 0.3 }
-.opacity40, .h-opacity40:hover { opacity: 0.4 }
-.opacity50, .h-opacity50:hover { opacity: 0.5 }
-.opacity60, .h-opacity60:hover { opacity: 0.6 }
-.opacity70, .h-opacity70:hover { opacity: 0.7 }
-.opacity80, .h-opacity80:hover { opacity: 0.8 }
-.opacity90, .h-opacity90:hover { opacity: 0.9 }
+.child-opacity-1,
+.h-child-opacity-1,
+.opacity-1,
+.h-opacity-1:hover {
+	opacity: 0.1
+}
+
+.child-opacity-10,
+.h-child-opacity-10,
+.opacity-10,
+.h-opacity-10:hover {
+	opacity: 0.1
+}
+
+.child-opacity-20,
+.h-child-opacity-20,
+.opacity-20,
+.h-opacity-20:hover {
+	opacity: 0.2
+}
+
+.child-opacity-30,
+.h-child-opacity-30,
+.opacity-30,
+.h-opacity-30:hover {
+	opacity: 0.3
+}
+
+.child-opacity-40,
+.h-child-opacity-40,
+.opacity-40,
+.h-opacity-40:hover {
+	opacity: 0.4
+}
+
+.child-opacity-50,
+.h-child-opacity-50,
+.opacity-50,
+.h-opacity-50:hover {
+	opacity: 0.5
+}
+
+.child-opacity-60,
+.h-child-opacity-60,
+.opacity-60,
+.h-opacity-60:hover {
+	opacity: 0.6
+}
+
+.child-opacity-70,
+.h-child-opacity-70,
+.opacity-70,
+.h-opacity-70:hover {
+	opacity: 0.7
+}
+
+.child-opacity-80,
+.h-child-opacity-80,
+.opacity-80,
+.h-opacity-80:hover {
+	opacity: 0.8
+}
+
+.child-opacity-90,
+.h-child-opacity-90,
+.opacity-90,
+.h-opacity-90:hover {
+	opacity: 0.9
+}
 
 /*
     Background Helpers
@@ -35,6 +95,7 @@
 /* Height Helpers */
 
 /* Height 100% */
+.child-height-100,
 .height-100 {
 	height: 100%;
 }
@@ -45,6 +106,7 @@
 /* Width Helpers */
 
 /* Width 100% */
+.child-width-100,
 .width-100 {
 	width: 100%;
 }
