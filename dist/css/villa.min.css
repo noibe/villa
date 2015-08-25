@@ -2,38 +2,31 @@
  * Villa Framework v2.8.7 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
-*/
-/*!
+*//*!
  * Villa Container v2.0.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
-*/.container{margin-right:auto;margin-left:auto}@media (max-width:60em){.container{width:100%}}@media (min-width:60em){.container{width:64em}}@media (min-width:72em){.blog,.full,.wide{width:100%}.wide{max-width:72em}.full{max-width:96em}}
-/*!
+*/.container{margin-right:auto;margin-left:auto}@media (max-width:60em){.container{width:100%}}@media (min-width:60em){.container{width:64em}}@media (min-width:72em){.blog,.full,.wide{width:100%}.wide{max-width:72em}.full{max-width:96em}}/*!
  * Villa Flex v3.0.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
-*/
-/*!
+*//*!
  * Villa Foundation v3.0.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
-*/h1,h2,h3,h4{font-size:inherit}img{max-width:100%;height:auto;border:0}
-/*!
+*/img{max-width:100%;height:auto;border:0}/*!
  * Villa Grid v3.0.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
-*/.row:after{clear:both}.row:after,.row:before{content:" ";display:table}
-/*!
+*/.row:after{clear:both}.row:after,.row:before{content:" ";display:table}/*!
  * Villa Typography v2.6.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
-*/html{font:caption;font-size:62.5%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}blockquote,h1{line-height:1.25}body{font-size:160%;line-height:1.3}body,h1,h2,h3,h4,h5,h6{font-size-adjust:.5}h1{font-size:2.25em}h2{font-size:1.5em;line-height:1.15384615}h3{font-size:1.3125em;line-height:1.13636364}h4{font-size:1.125em;line-height:1.11111111}blockquote{font-size:1.25em}@media (min-width:48em){h2,h3{line-height:1.25}blockquote,h3{font-size:1.5em}body{line-height:1.375}h1{font-size:2.5em;line-height:1.125}h2{font-size:2em}h4{line-height:1.22222222}blockquote{line-height:1.45833333}}@media (min-width:60em){h1,h2,h3{line-height:1.25}h1{font-size:4.5em}h2{font-size:2.25em}h3{font-size:1.75em}}.cursive{font-family:cursive}.fantasy{font-family:fantasy}.monospace{font-family:monospace}.sans-serif{font-family:sans-serif}.serif{font-family:serif}
-/*!
+*/html{font:caption;font-size:62.5%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}blockquote,h1{line-height:1.25}body{font-size:160%;line-height:1.3}body,h1,h2,h3,h4,h5,h6{font-size-adjust:.5}h1{font-size:2.25em}h2{font-size:1.5em;line-height:1.15384615}h3{font-size:1.3125em;line-height:1.13636364}h4{font-size:1.125em;line-height:1.11111111}blockquote{font-size:1.25em}@media (min-width:48em){h2,h3{line-height:1.25}blockquote,h3{font-size:1.5em}body{line-height:1.375}h1{font-size:2.5em;line-height:1.125}h2{font-size:2em}h4{line-height:1.22222222}blockquote{line-height:1.45833333}}@media (min-width:60em){h1,h2,h3{line-height:1.25}h1{font-size:4.5em}h2{font-size:2.25em}h3{font-size:1.75em}}.cursive{font-family:cursive}.fantasy{font-family:fantasy}.monospace{font-family:monospace}.sans-serif{font-family:sans-serif}.serif{font-family:serif}/*!
  * Villa UI Helper v2.2.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
-*/.h-opacity10:hover,.opacity10{opacity:.1}.h-opacity20:hover,.opacity20{opacity:.2}.h-opacity30:hover,.opacity30{opacity:.3}.h-opacity40:hover,.opacity40{opacity:.4}.h-opacity50:hover,.opacity50{opacity:.5}.h-opacity60:hover,.opacity60{opacity:.6}.h-opacity70:hover,.opacity70{opacity:.7}.h-opacity80:hover,.opacity80{opacity:.8}.h-opacity90:hover,.opacity90{opacity:.9}.bg-cover{background-repeat:no-repeat;background-size:cover;-moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover}.height-100{height:100%}.width-100{width:100%}
-/*!
+*/.h-opacity10:hover,.opacity10{opacity:.1}.h-opacity20:hover,.opacity20{opacity:.2}.h-opacity30:hover,.opacity30{opacity:.3}.h-opacity40:hover,.opacity40{opacity:.4}.h-opacity50:hover,.opacity50{opacity:.5}.h-opacity60:hover,.opacity60{opacity:.6}.h-opacity70:hover,.opacity70{opacity:.7}.h-opacity80:hover,.opacity80{opacity:.8}.h-opacity90:hover,.opacity90{opacity:.9}.bg-cover{background-repeat:no-repeat;background-size:cover;-moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover}.height-100{height:100%}.width-100{width:100%}/*!
  * Villa UX Helper v1.0.0 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)

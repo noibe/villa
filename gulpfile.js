@@ -5,13 +5,24 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	uglify = require('gulp-uglify');
 
-var cssFiles = 'css/*.css',
+var core = 'css/_.css',
+	cssFiles = 'css/*.css',
+	cssCross = 'css/cross/*.css',
 	jsFiles = 'js/villa.js';
 
 gulp.task('css', function() {
 	gulp.src(cssFiles)
-		.pipe(minifycss())
 		.pipe(concat('villa.css'))
+		.pipe(gulp.dest('dist/css'))
+		.pipe(minifycss())
+		.pipe(rename({
+			extname: '.min.css'
+		}))
+		.pipe(gulp.dest('dist/css'));
+	gulp.src([core, cssCross])
+		.pipe(concat('villa-cross.css'))
+		.pipe(gulp.dest('dist/css'))
+		.pipe(minifycss())
 		.pipe(rename({
 			extname: '.min.css'
 		}))

@@ -1,0 +1,798 @@
+/*!
+ * Villa Framework v2.8.7 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
+
+/*!
+ * Villa Container v2.0.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
+
+/* Container Margin */
+.container {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (max-width: 60em) {
+	.container {
+		width: 100%;
+	}
+}
+
+@media (min-width: 60em) {
+	.container {
+		width: 64em;
+	}
+}
+
+@media (min-width: 72em) {
+	.blog {
+		width: 100%;
+	}
+
+	.wide {
+		width: 100%;
+		max-width: 72em;
+	}
+
+	.full {
+		width: 100%;
+		max-width: 96em;
+	}
+}
+/*!
+ * Villa Flex v3.0.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
+
+.child-flex > *,
+.extends-flex *,
+.flex {}
+
+.flex.child-content-center > *,
+.flex.child-content-baseline > *,
+.flex.child-content-end > *,
+.flex.child-content-start > *,
+.flex.child-content-stretch > *,
+.flex.child-align-center > *,
+.flex.child-align-baseline > *,
+.flex.child-align-end > *,
+.flex.child-align-start > *,
+.flex.child-align-stretch > *,
+.flex.content-center,
+.flex.content-baseline,
+.flex.content-end,
+.flex.content-start,
+.flex.content-stretch,
+.flex.align-center,
+.flex.align-baseline,
+.flex.align-end,
+.flex.align-start,
+.flex.align-stretch,
+.flex .self-center,
+.flex .self-baseline,
+.flex .self-end,
+.flex .self-start,
+.flex .self-stretch {}
+
+.flex-column,
+.child-flex-column,
+.extends-flex-column,
+.flex-row,
+.child-flex-row,
+.extends-flex-row {}
+
+.flex .child-grow-1 > *,
+.flex .grow-1,
+.flex .grow-2,
+.flex .grow-3,
+.flex .grow-4,
+.flex .grow-5,
+.flex .grow-6,
+.flex .grow-7,
+.flex .grow-8,
+.flex .grow-9,
+.flex .grow-10,
+.flex .grow-11,
+.flex .grow-12,
+.flex .grow-13,
+.flex .grow-14,
+.flex .grow-15,
+.flex .grow-16,
+.flex .grow-17,
+.flex .grow-18,
+.flex .grow-19,
+.flex .grow-20,
+.flex .grow-21,
+.flex .grow-22,
+.flex .grow-23,
+.flex .grow-24,
+.flex .grow-25,
+.flex .grow-26,
+.flex .grow-27,
+.flex .grow-28,
+.flex .grow-29,
+.flex .grow-30,
+.flex .grow-31,
+.flex .grow-32,
+.flex .grow-33,
+.flex .grow-34,
+.flex .grow-35,
+.flex .grow-36,
+.flex .grow-37,
+.flex .grow-38,
+.flex .grow-39,
+.flex .grow-40,
+.flex .grow-41,
+.flex .grow-42,
+.flex .grow-43,
+.flex .grow-44,
+.flex .grow-45,
+.flex .grow-46,
+.flex .grow-47,
+.flex .grow-48,
+.flex .grow-49,
+.flex .grow-50,
+.flex .grow-51,
+.flex .grow-52,
+.flex .grow-53,
+.flex .grow-54,
+.flex .grow-55,
+.flex .grow-56,
+.flex .grow-57,
+.flex .grow-58,
+.flex .grow-59,
+.flex .grow-60,
+.flex .grow-61,
+.flex .grow-62,
+.flex .grow-63,
+.flex .grow-64 {}
+
+.flex .order-1,
+.flex .order-2,
+.flex .order-3,
+.flex .order-4,
+.flex .order-5,
+.flex .order-6,
+.flex .order-7,
+.flex .order-8,
+.flex .order-9,
+.flex .order-10,
+.flex .order-11,
+.flex .order-12,
+.flex .order-13,
+.flex .order-14,
+.flex .order-15,
+.flex .order-16,
+.flex .order-17,
+.flex .order-18,
+.flex .order-19,
+.flex .order-20,
+.flex .order-21,
+.flex .order-22,
+.flex .order-23,
+.flex .order-24,
+.flex .order-25,
+.flex .order-26,
+.flex .order-27,
+.flex .order-28,
+.flex .order-29,
+.flex .order-30,
+.flex .order-31,
+.flex .order-32,
+.flex .order-33,
+.flex .order-34,
+.flex .order-35,
+.flex .order-36,
+.flex .order-37,
+.flex .order-38,
+.flex .order-39,
+.flex .order-40,
+.flex .order-41,
+.flex .order-42,
+.flex .order-43,
+.flex .order-44,
+.flex .order-45,
+.flex .order-46,
+.flex .order-47,
+.flex .order-48,
+.flex .order-49,
+.flex .order-50,
+.flex .order-51,
+.flex .order-52,
+.flex .order-53,
+.flex .order-54,
+.flex .order-55,
+.flex .order-56,
+.flex .order-57,
+.flex .order-58,
+.flex .order-59,
+.flex .order-60,
+.flex .order-61,
+.flex .order-62,
+.flex .order-63,
+.flex .order-64 {}
+
+.child-flex-wrap > *,
+.child-flex-nowrap > *,
+.extends-flex-wrap *,
+.extends-flex-nowrap *,
+.flex-wrap,
+.flex-nowrap {}
+
+.child-justify-center > *,
+.child-justify-end > *,
+.child-justify-start > *,
+.child-justify-between > *,
+.child-justify-around > *,
+.justify-center,
+.justify-end,
+.justify-start,
+.justify-between,
+.justify-around {}
+/*!
+ * Villa Foundation v3.0.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
+
+h1,
+h2,
+h3,
+h4 {
+	font-size: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}
+/*!
+ * Villa Grid v3.0.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
+
+/*
+	Row
+*/
+
+.row:after {
+	clear: both;
+}
+
+.row:before, .row:after {
+	content: " ";
+	display: table;
+}
+
+/*
+	Cols
+*/
+
+[class^='col-xs'],
+[class^='col-sm'],
+[class^='col-md'],
+[class^='col-lg'],
+[class^='col-xs'],
+.col-xs-12,
+.col-xs-11,
+.col-xs-10,
+.col-xs-9,
+.col-xs-8,
+.col-xs-7,
+.col-xs-6,
+.col-xs-5,
+.col-xs-4,
+.col-xs-3,
+.col-xs-2,
+.col-xs-1,
+.col-xs-pull-12,
+.col-xs-pull-11,
+.col-xs-pull-10,
+.col-xs-pull-9,
+.col-xs-pull-8,
+.col-xs-pull-7,
+.col-xs-pull-6,
+.col-xs-pull-5,
+.col-xs-pull-4,
+.col-xs-pull-3,
+.col-xs-pull-2,
+.col-xs-pull-1,
+.col-xs-pull-0,
+.col-xs-push-12,
+.col-xs-push-11,
+.col-xs-push-10,
+.col-xs-push-9,
+.col-xs-push-8,
+.col-xs-push-7,
+.col-xs-push-6,
+.col-xs-push-5,
+.col-xs-push-4,
+.col-xs-push-3,
+.col-xs-push-2,
+.col-xs-push-1,
+.col-xs-push-0,
+.col-xs-offset-12,
+.col-xs-offset-11,
+.col-xs-offset-10,
+.col-xs-offset-9,
+.col-xs-offset-8,
+.col-xs-offset-7,
+.col-xs-offset-6,
+.col-xs-offset-5,
+.col-xs-offset-4,
+.col-xs-offset-3,
+.col-xs-offset-2,
+.col-xs-offset-1,
+.col-xs-offset-0 { }
+
+@media (min-width: 36em) {
+
+	[class*='col-sm'],
+	.col-sm-12,
+	.col-sm-11,
+	.col-sm-10,
+	.col-sm-9,
+	.col-sm-8,
+	.col-sm-7,
+	.col-sm-6,
+	.col-sm-5,
+	.col-sm-4,
+	.col-sm-3,
+	.col-sm-2,
+	.col-sm-1,
+	.col-sm-pull-12,
+	.col-sm-pull-11,
+	.col-sm-pull-10,
+	.col-sm-pull-9,
+	.col-sm-pull-8,
+	.col-sm-pull-7,
+	.col-sm-pull-6,
+	.col-sm-pull-5,
+	.col-sm-pull-4,
+	.col-sm-pull-3,
+	.col-sm-pull-2,
+	.col-sm-pull-1,
+	.col-sm-pull-0,
+	.col-sm-push-12,
+	.col-sm-push-11,
+	.col-sm-push-10,
+	.col-sm-push-9,
+	.col-sm-push-8,
+	.col-sm-push-7,
+	.col-sm-push-6,
+	.col-sm-push-5,
+	.col-sm-push-4,
+	.col-sm-push-3,
+	.col-sm-push-2,
+	.col-sm-push-1,
+	.col-sm-push-0,
+	.col-sm-offset-12,
+	.col-sm-offset-11,
+	.col-sm-offset-10,
+	.col-sm-offset-9,
+	.col-sm-offset-8,
+	.col-sm-offset-7,
+	.col-sm-offset-6,
+	.col-sm-offset-5,
+	.col-sm-offset-4,
+	.col-sm-offset-3,
+	.col-sm-offset-2,
+	.col-sm-offset-1,
+	.col-sm-offset-0 {}
+}
+
+@media (min-width: 48em) {
+
+	[class^='col-md'],
+	.col-md-12,
+	.col-md-11,
+	.col-md-10,
+	.col-md-9,
+	.col-md-8,
+	.col-md-7,
+	.col-md-6,
+	.col-md-5,
+	.col-md-4,
+	.col-md-3,
+	.col-md-2,
+	.col-md-1,
+	.col-md-pull-12,
+	.col-md-pull-11,
+	.col-md-pull-10,
+	.col-md-pull-9,
+	.col-md-pull-8,
+	.col-md-pull-7,
+	.col-md-pull-6,
+	.col-md-pull-5,
+	.col-md-pull-4,
+	.col-md-pull-3,
+	.col-md-pull-2,
+	.col-md-pull-1,
+	.col-md-pull-0,
+	.col-md-push-12,
+	.col-md-push-11,
+	.col-md-push-10,
+	.col-md-push-9,
+	.col-md-push-8,
+	.col-md-push-7,
+	.col-md-push-6,
+	.col-md-push-5,
+	.col-md-push-4,
+	.col-md-push-3,
+	.col-md-push-2,
+	.col-md-push-1,
+	.col-md-push-0,
+	.col-md-offset-12,
+	.col-md-offset-11,
+	.col-md-offset-10,
+	.col-md-offset-9,
+	.col-md-offset-8,
+	.col-md-offset-7,
+	.col-md-offset-6,
+	.col-md-offset-5,
+	.col-md-offset-4,
+	.col-md-offset-3,
+	.col-md-offset-2,
+	.col-md-offset-1,
+	.col-md-offset-0 {}
+
+}
+
+@media (min-width: 60em) {
+
+	[class^='col-lg'],
+	.col-lg-12,
+	.col-lg-11,
+	.col-lg-10,
+	.col-lg-9,
+	.col-lg-8,
+	.col-lg-7,
+	.col-lg-6,
+	.col-lg-5,
+	.col-lg-4,
+	.col-lg-3,
+	.col-lg-2,
+	.col-lg-1,
+	.col-lg-pull-12,
+	.col-lg-pull-11,
+	.col-lg-pull-10,
+	.col-lg-pull-9,
+	.col-lg-pull-8,
+	.col-lg-pull-7,
+	.col-lg-pull-6,
+	.col-lg-pull-5,
+	.col-lg-pull-4,
+	.col-lg-pull-3,
+	.col-lg-pull-2,
+	.col-lg-pull-1,
+	.col-lg-pull-0,
+	.col-lg-push-12,
+	.col-lg-push-11,
+	.col-lg-push-10,
+	.col-lg-push-8,
+	.col-lg-push-7,
+	.col-lg-push-6,
+	.col-lg-push-5,
+	.col-lg-push-4,
+	.col-lg-push-3,
+	.col-lg-push-2,
+	.col-lg-push-1,
+	.col-lg-push-0,
+	.col-lg-offset-12,
+	.col-lg-offset-11,
+	.col-lg-offset-10,
+	.col-lg-offset-9,
+	.col-lg-offset-8,
+	.col-lg-offset-7,
+	.col-lg-offset-6,
+	.col-lg-offset-5,
+	.col-lg-offset-4,
+	.col-lg-offset-3,
+	.col-lg-offset-2,
+	.col-lg-offset-1,
+	.col-lg-offset-0 {}
+
+}
+
+@media (min-width: 72em) {
+
+	[class^='col-xl'],
+	.col-xl-12,
+	.col-xl-11,
+	.col-xl-10,
+	.col-xl-9,
+	.col-xl-8,
+	.col-xl-7,
+	.col-xl-6,
+	.col-xl-5,
+	.col-xl-4,
+	.col-xl-3,
+	.col-xl-2,
+	.col-xl-1,
+	.col-xl-pull-12,
+	.col-xl-pull-11,
+	.col-xl-pull-10,
+	.col-xl-pull-9,
+	.col-xl-pull-8,
+	.col-xl-pull-7,
+	.col-xl-pull-6,
+	.col-xl-pull-5,
+	.col-xl-pull-4,
+	.col-xl-pull-3,
+	.col-xl-pull-2,
+	.col-xl-pull-1,
+	.col-xl-pull-0,
+	.col-xl-push-12,
+	.col-xl-push-11,
+	.col-xl-push-10,
+	.col-xl-push-9,
+	.col-xl-push-8,
+	.col-xl-push-7,
+	.col-xl-push-6,
+	.col-xl-push-5,
+	.col-xl-push-4,
+	.col-xl-push-3,
+	.col-xl-push-2,
+	.col-xl-push-1,
+	.col-xl-push-0,
+	.col-xl-offset-12,
+	.col-xl-offset-11,
+	.col-xl-offset-10,
+	.col-xl-offset-9,
+	.col-xl-offset-8,
+	.col-xl-offset-7,
+	.col-xl-offset-6,
+	.col-xl-offset-5,
+	.col-xl-offset-4,
+	.col-xl-offset-3,
+	.col-xl-offset-2,
+	.col-xl-offset-1,
+	.col-xl-offset-0 {}
+
+}
+/*!
+ * Villa Typography v2.6.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
+
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800,800italic);*/
+
+html {
+	/* can i use this someday, it helps to use the Root EM (rem) rule */
+	font: caption;
+	font-size: 62.5%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-size: 160%;
+	line-height: 1.3;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+	font-size-adjust: 0.5;
+}
+
+h1 {
+	font-size: 2.25em;
+	/* 2.25x body copy size = 36px */
+	line-height: 1.25;
+	/* 45px / 36px */
+}
+
+h2 {
+	font-size: 1.5em;
+	/* 1.5x body copy size = 24px */
+	line-height: 1.15384615;
+	/* 30px / 26px */
+}
+
+h3 {
+	font-size: 1.3125em;
+	/* 1.3125x body copy size = 21px */
+	line-height: 1.13636364;
+	/* 25px / 21px */
+}
+
+h4 {
+	font-size: 1.125em;
+	/* 1.125x body copy size = 18px */
+	line-height: 1.11111111;
+}
+
+blockquote {
+	font-size: 1.25em;
+	/* 20px / 16px */
+	line-height: 1.25;
+	/* 25px / 20px */
+}
+
+@media (min-width: 48em) {
+	body {
+		line-height: 1.375;
+	}
+
+	h1 {
+		font-size: 2.5em;
+		/* 2.5x body copy size = 40px */
+		line-height: 1.125;
+	}
+
+	h2 {
+		font-size: 2em;
+		/* 2x body copy size = 32px */
+		line-height: 1.25;
+	}
+
+	h3 {
+		font-size: 1.5em;
+		/* 1.5x body copy size = 24px */
+		line-height: 1.25;
+	}
+
+	h4 {
+		line-height: 1.22222222;
+		/* (22px / 18px */
+	}
+
+	blockquote {
+		font-size: 1.5em;
+		/* 24px / 16px = */
+		line-height: 1.45833333;
+		/* 35px / 24px */
+	}
+}
+
+@media (min-width: 60em) {
+	h1 {
+		font-size: 4.5em;
+		/* 3x body copy size = 48px */
+		line-height: 1.25;
+		/* keep to a multiple of the 20px line height
+		and something more appropriate for display headings */
+	}
+
+	h2 {
+		font-size: 2.25em;
+		/* 2.25x body copy size = 36px */
+		line-height: 1.25;
+	}
+
+	h3 {
+		font-size: 1.75em;
+		/* 1.75x body copy size = 28px */
+		line-height: 1.25;
+	}
+}
+
+/*
+	Typefaces Helpers
+*/
+
+.cursive {
+	font-family: cursive;
+}
+
+.fantasy {
+	font-family: fantasy;
+}
+
+.monospace {
+	font-family: monospace;
+}
+
+.sans-serif {
+	font-family: sans-serif;
+}
+
+.serif {
+	font-family: serif;
+}
+
+.fira-mono,
+.fira-sans,
+.fira-sans-italic,
+.lato,
+.open-sans,
+.open-sans-italic,
+.roboto {}
+/*!
+ * Villa UI Helper v2.2.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
+
+/* Opacity Helpers */
+.opacity10, .h-opacity10:hover { opacity: 0.1 }
+.opacity20, .h-opacity20:hover { opacity: 0.2 }
+.opacity30, .h-opacity30:hover { opacity: 0.3 }
+.opacity40, .h-opacity40:hover { opacity: 0.4 }
+.opacity50, .h-opacity50:hover { opacity: 0.5 }
+.opacity60, .h-opacity60:hover { opacity: 0.6 }
+.opacity70, .h-opacity70:hover { opacity: 0.7 }
+.opacity80, .h-opacity80:hover { opacity: 0.8 }
+.opacity90, .h-opacity90:hover { opacity: 0.9 }
+
+/*
+    Background Helpers
+*/
+
+/* Background Image Cover */
+.bg-cover {
+	background-repeat: no-repeat;
+	background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+}
+
+/*
+	Box Sizing Helpers
+*/
+
+/* Height Helpers */
+
+/* Height 100% */
+.height-100 {
+	height: 100%;
+}
+
+/* Height with Window size (for doc only, dynamic rules) */
+.height-window { }
+
+/* Width Helpers */
+
+/* Width 100% */
+.width-100 {
+	width: 100%;
+}
+/*!
+ * Villa UX Helper v1.0.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+*/
+
+/*
+	User Selection Helper
+*/
+
+/* User  */
+.user-unselect {
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+}
+
+/*
+    Cursor Helpers
+*/
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+/*
+	Anchors helpers
+*/
+
+a {
+	-webkit-transition:.3s;
+	-moz-transition: .3s;
+	-ms-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
