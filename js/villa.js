@@ -448,7 +448,13 @@ var WebFontFamilies = [
 		className: 'lato',
 		displayType: 'sans-serif',
 		name: 'Lato',
-		properties: 'Lato:400,300,600,700,800:latin'
+		properties: 'Lato:400,900,700,300,100:latin'
+	},
+	{
+		className: 'lato-italic',
+		displayType: 'sans-serif',
+		name: 'Lato',
+		properties: 'Lato:400,900italic,900,700italic,700,400italic,300italic,300,100italic,100:latin'
 	},
 	{
 		className: 'open-sans',
