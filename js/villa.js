@@ -28,7 +28,7 @@ colorFactory = function() {
 
 		styleSheetString.push(
 			['.' + name + ', .a-' + name + ':active' + ', .f-' + name+ ':focus' + ', .h-' + name+ ':hover', [['background-color', value]]],
-			['.font-' + name + ', .afont-' + name+ ':active' + ', .ffont-' + name+ ':focus' + ' .hfont-' + name+ ':hover', [['color', value]]],
+			['.font-' + name + ', .afont-' + name+ ':active' + ', .ffont-' + name+ ':focus' + ', .hfont-' + name+ ':hover', [['color', value]]],
 			['.border-' + name + ', .aborder-' + name+ ':active' + ', .fborder-' + name+ ':focus' + ', .hborder-' + name+ ':hover', [['border-color', value]]]
 		);
 	}
