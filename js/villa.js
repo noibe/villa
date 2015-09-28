@@ -396,9 +396,11 @@ buildGrid = function() {
 // Refresh the height-window value on resize
 var updateResize = function () {
 	var a, b, c, o;
-	a = window.innerHeight;
 
-	b = document.getElementsByClassName('min-height-window');
+	a = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+	b = document.querySelectorAll('.min-height-window');
+
 	if (b)
 		for (c = b.length; c--;) {
 			o = (b[c].getAttribute('height-offset'));
@@ -406,7 +408,7 @@ var updateResize = function () {
 			b[c].style.minHeight = (a + o) + 'px';
 		}
 
-	b = document.getElementsByClassName('height-window');
+	b = document.querySelectorAll('.height-window');
 	if (b)
 		for (c = b.length; c--;) {
 			o = (b[c].getAttribute('height-offset'));
@@ -414,7 +416,7 @@ var updateResize = function () {
 			b[c].style.height = (a + o) + 'px';
 		}
 
-	b = document.getElementsByClassName('max-height-window');
+	b = document.querySelectorAll('.max-height-window');
 	if (b) for (c = b.length; c--;) b[c].style.maxHeight = a + 'px';
 };
 
@@ -469,10 +471,70 @@ var WebFontFamilies = [
 		properties: 'Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800,800italic:latin'
 	},
 	{
+		className: 'exo',
+		displayType: 'sans-serif',
+		name: 'Exo',
+		properties: 'Exo:100,200,300,400,500,600,700,800,900:latin'
+	},
+	{
+		className: 'exo-italic',
+		displayType: 'sans-serif',
+		name: 'Exo',
+		properties: 'Exo:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic:latin'
+	},
+	{
+		className: 'exo-2',
+		displayType: 'sans-serif',
+		name: 'Exo 2',
+		properties: 'Exo+2:100,200,300,400,500,600,700,800,900:latin'
+	},
+	{
+		className: 'exo-2-italic',
+		displayType: 'sans-serif',
+		name: 'Exo 2',
+		properties: 'Exo+2:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic:latin'
+	},
+	{
 		className: 'roboto',
 		displayType: 'sans-serif',
 		name: 'Roboto',
-		properties: 'Roboto:400,300,600,700,800:latin'
+		properties: 'Roboto:100,300,400,500,700,900:latin'
+	},
+	{
+		className: 'roboto-italic',
+		displayType: 'sans-serif',
+		name: 'Roboto',
+		properties: 'Roboto:100,300,400,500,700,900,100italic,300italic,400italic,500italic,700italic,900italic:latin'
+	},
+	{
+		className: 'roboto-condensed',
+		displayType: 'sans-serif',
+		name: 'Roboto Condensed',
+		properties: 'Roboto+Condensed:300,400,700:latin'
+	},
+	{
+		className: 'roboto-condensed-italic',
+		displayType: 'sans-serif',
+		name: 'Roboto Condensed',
+		properties: 'Roboto+Condensed:300,400,700,300italic,400italic,700italic:latin'
+	},
+	{
+		className: 'roboto-mono',
+		displayType: 'monospace',
+		name: 'Roboto Mono',
+		properties: 'Roboto+Mono:100,300,400,500,700:latin'
+	},
+	{
+		className: 'roboto-mono-italic',
+		displayType: 'monospace',
+		name: 'Roboto Mono',
+		properties: 'Roboto+Mono:100,300,400,500,700,100italic,300italic,400italic,500italic,700italic:latin'
+	},
+	{
+		className: 'roboto-slab',
+		displayType: 'serif',
+		name: 'Roboto Slab',
+		properties: 'Roboto+Slab:100,300,400,700:latin'
 	}
 ];
 
