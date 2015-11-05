@@ -535,6 +535,18 @@ var WebFontFamilies = [
 		displayType: 'serif',
 		name: 'Roboto Slab',
 		properties: 'Roboto+Slab:100,300,400,700:latin'
+	},
+	{
+		className: 'josefin-slab',
+		displayType: 'serif',
+		name: 'Josefin Slab',
+		properties: 'Josefin+Slab:100,300,400,600,700:latin'
+	},
+	{
+		className: 'josefin-slab-italic',
+		displayType: 'serif',
+		name: 'Josefin Slab',
+		properties: 'Josefin+Slab:100,300,400,600,700,700italic,600italic,400italic,300italic,100italic:latin'
 	}
 ];
 
