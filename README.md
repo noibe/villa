@@ -65,3 +65,16 @@ To install a villa, just link the villa.js and the villa.css at your head!
 <p class="josefin-slab"></p>
 <p class="josefin-slab-italic"></p>
 ```
+
+###Slabo 27px
+
+```html
+<p class="slabo-27px"></p>
+```
+
+###Lora
+
+```html
+<p class="lora"></p>
+<p class="lora-italic"></p>
+```

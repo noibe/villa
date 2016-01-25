@@ -547,6 +547,24 @@ var WebFontFamilies = [
 		displayType: 'serif',
 		name: 'Josefin Slab',
 		properties: 'Josefin+Slab:100,300,400,600,700,700italic,600italic,400italic,300italic,100italic:latin'
+	},
+	{
+		className: 'slabo-27px',
+		displayType: 'serif',
+		name: 'Slabo 27px',
+		properties: 'Slabo+27px::latin'
+	},
+	{
+		className: 'lora',
+		displayType: 'serif',
+		name: 'Lora',
+		properties: 'Lora:400,700:latin'
+	},
+	{
+		className: 'lora-italic',
+		displayType: 'serif',
+		name: 'Lora',
+		properties: 'Lora:400,400italic,700,700italic:latin'
 	}
 ];
 
