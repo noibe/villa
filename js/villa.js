@@ -565,6 +565,30 @@ var WebFontFamilies = [
 		displayType: 'serif',
 		name: 'Lora',
 		properties: 'Lora:400,400italic,700,700italic:latin'
+	},
+	{
+		className: 'droid-serif',
+		displayType: 'serif',
+		name: 'Droid Serif',
+		properties: 'Droid+Serif:400,700:latin'
+	},
+	{
+		className: 'droid-serif-italic',
+		displayType: 'serif',
+		name: 'Droid Serif',
+		properties: 'Droid+Serif:400,400italic,700,700italic:latin'
+	},
+	{
+		className: 'merriweather',
+		displayType: 'serif',
+		name: 'Merriweather',
+		properties: 'Merriweather:300,400,700,900:latin'
+	},
+	{
+		className: 'merriweather-italic',
+		displayType: 'serif',
+		name: 'Merriweather',
+		properties: 'Merriweather:300,300italic,400,400italic,700,700italic,900,900italic:latin'
 	}
 ];
 

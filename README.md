@@ -78,3 +78,17 @@ To install a villa, just link the villa.js and the villa.css at your head!
 <p class="lora"></p>
 <p class="lora-italic"></p>
 ```
+
+###Droid Serif
+
+```html
+<p class="droid-serif"></p>
+<p class="droid-serif-italic"></p>
+```
+
+###Merriweather
+
+```html
+<p class="merriweather"></p>
+<p class="merriweather-italic"></p>
+```
