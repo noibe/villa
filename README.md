@@ -92,3 +92,11 @@ To install a villa, just link the villa.js and the villa.css at your head!
 <p class="merriweather"></p>
 <p class="merriweather-italic"></p>
 ```
+
+###PT Serif
+
+```html
+<p class="pt-serif"></p>
+<p class="pt-serif-italic"></p>
+```
+

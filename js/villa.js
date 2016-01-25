@@ -1,5 +1,5 @@
 /*!
- * Villa Framework v2.8.8 (http://getvilla.org/)
+ * Villa Framework v2.8.9 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
  */
@@ -589,6 +589,18 @@ var WebFontFamilies = [
 		displayType: 'serif',
 		name: 'Merriweather',
 		properties: 'Merriweather:300,300italic,400,400italic,700,700italic,900,900italic:latin'
+	},
+	{
+		className: 'pt-serif',
+		displayType: 'serif',
+		name: 'PT Serif',
+		properties: 'PT+Serif:400,700:latin'
+	},
+	{
+		className: 'pt-serif-italic',
+		displayType: 'serif',
+		name: 'PT Serif',
+		properties: 'PT+Serif:400,400italic,700,700italic:latin'
 	}
 ];
 
