@@ -15,8 +15,6 @@ To install a villa, just link the villa.js and the villa.css at your head!
 
 ```html
 <p class="fira-sans"></p>
-```
-```html
 <p class="fira-sans-italic"></p>
 ```
 ```html
