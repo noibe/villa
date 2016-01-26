@@ -100,3 +100,23 @@ To install a villa, just link the villa.js and the villa.css at your head!
 <p class="pt-serif-italic"></p>
 ```
 
+###Bitter
+
+```html
+<p class="bitter"></p>
+<p class="bitter-italic"></p>
+```
+
+###Playfair Display
+
+```html
+<p class="playfair-display"></p>
+<p class="playfair-display-italic"></p>
+```
+
+###Libre Baskerville
+
+```html
+<p class="libre-baskerville"></p>
+<p class="libre-baskerville-italic"></p>
+```

@@ -601,6 +601,42 @@ var WebFontFamilies = [
 		displayType: 'serif',
 		name: 'PT Serif',
 		properties: 'PT+Serif:400,400italic,700,700italic:latin'
+	},
+	{
+		className: 'bitter',
+		displayType: 'serif',
+		name: 'Bitter',
+		properties: 'Bitter:400,700:latin'
+	},
+	{
+		className: 'bitter-italic',
+		displayType: 'serif',
+		name: 'Bitter',
+		properties: 'Bitter:400,400italic,700:latin'
+	},
+	{
+		className: 'playfair-display',
+		displayType: 'serif',
+		name: 'Playfair Display',
+		properties: 'Playfair+Display:400,700,900:latin'
+	},
+	{
+		className: 'playfair-display-italic',
+		displayType: 'serif',
+		name: 'Playfair Display',
+		properties: 'Playfair+Display:400,400italic,700,700italic,900,900italic:latin'
+	},
+	{
+		className: 'libre-baskerville',
+		displayType: 'serif',
+		name: 'Libre Baskerville',
+		properties: 'Libre+Baskerville:400,700:latin'
+	},
+	{
+		className: 'libre-baskerville-italic',
+		displayType: 'serif',
+		name: 'Libre Baskerville',
+		properties: 'Libre+Baskerville:400,400italic,700:latin'
 	}
 ];
 
