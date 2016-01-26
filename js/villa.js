@@ -637,6 +637,30 @@ var WebFontFamilies = [
 		displayType: 'serif',
 		name: 'Libre Baskerville',
 		properties: 'Libre+Baskerville:400,400italic,700:latin'
+	},
+	{
+		className: 'vollkorn',
+		displayType: 'serif',
+		name: 'Vollkorn',
+		properties: 'Vollkorn:400,700:latin'
+	},
+	{
+		className: 'vollkorn-italic',
+		displayType: 'serif',
+		name: 'Vollkorn',
+		properties: 'Vollkorn:400,400italic,700,700italic:latin'
+	},
+	{
+		className: 'crimson-text',
+		displayType: 'serif',
+		name: 'Crimson Text',
+		properties: 'Crimson+Text:400,600,700:latin'
+	},
+	{
+		className: 'crimson-text-italic',
+		displayType: 'serif',
+		name: 'Crimson Text',
+		properties: 'Crimson+Text:400,400italic,600,600italic,700,700italic:latin'
 	}
 ];
 

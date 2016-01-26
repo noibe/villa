@@ -120,3 +120,17 @@ To install a villa, just link the villa.js and the villa.css at your head!
 <p class="libre-baskerville"></p>
 <p class="libre-baskerville-italic"></p>
 ```
+
+###Vollkorn
+
+```html
+<p class="vollkorn"></p>
+<p class="vollkorn-italic"></p>
+```
+
+###Crimson Text
+
+```html
+<p class="crimson-text"></p>
+<p class="crimson-text-italic"></p>
+```
