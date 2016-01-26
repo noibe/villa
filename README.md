@@ -68,11 +68,15 @@ To install a villa, just link the villa.js and the villa.css at your head!
 
 ###Slabo 27px
 
+1 style
+
 ```html
 <p class="slabo-27px"></p>
 ```
 
 ###Lora
+
+4 styles
 
 ```html
 <p class="lora"></p>
@@ -81,12 +85,16 @@ To install a villa, just link the villa.js and the villa.css at your head!
 
 ###Droid Serif
 
+4 styles
+
 ```html
 <p class="droid-serif"></p>
 <p class="droid-serif-italic"></p>
 ```
 
 ###Merriweather
+
+8 styles
 
 ```html
 <p class="merriweather"></p>
@@ -95,12 +103,16 @@ To install a villa, just link the villa.js and the villa.css at your head!
 
 ###PT Serif
 
+4 styles
+
 ```html
 <p class="pt-serif"></p>
 <p class="pt-serif-italic"></p>
 ```
 
 ###Bitter
+
+3 styles
 
 ```html
 <p class="bitter"></p>
@@ -109,12 +121,16 @@ To install a villa, just link the villa.js and the villa.css at your head!
 
 ###Playfair Display
 
+6 styles
+
 ```html
 <p class="playfair-display"></p>
 <p class="playfair-display-italic"></p>
 ```
 
 ###Libre Baskerville
+
+3 styles
 
 ```html
 <p class="libre-baskerville"></p>
@@ -123,12 +139,16 @@ To install a villa, just link the villa.js and the villa.css at your head!
 
 ###Vollkorn
 
+4 styles
+
 ```html
 <p class="vollkorn"></p>
 <p class="vollkorn-italic"></p>
 ```
 
 ###Crimson Text
+
+6 styles
 
 ```html
 <p class="crimson-text"></p>
