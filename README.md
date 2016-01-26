@@ -47,7 +47,7 @@ To install a villa, just link the villa.js and the villa.css at your head!
 <p class="exo-2-italic"></p>
 ```
 
-###Fira Sans
+###Roboto
 
 ```html
 <p class="roboto"></p>
