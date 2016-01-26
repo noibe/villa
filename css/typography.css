@@ -1,5 +1,5 @@
 /*!
- * Villa Typography v2.6.0 (http://getvilla.org/)
+ * Villa Typography v2.6.5 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
 */
@@ -147,4 +147,34 @@ blockquote {
 .lato,
 .open-sans,
 .open-sans-italic,
-.roboto {}
+.exo,
+.exo-italic,
+.exo-2,
+.exo-2-italic,
+.roboto,
+.roboto-italic,
+.roboto-condensed,
+.roboto-condensed-italic,
+.roboto-mono,
+.roboto-mono-italic,
+.josefin-slab,
+.josefin-slab-italic,
+.slabo-27px,
+.lora,
+.lora-italic,
+.droid-serif,
+.droid-serif-italic,
+.merriweather,
+.merriweather-italic,
+.pt-serif,
+.pt-serif-italic,
+.bitter,
+.bitter-italic,
+.playfair-display,
+.playfair-display-italic,
+.libre-baskerville,
+.libre-baskerville-italic,
+.vollkorn,
+.vollkorn-italic,
+.crimson-text,
+.crimson-text-italic { }
